@@ -1,0 +1,16 @@
+{
+  "name": "fastcash-ico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "test": "truffle test",
+  },
+  "author": "",
+  "license": "FCMP"
+}
