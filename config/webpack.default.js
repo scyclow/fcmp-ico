@@ -20,7 +20,10 @@ module.exports = {
     modules: [
       path.resolve('./src'),
       'node_modules'
-    ]
+    ],
+    alias: {
+      utils: rootDir('./src/utils')
+    }
   },
   plugins: [
     html({

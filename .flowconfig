@@ -1,0 +1,11 @@
+[ignore]
+.*/node_modules/.*
+.*/docs/.*
+.*/contracts/.*
+[include]
+
+[libs]
+
+[options]
+
+[lints]
