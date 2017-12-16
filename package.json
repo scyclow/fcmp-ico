@@ -10,8 +10,8 @@
     "compile": "truffle compile",
     "migrate": "truffle migrate",
     "test": "truffle test",
-    "start": "NODE_ENV=development node ./scripts/start.js",
-    "build": "rimraf docs && NODE_ENV=production webpack --progress --config config/webpack.prod.js",
+    "start": "truffle compile && NODE_ENV=development node ./scripts/start.js",
+    "build": "truffle compile && rimraf docs && NODE_ENV=production webpack --progress --config config/webpack.prod.js",
     "flow": "flow"
   },
   "author": "",
@@ -39,5 +39,8 @@
     "template-string-loader": "0.0.3",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "web3": "^1.0.0-beta.26"
   }
 }

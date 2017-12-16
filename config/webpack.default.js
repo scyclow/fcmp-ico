@@ -22,7 +22,8 @@ module.exports = {
       'node_modules'
     ],
     alias: {
-      utils: rootDir('./src/utils')
+      utils: rootDir('./src/utils'),
+      contracts: rootDir('./build/contracts')
     }
   },
   plugins: [
