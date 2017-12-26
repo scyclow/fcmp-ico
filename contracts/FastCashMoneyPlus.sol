@@ -4,13 +4,13 @@ pragma solidity ^0.4.17;
 
   This is highly propriatary software. Under no circumstances is anyone, except for employees of
   FastCashMoneyPlus.biz, authorized to modify, distribute, use, or otherwise profit from these
-  contracts. Anyone
+  contracts. Anyone attempting to do so will be persecuted under the full extent of the law.
 */
-contract FastCashMoneyPlusAccessControl {
-  address public centralBanker;
-  // TODO make pausable?
 
-  function FastCashMoneyPlusAccessControl() public {
+contract FastCashMoneyPlusPermissions {
+  address public centralBanker;
+
+  function FastCashMoneyPlusPermissions() public {
     centralBanker = msg.sender;
   }
 
@@ -25,96 +25,160 @@ contract FastCashMoneyPlusAccessControl {
   }
 }
 
-contract ERC20 {
-  // Maybe i should implement these?
-  // Remain compliant with ERC20 without actually implementing these features
-  function transferFrom(address _from, address _to, uint256 _value) external returns (bool success) {
-    return false;
-  }
-  function approve(address _spender, uint256 _value) external returns (bool success) {
-    return false;
-  }
-  function allowance(address _owner, address _spender) external constant returns (uint256 remaining) {
-    return 0;
-  }
-
-  // Triggered when tokens are transferred.
-  event Transfer(address indexed _from, address indexed _to, uint256 _value);
-
-  // Triggered whenever approve(address _spender, uint256 _value) is called.
-  event Approval(address indexed _owner, address indexed _spender, uint256 _value);
-
-  // Optional
-  // function tokensOfOwner(address _owner) external view returns (uint256[] tokenIds);
-  // function tokenMetadata(uint256 _tokenId, string _preferredTransport) public view returns (string infoUrl);
-
-  // ERC-165 Compatibility (https://github.com/ethereum/EIPs/issues/165)
-  // function supportsInterface(bytes4 _interfaceID) external view returns (bool);
-}
-
-contract FastCashMoneyPlusBase is FastCashMoneyPlusAccessControl, ERC20 {
+contract FastCashMoneyPlusBase is FastCashMoneyPlusPermissions {
   string public name = "Fast Cash Money Plus";
   string public symbol = "FASTCASH";
   uint8 public decimals = 18;
-
-  event Sale(bytes32 _routingCode, uint256 _amount);
 }
 
 contract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {
   mapping (bytes32 => address) public routingCodeMap;
-  mapping (address => uint256) public balanceOf;
+  mapping (address => uint) public balanceOf;
   bytes32[] public routingCodes;
+
+  function balanceOfRoutingCode(bytes32 routingCode) external returns (uint) {
+    address _address = routingCodeMap[routingCode];
+    return balanceOf[_address];
+  }
+
+  function totalInvestors() external returns (uint) {
+    return routingCodes.length;
+  }
+
+  function createRoutingCode(bytes32 _routingCode) public returns (bool success) {
+    require(routingCodeMap[_routingCode] == address(0));
+    require(balanceOf[msg.sender] > 0);
+
+    routingCodeMap[_routingCode] = msg.sender;
+    routingCodes.push(_routingCode);
+    return true;
+  }
 
   // add a function that checks if an account exists
 }
 
-contract FastCashMoneyPlusSales is FastCashMoneyPlusStorage {
-  // is this supposed to by the total circulating supply, or si this the bank?
-  uint256 public totalSupply = 1000000;
+// Maintain ERC20 compliance -- allow other contracts to access accounts
+contract FastCashMoneyPlusAccessControl is FastCashMoneyPlusStorage {
+  mapping (address => mapping (address => uint)) internal allowed;
 
-  // TODO exchangeRate -- onlyCentralBanker can change
-  // TODO fastcash > eth price goes up by constant multiplier every week
-    // start at equivalent of $0.25
-    // every week, increase by 1.2815392824 (brings you to 100,000 after one year)
+  event Approval(address indexed _owner, address indexed _spender, uint _value);
+
+  function approve(address _spender, uint _value) external returns (bool success) {
+    allowed[msg.sender][_spender] = _value;
+    Approval(msg.sender, _spender, _value);
+    return true;
+  }
+  function allowance(address _owner, address _spender) external constant returns (uint remaining) {
+    return allowed[_owner][_spender];
+  }
+}
+
+contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
+  uint256 public totalSupply;
+  uint public USDWEI = 1500000000000000;
+  uint public creationDate;
+  uint private constant oneWeek = 60 * 60 * 24 * 7;
+  uint public referalBonus = 10;
+
+  event Sale(address _address, uint _amount);
 
   function FastCashMoneyPlusSales() public {
+    // need to adjust total supply by decimals
+    totalSupply = 1000000 * 10 ** uint256(decimals);
+
     bytes32 centralBankerRoutingCode = "electricGOD_POWERvyS4xY69R";
     routingCodes.push(centralBankerRoutingCode);
     routingCodeMap[centralBankerRoutingCode] = msg.sender;
 
-    uint256 reserve = totalSupply / 4;
-    totalSupply -= reserve;
-    balanceOf[msg.sender] = reserve;
+    balanceOf[msg.sender] = totalSupply;
+    creationDate = now;
   }
 
-  function buy(bytes32 _routingCode, uint256 _amount/*, bytes32 referal*/) external returns (bool success) {
-// if routing code exists, use address
-// else if routing code doesnt exist, add to mappings + routing code list
-// adjust amount by exchange rate
-// require that amount is > 0
-// require that there is enough  fastcash in the bank
-// check for overflows
+  function updateUSDWEI(uint _wei) external onlyCentralBanker returns (bool success) {
+    USDWEI = _wei;
+    return true;
+  }
 
-// calculate eth cost
-  // based on exchange rate by "trusted third party"
-  // adjust by multiplier, which doubles every couple weeks or so
-// transfer central banker the eth
-  // give existing fastcash holders part of it?
+  function updateReferalBonus(uint _newBonus) external onlyCentralBanker returns (bool success) {
+    referalBonus = _newBonus;
+    return true;
+  }
 
-// withdraw from bank
-// credit to new routing code
-// pay finder's fee if any money is left in bank
-  // or, just give referers some eth if their balance is above a certain number
-// Sale event
-// return true
+  function weeksFromCreation() returns (uint) {
+    return (now - creationDate) / oneWeek;
+  }
+
+  function getExchangeRate(uint _week, uint _value, uint _usdwei) public returns (uint) {
+    uint __week;
+    if (_week > 71) {
+      __week = 71;
+    } else {
+      __week = _week;
+    }
+
+    uint extraAdj = 0;
+    if (__week > 50) {
+      extraAdj = __week - 50;
+    }
+
+    uint minAdj = 10;
+    uint x = __week + decimals - (minAdj + extraAdj);
+
+    uint n = _value * 4 * uint(10 ** x);
+    uint d = ( _usdwei / uint(10 ** minAdj) ) * (uint(12 ** __week) / uint(10 ** extraAdj));
+
+    return n / d;
+  }
+
+  function _makeSale() private returns (uint) {
+    uint _week = weeksFromCreation();
+    uint _value = msg.value;
+
+    uint moneyBucks = getExchangeRate(_week, _value, USDWEI);
+
+    require(moneyBucks > 0);
+    require(balanceOf[centralBanker] >= moneyBucks);
+
+    balanceOf[msg.sender] += moneyBucks;
+    balanceOf[centralBanker] -= moneyBucks;
+
+    centralBanker.transfer(msg.value);
+    Sale(msg.sender, moneyBucks);
+    return moneyBucks;
+  }
+
+  function buy(bytes32 _routingCode, bytes32 _referal) payable {
+    uint moneyBucks = _makeSale();
+
+    if (routingCodeMap[_routingCode] == address(0)) {
+      createRoutingCode(_routingCode);
+    }
+
+    if (_referal[0] != 0) {
+      uint referalFee;
+      if (balanceOf[centralBanker] > (moneyBucks / referalBonus)) {
+        referalFee = moneyBucks / referalBonus;
+      } else {
+        referalFee = balanceOf[centralBanker];
+      }
+      address reference = routingCodeMap[_referal];
+      balanceOf[reference] += referalFee;
+      balanceOf[centralBanker] -= referalFee;
+    }
+  }
+
+  function () payable {
+    _makeSale();
   }
 }
 
 contract FastCashMoneyPlusTransfer is FastCashMoneyPlusSales {
+  event Transfer(address indexed _from, address indexed _to, uint _value);
+
   function _transfer(
     address _from,
     address _to,
-    uint256 _amount
+    uint _amount
   ) internal returns (bool success) {
     require(_to != address(0));
     require(_to != address(this));
@@ -129,16 +193,34 @@ contract FastCashMoneyPlusTransfer is FastCashMoneyPlusSales {
 
     return true;
   }
-// TODO transfer messages?
-  function transfer(address _to, uint256 _amount) external returns (bool success) {
+
+  function transfer(address _to, uint _amount) external returns (bool success) {
     return _transfer(msg.sender, _to, _amount);
   }
 
-  function transferToAccount(bytes32 _toRoutingCode, uint256 _amount) external returns (bool success) {
+  function transferFrom(address _from, address _to, uint _amount) external returns (bool success) {
+    require(allowed[_from][msg.sender] >= _amount);
+
+    bool tranferSuccess = _transfer(_from, _to, _amount);
+    if (tranferSuccess) {
+      allowed[_from][msg.sender] -= _amount;
+    } else {
+      return false;
+    }
+  }
+
+  function transferToAccount(bytes32 _toRoutingCode, uint _amount) external returns (bool success) {
     return _transfer(msg.sender, routingCodeMap[_toRoutingCode], _amount);
   }
 
-  // TODO transfer account ownership?
+  // need to play around with this to figure out some of the specifics
+  function transferRoutingCode(bytes32 _routingCode, address _to) external returns (bool success) {
+    address owner = routingCodeMap[_routingCode];
+    require(msg.sender == owner);
+
+    routingCodeMap[_routingCode] = _to;
+    return true;
+  }
 }
 
 contract FastCashMoneyPlus is FastCashMoneyPlusTransfer {
