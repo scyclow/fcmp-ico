@@ -130,6 +130,11 @@ contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
     return n / d;
   }
 
+  function getCurrentExchangeRate() public returns (uint) {
+    uint _week = weeksFromCreation();
+    return getExchangeRate(_week, USDWEI, USDWEI);
+  }
+
   function _makeSale() private returns (uint) {
     uint _week = weeksFromCreation();
     uint _value = msg.value;

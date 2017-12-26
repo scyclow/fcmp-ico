@@ -114,5 +114,12 @@ $.window = {
   get height() { return window.innerHeight }
 }
 
+const parser = new DOMParser();
+$.fromString = (str: string) => {
+  return parser.parseFromString(str, 'text/xml').children[0];
+}
+
+$.appendString = (el, str) => el.appendChild($.fromString(str));
+
 window.$ = $;
 module.exports = $;

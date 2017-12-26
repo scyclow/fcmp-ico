@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  display: inline-block;
+}
+
+#container {
+  padding: 2%;
+}
+
+.highlight {
+  padding: 5px;
+  background-color: yellow;
+}
+
+.tinyFont {
+  font-size: 0.8em;
+}
+
+#tableContainer td {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+#generateRoutingCode {
+  padding: 10px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #ddd, #aaa);
+  cursor: pointer;
+}
+
+#routingCode {
+  width: 100%;
+  min-width: 510px;
+  font-size: 20px;
+  padding: 4px;
+}
+
+#purchaseAmountSlider {
+  width: 100%;
+}
+
+#amountOfFastcash {
+  font-size: 23px;
+  padding: 4px;
+}
+
+#pleaseContact {
+  background-color: pink;
+  text-align: center;
+  font-size: 23px;
+}

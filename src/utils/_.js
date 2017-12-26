@@ -100,6 +100,10 @@ function random(i: number, j: number | boolean | void, k: boolean | void): numbe
   else                   return Math.random() * i
 }
 
+function sample(a: string | Array<mixed>) {
+  return a[random(0, a.length, true)]
+}
+
 function betweenLinear(n: number, max: number, min: number): number {
   return min + ((max - min) * n);
 }
@@ -116,6 +120,14 @@ function times(t: number, fn = identity): Array<any> {
   let output = [];
   for (let i of timeGen(t)) output.push(fn(i));
   return output;
+}
+
+function each(arr, fn = noop) {
+  for (let i=0; i < arr.length; i++) {
+    let output = fn(arr[i])
+    if (output === false) return false
+  }
+  return arr;
 }
 
 function compact(arr: Array<any>): Array<any> {
@@ -227,7 +239,7 @@ const promise = {
 
 
 
-module.exports = {
+const exp = {
   between,
   betweenLinear,
   wrap,
@@ -247,6 +259,7 @@ module.exports = {
   atMost,
   atLeast,
   random,
+  sample,
   last,
   compact,
   enumerate,
@@ -261,6 +274,7 @@ module.exports = {
   assign,
   get,
   cond,
+  each,
 
   sin,
   cos,
@@ -274,3 +288,6 @@ module.exports = {
 
   promise
 };
+
+module.exports = exp;
+window._ = exp;
