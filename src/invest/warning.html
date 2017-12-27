@@ -1,0 +1,67 @@
+<div id="warning">
+  <style>
+    #warning {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background-color: gray;
+      top: 0;
+      overflow: scroll;
+      font-family: Gadget, sans-serif;
+    }
+
+    .closeWarning-x {
+      padding: 10px;
+      cursor: pointer;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    #warningHeader {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    #warningContainer {
+      color: white;
+      font-size: 30px;
+      padding: 20px;
+      padding-top: 0;
+    }
+
+    .warningIcon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    #warningButtonContainer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .warning-btn {
+      font-size: 25px;
+      padding: 10px;
+      background-color: dodgerblue;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer
+    }
+
+  </style>
+  <div id="warningHeader">
+    <div class="closeWarning closeWarning-x">X</div>
+  </div>
+  <div id="warningContainer">
+    <div class="warningIcon"></div>
+    WARNING: This site has been flagged as fraudulent and/or potentially misleading. Please proceed with caution, and beware of of deceptive content.
+    <div id="warningButtonContainer">
+      <a class="warning-btn" href="http://steviep.xyz/sounds">Back to Safety</a>
+      <div class="closeWarning warning-btn">Continue</div>
+    </div>
+  </div>
+</div>

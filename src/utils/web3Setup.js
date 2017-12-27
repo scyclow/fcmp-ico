@@ -11,8 +11,7 @@ export default async function web3Setup() {
     console.log(window.web3.currentProvider)
     window.web3 = new Web3(window.web3.currentProvider)
   } else {
-    console.error('No web3 context found :\'(')
-    return false;
+    throw new Error('No web3 context found :\'(')
   }
 
   FastCashMoneyPlus.setProvider(window.web3.currentProvider);
@@ -27,6 +26,15 @@ export default async function web3Setup() {
 
 async function getNum(fn) {
   return (await fn).toNumber()
+}
+
+export function getBuyData(
+  inst: any,
+  routingCode: string,
+  referal: string,
+  value: number
+): { data: string, to: string } {
+  return inst.buy.request(routingCode, referal, { value }).params[0]
 }
 
 // FastCashMoneyPlus.deployed().then(async i => {

@@ -3,8 +3,19 @@
   margin: 0;
 }
 
+#hero {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 h1, h2, h3 {
   display: inline-block;
+}
+
+hr {
+  margin-top: 43px;
+  margin-bottom: 20px;
 }
 
 #container {
@@ -14,10 +25,28 @@ h1, h2, h3 {
 .highlight {
   padding: 5px;
   background-color: yellow;
+  border: 1px solid orange;
+}
+
+.highlight .highlight {
+  background-color: #00ffff;
+  border: 2px solid #a600ff;
+}
+
+.sectionHeader {
+  margin-bottom: 10px;
 }
 
 .tinyFont {
   font-size: 0.8em;
+}
+
+.label {
+  font-family: sans-serif;
+}
+
+.sansSerif {
+  font-family: sans-serif;
 }
 
 #tableContainer td {
@@ -25,8 +54,13 @@ h1, h2, h3 {
   padding: 3px;
 }
 
+#tableContainer {
+  font-family: sans-serif;
+}
+
 #generateRoutingCode {
   padding: 10px;
+  font-size: 25px;
   border-radius: 3px;
   background: linear-gradient(180deg, #ddd, #aaa);
   cursor: pointer;
@@ -48,8 +82,51 @@ h1, h2, h3 {
   padding: 4px;
 }
 
+#fastcashLeft {
+  margin-bottom: 20px;
+}
+
 #pleaseContact {
   background-color: pink;
   text-align: center;
   font-size: 23px;
+}
+
+.confirmBox {
+  font-size: 18px;
+  margin-top: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.formData {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #dddddd;
+  font-size: 18px;
+  padding: 3px;
+  max-width: 90vw;
+  word-break: break-all;
+}
+
+.formData-name {
+  background-color: #eeeeee;
+  font-size: 17px;
+}
+
+.formData, .formData-name {
+  border: 1px solid black;
+}
+
+#stepsToComplete {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#myEtherPurchase {
+  font-size: 20px;
+}
+
+.pLarge {
+  font-size: 20px;
+  margin-bottom: 10px;
 }

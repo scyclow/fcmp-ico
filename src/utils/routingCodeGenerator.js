@@ -50,6 +50,7 @@ const keyWords = [
   'dynamic',
   'ace',
   'glorious',
+  'corruption',
 ];
 
 function randInsert (original: string, content: string): string {
@@ -61,7 +62,7 @@ function randInsert (original: string, content: string): string {
 };
 
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+$'
-export function makeHash(min, max) {
+export function makeHash(min: number, max: number) {
   return _.times(_.random(min, max, true), i => {
     return _.sample(chars)
   }).join('');
