@@ -78,6 +78,7 @@ p {
   padding: 10px;
   font-size: 25px;
   border-radius: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#aaa));
   background: linear-gradient(180deg, #ddd, #aaa);
   cursor: pointer;
 }
@@ -157,9 +158,15 @@ p {
 
 #easyCheckoutContainer {
   margin-top: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 40px;
   height: 130px
 }
@@ -168,12 +175,17 @@ p {
   font-size: 40px;
   padding: 20px;
   cursor: pointer;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
   background: linear-gradient(0deg, #ff0000, #0000ff);
-  animation: Checkout 12s ease infinite;
+  -webkit-animation: Checkout 12s ease infinite;
+          animation: Checkout 12s ease infinite;
+  -webkit-transition: 200ms;
   transition: 200ms;
   border: 0;
-  box-sizing: border-box;
-  box-shadow: 0 0 50px black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 50px black;
+          box-shadow: 0 0 50px black;
 }
 
 #easyCheckout:hover {
@@ -183,14 +195,16 @@ p {
 
 #easyCheckout:active {
   border: 0;
-  box-shadow: 0 0;
+  -webkit-box-shadow: 0 0;
+          box-shadow: 0 0;
 }
 
 
 
-@keyframes Checkout {
+@-webkit-keyframes Checkout {
   0% {
     color: #ff0000;
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
     background: linear-gradient(0deg, #ff0000, #0000ff);
   }
 
@@ -206,6 +220,48 @@ p {
 
   50% {
     color: #00ff00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00ffff), to(#ffff00));
+    background: linear-gradient(180deg, #00ffff, #ffff00);
+  }
+
+  66% {
+    color: #00ffff;
+    background: linear-gradient(240deg, #0000ff, #00ff00);
+  }
+
+  83% {
+    color: #0000ff;
+    /*background: linear-gradient(300deg, #ff00ff, #00ffff);*/
+  }
+
+  100% {
+    color: #ff00ff;
+    /*background: linear-gradient(360deg, #ff0000, #0000ff);*/
+  }
+}
+
+
+
+@keyframes Checkout {
+  0% {
+    color: #ff0000;
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
+    background: linear-gradient(0deg, #ff0000, #0000ff);
+  }
+
+  17% {
+    color: #ff0000;
+    background: linear-gradient(60deg, #ffff00, #ff00ff);
+  }
+
+  33% {
+    color: #ffff00;
+    background: linear-gradient(120deg, #00ff00, #ff0000);
+  }
+
+  50% {
+    color: #00ff00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00ffff), to(#ffff00));
     background: linear-gradient(180deg, #00ffff, #ffff00);
   }
 

@@ -64,8 +64,8 @@ const stopLoading = () => {
   $($loadingContainer, 'display', 'none');
 }
 
-// const LOADING_TIME = 2500
-const LOADING_TIME = 0
+const LOADING_TIME = 2500
+// const LOADING_TIME = 0
 
 setTimeout(stopLoading, LOADING_TIME)
 
@@ -77,15 +77,15 @@ const warningDisplayed = new Promise(res => displayWarning = res)
 const warningElem = document.createElement('div')
 warningElem.innerHTML = warning();
 
-// setTimeout(() => {
-//   document.body.appendChild(warningElem)
+setTimeout(() => {
+  document.body.appendChild(warningElem)
   displayWarning()
-//   _.each($.cls('warningIcon'), elem => elem.innerHTML = warningIcon)
-//   _.each($.cls('closeWarning'), elem =>
-//     $.onClick(elem)(() => document.body.removeChild(warningElem))
-//   )
+  _.each($.cls('warningIcon'), elem => elem.innerHTML = warningIcon)
+  _.each($.cls('closeWarning'), elem =>
+    $.onClick(elem)(() => document.body.removeChild(warningElem))
+  )
 
-// }, LOADING_TIME - 100)
+}, LOADING_TIME - 100)
 
 
 // ROUTING CODE BUTTON
@@ -100,6 +100,7 @@ const generateCode = async () => {
     existingCode = await INSTANCE.routingCodeMap.call(proposedCode)
   }
 
+  let tries = 0
   if (existingCode === emptyAddress) {
     STATE.newRoutingCode = proposedCode;
     const interval = setInterval(() => {
@@ -113,7 +114,7 @@ const generateCode = async () => {
 
     renderFromTransactionData(STATE)
   } else {
-    if(proposedCode++ > 2) {return console.error('cannot generate routing code')}
+    if(tries++ > 2) {return console.error('cannot generate routing code')}
     generateCode()
   }
 }
@@ -134,6 +135,8 @@ const $stepsToComplete = $.id('stepsToComplete')
 const $toAddressData = $.id('toAddressData')
 const $amountToSendData = $.id('amountToSendData')
 const $dataData = $.id('dataData')
+const $easyCheckout = $.id('easyCheckout')
+const $easyCheckoutError = $.id('easyCheckoutError')
 
 
 
@@ -232,6 +235,41 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
     const value = Number(event.target.value)
     changeAmount(value)
     $purchaseAmountSlider.value = convertFromFc(value)
+  })
+
+  $easyCheckout.addEventListener('click', event => {
+    console.log('click')
+    if (!INSTANCE) {
+      $easyCheckoutError.innerHTML = 'PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE';
+      return
+    }
+
+    if (!STATE.newRoutingCode) {
+      $easyCheckoutError.innerHTML = 'PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN';
+      return
+    }
+
+    if (!STATE.amountInMoneyBucks) {
+      $easyCheckoutError.innerHTML = 'PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN';
+      return
+    }
+
+    $easyCheckoutError.innerHTML = '';
+
+    const amountInWei = STATE.amountInMoneyBucks * fc2eth;
+
+    INSTANCE.buy(
+      STATE.newRoutingCode,
+      STATE.referal,
+      { from: web3.eth.coinbase, value: amountInWei, gas: 150000 }
+    )
+    .then((r) => {
+      window.alert('SUCCESS! Here is your receipt: '+ JSON.stringify(r))
+    })
+    .catch(e => {
+      console.error(e)
+      window.alert('ERROR:'+e.message)
+    })
   })
 
   renderFromTransactionData(STATE)
