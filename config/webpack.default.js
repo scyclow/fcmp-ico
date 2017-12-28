@@ -10,8 +10,8 @@ const rootDir = (...paths) => path.join(__dirname, '..', ...paths);
 module.exports = {
   context: rootDir('src'),
   entry: {
-    index: ['./index.js'],
-    invest: ['./invest/index.js']
+    index: './index.js',
+    invest: './invest/index.js'
   },
   output: {
     path: rootDir('docs'),

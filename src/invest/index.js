@@ -1,6 +1,7 @@
 // @flow
 
 import './invest.css';
+import 'babel-polyfill'
 import web3Setup, { getBuyData } from 'utils/web3Setup';
 import $ from 'utils/$';
 import _ from 'utils/_';
@@ -80,6 +81,7 @@ warningElem.innerHTML = warning();
 setTimeout(() => {
   document.body.appendChild(warningElem)
   displayWarning()
+  console.log('ok')
   _.each($.cls('warningIcon'), elem => elem.innerHTML = warningIcon)
   _.each($.cls('closeWarning'), elem =>
     $.onClick(elem)(() => document.body.removeChild(warningElem))
@@ -101,7 +103,7 @@ const generateCode = async () => {
   }
 
   let tries = 0
-  if (existingCode === emptyAddress) {
+  if (!existingCode || existingCode === emptyAddress) {
     STATE.newRoutingCode = proposedCode;
     const interval = setInterval(() => {
       $routingCode.value = createAddress()
@@ -114,7 +116,7 @@ const generateCode = async () => {
 
     renderFromTransactionData(STATE)
   } else {
-    if(tries++ > 2) {return console.error('cannot generate routing code')}
+    if(routingCodeTries++ > 2) {return console.error('cannot generate routing code')}
     generateCode()
   }
 }
@@ -294,6 +296,7 @@ function renderFromTransactionData({ usd2fc, usd2eth, amountInMoneyBucks, newRou
 
   if (newRoutingCode && amountInWei) {
     const buyData = getBuyData(INSTANCE, newRoutingCode, referal, amountInWei)
+    // TODO -- hardcode as actual address
     $toAddressData.innerHTML = buyData.to
     $dataData.innerHTML = buyData.data
   }
@@ -311,6 +314,10 @@ Promise.all([
 
     renderPage(STATE)
   })
-  .catch(() => {
+  .catch(e => {
+    console.error(e);
+    return warningDisplayed;
+  })
+  .then(() => {
     renderPage(STATE)
   })

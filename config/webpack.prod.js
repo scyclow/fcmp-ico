@@ -16,10 +16,6 @@ defaults.plugins.push(
   })
 );
 
-for (let e in defaults.entry) {
-  defaults.entry[e].push('babel-polyfill')
-}
-
 defaults.module.rules.push({
   test: /\.css$/,
   use: ExtractTextPlugin.extract({

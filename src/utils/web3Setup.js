@@ -34,7 +34,13 @@ export function getBuyData(
   referal: string,
   value: number
 ): { data: string, to: string } {
-  return inst.buy.request(routingCode, referal, { value }).params[0]
+  if (inst) {
+    return inst.buy.request(routingCode, referal, { value }).params[0]
+  } else {
+    const web3 = new Web3(new Web3.providers.HttpProvider(''))
+    const fakeInst = web3.eth.contract(FastCashMoneyPlusArtifact.abi).at('')
+    return { data: fakeInst.buy.getData(routingCode, referal) }
+  }
 }
 
 // FastCashMoneyPlus.deployed().then(async i => {
