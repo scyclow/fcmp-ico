@@ -43,6 +43,7 @@
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "ethereumjs-testrpc": "^6.0.3",
     "solc": "^0.4.19",
     "truffle-contract": "^3.0.1",
