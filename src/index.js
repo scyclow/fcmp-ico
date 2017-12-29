@@ -1,11 +1,9 @@
-import symbol from 'assets/FC-sans-serif.svg';
+// @flow
 
-const parser = new DOMParser()
+import 'index.css';
+import 'babel-polyfill'
+import './utils/devConsole'
+import './legacy'
+import {getRef} from 'utils/getRef'
 
-
-const $test = document.getElementById('test')
-for (let i=0; i < 50; i++) {
-  const $symbol = parser.parseFromString(symbol(), 'image/svg+xml').children[0]
-  $symbol.style.width = '18px';
-  $test.appendChild($symbol)
-}
+const referral = getRef()

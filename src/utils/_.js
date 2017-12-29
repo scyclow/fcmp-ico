@@ -124,7 +124,7 @@ function times(t: number, fn = identity): Array<any> {
 
 function each(arr, fn = noop) {
   for (let i=0; i < arr.length; i++) {
-    let output = fn(arr[i])
+    let output = fn(arr[i], i)
     if (output === false) return false
   }
   return arr;
