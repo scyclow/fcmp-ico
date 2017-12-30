@@ -19857,7 +19857,7 @@ var sansSerif = exports.sansSerif = function sansSerif() {
       _ref$size = _ref.size,
       size = _ref$size === undefined ? 18 : _ref$size;
 
-  var ss = parser.parseFromString((0, _FCSansSerif2.default)(), 'image/svg+xml').children[0];
+  var ss = parser.parseFromString((0, _FCSansSerif2.default)(), 'image/svg+xml').childNodes[0];
   ss.style.width = size + 'px';
   return ss;
 };
@@ -19868,7 +19868,7 @@ var serif = exports.serif = function serif() {
       size = _ref2$size === undefined ? 18 : _ref2$size,
       adjusted = _ref2.adjusted;
 
-  var s = parser.parseFromString((0, _FCSerif2.default)(), 'image/svg+xml').children[0];
+  var s = parser.parseFromString((0, _FCSerif2.default)(), 'image/svg+xml').childNodes[0];
   s.style.width = size + 'px';
   if (adjusted) s.style['margin-bottom'] = '-4px';
   return s;
@@ -19879,7 +19879,7 @@ var warning = exports.warning = function warning() {
       _ref3$size = _ref3.size,
       size = _ref3$size === undefined ? 150 : _ref3$size;
 
-  var ss = parser.parseFromString((0, _warningTriangle2.default)(), 'image/svg+xml').children[0];
+  var ss = parser.parseFromString((0, _warningTriangle2.default)(), 'image/svg+xml').childNodes[0];
   ss.style.width = size + 'px';
   return ss;
 };

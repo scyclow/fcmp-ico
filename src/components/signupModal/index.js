@@ -12,7 +12,7 @@ import step4Template from './step4.html'
 import loadingTemplate from './loading.html'
 
 const parser = new DOMParser();
-const parse = (template, id) => parser.parseFromString(template(), 'text/html').children[0]
+const parse = (template, id) => parser.parseFromString(template(), 'text/html').childNodes[0]
 
 const mount = (elem, child) => {
   elem.innerHTML = '';
