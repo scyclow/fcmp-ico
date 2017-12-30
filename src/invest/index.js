@@ -6,9 +6,9 @@ import web3Setup, { getBuyData } from 'utils/web3Setup';
 import $ from 'utils/$';
 import _ from 'utils/_';
 import warning from './warning.html';
-import { serif, sansSerif, warning as _warningIcon } from 'components/symbol'
 import {createAddress} from 'utils/routingCodeGenerator'
 import {getRef} from 'utils/getRef'
+import { serif, sansSerif, warning as _warningIcon } from 'components/symbol'
 const fcSymbol = sansSerif({ size: 10 }).outerHTML
 const fcSymbolLarge = sansSerif({ size: 18 }).outerHTML
 const fcSerifLarge = serif({ size: 18, adjusted: true }).outerHTML

@@ -9,7 +9,10 @@ import _ from 'utils/_'
 import $ from 'utils/$'
 import { polarize, applyToHex } from 'utils/colors';
 import {tickerGenerator} from 'utils/randCurrency'
+import { serif, sansSerif } from 'components/symbol'
 
+const fcSans = sansSerif({ size: 70, }).outerHTML
+const fcSerif = serif({ size: 90 }).outerHTML
 
 const { changeColors } = require('./utils/updateColor');
 
@@ -21,17 +24,17 @@ const $content = $.id('content');
 const $hero = $.id('hero');
 const $warning = $.id('warning');
 const $callToAction = $.id('call-to-action');
+_.each($.cls('fc-ss'), elem => elem.innerHTML = fcSerif)
+_.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
+
 
 const ctaPrompts = [
  'START NOW',
- '100% SECURE',
- '100% LEGAL',
  '100% ONLINE',
  'MAKE CASH FAST',
  'MAKE FAST CASH',
- 'CLICK HERE',
  'SAFE AND SECURE',
- 'FUEL YOUR DREAMS TODAY',
+ 'FUEL YOUR DREAMS',
 ]
 
 $callToAction.innerHTML = _.sample(ctaPrompts)
@@ -47,7 +50,7 @@ let heroH = 1;
 $($hero, 'background-color', '#000033')
 
 setInterval(
-  () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color']})(heroH++),
+  () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color', 'fill']})(heroH++),
   250
 );
 
