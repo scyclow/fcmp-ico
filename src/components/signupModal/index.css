@@ -1,10 +1,11 @@
 .modalHidden {
-  margin-top: 100vh;
+  margin-top: 150vh;
 }
 
 #signupModal {
   height: 100vh;
   width: 100vw;
+  padding-bottom: 50vh;
   position: fixed;
   top: 0;
   left: 0;
