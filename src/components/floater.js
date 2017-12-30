@@ -2,10 +2,15 @@
 
 import $  from 'utils/$';
 import _  from 'utils/_';
+import { serif } from 'components/symbol'
+const fcSymbol = serif({ size: 45 }).outerHTML
 
 const floaters = $.cls('floater');
 
 _.each(floaters, (floater, i) => {
+  $(floater, 'font-size', 45);
+  floater.innerHTML = Math.random() < 0.5 ? fcSymbol : '$';
+
   const moveFloater = () => {
     if (window.IMPORTANT.pause) return;
     const moveX = _.random(0, $.window.width) + 'px';
@@ -21,7 +26,7 @@ _.each(floaters, (floater, i) => {
   );
 
   $.onClick(floater)(() => {
-    console.log('clicked floader', i);
+    console.log('clicked floater', i);
     $(floater, 'display', 'none');
     clearInterval(floating)
   });

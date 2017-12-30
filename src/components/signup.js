@@ -19,12 +19,18 @@ const navHeight = '45px';
 const modalHeight = `calc(100vh - ${navHeight}`;
 
 $(signUpModal, 'height', modalHeight)
+$(signUpModal, 'visibility', 'hidden')
 
 // display modal when call to action is clicked
-$.onClick(callToAction)(() => setTimeout(
-  () => $(signUpModal, 'margin-top', '-75px'),
-  300
-));
+$.onClick(callToAction)(() => {
+  setTimeout(
+    () => {
+      $(signUpModal, 'visibility', 'inherit')
+      $(signUpModal, 'margin-top', '-75px')
+    },
+    300
+  )
+});
 
 
 // Hide modal when clickin background

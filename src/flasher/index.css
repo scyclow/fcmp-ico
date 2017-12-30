@@ -1,0 +1,49 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main-container {
+  z-index: 2;
+  cursor: pointer;
+  margin-top: -70px;
+  padding-top: 70px;
+  height: 100vh;
+  user-select: none;
+}
+
+#fast-cash {
+  left: 0;
+  right: 0;
+  margin-top: 70px;
+  font-size: 170px;
+  height: 170px;
+  width: 800px;
+}
+
+#call-to-action {
+  margin-top: 60px;
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 10px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 20px;
+  width: 500px;
+}
+
+#call-to-action, #fast-cash {
+  font-weight: 600;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  word-wrap: break-word;
+  font-size: 12px;
+}

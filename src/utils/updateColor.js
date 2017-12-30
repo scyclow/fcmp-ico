@@ -19,7 +19,7 @@ const changeColors = (elem: Element, baseColor: string, properties={}) => {
   let secondaryColor = c.polarize(primaryColor);
 
   properties.primary = properties.primary || ['background-color'];
-  properties.secondary = properties.secondary || ['color'];
+  properties.secondary = properties.secondary || ['color', 'fill'];
 
   return (input: number | HSV) => {
     const hsv = {
@@ -38,7 +38,7 @@ const changeColors = (elem: Element, baseColor: string, properties={}) => {
   }
 }
 
-const maxChange = 30;
+const maxChange = 10;
 const baseDistance = 700;
 const baseTime = 15;
 

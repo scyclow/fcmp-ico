@@ -11,7 +11,8 @@ module.exports = {
   context: rootDir('src'),
   entry: {
     index: './index.js',
-    invest: './invest/index.js'
+    invest: './invest/index.js',
+    flasher: './flasher/index.js'
   },
   output: {
     path: rootDir('docs'),
@@ -42,7 +43,14 @@ module.exports = {
       filename: 'invest.html',
       inject: 'body',
       chunks: ['invest'],
-      inlineSource: '.(js|css)$' // inline all css and js in prod
+      inlineSource: '.(js|css)$'
+    }),
+    html({
+      template: rootDir(`src/flasher/index.html`),
+      filename: 'flasher.html',
+      inject: 'body',
+      chunks: ['flasher'],
+      inlineSource: '.(js|css)$'
     }),
   ],
   module: {

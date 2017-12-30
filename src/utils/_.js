@@ -231,6 +231,13 @@ function set(obj, path, val) {
   return obj;
 }
 
+function take(a: Array<mixed> | string, i: number = 1) {
+  return a.slice(0, i)
+}
+function takeRight(a: Array<mixed> | string, i: number = 1) {
+  return a.slice(i * -1)
+}
+
 const promise = {
   wait: (ms, result) => new Promise(resolve =>
     setTimeout(() => resolve(result), ms)
@@ -275,6 +282,8 @@ const exp = {
   get,
   cond,
   each,
+  take,
+  takeRight,
 
   sin,
   cos,

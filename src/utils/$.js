@@ -34,7 +34,7 @@ const eventListener = (eventType, hasCoords) => (element = document) => (fn) => 
     return () => clears.map(_.runFn);
   };
 
-  return element.length
+  return element.length && element.map
     ? multiple(element)
     : one(element);
 }

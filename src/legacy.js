@@ -66,7 +66,7 @@ type ColorUpdator = {
 const updaters: Array<ColorUpdator> = colorSwitchers.map(box =>
   updateColorSpeedDistance(box, c.applyToHex('#ff0000', { h: _.random(360) }), baseSpeed, {
     primary: ['background-color'],
-    secondary: ['color']
+    secondary: ['color', 'fill']
   })
 );
 
@@ -85,7 +85,7 @@ $.onMouseMove()(event => shadowChanges.map(box => updateBoxShadow(box)(event)));
 // continuously rotate element color
 colorTimeChangers.forEach(elem => {
   let h = 1
-  setInterval(() => changeColors(elem, '#ff0000')(h++), 20);
+  setInterval(() => changeColors(elem, '#00ffff')(h++), 20);
 });
 
 const baseButtonColor = c.polarize('#ff0000');
