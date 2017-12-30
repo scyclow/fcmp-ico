@@ -10213,7 +10213,7 @@ function getRef() {
 var _ = __webpack_require__(51);
 var $ = __webpack_require__(77);
 var c = __webpack_require__(381);
-var dynamicInterval = __webpack_require__(421);
+var dynamicInterval = __webpack_require__(420);
 var atLeast1 = _.atLeast(1);
 
 var changeColors = function changeColors(elem, baseColor) {
@@ -10345,13 +10345,16 @@ var _$2 = _interopRequireDefault(_$);
 
 var _colors = __webpack_require__(381);
 
-var _randCurrency = __webpack_require__(422);
+var _randCurrency = __webpack_require__(421);
 
 var _symbol = __webpack_require__(161);
+
+var _signupModal = __webpack_require__(422);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var fcSans = (0, _symbol.sansSerif)({ size: 70 }).outerHTML;
+
 var fcSerif = (0, _symbol.serif)({ size: 90 }).outerHTML;
 
 var _require = __webpack_require__(394),
@@ -10370,6 +10373,8 @@ _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
 _3.default.each(_$2.default.cls('fc-s'), function (elem) {
   return elem.innerHTML = fcSans;
 });
+
+$content.appendChild((0, _signupModal.modal)($callToAction));
 
 var ctaPrompts = ['START NOW', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
 
@@ -10447,11 +10452,10 @@ var _3 = _interopRequireDefault(_2);
 
 __webpack_require__(419);
 
-__webpack_require__(420);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var c = __webpack_require__(381);
+// import 'components/signup';
 
 var _require = __webpack_require__(394),
     updateColorSpeedDistance = _require.updateColorSpeedDistance,
@@ -10587,125 +10591,6 @@ var _2 = __webpack_require__(51);
 
 var _3 = _interopRequireDefault(_2);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
-var _marked = /*#__PURE__*/regeneratorRuntime.mark(nextLoadingChar);
-
-// const signupTemplate = require('babel-loader!template-string!./signup.html');
-
-var callToAction = _$2.default.id('call-to-action');
-var signUpModal = _$2.default.id('signup-modal-container');
-var signUpModalBackground = _$2.default.cls('signup-modal-background')[0];
-var submission = _$2.default.id('signup-submission');
-var signupForm = _$2.default.id('signup-form');
-var signupLoading = _$2.default.id('signup-loading');
-var signupOutput = _$2.default.id('signup-output');
-
-var navHeight = '45px';
-var modalHeight = 'calc(100vh - ' + navHeight;
-
-(0, _$2.default)(signUpModal, 'height', modalHeight);
-(0, _$2.default)(signUpModal, 'visibility', 'hidden');
-
-// display modal when call to action is clicked
-_$2.default.onClick(callToAction)(function () {
-  setTimeout(function () {
-    (0, _$2.default)(signUpModal, 'visibility', 'inherit');
-    (0, _$2.default)(signUpModal, 'margin-top', '-75px');
-  }, 300);
-});
-
-// Hide modal when clickin background
-_$2.default.onClick(signUpModalBackground)(function () {
-
-  (0, _$2.default)(signUpModal, 'margin-top', '100vh');
-});
-
-function nextLoadingChar(str) {
-  var i;
-  return regeneratorRuntime.wrap(function nextLoadingChar$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          i = 0;
-
-        case 1:
-          if (false) {
-            _context.next = 6;
-            break;
-          }
-
-          _context.next = 4;
-          return str[i++ % str.length];
-
-        case 4:
-          _context.next = 1;
-          break;
-
-        case 6:
-        case 'end':
-          return _context.stop();
-      }
-    }
-  }, _marked, this);
-}
-
-function setLoadingAnimation() {
-  (0, _$2.default)(signupForm, 'display', 'none');
-  signupLoading.innerHTML = 'LOADING ';
-  var loadingChars = nextLoadingChar('>>>>>>>$$$$$$$$+++++++');
-
-  var loadingAnimation = setInterval(function () {
-    return signupLoading.innerHTML += loadingChars.next().value;
-  }, 50);
-
-  return function () {
-    clearInterval(loadingAnimation);
-    (0, _$2.default)(signupLoading, 'display', 'none');
-  };
-};
-
-_$2.default.onClick(submission)(_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-  var clearLoadingAnimation, something;
-  return regeneratorRuntime.wrap(function _callee$(_context2) {
-    while (1) {
-      switch (_context2.prev = _context2.next) {
-        case 0:
-          clearLoadingAnimation = setLoadingAnimation();
-          _context2.next = 3;
-          return _3.default.promise.wait(2000);
-
-        case 3:
-          something = _context2.sent;
-
-
-          clearLoadingAnimation();
-
-        case 5:
-        case 'end':
-          return _context2.stop();
-      }
-    }
-  }, _callee, undefined);
-})));
-
-/***/ }),
-/* 420 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _$ = __webpack_require__(77);
-
-var _$2 = _interopRequireDefault(_$);
-
-var _2 = __webpack_require__(51);
-
-var _3 = _interopRequireDefault(_2);
-
 var _symbol = __webpack_require__(161);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -10737,7 +10622,7 @@ _3.default.each(floaters, function (floater, i) {
 });
 
 /***/ }),
-/* 421 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10804,7 +10689,7 @@ function dynamicInterval(fn) {
 module.exports = dynamicInterval;
 
 /***/ }),
-/* 422 */
+/* 421 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10951,6 +10836,365 @@ function tickerGenerator() {
     }
   }, _marked, this);
 }
+
+/***/ }),
+/* 422 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.modal = undefined;
+
+var _$ = __webpack_require__(77);
+
+var _$2 = _interopRequireDefault(_$);
+
+var _2 = __webpack_require__(51);
+
+var _3 = _interopRequireDefault(_2);
+
+__webpack_require__(423);
+
+var _index = __webpack_require__(424);
+
+var _index2 = _interopRequireDefault(_index);
+
+var _step = __webpack_require__(425);
+
+var _step2 = _interopRequireDefault(_step);
+
+var _step3 = __webpack_require__(426);
+
+var _step4 = _interopRequireDefault(_step3);
+
+var _step5 = __webpack_require__(427);
+
+var _step6 = _interopRequireDefault(_step5);
+
+var _step7 = __webpack_require__(428);
+
+var _step8 = _interopRequireDefault(_step7);
+
+var _loading = __webpack_require__(429);
+
+var _loading2 = _interopRequireDefault(_loading);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _marked = /*#__PURE__*/regeneratorRuntime.mark(nextLoadingChar);
+
+var parser = new DOMParser();
+var parse = function parse(template, id) {
+  return parser.parseFromString(template(), 'text/html').children[0];
+};
+
+var mount = function mount(elem, child) {
+  elem.innerHTML = '';
+  elem.appendChild(child);
+};
+
+function nextLoadingChar(str) {
+  var i;
+  return regeneratorRuntime.wrap(function nextLoadingChar$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          i = 0;
+
+        case 1:
+          if (false) {
+            _context.next = 6;
+            break;
+          }
+
+          _context.next = 4;
+          return str[i++ % str.length];
+
+        case 4:
+          _context.next = 1;
+          break;
+
+        case 6:
+        case 'end':
+          return _context.stop();
+      }
+    }
+  }, _marked, this);
+}
+
+var modal = exports.modal = function modal(trigger) {
+  var loading = parse(_loading2.default).querySelector('#signupModal-loading');
+  var step1 = parse(_step2.default).querySelector('#signupModal-1');
+  var step2 = parse(_step4.default).querySelector('#signupModal-2');
+  var step3 = parse(_step6.default).querySelector('#signupModal-3');
+  var step4 = parse(_step8.default).querySelector('#signupModal-4');
+  var loadingChars = nextLoadingChar('>>>>>>>$$$$$$$$+++++++');
+
+  var component = parse(_index2.default).querySelector('#signupModal');
+  component.className = 'modalHidden';
+
+  var bg = component.querySelector('#signupModalBG');
+  var content = component.querySelector('#signupModalContent');
+
+  bg.addEventListener('click', function () {
+    setTimeout(function () {
+      window.IMPORTANT.pause = false;
+      component.className = 'modalHidden';
+    }, 50);
+  });
+
+  trigger.addEventListener('click', function () {
+    window.IMPORTANT.pause = true;
+    setTimeout(function () {
+      component.className = '';
+    }, 300);
+  });
+
+  mount(content, step1);
+
+  step1.querySelector('#signupContinue-1').onclick = function () {
+    mount(content, loading);
+    setInterval(function () {
+      return loading.innerHTML += loadingChars.next().value;
+    }, 50);
+    setTimeout(function () {
+      return mount(content, step2);
+    }, 4000);
+  };
+
+  step2.querySelector('#signupContinue-2').onclick = function () {
+    mount(content, loading);
+    setTimeout(function () {
+      return mount(content, step3);
+    }, 3000);
+  };
+
+  var continueIfInputsClicked = function continueIfInputsClicked() {
+    var allClicked = [].every.call(step3.getElementsByTagName('input'), function (input) {
+      return input.checked;
+    });
+
+    if (allClicked) {
+      mount(content, loading);
+      setTimeout(function () {
+        return mount(content, step4);
+      }, 6000);
+    }
+  };
+  _3.default.each(step3.getElementsByTagName('input'), function (input) {
+    input.onclick = continueIfInputsClicked;
+  });
+
+  return component;
+};
+
+/***/ }),
+/* 423 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 424 */
+/***/ (function(module, exports) {
+
+module.exports=function(scope){ return `<div id="signupModal">
+  <div id="signupModalBG"></div>
+  <div id="signupModalContent">
+    <h1>DON'T WAIT! JOIN FASTCASHMONEYPLUS TODAY, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>
+
+    <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>
+
+    <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about "What Could Have Been" if you had bought FashCash early on. "I remember discovering FastCash early on," you'll tell your children at the dinner table, "and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!".</h3>
+
+    <button id="signupGetStarted">GET STARTED NOW</button>
+  </div>
+</div>
+`};
+
+/***/ }),
+/* 425 */
+/***/ (function(module, exports) {
+
+module.exports=function(scope){ return `<div id="signupModal-1">
+  <h1>DON'T WAIT! JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>
+
+  <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>
+
+  <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about "What Could Have Been" if you had bought FashCash early on. "I remember discovering FastCash early on," you'll tell your children at the dinner table, "and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!".</h3>
+
+  <button id="signupContinue-1" class="signupContinue">GET STARTED NOW</button>
+</div>
+`};
+
+/***/ }),
+/* 426 */
+/***/ (function(module, exports) {
+
+module.exports=function(scope){ return `<div id="signupModal-2">
+  <style>
+    .modal-input {
+      font-size: 22px;
+      background-color: #feb;
+      border: 3px solid #888;
+    }
+
+    .modal-input:active,
+    .modal-input:focus {
+      background-color: #def;
+    }
+
+    .modal-input-section {
+      margin-top: 5px;
+    }
+    .modal-input-section label {
+      font-size: 20px;
+      font-family: sans-serif;
+    }
+  </style>
+  <h2>CREATE ACCOUNT</h2>
+
+  <div class="modal-input-section">
+    <label>
+      EMAIL ADDRESS:
+      <input id="signupEmail" class="modal-input" placeholder="EMAIL ADDRESS">
+      <br>
+      <label style="user-select: none; pointer-events: none"><input type="checkbox" checked>signup for fastcashmoneyplus.biz updates and promotions</label>
+    </label>
+  </div>
+
+  <div class="modal-input-section">
+    <label>
+      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:
+      <input class="modal-input" placeholder="SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT">
+    </label>
+  </div>
+
+  <div class="modal-input-section">
+    <label>
+      FULL LEGAL NAME:
+      <input class="modal-input" placeholder="FULL LEGAL NAME">
+    </label>
+  </div>
+
+  <div class="modal-input-section">
+    <label>
+      DATE OF BIRTH dd/mm/yyyy:
+      <input class="modal-input" placeholder="DATE OF BIRTH dd/mm/yyyy">
+    </label>
+  </div>
+
+
+  <div>
+    <button id="signupContinue-2" class="signupContinue">INVEST NOW</button>
+  </div>
+</div>
+`};
+
+/***/ }),
+/* 427 */
+/***/ (function(module, exports) {
+
+module.exports=function(scope){ return `<div id="signupModal-3">
+  <style>
+    #confirmationList {
+      padding-left: 40px;
+      margin-top: 5px;
+    }
+    #confirmationList li {
+      margin-top: 15px
+    }
+    #confirmationList label {
+      font-family: sans-serif;
+      font-size: 20px;
+    }
+    #confirmationList input {
+      transform: scale(1.5);
+    }
+  </style>
+  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>
+
+  <ul id="confirmationList">
+    <li>
+      <label>
+        <input type="checkbox"> I have read, and agree to, the <a href="#">Terms of Service</a>
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="checkbox"> I have read the <a href="#">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="checkbox"> I have read the <a href="#">FastCashMoneyPlus smart contract source code</a>.
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="checkbox"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, or Uraguay.
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="checkbox"> I am older than 18.
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="checkbox"> I am not a robot.
+      </label>
+    </li>
+
+    <li>
+      <label>
+        <input type="checkbox"> I'm ready to start making FAST CASH NOW!.
+      </label>
+    </li>
+  </ul>
+</div>
+`};
+
+/***/ }),
+/* 428 */
+/***/ (function(module, exports) {
+
+module.exports=function(scope){ return `<div id="signupModal-4">
+  <style>
+    #signupModal-4 h2 {
+      margin-top: 30px;
+    }
+  </style>
+  <h1>You're all set to invest in FastCashMoneyPlus!</h1>
+
+  <h2>The FastCashMoneyPlus.biz investment console will walk you through the remaining steps to invest in the highly-sought-after FastCashMoneyPlus ICO!</h2>
+
+  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>
+
+  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>
+
+  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>
+  <a href="./invest.html" target="_blank" style="font-size: 25px; margin-top: 20px">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>
+</div>
+`};
+
+/***/ }),
+/* 429 */
+/***/ (function(module, exports) {
+
+module.exports=function(scope){ return `<div id="signupModal-loading" style="overflow-wrap: break-word; width: 35em;font-size: 22px;">
+  LOADING
+</div>
+`};
 
 /***/ })
 /******/ ]);

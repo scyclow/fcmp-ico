@@ -10,6 +10,8 @@ import $ from 'utils/$'
 import { polarize, applyToHex } from 'utils/colors';
 import {tickerGenerator} from 'utils/randCurrency'
 import { serif, sansSerif } from 'components/symbol'
+import {modal} from 'components/signupModal'
+
 
 const fcSans = sansSerif({ size: 70, }).outerHTML
 const fcSerif = serif({ size: 90 }).outerHTML
@@ -27,6 +29,7 @@ const $callToAction = $.id('call-to-action');
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSerif)
 _.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
 
+$content.appendChild(modal($callToAction))
 
 const ctaPrompts = [
  'START NOW',

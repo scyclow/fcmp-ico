@@ -1,7 +1,7 @@
 
 import $  from 'utils/$';
 import _  from 'utils/_';
-import 'components/signup';
+// import 'components/signup';
 import 'components/floater';
 
 

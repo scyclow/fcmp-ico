@@ -37,6 +37,7 @@ const keyWords = [
   'pump',
   'bang',
   'cool',
+  'fat',
   'secure',
   'mint',
   'fresh',

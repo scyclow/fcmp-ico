@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 423);
+/******/ 	return __webpack_require__(__webpack_require__.s = 430);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -12496,9 +12496,9 @@ module.exports = Method;
 
 
 
-var base64 = __webpack_require__(481)
-var ieee754 = __webpack_require__(482)
-var isArray = __webpack_require__(483)
+var base64 = __webpack_require__(488)
+var ieee754 = __webpack_require__(489)
+var isArray = __webpack_require__(490)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -15384,7 +15384,7 @@ module.exports = {
   getProperty: getProperty,
   escapeQuotes: escapeQuotes,
   equal: __webpack_require__(390),
-  ucs2length: __webpack_require__(499),
+  ucs2length: __webpack_require__(506),
   varOccurences: varOccurences,
   varReplace: varReplace,
   cleanUpCode: cleanUpCode,
@@ -27967,7 +27967,7 @@ function getRef() {
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(10), __webpack_require__(162), __webpack_require__(430), __webpack_require__(431), __webpack_require__(112), __webpack_require__(113), __webpack_require__(384), __webpack_require__(396), __webpack_require__(432), __webpack_require__(397), __webpack_require__(433), __webpack_require__(163), __webpack_require__(434), __webpack_require__(385), __webpack_require__(435), __webpack_require__(114), __webpack_require__(33), __webpack_require__(436), __webpack_require__(437), __webpack_require__(438), __webpack_require__(439), __webpack_require__(440), __webpack_require__(441), __webpack_require__(442), __webpack_require__(443), __webpack_require__(444), __webpack_require__(445), __webpack_require__(446), __webpack_require__(447), __webpack_require__(448), __webpack_require__(449), __webpack_require__(450), __webpack_require__(451));
+		module.exports = exports = factory(__webpack_require__(10), __webpack_require__(162), __webpack_require__(437), __webpack_require__(438), __webpack_require__(112), __webpack_require__(113), __webpack_require__(384), __webpack_require__(396), __webpack_require__(439), __webpack_require__(397), __webpack_require__(440), __webpack_require__(163), __webpack_require__(441), __webpack_require__(385), __webpack_require__(442), __webpack_require__(114), __webpack_require__(33), __webpack_require__(443), __webpack_require__(444), __webpack_require__(445), __webpack_require__(446), __webpack_require__(447), __webpack_require__(448), __webpack_require__(449), __webpack_require__(450), __webpack_require__(451), __webpack_require__(452), __webpack_require__(453), __webpack_require__(454), __webpack_require__(455), __webpack_require__(456), __webpack_require__(457), __webpack_require__(458));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -28564,15 +28564,15 @@ function getRef() {
 
 var f = __webpack_require__(55);
 
-var SolidityTypeAddress = __webpack_require__(454);
-var SolidityTypeBool = __webpack_require__(455);
-var SolidityTypeInt = __webpack_require__(456);
-var SolidityTypeUInt = __webpack_require__(457);
-var SolidityTypeDynamicBytes = __webpack_require__(458);
-var SolidityTypeString = __webpack_require__(459);
-var SolidityTypeReal = __webpack_require__(460);
-var SolidityTypeUReal = __webpack_require__(461);
-var SolidityTypeBytes = __webpack_require__(462);
+var SolidityTypeAddress = __webpack_require__(461);
+var SolidityTypeBool = __webpack_require__(462);
+var SolidityTypeInt = __webpack_require__(463);
+var SolidityTypeUInt = __webpack_require__(464);
+var SolidityTypeDynamicBytes = __webpack_require__(465);
+var SolidityTypeString = __webpack_require__(466);
+var SolidityTypeReal = __webpack_require__(467);
+var SolidityTypeUReal = __webpack_require__(468);
+var SolidityTypeBytes = __webpack_require__(469);
 
 var isDynamic = function (solidityType, type) {
    return solidityType.isDynamicType(type) ||
@@ -28819,11 +28819,11 @@ module.exports = XMLHttpRequest;
 "use strict";
 
 
-var url = __webpack_require__(493)
+var url = __webpack_require__(500)
   , equal = __webpack_require__(390)
   , util = __webpack_require__(117)
   , SchemaObject = __webpack_require__(401)
-  , traverse = __webpack_require__(500);
+  , traverse = __webpack_require__(507);
 
 module.exports = resolve;
 
@@ -29209,15 +29209,15 @@ function errorSubclass(Subclass) {
 
 var f = __webpack_require__(56);
 
-var SolidityTypeAddress = __webpack_require__(548);
-var SolidityTypeBool = __webpack_require__(549);
-var SolidityTypeInt = __webpack_require__(550);
-var SolidityTypeUInt = __webpack_require__(551);
-var SolidityTypeDynamicBytes = __webpack_require__(552);
-var SolidityTypeString = __webpack_require__(553);
-var SolidityTypeReal = __webpack_require__(554);
-var SolidityTypeUReal = __webpack_require__(555);
-var SolidityTypeBytes = __webpack_require__(556);
+var SolidityTypeAddress = __webpack_require__(555);
+var SolidityTypeBool = __webpack_require__(556);
+var SolidityTypeInt = __webpack_require__(557);
+var SolidityTypeUInt = __webpack_require__(558);
+var SolidityTypeDynamicBytes = __webpack_require__(559);
+var SolidityTypeString = __webpack_require__(560);
+var SolidityTypeReal = __webpack_require__(561);
+var SolidityTypeUReal = __webpack_require__(562);
+var SolidityTypeBytes = __webpack_require__(563);
 
 var isDynamic = function (solidityType, type) {
    return solidityType.isDynamicType(type) ||
@@ -29462,15 +29462,15 @@ module.exports = coder;
 
 var f = __webpack_require__(57);
 
-var SolidityTypeAddress = __webpack_require__(582);
-var SolidityTypeBool = __webpack_require__(583);
-var SolidityTypeInt = __webpack_require__(584);
-var SolidityTypeUInt = __webpack_require__(585);
-var SolidityTypeDynamicBytes = __webpack_require__(586);
-var SolidityTypeString = __webpack_require__(587);
-var SolidityTypeReal = __webpack_require__(588);
-var SolidityTypeUReal = __webpack_require__(589);
-var SolidityTypeBytes = __webpack_require__(590);
+var SolidityTypeAddress = __webpack_require__(589);
+var SolidityTypeBool = __webpack_require__(590);
+var SolidityTypeInt = __webpack_require__(591);
+var SolidityTypeUInt = __webpack_require__(592);
+var SolidityTypeDynamicBytes = __webpack_require__(593);
+var SolidityTypeString = __webpack_require__(594);
+var SolidityTypeReal = __webpack_require__(595);
+var SolidityTypeUReal = __webpack_require__(596);
+var SolidityTypeBytes = __webpack_require__(597);
 
 var isDynamic = function (solidityType, type) {
    return solidityType.isDynamicType(type) ||
@@ -33583,17 +33583,24 @@ module.exports = SolidityEvent;
 /* 420 */,
 /* 421 */,
 /* 422 */,
-/* 423 */
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(424);
+__webpack_require__(431);
 
 __webpack_require__(176);
 
-var _web3Setup = __webpack_require__(425);
+var _web3Setup = __webpack_require__(432);
 
 var _web3Setup2 = _interopRequireDefault(_web3Setup);
 
@@ -33605,11 +33612,11 @@ var _2 = __webpack_require__(51);
 
 var _3 = _interopRequireDefault(_2);
 
-var _warning = __webpack_require__(611);
+var _warning = __webpack_require__(618);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _routingCodeGenerator = __webpack_require__(612);
+var _routingCodeGenerator = __webpack_require__(619);
 
 var _getRef = __webpack_require__(382);
 
@@ -33984,13 +33991,13 @@ Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
 });
 
 /***/ }),
-/* 424 */
+/* 431 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 425 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34027,15 +34034,15 @@ var getNum = function () {
 
 exports.getBuyData = getBuyData;
 
-var _FastCashMoneyPlus = __webpack_require__(426);
+var _FastCashMoneyPlus = __webpack_require__(433);
 
 var _FastCashMoneyPlus2 = _interopRequireDefault(_FastCashMoneyPlus);
 
-var _web = __webpack_require__(427);
+var _web = __webpack_require__(434);
 
 var _web2 = _interopRequireDefault(_web);
 
-var _truffleContract = __webpack_require__(486);
+var _truffleContract = __webpack_require__(493);
 
 var _truffleContract2 = _interopRequireDefault(_truffleContract);
 
@@ -34132,16 +34139,16 @@ function getBuyData(inst, routingCode, referal, value) {
 // })
 
 /***/ }),
-/* 426 */
+/* 433 */
 /***/ (function(module, exports) {
 
 module.exports = {"contractName":"FastCashMoneyPlus","abi":[{"constant":true,"inputs":[],"name":"creationDate","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_toRoutingCode","type":"bytes32"},{"name":"_amount","type":"uint256"}],"name":"transferToAccount","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"weeksFromCreation","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"routingCodes","outputs":[{"name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_amount","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[],"name":"totalInvestors","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"newCentralBanker","type":"address"}],"name":"setCentralBanker","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"getCurrentExchangeRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"centralBanker","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"USDWEI","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_routingCode","type":"bytes32"},{"name":"_referal","type":"bytes32"}],"name":"buy","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"referalBonus","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"routingCode","type":"bytes32"}],"name":"balanceOfRoutingCode","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_amount","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_wei","type":"uint256"}],"name":"updateUSDWEI","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_routingCode","type":"bytes32"},{"name":"_to","type":"address"}],"name":"transferRoutingCode","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_routingCode","type":"bytes32"}],"name":"createRoutingCode","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_week","type":"uint256"},{"name":"_value","type":"uint256"},{"name":"_usdwei","type":"uint256"}],"name":"getExchangeRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_newBonus","type":"uint256"}],"name":"updateReferalBonus","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"bytes32"}],"name":"routingCodeMap","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_address","type":"address"},{"indexed":false,"name":"_amount","type":"uint256"}],"name":"Sale","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}],"bytecode":"0x60606040526040805190810160405280601481526020017f466173742043617368204d6f6e657920506c7573000000000000000000000000815250600190805190602001906200005192919062000231565b506040805190810160405280600881526020017f4641535443415348000000000000000000000000000000000000000000000000815250600290805190602001906200009f92919062000231565b506012600360006101000a81548160ff021916908360ff1602179055506605543df729c000600955600a600b556000336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600360009054906101000a900460ff1660ff16600a0a620f4240026008819055507f656c656374726963474f445f504f574552767953347859363952000000000000905060068054806001018281620001689190620002b8565b9160005260206000209001600083909190915090600019169055503360046000836000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600854600560003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555042600a819055505062000337565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106200027457805160ff1916838001178555620002a5565b82800160010185558215620002a5579182015b82811115620002a457825182559160200191906001019062000287565b5b509050620002b49190620002e7565b5090565b815481835581811511620002e257818360005260206000209182019101620002e191906200030f565b5b505050565b6200030c91905b8082111562000308576000816000905550600101620002ee565b5090565b90565b6200033491905b808211156200033057600081600090555060010162000316565b5090565b90565b611b7e80620003476000396000f30060606040526004361061015f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806305b344101461016a57806306fdde0314610193578063095ea7b3146102215780631084a1fb1461027b57806317a7cd10146102c357806318160ddd146102ec5780632263e8b71461031557806323b872dd1461035457806329b8caff146103cd5780632adc7da3146103f6578063313ce5671461042f5780633ca967f31461045e578063506b56da1461048757806354fbde65146104dc57806359c8d6471461050557806363e0f8c71461052e57806370a08231146105575780637139b1ca146105a457806395d89b41146105df578063a9059cbb1461066d578063d5667d8a146106c7578063d9ca0b7f14610702578063dbeab27514610760578063dd62ed3e1461079f578063eccd8e0d1461080b578063edb649de14610854578063edf897931461088f575b6101676108f6565b50005b341561017557600080fd5b61017d610b26565b6040518082815260200191505060405180910390f35b341561019e57600080fd5b6101a6610b2c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101e65780820151818401526020810190506101cb565b50505050905090810190601f1680156102135780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561022c57600080fd5b610261600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610bca565b604051808215151515815260200191505060405180910390f35b341561028657600080fd5b6102a9600480803560001916906020019091908035906020019091905050610cbc565b604051808215151515815260200191505060405180910390f35b34156102ce57600080fd5b6102d6610d0c565b6040518082815260200191505060405180910390f35b34156102f757600080fd5b6102ff610d26565b6040518082815260200191505060405180910390f35b341561032057600080fd5b6103366004808035906020019091905050610d2c565b60405180826000191660001916815260200191505060405180910390f35b341561035f57600080fd5b6103b3600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610d50565b604051808215151515815260200191505060405180910390f35b34156103d857600080fd5b6103e0610e92565b6040518082815260200191505060405180910390f35b341561040157600080fd5b61042d600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610e9f565b005b341561043a57600080fd5b610442610f79565b604051808260ff1660ff16815260200191505060405180910390f35b341561046957600080fd5b610471610f8c565b6040518082815260200191505060405180910390f35b341561049257600080fd5b61049a610fae565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156104e757600080fd5b6104ef610fd3565b6040518082815260200191505060405180910390f35b61052c60048080356000191690602001909190803560001916906020019091905050610fd9565b005b341561053957600080fd5b6105416112d1565b6040518082815260200191505060405180910390f35b341561056257600080fd5b61058e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506112d7565b6040518082815260200191505060405180910390f35b34156105af57600080fd5b6105c96004808035600019169060200190919050506112ef565b6040518082815260200191505060405180910390f35b34156105ea57600080fd5b6105f2611378565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610632578082015181840152602081019050610617565b50505050905090810190601f16801561065f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561067857600080fd5b6106ad600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050611416565b604051808215151515815260200191505060405180910390f35b34156106d257600080fd5b6106e8600480803590602001909190505061142b565b604051808215151515815260200191505060405180910390f35b341561070d57600080fd5b61074660048080356000191690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050611498565b604051808215151515815260200191505060405180910390f35b341561076b57600080fd5b610785600480803560001916906020019091905050611578565b604051808215151515815260200191505060405180910390f35b34156107aa57600080fd5b6107f5600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506116cf565b6040518082815260200191505060405180910390f35b341561081657600080fd5b61083e6004808035906020019091908035906020019091908035906020019091905050611756565b6040518082815260200191505060405180910390f35b341561085f57600080fd5b61087560048080359060200190919050506117f4565b604051808215151515815260200191505060405180910390f35b341561089a57600080fd5b6108b4600480803560001916906020019091905050611861565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600080600080610904610d0c565b92503491506109168383600954611756565b905060008111151561092757600080fd5b80600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561099657600080fd5b80600560003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555080600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f193505050501515610ab257600080fd5b7fc6851889326b4ff916523ef06f539b4cf0b81d78fc6e0f97c30e6223d18319903382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a180935050505090565b600a5481565b60018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bc25780601f10610b9757610100808354040283529160200191610bc2565b820191906000526020600020905b815481529060010190602001808311610ba557829003601f168201915b505050505081565b600081600760003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b6000610d043360046000866000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1684611894565b905092915050565b600062093a80600a544203811515610d2057fe5b04905090565b60085481565b600681815481101515610d3b57fe5b90600052602060002090016000915090505481565b60008082600760008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205410151515610dde57600080fd5b610de9858585611894565b90508015610e805782600760008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008282540392505081905550610e89565b60009150610e8a565b5b509392505050565b6000600680549050905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610efa57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610f3657600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600360009054906101000a900460ff1681565b600080610f97610d0c565b9050610fa881600954600954611756565b91505090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60095481565b6000806000610fe66108f6565b9250600073ffffffffffffffffffffffffffffffffffffffff1660046000876000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156110635761106185611578565b505b60007f01000000000000000000000000000000000000000000000000000000000000000284600060208110151561109657fe5b1a7f0100000000000000000000000000000000000000000000000000000000000000027effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff19161415156112ca57600b54838115156110ef57fe5b04600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054111561116c57600b548381151561116457fe5b0491506111d0565b600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205491505b60046000856000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905081600560008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555081600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055505b5050505050565b600b5481565b60056020528060005260406000206000915090505481565b60008060046000846000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600560008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054915050919050565b60028054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561140e5780601f106113e35761010080835404028352916020019161140e565b820191906000526020600020905b8154815290600101906020018083116113f157829003601f168201915b505050505081565b6000611423338484611894565b905092915050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561148857600080fd5b8160098190555060019050919050565b60008060046000856000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561151357600080fd5b8260046000866000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600191505092915050565b60008073ffffffffffffffffffffffffffffffffffffffff1660046000846000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415156115ef57600080fd5b6000600560003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205411151561163d57600080fd5b3360046000846000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600680548060010182816116ab9190611b01565b91600052602060002090016000849091909150906000191690555060019050919050565b6000600760008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905092915050565b600080600080600080600060478a11156117735760479550611777565b8995505b60009450603286111561178b576032860394505b600a9350848401600360009054906101000a900460ff1660ff16870103925082600a0a60048a0202915084600a0a86600c0a8115156117c657fe5b0484600a0a898115156117d557fe5b0402905080828115156117e457fe5b0496505050505050509392505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561185157600080fd5b81600b8190555060019050919050565b60046020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff16141515156118d157600080fd5b3073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff161415151561190c57600080fd5b60008211151561191b57600080fd5b81600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561196957600080fd5b600560008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205482600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054011115156119f757600080fd5b81600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600560008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b815481835581811511611b2857818360005260206000209182019101611b279190611b2d565b5b505050565b611b4f91905b80821115611b4b576000816000905550600101611b33565b5090565b905600a165627a7a72305820b908f4529f4cb10b55281bc0bdd8e8fbbab26901b2604e9ad484453fdc606ecb0029","deployedBytecode":"0x60606040526004361061015f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806305b344101461016a57806306fdde0314610193578063095ea7b3146102215780631084a1fb1461027b57806317a7cd10146102c357806318160ddd146102ec5780632263e8b71461031557806323b872dd1461035457806329b8caff146103cd5780632adc7da3146103f6578063313ce5671461042f5780633ca967f31461045e578063506b56da1461048757806354fbde65146104dc57806359c8d6471461050557806363e0f8c71461052e57806370a08231146105575780637139b1ca146105a457806395d89b41146105df578063a9059cbb1461066d578063d5667d8a146106c7578063d9ca0b7f14610702578063dbeab27514610760578063dd62ed3e1461079f578063eccd8e0d1461080b578063edb649de14610854578063edf897931461088f575b6101676108f6565b50005b341561017557600080fd5b61017d610b26565b6040518082815260200191505060405180910390f35b341561019e57600080fd5b6101a6610b2c565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101e65780820151818401526020810190506101cb565b50505050905090810190601f1680156102135780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561022c57600080fd5b610261600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610bca565b604051808215151515815260200191505060405180910390f35b341561028657600080fd5b6102a9600480803560001916906020019091908035906020019091905050610cbc565b604051808215151515815260200191505060405180910390f35b34156102ce57600080fd5b6102d6610d0c565b6040518082815260200191505060405180910390f35b34156102f757600080fd5b6102ff610d26565b6040518082815260200191505060405180910390f35b341561032057600080fd5b6103366004808035906020019091905050610d2c565b60405180826000191660001916815260200191505060405180910390f35b341561035f57600080fd5b6103b3600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610d50565b604051808215151515815260200191505060405180910390f35b34156103d857600080fd5b6103e0610e92565b6040518082815260200191505060405180910390f35b341561040157600080fd5b61042d600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610e9f565b005b341561043a57600080fd5b610442610f79565b604051808260ff1660ff16815260200191505060405180910390f35b341561046957600080fd5b610471610f8c565b6040518082815260200191505060405180910390f35b341561049257600080fd5b61049a610fae565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34156104e757600080fd5b6104ef610fd3565b6040518082815260200191505060405180910390f35b61052c60048080356000191690602001909190803560001916906020019091905050610fd9565b005b341561053957600080fd5b6105416112d1565b6040518082815260200191505060405180910390f35b341561056257600080fd5b61058e600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506112d7565b6040518082815260200191505060405180910390f35b34156105af57600080fd5b6105c96004808035600019169060200190919050506112ef565b6040518082815260200191505060405180910390f35b34156105ea57600080fd5b6105f2611378565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610632578082015181840152602081019050610617565b50505050905090810190601f16801561065f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561067857600080fd5b6106ad600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050611416565b604051808215151515815260200191505060405180910390f35b34156106d257600080fd5b6106e8600480803590602001909190505061142b565b604051808215151515815260200191505060405180910390f35b341561070d57600080fd5b61074660048080356000191690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050611498565b604051808215151515815260200191505060405180910390f35b341561076b57600080fd5b610785600480803560001916906020019091905050611578565b604051808215151515815260200191505060405180910390f35b34156107aa57600080fd5b6107f5600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506116cf565b6040518082815260200191505060405180910390f35b341561081657600080fd5b61083e6004808035906020019091908035906020019091908035906020019091905050611756565b6040518082815260200191505060405180910390f35b341561085f57600080fd5b61087560048080359060200190919050506117f4565b604051808215151515815260200191505060405180910390f35b341561089a57600080fd5b6108b4600480803560001916906020019091905050611861565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600080600080610904610d0c565b92503491506109168383600954611756565b905060008111151561092757600080fd5b80600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561099657600080fd5b80600560003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555080600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f193505050501515610ab257600080fd5b7fc6851889326b4ff916523ef06f539b4cf0b81d78fc6e0f97c30e6223d18319903382604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390a180935050505090565b600a5481565b60018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bc25780601f10610b9757610100808354040283529160200191610bc2565b820191906000526020600020905b815481529060010190602001808311610ba557829003601f168201915b505050505081565b600081600760003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b6000610d043360046000866000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1684611894565b905092915050565b600062093a80600a544203811515610d2057fe5b04905090565b60085481565b600681815481101515610d3b57fe5b90600052602060002090016000915090505481565b60008082600760008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205410151515610dde57600080fd5b610de9858585611894565b90508015610e805782600760008773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008282540392505081905550610e89565b60009150610e8a565b5b509392505050565b6000600680549050905090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141515610efa57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151515610f3657600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b600360009054906101000a900460ff1681565b600080610f97610d0c565b9050610fa881600954600954611756565b91505090565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60095481565b6000806000610fe66108f6565b9250600073ffffffffffffffffffffffffffffffffffffffff1660046000876000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156110635761106185611578565b505b60007f01000000000000000000000000000000000000000000000000000000000000000284600060208110151561109657fe5b1a7f0100000000000000000000000000000000000000000000000000000000000000027effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff19161415156112ca57600b54838115156110ef57fe5b04600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054111561116c57600b548381151561116457fe5b0491506111d0565b600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205491505b60046000856000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905081600560008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555081600560008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055505b5050505050565b600b5481565b60056020528060005260406000206000915090505481565b60008060046000846000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050600560008273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054915050919050565b60028054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561140e5780601f106113e35761010080835404028352916020019161140e565b820191906000526020600020905b8154815290600101906020018083116113f157829003601f168201915b505050505081565b6000611423338484611894565b905092915050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561148857600080fd5b8160098190555060019050919050565b60008060046000856000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561151357600080fd5b8260046000866000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600191505092915050565b60008073ffffffffffffffffffffffffffffffffffffffff1660046000846000191660001916815260200190815260200160002060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff161415156115ef57600080fd5b6000600560003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205411151561163d57600080fd5b3360046000846000191660001916815260200190815260200160002060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600680548060010182816116ab9190611b01565b91600052602060002090016000849091909150906000191690555060019050919050565b6000600760008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905092915050565b600080600080600080600060478a11156117735760479550611777565b8995505b60009450603286111561178b576032860394505b600a9350848401600360009054906101000a900460ff1660ff16870103925082600a0a60048a0202915084600a0a86600c0a8115156117c657fe5b0484600a0a898115156117d557fe5b0402905080828115156117e457fe5b0496505050505050509392505050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561185157600080fd5b81600b8190555060019050919050565b60046020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff16141515156118d157600080fd5b3073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff161415151561190c57600080fd5b60008211151561191b57600080fd5b81600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561196957600080fd5b600560008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205482600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054011115156119f757600080fd5b81600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600560008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b815481835581811511611b2857818360005260206000209182019101611b279190611b2d565b5b505050565b611b4f91905b80821115611b4b576000816000905550600101611b33565b5090565b905600a165627a7a72305820b908f4529f4cb10b55281bc0bdd8e8fbbab26901b2604e9ad484453fdc606ecb0029","sourceMap":"6738:60:0:-;;;846:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;893:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;954:2;930:26;;;;;;;;;;;;;;;;;;;;2510:16;2489:37;;2637:2;2610:29;;2839:32;502:10;486:13;;:26;;;;;;;;;;;;;;;;;;2823:8;;;;;;;;;;;2815:17;;2809:2;:23;2799:7;:33;2785:11;:47;;;;2839:63;;;2908:12;:43;;;;;;;;;;;:::i;:::-;;;;;;;;;;2926:24;2908:43;;;;;;;;;;;;3000:10;2957:14;:40;2972:24;2957:40;;;;;;;;;;;;;;;;;;:53;;;;;;;;;;;;;;;;;;3041:11;;3017:9;:21;3027:10;3017:21;;;;;;;;;;;;;;;:35;;;;3073:3;3058:12;:18;;;;2691:390;6738:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;","deployedSourceMap":"6738:60:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5185:11;:9;:11::i;:::-;;6738:60;2530:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;846:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2053:190:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6239:177;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3363:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2459:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1124:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5913:322;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1326:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;608:167;;;;;;;;;;;;;;;;;;;;;;;;;;;;930:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3967:150;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;400:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2489:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4570:585;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2610:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1078:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1158:164;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;893:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5779:130:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3085:124;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;6491:243;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1417:283;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2246:139;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3459:504;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3213:146;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1024:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4121:445;4159:4;4171:10;4209:11;4239:15;4184:19;:17;:19::i;:::-;4171:32;;4223:9;4209:23;;4257:38;4273:5;4280:6;4288;;4257:15;:38::i;:::-;4239:56;;4323:1;4310:10;:14;4302:23;;;;;;;;4367:10;4339:9;:24;4349:13;;;;;;;;;;;4339:24;;;;;;;;;;;;;;;;:38;;4331:47;;;;;;;;4410:10;4385:9;:21;4395:10;4385:21;;;;;;;;;;;;;;;;:35;;;;;;;;;;;4454:10;4426:9;:24;4436:13;;;;;;;;;;;4426:24;;;;;;;;;;;;;;;;:38;;;;;;;;;;;4471:13;;;;;;;;;;;:22;;:33;4494:9;4471:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;4510:28;4515:10;4527;4510:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;4551:10;4544:17;;4121:445;;;;:::o;2530:24::-;;;;:::o;846:43::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;2053:190::-;2119:12;2171:6;2139:7;:19;2147:10;2139:19;;;;;;;;;;;;;;;:29;2159:8;2139:29;;;;;;;;;;;;;;;:38;;;;2204:8;2183:38;;2192:10;2183:38;;;2214:6;2183:38;;;;;;;;;;;;;;;;;;2234:4;2227:11;;2053:190;;;;:::o;6239:177::-;6322:12;6349:62;6359:10;6371:14;:30;6386:14;6371:30;;;;;;;;;;;;;;;;;;;;;;;;;;;6403:7;6349:9;:62::i;:::-;6342:69;;6239:177;;;;:::o;3363:92::-;3401:4;2590:16;3427:12;;3421:3;:18;3420:30;;;;;;;;3413:37;;3363:92;:::o;2459:26::-;;;;:::o;1124:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5913:322::-;5995:12;6068:19;6053:7;6023;:14;6031:5;6023:14;;;;;;;;;;;;;;;:26;6038:10;6023:26;;;;;;;;;;;;;;;;:37;;6015:46;;;;;;;;6090:30;6100:5;6107:3;6112:7;6090:9;:30::i;:::-;6068:52;;6130:14;6126:105;;;6184:7;6154;:14;6162:5;6154:14;;;;;;;;;;;;;;;:26;6169:10;6154:26;;;;;;;;;;;;;;;;:37;;;;;;;;;;;6126:105;;;6219:5;6212:12;;;;6126:105;5913:322;;;;;;;:::o;1326:87::-;1370:4;1389:12;:19;;;;1382:26;;1326:87;:::o;608:167::-;578:13;;;;;;;;;;;564:27;;:10;:27;;;556:36;;;;;;;;729:1;701:30;;:16;:30;;;;693:39;;;;;;;;754:16;738:13;;:32;;;;;;;;;;;;;;;;;;608:167;:::o;930:26::-;;;;;;;;;;;;;:::o;3967:150::-;4017:4;4029:10;4042:19;:17;:19::i;:::-;4029:32;;4074:38;4090:5;4097:6;;4105;;4074:15;:38::i;:::-;4067:45;;3967:150;;:::o;400:28::-;;;;;;;;;;;;;:::o;2489:37::-;;;;:::o;4570:585::-;4637:15;4803;5012:17;4655:11;:9;:11::i;:::-;4637:29;;4717:1;4677:42;;:14;:28;4692:12;4677:28;;;;;;;;;;;;;;;;;;;;;;;;;;;:42;;;4673:94;;;4729:31;4747:12;4729:17;:31::i;:::-;;4673:94;4792:1;4777:16;;:8;4786:1;4777:11;;;;;;;;;;;;:16;;;;;4773:378;;;4871:12;;4858:10;:25;;;;;;;;4830:9;:24;4840:13;;;;;;;;;;;4830:24;;;;;;;;;;;;;;;;:54;4826:179;;;4922:12;;4909:10;:25;;;;;;;;4896:38;;4826:179;;;4972:9;:24;4982:13;;;;;;;;;;;4972:24;;;;;;;;;;;;;;;;4959:37;;4826:179;5032:14;:24;5047:8;5032:24;;;;;;;;;;;;;;;;;;;;;;;;;;;5012:44;;5088:10;5064:9;:20;5074:9;5064:20;;;;;;;;;;;;;;;;:34;;;;;;;;;;;5134:10;5106:9;:24;5116:13;;;;;;;;;;;5106:24;;;;;;;;;;;;;;;;:38;;;;;;;;;;;4773:378;4570:585;;;;;:::o;2610:29::-;;;;:::o;1078:42::-;;;;;;;;;;;;;;;;;:::o;1158:164::-;1227:4;1239:16;1258:14;:27;1273:11;1258:27;;;;;;;;;;;;;;;;;;;;;;;;;;;1239:46;;1298:9;:19;1308:8;1298:19;;;;;;;;;;;;;;;;1291:26;;1158:164;;;;:::o;893:33::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5779:130::-;5842:12;5869:35;5879:10;5891:3;5896:7;5869:9;:35::i;:::-;5862:42;;5779:130;;;;:::o;3085:124::-;3154:12;578:13;;;;;;;;;;;564:27;;:10;:27;;;556:36;;;;;;;;3183:4;3174:6;:13;;;;3200:4;3193:11;;3085:124;;;:::o;6491:243::-;6573:12;6593:13;6609:14;:28;6624:12;6609:28;;;;;;;;;;;;;;;;;;;;;;;;;;;6593:44;;6665:5;6651:19;;:10;:19;;;6643:28;;;;;;;;6709:3;6678:14;:28;6693:12;6678:28;;;;;;;;;;;;;;;;;;:34;;;;;;;;;;;;;;;;;;6725:4;6718:11;;6491:243;;;;;:::o;1417:283::-;1482:12;1550:1;1510:42;;:14;:28;1525:12;1510:28;;;;;;;;;;;;;;;;;;;;;;;;;;;:42;;;1502:51;;;;;;;;1591:1;1567:9;:21;1577:10;1567:21;;;;;;;;;;;;;;;;:25;1559:34;;;;;;;;1631:10;1600:14;:28;1615:12;1600:28;;;;;;;;;;;;;;;;;;:41;;;;;;;;;;;;;;;;;;1647:12;:31;;;;;;;;;;;:::i;:::-;;;;;;;;;;1665:12;1647:31;;;;;;;;;;;;1691:4;1684:11;;1417:283;;;:::o;2246:139::-;2326:14;2355:7;:15;2363:6;2355:15;;;;;;;;;;;;;;;:25;2371:8;2355:25;;;;;;;;;;;;;;;;2348:32;;2246:139;;;;:::o;3459:504::-;3539:4;3551:11;3651:13;3734:11;3756:6;3811;3852;3580:2;3572:5;:10;3568:77;;;3601:2;3592:11;;3568:77;;;3633:5;3624:14;;3568:77;3667:1;3651:17;;3687:2;3678:6;:11;3674:54;;;3719:2;3710:6;:11;3699:22;;3674:54;3748:2;3734:16;;3795:8;3786:6;:17;3774:8;;;;;;;;;;;3765:17;;:6;:17;:39;3756:48;;3844:1;3838:2;:7;3829:1;3820:6;:10;:26;3811:35;;3929:8;3923:2;:14;3908:6;3902:2;:12;3897:41;;;;;;;;3884:6;3878:2;:12;3863:7;:28;;;;;;;;3861:78;3852:87;;3957:1;3953;:5;;;;;;;;3946:12;;3459:504;;;;;;;;;;;:::o;3213:146::-;3293:12;578:13;;;;;;;;;;;564:27;;:10;:27;;;556:36;;;;;;;;3328:9;3313:12;:24;;;;3350:4;3343:11;;3213:146;;;:::o;1024:50::-;;;;;;;;;;;;;;;;;;;;;;:::o;5346:429::-;5441:12;5484:1;5469:17;;:3;:17;;;;5461:26;;;;;;;;5516:4;5501:20;;:3;:20;;;;5493:29;;;;;;;;5546:1;5536:7;:11;5528:20;;;;;;;;5582:7;5562:9;:16;5572:5;5562:16;;;;;;;;;;;;;;;;:27;;5554:36;;;;;;;;5631:9;:14;5641:3;5631:14;;;;;;;;;;;;;;;;5621:7;5604:9;:14;5614:3;5604:14;;;;;;;;;;;;;;;;:24;:41;5596:50;;;;;;;;5673:7;5653:9;:16;5663:5;5653:16;;;;;;;;;;;;;;;;:27;;;;;;;;;;;5704:7;5686:9;:14;5696:3;5686:14;;;;;;;;;;;;;;;;:25;;;;;;;;;;;5739:3;5718:34;;5727:10;5718:34;;;5744:7;5718:34;;;;;;;;;;;;;;;;;;5766:4;5759:11;;5346:429;;;;;:::o;6738:60::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o","source":"pragma solidity ^0.4.17;\n/*\n  Copyright 2017, FastCashMoneyPlus.biz\n\n  This is highly propriatary software. Under no circumstances is anyone, except for employees of\n  FastCashMoneyPlus.biz, authorized to modify, distribute, use, or otherwise profit from these\n  contracts. Anyone attempting to do so will be persecuted under the full extent of the law.\n*/\n\ncontract FastCashMoneyPlusPermissions {\n  address public centralBanker;\n\n  function FastCashMoneyPlusPermissions() public {\n    centralBanker = msg.sender;\n  }\n\n  modifier onlyCentralBanker() {\n    require(msg.sender == centralBanker);\n    _;\n  }\n\n  function setCentralBanker(address newCentralBanker) external onlyCentralBanker {\n    require(newCentralBanker != address(0));\n    centralBanker = newCentralBanker;\n  }\n}\n\ncontract FastCashMoneyPlusBase is FastCashMoneyPlusPermissions {\n  string public name = \"Fast Cash Money Plus\";\n  string public symbol = \"FASTCASH\";\n  uint8 public decimals = 18;\n}\n\ncontract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {\n  mapping (bytes32 => address) public routingCodeMap;\n  mapping (address => uint) public balanceOf;\n  bytes32[] public routingCodes;\n\n  function balanceOfRoutingCode(bytes32 routingCode) external returns (uint) {\n    address _address = routingCodeMap[routingCode];\n    return balanceOf[_address];\n  }\n\n  function totalInvestors() external returns (uint) {\n    return routingCodes.length;\n  }\n\n  function createRoutingCode(bytes32 _routingCode) public returns (bool success) {\n    require(routingCodeMap[_routingCode] == address(0));\n    require(balanceOf[msg.sender] > 0);\n\n    routingCodeMap[_routingCode] = msg.sender;\n    routingCodes.push(_routingCode);\n    return true;\n  }\n\n  // add a function that checks if an account exists\n}\n\n// Maintain ERC20 compliance -- allow other contracts to access accounts\ncontract FastCashMoneyPlusAccessControl is FastCashMoneyPlusStorage {\n  mapping (address => mapping (address => uint)) internal allowed;\n\n  event Approval(address indexed _owner, address indexed _spender, uint _value);\n\n  function approve(address _spender, uint _value) external returns (bool success) {\n    allowed[msg.sender][_spender] = _value;\n    Approval(msg.sender, _spender, _value);\n    return true;\n  }\n  function allowance(address _owner, address _spender) external constant returns (uint remaining) {\n    return allowed[_owner][_spender];\n  }\n}\n\ncontract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {\n  uint256 public totalSupply;\n  uint public USDWEI = 1500000000000000;\n  uint public creationDate;\n  uint private constant oneWeek = 60 * 60 * 24 * 7;\n  uint public referalBonus = 10;\n\n  event Sale(address _address, uint _amount);\n\n  function FastCashMoneyPlusSales() public {\n    // need to adjust total supply by decimals\n    totalSupply = 1000000 * 10 ** uint256(decimals);\n\n    bytes32 centralBankerRoutingCode = \"electricGOD_POWERvyS4xY69R\";\n    routingCodes.push(centralBankerRoutingCode);\n    routingCodeMap[centralBankerRoutingCode] = msg.sender;\n\n    balanceOf[msg.sender] = totalSupply;\n    creationDate = now;\n  }\n\n  function updateUSDWEI(uint _wei) external onlyCentralBanker returns (bool success) {\n    USDWEI = _wei;\n    return true;\n  }\n\n  function updateReferalBonus(uint _newBonus) external onlyCentralBanker returns (bool success) {\n    referalBonus = _newBonus;\n    return true;\n  }\n\n  function weeksFromCreation() returns (uint) {\n    return (now - creationDate) / oneWeek;\n  }\n\n  function getExchangeRate(uint _week, uint _value, uint _usdwei) public returns (uint) {\n    uint __week;\n    if (_week > 71) {\n      __week = 71;\n    } else {\n      __week = _week;\n    }\n\n    uint extraAdj = 0;\n    if (__week > 50) {\n      extraAdj = __week - 50;\n    }\n\n    uint minAdj = 10;\n    uint x = __week + decimals - (minAdj + extraAdj);\n\n    uint n = _value * 4 * uint(10 ** x);\n    uint d = ( _usdwei / uint(10 ** minAdj) ) * (uint(12 ** __week) / uint(10 ** extraAdj));\n\n    return n / d;\n  }\n\n  function getCurrentExchangeRate() public returns (uint) {\n    uint _week = weeksFromCreation();\n    return getExchangeRate(_week, USDWEI, USDWEI);\n  }\n\n  function _makeSale() private returns (uint) {\n    uint _week = weeksFromCreation();\n    uint _value = msg.value;\n\n    uint moneyBucks = getExchangeRate(_week, _value, USDWEI);\n\n    require(moneyBucks > 0);\n    require(balanceOf[centralBanker] >= moneyBucks);\n\n    balanceOf[msg.sender] += moneyBucks;\n    balanceOf[centralBanker] -= moneyBucks;\n\n    centralBanker.transfer(msg.value);\n    Sale(msg.sender, moneyBucks);\n    return moneyBucks;\n  }\n\n  function buy(bytes32 _routingCode, bytes32 _referal) payable {\n    uint moneyBucks = _makeSale();\n\n    if (routingCodeMap[_routingCode] == address(0)) {\n      createRoutingCode(_routingCode);\n    }\n\n    if (_referal[0] != 0) {\n      uint referalFee;\n      if (balanceOf[centralBanker] > (moneyBucks / referalBonus)) {\n        referalFee = moneyBucks / referalBonus;\n      } else {\n        referalFee = balanceOf[centralBanker];\n      }\n      address reference = routingCodeMap[_referal];\n      balanceOf[reference] += referalFee;\n      balanceOf[centralBanker] -= referalFee;\n    }\n  }\n\n  function () payable {\n    _makeSale();\n  }\n}\n\ncontract FastCashMoneyPlusTransfer is FastCashMoneyPlusSales {\n  event Transfer(address indexed _from, address indexed _to, uint _value);\n\n  function _transfer(\n    address _from,\n    address _to,\n    uint _amount\n  ) internal returns (bool success) {\n    require(_to != address(0));\n    require(_to != address(this));\n    require(_amount > 0);\n    require(balanceOf[_from] >= _amount);\n    require(balanceOf[_to] + _amount > balanceOf[_to]);\n\n    balanceOf[_from] -= _amount;\n    balanceOf[_to] += _amount;\n\n    Transfer(msg.sender, _to, _amount);\n\n    return true;\n  }\n\n  function transfer(address _to, uint _amount) external returns (bool success) {\n    return _transfer(msg.sender, _to, _amount);\n  }\n\n  function transferFrom(address _from, address _to, uint _amount) external returns (bool success) {\n    require(allowed[_from][msg.sender] >= _amount);\n\n    bool tranferSuccess = _transfer(_from, _to, _amount);\n    if (tranferSuccess) {\n      allowed[_from][msg.sender] -= _amount;\n    } else {\n      return false;\n    }\n  }\n\n  function transferToAccount(bytes32 _toRoutingCode, uint _amount) external returns (bool success) {\n    return _transfer(msg.sender, routingCodeMap[_toRoutingCode], _amount);\n  }\n\n  // need to play around with this to figure out some of the specifics\n  function transferRoutingCode(bytes32 _routingCode, address _to) external returns (bool success) {\n    address owner = routingCodeMap[_routingCode];\n    require(msg.sender == owner);\n\n    routingCodeMap[_routingCode] = _to;\n    return true;\n  }\n}\n\ncontract FastCashMoneyPlus is FastCashMoneyPlusTransfer {\n\n}\n","sourcePath":"/Users/spikelny/Desktop/projects/fastcash-ico/contracts/FastCashMoneyPlus.sol","ast":{"attributes":{"absolutePath":"/Users/spikelny/Desktop/projects/fastcash-ico/contracts/FastCashMoneyPlus.sol","exportedSymbols":{"FastCashMoneyPlus":[783],"FastCashMoneyPlusAccessControl":[200],"FastCashMoneyPlusBase":[56],"FastCashMoneyPlusPermissions":[44],"FastCashMoneyPlusSales":[581],"FastCashMoneyPlusStorage":[139],"FastCashMoneyPlusTransfer":[780]}},"children":[{"attributes":{"literals":["solidity","^","0.4",".17"]},"id":1,"name":"PragmaDirective","src":"0:24:0"},{"attributes":{"baseContracts":[null],"contractDependencies":[null],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[44],"name":"FastCashMoneyPlusPermissions","scope":784},"children":[{"attributes":{"constant":false,"name":"centralBanker","scope":44,"stateVariable":true,"storageLocation":"default","type":"address","value":null,"visibility":"public"},"children":[{"attributes":{"name":"address","type":"address"},"id":2,"name":"ElementaryTypeName","src":"400:7:0"}],"id":3,"name":"VariableDeclaration","src":"400:28:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":true,"modifiers":[null],"name":"FastCashMoneyPlusPermissions","payable":false,"scope":44,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":4,"name":"ParameterList","src":"470:2:0"},{"attributes":{"parameters":[null]},"children":[],"id":5,"name":"ParameterList","src":"480:0:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":6,"name":"Identifier","src":"486:13:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":7,"name":"Identifier","src":"502:3:0"}],"id":8,"name":"MemberAccess","src":"502:10:0"}],"id":9,"name":"Assignment","src":"486:26:0"}],"id":10,"name":"ExpressionStatement","src":"486:26:0"}],"id":11,"name":"Block","src":"480:37:0"}],"id":12,"name":"FunctionDefinition","src":"433:84:0"},{"attributes":{"name":"onlyCentralBanker","visibility":"internal"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":13,"name":"ParameterList","src":"547:2:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":14,"name":"Identifier","src":"556:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_address","typeString":"address"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"==","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":15,"name":"Identifier","src":"564:3:0"}],"id":16,"name":"MemberAccess","src":"564:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":17,"name":"Identifier","src":"578:13:0"}],"id":18,"name":"BinaryOperation","src":"564:27:0"}],"id":19,"name":"FunctionCall","src":"556:36:0"}],"id":20,"name":"ExpressionStatement","src":"556:36:0"},{"id":21,"name":"PlaceholderStatement","src":"598:1:0"}],"id":22,"name":"Block","src":"550:54:0"}],"id":23,"name":"ModifierDefinition","src":"521:83:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"name":"setCentralBanker","payable":false,"scope":44,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"newCentralBanker","scope":43,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":24,"name":"ElementaryTypeName","src":"634:7:0"}],"id":25,"name":"VariableDeclaration","src":"634:24:0"}],"id":26,"name":"ParameterList","src":"633:26:0"},{"attributes":{"parameters":[null]},"children":[],"id":29,"name":"ParameterList","src":"687:0:0"},{"attributes":{"arguments":[null]},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":23,"type":"modifier ()","value":"onlyCentralBanker"},"id":27,"name":"Identifier","src":"669:17:0"}],"id":28,"name":"ModifierInvocation","src":"669:17:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":30,"name":"Identifier","src":"693:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_address","typeString":"address"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"!=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":25,"type":"address","value":"newCentralBanker"},"id":31,"name":"Identifier","src":"701:16:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"address","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(address)","value":"address"},"id":32,"name":"ElementaryTypeNameExpression","src":"721:7:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":33,"name":"Literal","src":"729:1:0"}],"id":34,"name":"FunctionCall","src":"721:10:0"}],"id":35,"name":"BinaryOperation","src":"701:30:0"}],"id":36,"name":"FunctionCall","src":"693:39:0"}],"id":37,"name":"ExpressionStatement","src":"693:39:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":38,"name":"Identifier","src":"738:13:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":25,"type":"address","value":"newCentralBanker"},"id":39,"name":"Identifier","src":"754:16:0"}],"id":40,"name":"Assignment","src":"738:32:0"}],"id":41,"name":"ExpressionStatement","src":"738:32:0"}],"id":42,"name":"Block","src":"687:88:0"}],"id":43,"name":"FunctionDefinition","src":"608:167:0"}],"id":44,"name":"ContractDefinition","src":"358:419:0"},{"attributes":{"contractDependencies":[44],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[56,44],"name":"FastCashMoneyPlusBase","scope":784},"children":[{"attributes":{"arguments":[null]},"children":[{"attributes":{"contractScope":null,"name":"FastCashMoneyPlusPermissions","referencedDeclaration":44,"type":"contract FastCashMoneyPlusPermissions"},"id":45,"name":"UserDefinedTypeName","src":"813:28:0"}],"id":46,"name":"InheritanceSpecifier","src":"813:28:0"},{"attributes":{"constant":false,"name":"name","scope":56,"stateVariable":true,"storageLocation":"default","type":"string storage ref","visibility":"public"},"children":[{"attributes":{"name":"string","type":"string storage pointer"},"id":47,"name":"ElementaryTypeName","src":"846:6:0"},{"attributes":{"argumentTypes":null,"hexvalue":"466173742043617368204d6f6e657920506c7573","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"string","type":"literal_string \"Fast Cash Money Plus\"","value":"Fast Cash Money Plus"},"id":48,"name":"Literal","src":"867:22:0"}],"id":49,"name":"VariableDeclaration","src":"846:43:0"},{"attributes":{"constant":false,"name":"symbol","scope":56,"stateVariable":true,"storageLocation":"default","type":"string storage ref","visibility":"public"},"children":[{"attributes":{"name":"string","type":"string storage pointer"},"id":50,"name":"ElementaryTypeName","src":"893:6:0"},{"attributes":{"argumentTypes":null,"hexvalue":"4641535443415348","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"string","type":"literal_string \"FASTCASH\"","value":"FASTCASH"},"id":51,"name":"Literal","src":"916:10:0"}],"id":52,"name":"VariableDeclaration","src":"893:33:0"},{"attributes":{"constant":false,"name":"decimals","scope":56,"stateVariable":true,"storageLocation":"default","type":"uint8","visibility":"public"},"children":[{"attributes":{"name":"uint8","type":"uint8"},"id":53,"name":"ElementaryTypeName","src":"930:5:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3138","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 18","value":"18"},"id":54,"name":"Literal","src":"954:2:0"}],"id":55,"name":"VariableDeclaration","src":"930:26:0"}],"id":56,"name":"ContractDefinition","src":"779:180:0"},{"attributes":{"contractDependencies":[44,56],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[139,56,44],"name":"FastCashMoneyPlusStorage","scope":784},"children":[{"attributes":{"arguments":[null]},"children":[{"attributes":{"contractScope":null,"name":"FastCashMoneyPlusBase","referencedDeclaration":56,"type":"contract FastCashMoneyPlusBase"},"id":57,"name":"UserDefinedTypeName","src":"998:21:0"}],"id":58,"name":"InheritanceSpecifier","src":"998:21:0"},{"attributes":{"constant":false,"name":"routingCodeMap","scope":139,"stateVariable":true,"storageLocation":"default","type":"mapping(bytes32 => address)","value":null,"visibility":"public"},"children":[{"attributes":{"type":"mapping(bytes32 => address)"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":59,"name":"ElementaryTypeName","src":"1033:7:0"},{"attributes":{"name":"address","type":"address"},"id":60,"name":"ElementaryTypeName","src":"1044:7:0"}],"id":61,"name":"Mapping","src":"1024:28:0"}],"id":62,"name":"VariableDeclaration","src":"1024:50:0"},{"attributes":{"constant":false,"name":"balanceOf","scope":139,"stateVariable":true,"storageLocation":"default","type":"mapping(address => uint256)","value":null,"visibility":"public"},"children":[{"attributes":{"type":"mapping(address => uint256)"},"children":[{"attributes":{"name":"address","type":"address"},"id":63,"name":"ElementaryTypeName","src":"1087:7:0"},{"attributes":{"name":"uint","type":"uint256"},"id":64,"name":"ElementaryTypeName","src":"1098:4:0"}],"id":65,"name":"Mapping","src":"1078:25:0"}],"id":66,"name":"VariableDeclaration","src":"1078:42:0"},{"attributes":{"constant":false,"name":"routingCodes","scope":139,"stateVariable":true,"storageLocation":"default","type":"bytes32[] storage ref","value":null,"visibility":"public"},"children":[{"attributes":{"length":null,"type":"bytes32[] storage pointer"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":67,"name":"ElementaryTypeName","src":"1124:7:0"}],"id":68,"name":"ArrayTypeName","src":"1124:9:0"}],"id":69,"name":"VariableDeclaration","src":"1124:29:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"balanceOfRoutingCode","payable":false,"scope":139,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"routingCode","scope":87,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":70,"name":"ElementaryTypeName","src":"1188:7:0"}],"id":71,"name":"VariableDeclaration","src":"1188:19:0"}],"id":72,"name":"ParameterList","src":"1187:21:0"},{"children":[{"attributes":{"constant":false,"name":"","scope":87,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":73,"name":"ElementaryTypeName","src":"1227:4:0"}],"id":74,"name":"VariableDeclaration","src":"1227:4:0"}],"id":75,"name":"ParameterList","src":"1226:6:0"},{"children":[{"attributes":{"assignments":[77]},"children":[{"attributes":{"constant":false,"name":"_address","scope":87,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":76,"name":"ElementaryTypeName","src":"1239:7:0"}],"id":77,"name":"VariableDeclaration","src":"1239:16:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":78,"name":"Identifier","src":"1258:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":71,"type":"bytes32","value":"routingCode"},"id":79,"name":"Identifier","src":"1273:11:0"}],"id":80,"name":"IndexAccess","src":"1258:27:0"}],"id":81,"name":"VariableDeclarationStatement","src":"1239:46:0"},{"attributes":{"functionReturnParameters":75},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":82,"name":"Identifier","src":"1298:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":77,"type":"address","value":"_address"},"id":83,"name":"Identifier","src":"1308:8:0"}],"id":84,"name":"IndexAccess","src":"1298:19:0"}],"id":85,"name":"Return","src":"1291:26:0"}],"id":86,"name":"Block","src":"1233:89:0"}],"id":87,"name":"FunctionDefinition","src":"1158:164:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"totalInvestors","payable":false,"scope":139,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":88,"name":"ParameterList","src":"1349:2:0"},{"children":[{"attributes":{"constant":false,"name":"","scope":96,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":89,"name":"ElementaryTypeName","src":"1370:4:0"}],"id":90,"name":"VariableDeclaration","src":"1370:4:0"}],"id":91,"name":"ParameterList","src":"1369:6:0"},{"children":[{"attributes":{"functionReturnParameters":91},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"member_name":"length","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":69,"type":"bytes32[] storage ref","value":"routingCodes"},"id":92,"name":"Identifier","src":"1389:12:0"}],"id":93,"name":"MemberAccess","src":"1389:19:0"}],"id":94,"name":"Return","src":"1382:26:0"}],"id":95,"name":"Block","src":"1376:37:0"}],"id":96,"name":"FunctionDefinition","src":"1326:87:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"createRoutingCode","payable":false,"scope":139,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"_routingCode","scope":138,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":97,"name":"ElementaryTypeName","src":"1444:7:0"}],"id":98,"name":"VariableDeclaration","src":"1444:20:0"}],"id":99,"name":"ParameterList","src":"1443:22:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":138,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":100,"name":"ElementaryTypeName","src":"1482:4:0"}],"id":101,"name":"VariableDeclaration","src":"1482:12:0"}],"id":102,"name":"ParameterList","src":"1481:14:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":103,"name":"Identifier","src":"1502:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_address","typeString":"address"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"==","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":104,"name":"Identifier","src":"1510:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":98,"type":"bytes32","value":"_routingCode"},"id":105,"name":"Identifier","src":"1525:12:0"}],"id":106,"name":"IndexAccess","src":"1510:28:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"address","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(address)","value":"address"},"id":107,"name":"ElementaryTypeNameExpression","src":"1542:7:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":108,"name":"Literal","src":"1550:1:0"}],"id":109,"name":"FunctionCall","src":"1542:10:0"}],"id":110,"name":"BinaryOperation","src":"1510:42:0"}],"id":111,"name":"FunctionCall","src":"1502:51:0"}],"id":112,"name":"ExpressionStatement","src":"1502:51:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":113,"name":"Identifier","src":"1559:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":114,"name":"Identifier","src":"1567:9:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":115,"name":"Identifier","src":"1577:3:0"}],"id":116,"name":"MemberAccess","src":"1577:10:0"}],"id":117,"name":"IndexAccess","src":"1567:21:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":118,"name":"Literal","src":"1591:1:0"}],"id":119,"name":"BinaryOperation","src":"1567:25:0"}],"id":120,"name":"FunctionCall","src":"1559:34:0"}],"id":121,"name":"ExpressionStatement","src":"1559:34:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"address"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":122,"name":"Identifier","src":"1600:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":98,"type":"bytes32","value":"_routingCode"},"id":123,"name":"Identifier","src":"1615:12:0"}],"id":124,"name":"IndexAccess","src":"1600:28:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":125,"name":"Identifier","src":"1631:3:0"}],"id":126,"name":"MemberAccess","src":"1631:10:0"}],"id":127,"name":"Assignment","src":"1600:41:0"}],"id":128,"name":"ExpressionStatement","src":"1600:41:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bytes32","typeString":"bytes32"}],"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"push","referencedDeclaration":null,"type":"function (bytes32) returns (uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":69,"type":"bytes32[] storage ref","value":"routingCodes"},"id":129,"name":"Identifier","src":"1647:12:0"}],"id":131,"name":"MemberAccess","src":"1647:17:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":98,"type":"bytes32","value":"_routingCode"},"id":132,"name":"Identifier","src":"1665:12:0"}],"id":133,"name":"FunctionCall","src":"1647:31:0"}],"id":134,"name":"ExpressionStatement","src":"1647:31:0"},{"attributes":{"functionReturnParameters":102},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"74727565","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"bool","type":"bool","value":"true"},"id":135,"name":"Literal","src":"1691:4:0"}],"id":136,"name":"Return","src":"1684:11:0"}],"id":137,"name":"Block","src":"1496:204:0"}],"id":138,"name":"FunctionDefinition","src":"1417:283:0"}],"id":139,"name":"ContractDefinition","src":"961:795:0"},{"attributes":{"contractDependencies":[44,56,139],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[200,139,56,44],"name":"FastCashMoneyPlusAccessControl","scope":784},"children":[{"attributes":{"arguments":[null]},"children":[{"attributes":{"contractScope":null,"name":"FastCashMoneyPlusStorage","referencedDeclaration":139,"type":"contract FastCashMoneyPlusStorage"},"id":140,"name":"UserDefinedTypeName","src":"1874:24:0"}],"id":141,"name":"InheritanceSpecifier","src":"1874:24:0"},{"attributes":{"constant":false,"name":"allowed","scope":200,"stateVariable":true,"storageLocation":"default","type":"mapping(address => mapping(address => uint256))","value":null,"visibility":"internal"},"children":[{"attributes":{"type":"mapping(address => mapping(address => uint256))"},"children":[{"attributes":{"name":"address","type":"address"},"id":142,"name":"ElementaryTypeName","src":"1912:7:0"},{"attributes":{"type":"mapping(address => uint256)"},"children":[{"attributes":{"name":"address","type":"address"},"id":143,"name":"ElementaryTypeName","src":"1932:7:0"},{"attributes":{"name":"uint","type":"uint256"},"id":144,"name":"ElementaryTypeName","src":"1943:4:0"}],"id":145,"name":"Mapping","src":"1923:25:0"}],"id":146,"name":"Mapping","src":"1903:46:0"}],"id":147,"name":"VariableDeclaration","src":"1903:63:0"},{"attributes":{"anonymous":false,"name":"Approval"},"children":[{"children":[{"attributes":{"constant":false,"indexed":true,"name":"_owner","scope":155,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":148,"name":"ElementaryTypeName","src":"1986:7:0"}],"id":149,"name":"VariableDeclaration","src":"1986:22:0"},{"attributes":{"constant":false,"indexed":true,"name":"_spender","scope":155,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":150,"name":"ElementaryTypeName","src":"2010:7:0"}],"id":151,"name":"VariableDeclaration","src":"2010:24:0"},{"attributes":{"constant":false,"indexed":false,"name":"_value","scope":155,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":152,"name":"ElementaryTypeName","src":"2036:4:0"}],"id":153,"name":"VariableDeclaration","src":"2036:11:0"}],"id":154,"name":"ParameterList","src":"1985:63:0"}],"id":155,"name":"EventDefinition","src":"1971:78:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"approve","payable":false,"scope":200,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_spender","scope":183,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":156,"name":"ElementaryTypeName","src":"2070:7:0"}],"id":157,"name":"VariableDeclaration","src":"2070:16:0"},{"attributes":{"constant":false,"name":"_value","scope":183,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":158,"name":"ElementaryTypeName","src":"2088:4:0"}],"id":159,"name":"VariableDeclaration","src":"2088:11:0"}],"id":160,"name":"ParameterList","src":"2069:31:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":183,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":161,"name":"ElementaryTypeName","src":"2119:4:0"}],"id":162,"name":"VariableDeclaration","src":"2119:12:0"}],"id":163,"name":"ParameterList","src":"2118:14:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"mapping(address => uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":147,"type":"mapping(address => mapping(address => uint256))","value":"allowed"},"id":164,"name":"Identifier","src":"2139:7:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":165,"name":"Identifier","src":"2147:3:0"}],"id":166,"name":"MemberAccess","src":"2147:10:0"}],"id":168,"name":"IndexAccess","src":"2139:19:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":157,"type":"address","value":"_spender"},"id":167,"name":"Identifier","src":"2159:8:0"}],"id":169,"name":"IndexAccess","src":"2139:29:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":159,"type":"uint256","value":"_value"},"id":170,"name":"Identifier","src":"2171:6:0"}],"id":171,"name":"Assignment","src":"2139:38:0"}],"id":172,"name":"ExpressionStatement","src":"2139:38:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":155,"type":"function (address,address,uint256)","value":"Approval"},"id":173,"name":"Identifier","src":"2183:8:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":174,"name":"Identifier","src":"2192:3:0"}],"id":175,"name":"MemberAccess","src":"2192:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":157,"type":"address","value":"_spender"},"id":176,"name":"Identifier","src":"2204:8:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":159,"type":"uint256","value":"_value"},"id":177,"name":"Identifier","src":"2214:6:0"}],"id":178,"name":"FunctionCall","src":"2183:38:0"}],"id":179,"name":"ExpressionStatement","src":"2183:38:0"},{"attributes":{"functionReturnParameters":163},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"74727565","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"bool","type":"bool","value":"true"},"id":180,"name":"Literal","src":"2234:4:0"}],"id":181,"name":"Return","src":"2227:11:0"}],"id":182,"name":"Block","src":"2133:110:0"}],"id":183,"name":"FunctionDefinition","src":"2053:190:0"},{"attributes":{"constant":true,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"allowance","payable":false,"scope":200,"stateMutability":"view","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_owner","scope":199,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":184,"name":"ElementaryTypeName","src":"2265:7:0"}],"id":185,"name":"VariableDeclaration","src":"2265:14:0"},{"attributes":{"constant":false,"name":"_spender","scope":199,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":186,"name":"ElementaryTypeName","src":"2281:7:0"}],"id":187,"name":"VariableDeclaration","src":"2281:16:0"}],"id":188,"name":"ParameterList","src":"2264:34:0"},{"children":[{"attributes":{"constant":false,"name":"remaining","scope":199,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":189,"name":"ElementaryTypeName","src":"2326:4:0"}],"id":190,"name":"VariableDeclaration","src":"2326:14:0"}],"id":191,"name":"ParameterList","src":"2325:16:0"},{"children":[{"attributes":{"functionReturnParameters":191},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"mapping(address => uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":147,"type":"mapping(address => mapping(address => uint256))","value":"allowed"},"id":192,"name":"Identifier","src":"2355:7:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":185,"type":"address","value":"_owner"},"id":193,"name":"Identifier","src":"2363:6:0"}],"id":194,"name":"IndexAccess","src":"2355:15:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":187,"type":"address","value":"_spender"},"id":195,"name":"Identifier","src":"2371:8:0"}],"id":196,"name":"IndexAccess","src":"2355:25:0"}],"id":197,"name":"Return","src":"2348:32:0"}],"id":198,"name":"Block","src":"2342:43:0"}],"id":199,"name":"FunctionDefinition","src":"2246:139:0"}],"id":200,"name":"ContractDefinition","src":"1831:556:0"},{"attributes":{"contractDependencies":[44,56,139,200],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[581,200,139,56,44],"name":"FastCashMoneyPlusSales","scope":784},"children":[{"attributes":{"arguments":[null]},"children":[{"attributes":{"contractScope":null,"name":"FastCashMoneyPlusAccessControl","referencedDeclaration":200,"type":"contract FastCashMoneyPlusAccessControl"},"id":201,"name":"UserDefinedTypeName","src":"2424:30:0"}],"id":202,"name":"InheritanceSpecifier","src":"2424:30:0"},{"attributes":{"constant":false,"name":"totalSupply","scope":581,"stateVariable":true,"storageLocation":"default","type":"uint256","value":null,"visibility":"public"},"children":[{"attributes":{"name":"uint256","type":"uint256"},"id":203,"name":"ElementaryTypeName","src":"2459:7:0"}],"id":204,"name":"VariableDeclaration","src":"2459:26:0"},{"attributes":{"constant":false,"name":"USDWEI","scope":581,"stateVariable":true,"storageLocation":"default","type":"uint256","visibility":"public"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":205,"name":"ElementaryTypeName","src":"2489:4:0"},{"attributes":{"argumentTypes":null,"hexvalue":"31353030303030303030303030303030","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 1500000000000000","value":"1500000000000000"},"id":206,"name":"Literal","src":"2510:16:0"}],"id":207,"name":"VariableDeclaration","src":"2489:37:0"},{"attributes":{"constant":false,"name":"creationDate","scope":581,"stateVariable":true,"storageLocation":"default","type":"uint256","value":null,"visibility":"public"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":208,"name":"ElementaryTypeName","src":"2530:4:0"}],"id":209,"name":"VariableDeclaration","src":"2530:24:0"},{"attributes":{"constant":true,"name":"oneWeek","scope":581,"stateVariable":true,"storageLocation":"default","type":"uint256","visibility":"private"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":210,"name":"ElementaryTypeName","src":"2558:4:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_rational_604800_by_1","typeString":"int_const 604800"},"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"operator":"*","type":"int_const 604800"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_rational_86400_by_1","typeString":"int_const 86400"},"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"operator":"*","type":"int_const 86400"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_rational_3600_by_1","typeString":"int_const 3600"},"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"operator":"*","type":"int_const 3600"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"3630","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 60","value":"60"},"id":211,"name":"Literal","src":"2590:2:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3630","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 60","value":"60"},"id":212,"name":"Literal","src":"2595:2:0"}],"id":213,"name":"BinaryOperation","src":"2590:7:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3234","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 24","value":"24"},"id":214,"name":"Literal","src":"2600:2:0"}],"id":215,"name":"BinaryOperation","src":"2590:12:0"},{"attributes":{"argumentTypes":null,"hexvalue":"37","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 7","value":"7"},"id":216,"name":"Literal","src":"2605:1:0"}],"id":217,"name":"BinaryOperation","src":"2590:16:0"}],"id":218,"name":"VariableDeclaration","src":"2558:48:0"},{"attributes":{"constant":false,"name":"referalBonus","scope":581,"stateVariable":true,"storageLocation":"default","type":"uint256","visibility":"public"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":219,"name":"ElementaryTypeName","src":"2610:4:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3130","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 10","value":"10"},"id":220,"name":"Literal","src":"2637:2:0"}],"id":221,"name":"VariableDeclaration","src":"2610:29:0"},{"attributes":{"anonymous":false,"name":"Sale"},"children":[{"children":[{"attributes":{"constant":false,"indexed":false,"name":"_address","scope":227,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":222,"name":"ElementaryTypeName","src":"2655:7:0"}],"id":223,"name":"VariableDeclaration","src":"2655:16:0"},{"attributes":{"constant":false,"indexed":false,"name":"_amount","scope":227,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":224,"name":"ElementaryTypeName","src":"2673:4:0"}],"id":225,"name":"VariableDeclaration","src":"2673:12:0"}],"id":226,"name":"ParameterList","src":"2654:32:0"}],"id":227,"name":"EventDefinition","src":"2644:43:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":true,"modifiers":[null],"name":"FastCashMoneyPlusSales","payable":false,"scope":581,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":228,"name":"ParameterList","src":"2722:2:0"},{"attributes":{"parameters":[null]},"children":[],"id":229,"name":"ParameterList","src":"2732:0:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":204,"type":"uint256","value":"totalSupply"},"id":230,"name":"Identifier","src":"2785:11:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"*","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"31303030303030","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 1000000","value":"1000000"},"id":231,"name":"Literal","src":"2799:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"**","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"3130","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 10","value":"10"},"id":232,"name":"Literal","src":"2809:2:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint8","typeString":"uint8"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(uint256)","value":"uint256"},"id":233,"name":"ElementaryTypeNameExpression","src":"2815:7:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":55,"type":"uint8","value":"decimals"},"id":234,"name":"Identifier","src":"2823:8:0"}],"id":235,"name":"FunctionCall","src":"2815:17:0"}],"id":236,"name":"BinaryOperation","src":"2809:23:0"}],"id":237,"name":"BinaryOperation","src":"2799:33:0"}],"id":238,"name":"Assignment","src":"2785:47:0"}],"id":239,"name":"ExpressionStatement","src":"2785:47:0"},{"attributes":{"assignments":[241]},"children":[{"attributes":{"constant":false,"name":"centralBankerRoutingCode","scope":269,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":240,"name":"ElementaryTypeName","src":"2839:7:0"}],"id":241,"name":"VariableDeclaration","src":"2839:32:0"},{"attributes":{"argumentTypes":null,"hexvalue":"656c656374726963474f445f504f574552767953347859363952","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"string","type":"literal_string \"electricGOD_POWERvyS4xY69R\"","value":"electricGOD_POWERvyS4xY69R"},"id":242,"name":"Literal","src":"2874:28:0"}],"id":243,"name":"VariableDeclarationStatement","src":"2839:63:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bytes32","typeString":"bytes32"}],"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"push","referencedDeclaration":null,"type":"function (bytes32) returns (uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":69,"type":"bytes32[] storage ref","value":"routingCodes"},"id":244,"name":"Identifier","src":"2908:12:0"}],"id":246,"name":"MemberAccess","src":"2908:17:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":241,"type":"bytes32","value":"centralBankerRoutingCode"},"id":247,"name":"Identifier","src":"2926:24:0"}],"id":248,"name":"FunctionCall","src":"2908:43:0"}],"id":249,"name":"ExpressionStatement","src":"2908:43:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"address"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":250,"name":"Identifier","src":"2957:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":241,"type":"bytes32","value":"centralBankerRoutingCode"},"id":251,"name":"Identifier","src":"2972:24:0"}],"id":252,"name":"IndexAccess","src":"2957:40:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":253,"name":"Identifier","src":"3000:3:0"}],"id":254,"name":"MemberAccess","src":"3000:10:0"}],"id":255,"name":"Assignment","src":"2957:53:0"}],"id":256,"name":"ExpressionStatement","src":"2957:53:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":257,"name":"Identifier","src":"3017:9:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":258,"name":"Identifier","src":"3027:3:0"}],"id":259,"name":"MemberAccess","src":"3027:10:0"}],"id":260,"name":"IndexAccess","src":"3017:21:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":204,"type":"uint256","value":"totalSupply"},"id":261,"name":"Identifier","src":"3041:11:0"}],"id":262,"name":"Assignment","src":"3017:35:0"}],"id":263,"name":"ExpressionStatement","src":"3017:35:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":209,"type":"uint256","value":"creationDate"},"id":264,"name":"Identifier","src":"3058:12:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":854,"type":"uint256","value":"now"},"id":265,"name":"Identifier","src":"3073:3:0"}],"id":266,"name":"Assignment","src":"3058:18:0"}],"id":267,"name":"ExpressionStatement","src":"3058:18:0"}],"id":268,"name":"Block","src":"2732:349:0"}],"id":269,"name":"FunctionDefinition","src":"2691:390:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"name":"updateUSDWEI","payable":false,"scope":581,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_wei","scope":285,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":270,"name":"ElementaryTypeName","src":"3107:4:0"}],"id":271,"name":"VariableDeclaration","src":"3107:9:0"}],"id":272,"name":"ParameterList","src":"3106:11:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":285,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":275,"name":"ElementaryTypeName","src":"3154:4:0"}],"id":276,"name":"VariableDeclaration","src":"3154:12:0"}],"id":277,"name":"ParameterList","src":"3153:14:0"},{"attributes":{"arguments":[null]},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":23,"type":"modifier ()","value":"onlyCentralBanker"},"id":273,"name":"Identifier","src":"3127:17:0"}],"id":274,"name":"ModifierInvocation","src":"3127:17:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":207,"type":"uint256","value":"USDWEI"},"id":278,"name":"Identifier","src":"3174:6:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":271,"type":"uint256","value":"_wei"},"id":279,"name":"Identifier","src":"3183:4:0"}],"id":280,"name":"Assignment","src":"3174:13:0"}],"id":281,"name":"ExpressionStatement","src":"3174:13:0"},{"attributes":{"functionReturnParameters":277},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"74727565","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"bool","type":"bool","value":"true"},"id":282,"name":"Literal","src":"3200:4:0"}],"id":283,"name":"Return","src":"3193:11:0"}],"id":284,"name":"Block","src":"3168:41:0"}],"id":285,"name":"FunctionDefinition","src":"3085:124:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"name":"updateReferalBonus","payable":false,"scope":581,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_newBonus","scope":301,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":286,"name":"ElementaryTypeName","src":"3241:4:0"}],"id":287,"name":"VariableDeclaration","src":"3241:14:0"}],"id":288,"name":"ParameterList","src":"3240:16:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":301,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":291,"name":"ElementaryTypeName","src":"3293:4:0"}],"id":292,"name":"VariableDeclaration","src":"3293:12:0"}],"id":293,"name":"ParameterList","src":"3292:14:0"},{"attributes":{"arguments":[null]},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":23,"type":"modifier ()","value":"onlyCentralBanker"},"id":289,"name":"Identifier","src":"3266:17:0"}],"id":290,"name":"ModifierInvocation","src":"3266:17:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":221,"type":"uint256","value":"referalBonus"},"id":294,"name":"Identifier","src":"3313:12:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":287,"type":"uint256","value":"_newBonus"},"id":295,"name":"Identifier","src":"3328:9:0"}],"id":296,"name":"Assignment","src":"3313:24:0"}],"id":297,"name":"ExpressionStatement","src":"3313:24:0"},{"attributes":{"functionReturnParameters":293},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"74727565","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"bool","type":"bool","value":"true"},"id":298,"name":"Literal","src":"3350:4:0"}],"id":299,"name":"Return","src":"3343:11:0"}],"id":300,"name":"Block","src":"3307:52:0"}],"id":301,"name":"FunctionDefinition","src":"3213:146:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"weeksFromCreation","payable":false,"scope":581,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":302,"name":"ParameterList","src":"3389:2:0"},{"children":[{"attributes":{"constant":false,"name":"","scope":314,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":303,"name":"ElementaryTypeName","src":"3401:4:0"}],"id":304,"name":"VariableDeclaration","src":"3401:4:0"}],"id":305,"name":"ParameterList","src":"3400:6:0"},{"children":[{"attributes":{"functionReturnParameters":305},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"/","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isInlineArray":false,"isLValue":false,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":854,"type":"uint256","value":"now"},"id":306,"name":"Identifier","src":"3421:3:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":209,"type":"uint256","value":"creationDate"},"id":307,"name":"Identifier","src":"3427:12:0"}],"id":308,"name":"BinaryOperation","src":"3421:18:0"}],"id":309,"name":"TupleExpression","src":"3420:20:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":218,"type":"uint256","value":"oneWeek"},"id":310,"name":"Identifier","src":"3443:7:0"}],"id":311,"name":"BinaryOperation","src":"3420:30:0"}],"id":312,"name":"Return","src":"3413:37:0"}],"id":313,"name":"Block","src":"3407:48:0"}],"id":314,"name":"FunctionDefinition","src":"3363:92:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"getExchangeRate","payable":false,"scope":581,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"_week","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":315,"name":"ElementaryTypeName","src":"3484:4:0"}],"id":316,"name":"VariableDeclaration","src":"3484:10:0"},{"attributes":{"constant":false,"name":"_value","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":317,"name":"ElementaryTypeName","src":"3496:4:0"}],"id":318,"name":"VariableDeclaration","src":"3496:11:0"},{"attributes":{"constant":false,"name":"_usdwei","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":319,"name":"ElementaryTypeName","src":"3509:4:0"}],"id":320,"name":"VariableDeclaration","src":"3509:12:0"}],"id":321,"name":"ParameterList","src":"3483:39:0"},{"children":[{"attributes":{"constant":false,"name":"","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":322,"name":"ElementaryTypeName","src":"3539:4:0"}],"id":323,"name":"VariableDeclaration","src":"3539:4:0"}],"id":324,"name":"ParameterList","src":"3538:6:0"},{"children":[{"attributes":{"assignments":[null],"initialValue":null},"children":[{"attributes":{"constant":false,"name":"__week","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":325,"name":"ElementaryTypeName","src":"3551:4:0"}],"id":326,"name":"VariableDeclaration","src":"3551:11:0"}],"id":327,"name":"VariableDeclarationStatement","src":"3551:11:0"},{"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":316,"type":"uint256","value":"_week"},"id":328,"name":"Identifier","src":"3572:5:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3731","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 71","value":"71"},"id":329,"name":"Literal","src":"3580:2:0"}],"id":330,"name":"BinaryOperation","src":"3572:10:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":326,"type":"uint256","value":"__week"},"id":331,"name":"Identifier","src":"3592:6:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3731","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 71","value":"71"},"id":332,"name":"Literal","src":"3601:2:0"}],"id":333,"name":"Assignment","src":"3592:11:0"}],"id":334,"name":"ExpressionStatement","src":"3592:11:0"}],"id":335,"name":"Block","src":"3584:26:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":326,"type":"uint256","value":"__week"},"id":336,"name":"Identifier","src":"3624:6:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":316,"type":"uint256","value":"_week"},"id":337,"name":"Identifier","src":"3633:5:0"}],"id":338,"name":"Assignment","src":"3624:14:0"}],"id":339,"name":"ExpressionStatement","src":"3624:14:0"}],"id":340,"name":"Block","src":"3616:29:0"}],"id":341,"name":"IfStatement","src":"3568:77:0"},{"attributes":{"assignments":[343]},"children":[{"attributes":{"constant":false,"name":"extraAdj","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":342,"name":"ElementaryTypeName","src":"3651:4:0"}],"id":343,"name":"VariableDeclaration","src":"3651:13:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":344,"name":"Literal","src":"3667:1:0"}],"id":345,"name":"VariableDeclarationStatement","src":"3651:17:0"},{"attributes":{"falseBody":null},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":326,"type":"uint256","value":"__week"},"id":346,"name":"Identifier","src":"3678:6:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3530","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 50","value":"50"},"id":347,"name":"Literal","src":"3687:2:0"}],"id":348,"name":"BinaryOperation","src":"3678:11:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":343,"type":"uint256","value":"extraAdj"},"id":349,"name":"Identifier","src":"3699:8:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":326,"type":"uint256","value":"__week"},"id":350,"name":"Identifier","src":"3710:6:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3530","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 50","value":"50"},"id":351,"name":"Literal","src":"3719:2:0"}],"id":352,"name":"BinaryOperation","src":"3710:11:0"}],"id":353,"name":"Assignment","src":"3699:22:0"}],"id":354,"name":"ExpressionStatement","src":"3699:22:0"}],"id":355,"name":"Block","src":"3691:37:0"}],"id":356,"name":"IfStatement","src":"3674:54:0"},{"attributes":{"assignments":[358]},"children":[{"attributes":{"constant":false,"name":"minAdj","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":357,"name":"ElementaryTypeName","src":"3734:4:0"}],"id":358,"name":"VariableDeclaration","src":"3734:11:0"},{"attributes":{"argumentTypes":null,"hexvalue":"3130","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 10","value":"10"},"id":359,"name":"Literal","src":"3748:2:0"}],"id":360,"name":"VariableDeclarationStatement","src":"3734:16:0"},{"attributes":{"assignments":[362]},"children":[{"attributes":{"constant":false,"name":"x","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":361,"name":"ElementaryTypeName","src":"3756:4:0"}],"id":362,"name":"VariableDeclaration","src":"3756:6:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":326,"type":"uint256","value":"__week"},"id":363,"name":"Identifier","src":"3765:6:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":55,"type":"uint8","value":"decimals"},"id":364,"name":"Identifier","src":"3774:8:0"}],"id":365,"name":"BinaryOperation","src":"3765:17:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isInlineArray":false,"isLValue":false,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":358,"type":"uint256","value":"minAdj"},"id":366,"name":"Identifier","src":"3786:6:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":343,"type":"uint256","value":"extraAdj"},"id":367,"name":"Identifier","src":"3795:8:0"}],"id":368,"name":"BinaryOperation","src":"3786:17:0"}],"id":369,"name":"TupleExpression","src":"3785:19:0"}],"id":370,"name":"BinaryOperation","src":"3765:39:0"}],"id":371,"name":"VariableDeclarationStatement","src":"3756:48:0"},{"attributes":{"assignments":[373]},"children":[{"attributes":{"constant":false,"name":"n","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":372,"name":"ElementaryTypeName","src":"3811:4:0"}],"id":373,"name":"VariableDeclaration","src":"3811:6:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"*","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"*","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":318,"type":"uint256","value":"_value"},"id":374,"name":"Identifier","src":"3820:6:0"},{"attributes":{"argumentTypes":null,"hexvalue":"34","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 4","value":"4"},"id":375,"name":"Literal","src":"3829:1:0"}],"id":376,"name":"BinaryOperation","src":"3820:10:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(uint256)","value":"uint"},"id":377,"name":"ElementaryTypeNameExpression","src":"3833:4:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"**","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"3130","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 10","value":"10"},"id":378,"name":"Literal","src":"3838:2:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":362,"type":"uint256","value":"x"},"id":379,"name":"Identifier","src":"3844:1:0"}],"id":380,"name":"BinaryOperation","src":"3838:7:0"}],"id":381,"name":"FunctionCall","src":"3833:13:0"}],"id":382,"name":"BinaryOperation","src":"3820:26:0"}],"id":383,"name":"VariableDeclarationStatement","src":"3811:35:0"},{"attributes":{"assignments":[385]},"children":[{"attributes":{"constant":false,"name":"d","scope":413,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":384,"name":"ElementaryTypeName","src":"3852:4:0"}],"id":385,"name":"VariableDeclaration","src":"3852:6:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"*","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isInlineArray":false,"isLValue":false,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"/","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":320,"type":"uint256","value":"_usdwei"},"id":386,"name":"Identifier","src":"3863:7:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(uint256)","value":"uint"},"id":387,"name":"ElementaryTypeNameExpression","src":"3873:4:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"**","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"3130","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 10","value":"10"},"id":388,"name":"Literal","src":"3878:2:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":358,"type":"uint256","value":"minAdj"},"id":389,"name":"Identifier","src":"3884:6:0"}],"id":390,"name":"BinaryOperation","src":"3878:12:0"}],"id":391,"name":"FunctionCall","src":"3873:18:0"}],"id":392,"name":"BinaryOperation","src":"3863:28:0"}],"id":393,"name":"TupleExpression","src":"3861:32:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isInlineArray":false,"isLValue":false,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"/","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(uint256)","value":"uint"},"id":394,"name":"ElementaryTypeNameExpression","src":"3897:4:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"**","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"3132","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 12","value":"12"},"id":395,"name":"Literal","src":"3902:2:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":326,"type":"uint256","value":"__week"},"id":396,"name":"Identifier","src":"3908:6:0"}],"id":397,"name":"BinaryOperation","src":"3902:12:0"}],"id":398,"name":"FunctionCall","src":"3897:18:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(uint256)","value":"uint"},"id":399,"name":"ElementaryTypeNameExpression","src":"3918:4:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"**","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"3130","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 10","value":"10"},"id":400,"name":"Literal","src":"3923:2:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":343,"type":"uint256","value":"extraAdj"},"id":401,"name":"Identifier","src":"3929:8:0"}],"id":402,"name":"BinaryOperation","src":"3923:14:0"}],"id":403,"name":"FunctionCall","src":"3918:20:0"}],"id":404,"name":"BinaryOperation","src":"3897:41:0"}],"id":405,"name":"TupleExpression","src":"3896:43:0"}],"id":406,"name":"BinaryOperation","src":"3861:78:0"}],"id":407,"name":"VariableDeclarationStatement","src":"3852:87:0"},{"attributes":{"functionReturnParameters":324},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"/","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":373,"type":"uint256","value":"n"},"id":408,"name":"Identifier","src":"3953:1:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":385,"type":"uint256","value":"d"},"id":409,"name":"Identifier","src":"3957:1:0"}],"id":410,"name":"BinaryOperation","src":"3953:5:0"}],"id":411,"name":"Return","src":"3946:12:0"}],"id":412,"name":"Block","src":"3545:418:0"}],"id":413,"name":"FunctionDefinition","src":"3459:504:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"getCurrentExchangeRate","payable":false,"scope":581,"stateMutability":"nonpayable","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":414,"name":"ParameterList","src":"3998:2:0"},{"children":[{"attributes":{"constant":false,"name":"","scope":430,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":415,"name":"ElementaryTypeName","src":"4017:4:0"}],"id":416,"name":"VariableDeclaration","src":"4017:4:0"}],"id":417,"name":"ParameterList","src":"4016:6:0"},{"children":[{"attributes":{"assignments":[419]},"children":[{"attributes":{"constant":false,"name":"_week","scope":430,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":418,"name":"ElementaryTypeName","src":"4029:4:0"}],"id":419,"name":"VariableDeclaration","src":"4029:10:0"},{"attributes":{"argumentTypes":null,"arguments":[null],"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[null],"overloadedDeclarations":[null],"referencedDeclaration":314,"type":"function () returns (uint256)","value":"weeksFromCreation"},"id":420,"name":"Identifier","src":"4042:17:0"}],"id":421,"name":"FunctionCall","src":"4042:19:0"}],"id":422,"name":"VariableDeclarationStatement","src":"4029:32:0"},{"attributes":{"functionReturnParameters":417},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"},{"typeIdentifier":"t_uint256","typeString":"uint256"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":413,"type":"function (uint256,uint256,uint256) returns (uint256)","value":"getExchangeRate"},"id":423,"name":"Identifier","src":"4074:15:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":419,"type":"uint256","value":"_week"},"id":424,"name":"Identifier","src":"4090:5:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":207,"type":"uint256","value":"USDWEI"},"id":425,"name":"Identifier","src":"4097:6:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":207,"type":"uint256","value":"USDWEI"},"id":426,"name":"Identifier","src":"4105:6:0"}],"id":427,"name":"FunctionCall","src":"4074:38:0"}],"id":428,"name":"Return","src":"4067:45:0"}],"id":429,"name":"Block","src":"4023:94:0"}],"id":430,"name":"FunctionDefinition","src":"3967:150:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"_makeSale","payable":false,"scope":581,"stateMutability":"nonpayable","superFunction":null,"visibility":"private"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":431,"name":"ParameterList","src":"4139:2:0"},{"children":[{"attributes":{"constant":false,"name":"","scope":496,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":432,"name":"ElementaryTypeName","src":"4159:4:0"}],"id":433,"name":"VariableDeclaration","src":"4159:4:0"}],"id":434,"name":"ParameterList","src":"4158:6:0"},{"children":[{"attributes":{"assignments":[436]},"children":[{"attributes":{"constant":false,"name":"_week","scope":496,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":435,"name":"ElementaryTypeName","src":"4171:4:0"}],"id":436,"name":"VariableDeclaration","src":"4171:10:0"},{"attributes":{"argumentTypes":null,"arguments":[null],"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[null],"overloadedDeclarations":[null],"referencedDeclaration":314,"type":"function () returns (uint256)","value":"weeksFromCreation"},"id":437,"name":"Identifier","src":"4184:17:0"}],"id":438,"name":"FunctionCall","src":"4184:19:0"}],"id":439,"name":"VariableDeclarationStatement","src":"4171:32:0"},{"attributes":{"assignments":[441]},"children":[{"attributes":{"constant":false,"name":"_value","scope":496,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":440,"name":"ElementaryTypeName","src":"4209:4:0"}],"id":441,"name":"VariableDeclaration","src":"4209:11:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"value","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":442,"name":"Identifier","src":"4223:3:0"}],"id":443,"name":"MemberAccess","src":"4223:9:0"}],"id":444,"name":"VariableDeclarationStatement","src":"4209:23:0"},{"attributes":{"assignments":[446]},"children":[{"attributes":{"constant":false,"name":"moneyBucks","scope":496,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":445,"name":"ElementaryTypeName","src":"4239:4:0"}],"id":446,"name":"VariableDeclaration","src":"4239:15:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"},{"typeIdentifier":"t_uint256","typeString":"uint256"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":413,"type":"function (uint256,uint256,uint256) returns (uint256)","value":"getExchangeRate"},"id":447,"name":"Identifier","src":"4257:15:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":436,"type":"uint256","value":"_week"},"id":448,"name":"Identifier","src":"4273:5:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":441,"type":"uint256","value":"_value"},"id":449,"name":"Identifier","src":"4280:6:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":207,"type":"uint256","value":"USDWEI"},"id":450,"name":"Identifier","src":"4288:6:0"}],"id":451,"name":"FunctionCall","src":"4257:38:0"}],"id":452,"name":"VariableDeclarationStatement","src":"4239:56:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":453,"name":"Identifier","src":"4302:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":446,"type":"uint256","value":"moneyBucks"},"id":454,"name":"Identifier","src":"4310:10:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":455,"name":"Literal","src":"4323:1:0"}],"id":456,"name":"BinaryOperation","src":"4310:14:0"}],"id":457,"name":"FunctionCall","src":"4302:23:0"}],"id":458,"name":"ExpressionStatement","src":"4302:23:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":459,"name":"Identifier","src":"4331:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":460,"name":"Identifier","src":"4339:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":461,"name":"Identifier","src":"4349:13:0"}],"id":462,"name":"IndexAccess","src":"4339:24:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":446,"type":"uint256","value":"moneyBucks"},"id":463,"name":"Identifier","src":"4367:10:0"}],"id":464,"name":"BinaryOperation","src":"4339:38:0"}],"id":465,"name":"FunctionCall","src":"4331:47:0"}],"id":466,"name":"ExpressionStatement","src":"4331:47:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":467,"name":"Identifier","src":"4385:9:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":468,"name":"Identifier","src":"4395:3:0"}],"id":469,"name":"MemberAccess","src":"4395:10:0"}],"id":470,"name":"IndexAccess","src":"4385:21:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":446,"type":"uint256","value":"moneyBucks"},"id":471,"name":"Identifier","src":"4410:10:0"}],"id":472,"name":"Assignment","src":"4385:35:0"}],"id":473,"name":"ExpressionStatement","src":"4385:35:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":474,"name":"Identifier","src":"4426:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":475,"name":"Identifier","src":"4436:13:0"}],"id":476,"name":"IndexAccess","src":"4426:24:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":446,"type":"uint256","value":"moneyBucks"},"id":477,"name":"Identifier","src":"4454:10:0"}],"id":478,"name":"Assignment","src":"4426:38:0"}],"id":479,"name":"ExpressionStatement","src":"4426:38:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_uint256","typeString":"uint256"}],"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"transfer","referencedDeclaration":null,"type":"function (uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":480,"name":"Identifier","src":"4471:13:0"}],"id":482,"name":"MemberAccess","src":"4471:22:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"value","referencedDeclaration":null,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":483,"name":"Identifier","src":"4494:3:0"}],"id":484,"name":"MemberAccess","src":"4494:9:0"}],"id":485,"name":"FunctionCall","src":"4471:33:0"}],"id":486,"name":"ExpressionStatement","src":"4471:33:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":227,"type":"function (address,uint256)","value":"Sale"},"id":487,"name":"Identifier","src":"4510:4:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":488,"name":"Identifier","src":"4515:3:0"}],"id":489,"name":"MemberAccess","src":"4515:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":446,"type":"uint256","value":"moneyBucks"},"id":490,"name":"Identifier","src":"4527:10:0"}],"id":491,"name":"FunctionCall","src":"4510:28:0"}],"id":492,"name":"ExpressionStatement","src":"4510:28:0"},{"attributes":{"functionReturnParameters":434},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":446,"type":"uint256","value":"moneyBucks"},"id":493,"name":"Identifier","src":"4551:10:0"}],"id":494,"name":"Return","src":"4544:17:0"}],"id":495,"name":"Block","src":"4165:401:0"}],"id":496,"name":"FunctionDefinition","src":"4121:445:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"buy","payable":true,"scope":581,"stateMutability":"payable","superFunction":null,"visibility":"public"},"children":[{"children":[{"attributes":{"constant":false,"name":"_routingCode","scope":573,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":497,"name":"ElementaryTypeName","src":"4583:7:0"}],"id":498,"name":"VariableDeclaration","src":"4583:20:0"},{"attributes":{"constant":false,"name":"_referal","scope":573,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":499,"name":"ElementaryTypeName","src":"4605:7:0"}],"id":500,"name":"VariableDeclaration","src":"4605:16:0"}],"id":501,"name":"ParameterList","src":"4582:40:0"},{"attributes":{"parameters":[null]},"children":[],"id":502,"name":"ParameterList","src":"4631:0:0"},{"children":[{"attributes":{"assignments":[504]},"children":[{"attributes":{"constant":false,"name":"moneyBucks","scope":573,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":503,"name":"ElementaryTypeName","src":"4637:4:0"}],"id":504,"name":"VariableDeclaration","src":"4637:15:0"},{"attributes":{"argumentTypes":null,"arguments":[null],"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[null],"overloadedDeclarations":[null],"referencedDeclaration":496,"type":"function () returns (uint256)","value":"_makeSale"},"id":505,"name":"Identifier","src":"4655:9:0"}],"id":506,"name":"FunctionCall","src":"4655:11:0"}],"id":507,"name":"VariableDeclarationStatement","src":"4637:29:0"},{"attributes":{"falseBody":null},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_address","typeString":"address"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"==","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":508,"name":"Identifier","src":"4677:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":498,"type":"bytes32","value":"_routingCode"},"id":509,"name":"Identifier","src":"4692:12:0"}],"id":510,"name":"IndexAccess","src":"4677:28:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"address","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(address)","value":"address"},"id":511,"name":"ElementaryTypeNameExpression","src":"4709:7:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":512,"name":"Literal","src":"4717:1:0"}],"id":513,"name":"FunctionCall","src":"4709:10:0"}],"id":514,"name":"BinaryOperation","src":"4677:42:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"bool","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bytes32","typeString":"bytes32"}],"overloadedDeclarations":[null],"referencedDeclaration":138,"type":"function (bytes32) returns (bool)","value":"createRoutingCode"},"id":515,"name":"Identifier","src":"4729:17:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":498,"type":"bytes32","value":"_routingCode"},"id":516,"name":"Identifier","src":"4747:12:0"}],"id":517,"name":"FunctionCall","src":"4729:31:0"}],"id":518,"name":"ExpressionStatement","src":"4729:31:0"}],"id":519,"name":"Block","src":"4721:46:0"}],"id":520,"name":"IfStatement","src":"4673:94:0"},{"attributes":{"falseBody":null},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_bytes1","typeString":"bytes1"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"!=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"type":"bytes1"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":500,"type":"bytes32","value":"_referal"},"id":521,"name":"Identifier","src":"4777:8:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":522,"name":"Literal","src":"4786:1:0"}],"id":523,"name":"IndexAccess","src":"4777:11:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":524,"name":"Literal","src":"4792:1:0"}],"id":525,"name":"BinaryOperation","src":"4777:16:0"},{"children":[{"attributes":{"assignments":[null],"initialValue":null},"children":[{"attributes":{"constant":false,"name":"referalFee","scope":573,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":526,"name":"ElementaryTypeName","src":"4803:4:0"}],"id":527,"name":"VariableDeclaration","src":"4803:15:0"}],"id":528,"name":"VariableDeclarationStatement","src":"4803:15:0"},{"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":529,"name":"Identifier","src":"4830:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":530,"name":"Identifier","src":"4840:13:0"}],"id":531,"name":"IndexAccess","src":"4830:24:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isInlineArray":false,"isLValue":false,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"/","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":504,"type":"uint256","value":"moneyBucks"},"id":532,"name":"Identifier","src":"4858:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":221,"type":"uint256","value":"referalBonus"},"id":533,"name":"Identifier","src":"4871:12:0"}],"id":534,"name":"BinaryOperation","src":"4858:25:0"}],"id":535,"name":"TupleExpression","src":"4857:27:0"}],"id":536,"name":"BinaryOperation","src":"4830:54:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":527,"type":"uint256","value":"referalFee"},"id":537,"name":"Identifier","src":"4896:10:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"/","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":504,"type":"uint256","value":"moneyBucks"},"id":538,"name":"Identifier","src":"4909:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":221,"type":"uint256","value":"referalBonus"},"id":539,"name":"Identifier","src":"4922:12:0"}],"id":540,"name":"BinaryOperation","src":"4909:25:0"}],"id":541,"name":"Assignment","src":"4896:38:0"}],"id":542,"name":"ExpressionStatement","src":"4896:38:0"}],"id":543,"name":"Block","src":"4886:57:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":527,"type":"uint256","value":"referalFee"},"id":544,"name":"Identifier","src":"4959:10:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":545,"name":"Identifier","src":"4972:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":546,"name":"Identifier","src":"4982:13:0"}],"id":547,"name":"IndexAccess","src":"4972:24:0"}],"id":548,"name":"Assignment","src":"4959:37:0"}],"id":549,"name":"ExpressionStatement","src":"4959:37:0"}],"id":550,"name":"Block","src":"4949:56:0"}],"id":551,"name":"IfStatement","src":"4826:179:0"},{"attributes":{"assignments":[553]},"children":[{"attributes":{"constant":false,"name":"reference","scope":573,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":552,"name":"ElementaryTypeName","src":"5012:7:0"}],"id":553,"name":"VariableDeclaration","src":"5012:17:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":554,"name":"Identifier","src":"5032:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":500,"type":"bytes32","value":"_referal"},"id":555,"name":"Identifier","src":"5047:8:0"}],"id":556,"name":"IndexAccess","src":"5032:24:0"}],"id":557,"name":"VariableDeclarationStatement","src":"5012:44:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":558,"name":"Identifier","src":"5064:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":553,"type":"address","value":"reference"},"id":559,"name":"Identifier","src":"5074:9:0"}],"id":560,"name":"IndexAccess","src":"5064:20:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":527,"type":"uint256","value":"referalFee"},"id":561,"name":"Identifier","src":"5088:10:0"}],"id":562,"name":"Assignment","src":"5064:34:0"}],"id":563,"name":"ExpressionStatement","src":"5064:34:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":564,"name":"Identifier","src":"5106:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":3,"type":"address","value":"centralBanker"},"id":565,"name":"Identifier","src":"5116:13:0"}],"id":566,"name":"IndexAccess","src":"5106:24:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":527,"type":"uint256","value":"referalFee"},"id":567,"name":"Identifier","src":"5134:10:0"}],"id":568,"name":"Assignment","src":"5106:38:0"}],"id":569,"name":"ExpressionStatement","src":"5106:38:0"}],"id":570,"name":"Block","src":"4795:356:0"}],"id":571,"name":"IfStatement","src":"4773:378:0"}],"id":572,"name":"Block","src":"4631:524:0"}],"id":573,"name":"FunctionDefinition","src":"4570:585:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"","payable":true,"scope":581,"stateMutability":"payable","superFunction":null,"visibility":"public"},"children":[{"attributes":{"parameters":[null]},"children":[],"id":574,"name":"ParameterList","src":"5168:2:0"},{"attributes":{"parameters":[null]},"children":[],"id":575,"name":"ParameterList","src":"5179:0:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"arguments":[null],"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"uint256","type_conversion":false},"children":[{"attributes":{"argumentTypes":[null],"overloadedDeclarations":[null],"referencedDeclaration":496,"type":"function () returns (uint256)","value":"_makeSale"},"id":576,"name":"Identifier","src":"5185:9:0"}],"id":577,"name":"FunctionCall","src":"5185:11:0"}],"id":578,"name":"ExpressionStatement","src":"5185:11:0"}],"id":579,"name":"Block","src":"5179:22:0"}],"id":580,"name":"FunctionDefinition","src":"5159:42:0"}],"id":581,"name":"ContractDefinition","src":"2389:2814:0"},{"attributes":{"contractDependencies":[44,56,139,200,581],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[780,581,200,139,56,44],"name":"FastCashMoneyPlusTransfer","scope":784},"children":[{"attributes":{"arguments":[null]},"children":[{"attributes":{"contractScope":null,"name":"FastCashMoneyPlusSales","referencedDeclaration":581,"type":"contract FastCashMoneyPlusSales"},"id":582,"name":"UserDefinedTypeName","src":"5243:22:0"}],"id":583,"name":"InheritanceSpecifier","src":"5243:22:0"},{"attributes":{"anonymous":false,"name":"Transfer"},"children":[{"children":[{"attributes":{"constant":false,"indexed":true,"name":"_from","scope":591,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":584,"name":"ElementaryTypeName","src":"5285:7:0"}],"id":585,"name":"VariableDeclaration","src":"5285:21:0"},{"attributes":{"constant":false,"indexed":true,"name":"_to","scope":591,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":586,"name":"ElementaryTypeName","src":"5308:7:0"}],"id":587,"name":"VariableDeclaration","src":"5308:19:0"},{"attributes":{"constant":false,"indexed":false,"name":"_value","scope":591,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":588,"name":"ElementaryTypeName","src":"5329:4:0"}],"id":589,"name":"VariableDeclaration","src":"5329:11:0"}],"id":590,"name":"ParameterList","src":"5284:57:0"}],"id":591,"name":"EventDefinition","src":"5270:72:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"_transfer","payable":false,"scope":780,"stateMutability":"nonpayable","superFunction":null,"visibility":"internal"},"children":[{"children":[{"attributes":{"constant":false,"name":"_from","scope":666,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":592,"name":"ElementaryTypeName","src":"5370:7:0"}],"id":593,"name":"VariableDeclaration","src":"5370:13:0"},{"attributes":{"constant":false,"name":"_to","scope":666,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":594,"name":"ElementaryTypeName","src":"5389:7:0"}],"id":595,"name":"VariableDeclaration","src":"5389:11:0"},{"attributes":{"constant":false,"name":"_amount","scope":666,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":596,"name":"ElementaryTypeName","src":"5406:4:0"}],"id":597,"name":"VariableDeclaration","src":"5406:12:0"}],"id":598,"name":"ParameterList","src":"5364:58:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":666,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":599,"name":"ElementaryTypeName","src":"5441:4:0"}],"id":600,"name":"VariableDeclaration","src":"5441:12:0"}],"id":601,"name":"ParameterList","src":"5440:14:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":602,"name":"Identifier","src":"5461:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_address","typeString":"address"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"!=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":595,"type":"address","value":"_to"},"id":603,"name":"Identifier","src":"5469:3:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":true,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"address","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_rational_0_by_1","typeString":"int_const 0"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(address)","value":"address"},"id":604,"name":"ElementaryTypeNameExpression","src":"5476:7:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":605,"name":"Literal","src":"5484:1:0"}],"id":606,"name":"FunctionCall","src":"5476:10:0"}],"id":607,"name":"BinaryOperation","src":"5469:17:0"}],"id":608,"name":"FunctionCall","src":"5461:26:0"}],"id":609,"name":"ExpressionStatement","src":"5461:26:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":610,"name":"Identifier","src":"5493:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_address","typeString":"address"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"!=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":595,"type":"address","value":"_to"},"id":611,"name":"Identifier","src":"5501:3:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"address","type_conversion":true},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_contract$_FastCashMoneyPlusTransfer_$780","typeString":"contract FastCashMoneyPlusTransfer"}],"isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"type":"type(address)","value":"address"},"id":612,"name":"ElementaryTypeNameExpression","src":"5508:7:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":873,"type":"contract FastCashMoneyPlusTransfer","value":"this"},"id":613,"name":"Identifier","src":"5516:4:0"}],"id":614,"name":"FunctionCall","src":"5508:13:0"}],"id":615,"name":"BinaryOperation","src":"5501:20:0"}],"id":616,"name":"FunctionCall","src":"5493:29:0"}],"id":617,"name":"ExpressionStatement","src":"5493:29:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":618,"name":"Identifier","src":"5528:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":597,"type":"uint256","value":"_amount"},"id":619,"name":"Identifier","src":"5536:7:0"},{"attributes":{"argumentTypes":null,"hexvalue":"30","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"number","type":"int_const 0","value":"0"},"id":620,"name":"Literal","src":"5546:1:0"}],"id":621,"name":"BinaryOperation","src":"5536:11:0"}],"id":622,"name":"FunctionCall","src":"5528:20:0"}],"id":623,"name":"ExpressionStatement","src":"5528:20:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":624,"name":"Identifier","src":"5554:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":625,"name":"Identifier","src":"5562:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":593,"type":"address","value":"_from"},"id":626,"name":"Identifier","src":"5572:5:0"}],"id":627,"name":"IndexAccess","src":"5562:16:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":597,"type":"uint256","value":"_amount"},"id":628,"name":"Identifier","src":"5582:7:0"}],"id":629,"name":"BinaryOperation","src":"5562:27:0"}],"id":630,"name":"FunctionCall","src":"5554:36:0"}],"id":631,"name":"ExpressionStatement","src":"5554:36:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":632,"name":"Identifier","src":"5596:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":633,"name":"Identifier","src":"5604:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":595,"type":"address","value":"_to"},"id":634,"name":"Identifier","src":"5614:3:0"}],"id":635,"name":"IndexAccess","src":"5604:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":597,"type":"uint256","value":"_amount"},"id":636,"name":"Identifier","src":"5621:7:0"}],"id":637,"name":"BinaryOperation","src":"5604:24:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":638,"name":"Identifier","src":"5631:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":595,"type":"address","value":"_to"},"id":639,"name":"Identifier","src":"5641:3:0"}],"id":640,"name":"IndexAccess","src":"5631:14:0"}],"id":641,"name":"BinaryOperation","src":"5604:41:0"}],"id":642,"name":"FunctionCall","src":"5596:50:0"}],"id":643,"name":"ExpressionStatement","src":"5596:50:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":644,"name":"Identifier","src":"5653:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":593,"type":"address","value":"_from"},"id":645,"name":"Identifier","src":"5663:5:0"}],"id":646,"name":"IndexAccess","src":"5653:16:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":597,"type":"uint256","value":"_amount"},"id":647,"name":"Identifier","src":"5673:7:0"}],"id":648,"name":"Assignment","src":"5653:27:0"}],"id":649,"name":"ExpressionStatement","src":"5653:27:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"+=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":66,"type":"mapping(address => uint256)","value":"balanceOf"},"id":650,"name":"Identifier","src":"5686:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":595,"type":"address","value":"_to"},"id":651,"name":"Identifier","src":"5696:3:0"}],"id":652,"name":"IndexAccess","src":"5686:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":597,"type":"uint256","value":"_amount"},"id":653,"name":"Identifier","src":"5704:7:0"}],"id":654,"name":"Assignment","src":"5686:25:0"}],"id":655,"name":"ExpressionStatement","src":"5686:25:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":591,"type":"function (address,address,uint256)","value":"Transfer"},"id":656,"name":"Identifier","src":"5718:8:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":657,"name":"Identifier","src":"5727:3:0"}],"id":658,"name":"MemberAccess","src":"5727:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":595,"type":"address","value":"_to"},"id":659,"name":"Identifier","src":"5739:3:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":597,"type":"uint256","value":"_amount"},"id":660,"name":"Identifier","src":"5744:7:0"}],"id":661,"name":"FunctionCall","src":"5718:34:0"}],"id":662,"name":"ExpressionStatement","src":"5718:34:0"},{"attributes":{"functionReturnParameters":601},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"74727565","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"bool","type":"bool","value":"true"},"id":663,"name":"Literal","src":"5766:4:0"}],"id":664,"name":"Return","src":"5759:11:0"}],"id":665,"name":"Block","src":"5455:320:0"}],"id":666,"name":"FunctionDefinition","src":"5346:429:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"transfer","payable":false,"scope":780,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_to","scope":683,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":667,"name":"ElementaryTypeName","src":"5797:7:0"}],"id":668,"name":"VariableDeclaration","src":"5797:11:0"},{"attributes":{"constant":false,"name":"_amount","scope":683,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":669,"name":"ElementaryTypeName","src":"5810:4:0"}],"id":670,"name":"VariableDeclaration","src":"5810:12:0"}],"id":671,"name":"ParameterList","src":"5796:27:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":683,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":672,"name":"ElementaryTypeName","src":"5842:4:0"}],"id":673,"name":"VariableDeclaration","src":"5842:12:0"}],"id":674,"name":"ParameterList","src":"5841:14:0"},{"children":[{"attributes":{"functionReturnParameters":674},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"bool","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":666,"type":"function (address,address,uint256) returns (bool)","value":"_transfer"},"id":675,"name":"Identifier","src":"5869:9:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":676,"name":"Identifier","src":"5879:3:0"}],"id":677,"name":"MemberAccess","src":"5879:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":668,"type":"address","value":"_to"},"id":678,"name":"Identifier","src":"5891:3:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":670,"type":"uint256","value":"_amount"},"id":679,"name":"Identifier","src":"5896:7:0"}],"id":680,"name":"FunctionCall","src":"5869:35:0"}],"id":681,"name":"Return","src":"5862:42:0"}],"id":682,"name":"Block","src":"5856:53:0"}],"id":683,"name":"FunctionDefinition","src":"5779:130:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"transferFrom","payable":false,"scope":780,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_from","scope":729,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":684,"name":"ElementaryTypeName","src":"5935:7:0"}],"id":685,"name":"VariableDeclaration","src":"5935:13:0"},{"attributes":{"constant":false,"name":"_to","scope":729,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":686,"name":"ElementaryTypeName","src":"5950:7:0"}],"id":687,"name":"VariableDeclaration","src":"5950:11:0"},{"attributes":{"constant":false,"name":"_amount","scope":729,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":688,"name":"ElementaryTypeName","src":"5963:4:0"}],"id":689,"name":"VariableDeclaration","src":"5963:12:0"}],"id":690,"name":"ParameterList","src":"5934:42:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":729,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":691,"name":"ElementaryTypeName","src":"5995:4:0"}],"id":692,"name":"VariableDeclaration","src":"5995:12:0"}],"id":693,"name":"ParameterList","src":"5994:14:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":694,"name":"Identifier","src":"6015:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_uint256","typeString":"uint256"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":">=","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"mapping(address => uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":147,"type":"mapping(address => mapping(address => uint256))","value":"allowed"},"id":695,"name":"Identifier","src":"6023:7:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":685,"type":"address","value":"_from"},"id":696,"name":"Identifier","src":"6031:5:0"}],"id":697,"name":"IndexAccess","src":"6023:14:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":698,"name":"Identifier","src":"6038:3:0"}],"id":699,"name":"MemberAccess","src":"6038:10:0"}],"id":700,"name":"IndexAccess","src":"6023:26:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":689,"type":"uint256","value":"_amount"},"id":701,"name":"Identifier","src":"6053:7:0"}],"id":702,"name":"BinaryOperation","src":"6023:37:0"}],"id":703,"name":"FunctionCall","src":"6015:46:0"}],"id":704,"name":"ExpressionStatement","src":"6015:46:0"},{"attributes":{"assignments":[706]},"children":[{"attributes":{"constant":false,"name":"tranferSuccess","scope":729,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":705,"name":"ElementaryTypeName","src":"6068:4:0"}],"id":706,"name":"VariableDeclaration","src":"6068:19:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"bool","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":666,"type":"function (address,address,uint256) returns (bool)","value":"_transfer"},"id":707,"name":"Identifier","src":"6090:9:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":685,"type":"address","value":"_from"},"id":708,"name":"Identifier","src":"6100:5:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":687,"type":"address","value":"_to"},"id":709,"name":"Identifier","src":"6107:3:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":689,"type":"uint256","value":"_amount"},"id":710,"name":"Identifier","src":"6112:7:0"}],"id":711,"name":"FunctionCall","src":"6090:30:0"}],"id":712,"name":"VariableDeclarationStatement","src":"6068:52:0"},{"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":706,"type":"bool","value":"tranferSuccess"},"id":713,"name":"Identifier","src":"6130:14:0"},{"children":[{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"-=","type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"uint256"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"mapping(address => uint256)"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":147,"type":"mapping(address => mapping(address => uint256))","value":"allowed"},"id":714,"name":"Identifier","src":"6154:7:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":685,"type":"address","value":"_from"},"id":715,"name":"Identifier","src":"6162:5:0"}],"id":718,"name":"IndexAccess","src":"6154:14:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":716,"name":"Identifier","src":"6169:3:0"}],"id":717,"name":"MemberAccess","src":"6169:10:0"}],"id":719,"name":"IndexAccess","src":"6154:26:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":689,"type":"uint256","value":"_amount"},"id":720,"name":"Identifier","src":"6184:7:0"}],"id":721,"name":"Assignment","src":"6154:37:0"}],"id":722,"name":"ExpressionStatement","src":"6154:37:0"}],"id":723,"name":"Block","src":"6146:52:0"},{"children":[{"attributes":{"functionReturnParameters":693},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"66616c7365","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"bool","type":"bool","value":"false"},"id":724,"name":"Literal","src":"6219:5:0"}],"id":725,"name":"Return","src":"6212:12:0"}],"id":726,"name":"Block","src":"6204:27:0"}],"id":727,"name":"IfStatement","src":"6126:105:0"}],"id":728,"name":"Block","src":"6009:226:0"}],"id":729,"name":"FunctionDefinition","src":"5913:322:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"transferToAccount","payable":false,"scope":780,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_toRoutingCode","scope":748,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":730,"name":"ElementaryTypeName","src":"6266:7:0"}],"id":731,"name":"VariableDeclaration","src":"6266:22:0"},{"attributes":{"constant":false,"name":"_amount","scope":748,"stateVariable":false,"storageLocation":"default","type":"uint256","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"uint","type":"uint256"},"id":732,"name":"ElementaryTypeName","src":"6290:4:0"}],"id":733,"name":"VariableDeclaration","src":"6290:12:0"}],"id":734,"name":"ParameterList","src":"6265:38:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":748,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":735,"name":"ElementaryTypeName","src":"6322:4:0"}],"id":736,"name":"VariableDeclaration","src":"6322:12:0"}],"id":737,"name":"ParameterList","src":"6321:14:0"},{"children":[{"attributes":{"functionReturnParameters":737},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"bool","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_address","typeString":"address"},{"typeIdentifier":"t_uint256","typeString":"uint256"}],"overloadedDeclarations":[null],"referencedDeclaration":666,"type":"function (address,address,uint256) returns (bool)","value":"_transfer"},"id":738,"name":"Identifier","src":"6349:9:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":739,"name":"Identifier","src":"6359:3:0"}],"id":740,"name":"MemberAccess","src":"6359:10:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":741,"name":"Identifier","src":"6371:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":731,"type":"bytes32","value":"_toRoutingCode"},"id":742,"name":"Identifier","src":"6386:14:0"}],"id":743,"name":"IndexAccess","src":"6371:30:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":733,"type":"uint256","value":"_amount"},"id":744,"name":"Identifier","src":"6403:7:0"}],"id":745,"name":"FunctionCall","src":"6349:62:0"}],"id":746,"name":"Return","src":"6342:69:0"}],"id":747,"name":"Block","src":"6336:80:0"}],"id":748,"name":"FunctionDefinition","src":"6239:177:0"},{"attributes":{"constant":false,"implemented":true,"isConstructor":false,"modifiers":[null],"name":"transferRoutingCode","payable":false,"scope":780,"stateMutability":"nonpayable","superFunction":null,"visibility":"external"},"children":[{"children":[{"attributes":{"constant":false,"name":"_routingCode","scope":779,"stateVariable":false,"storageLocation":"default","type":"bytes32","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bytes32","type":"bytes32"},"id":749,"name":"ElementaryTypeName","src":"6520:7:0"}],"id":750,"name":"VariableDeclaration","src":"6520:20:0"},{"attributes":{"constant":false,"name":"_to","scope":779,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":751,"name":"ElementaryTypeName","src":"6542:7:0"}],"id":752,"name":"VariableDeclaration","src":"6542:11:0"}],"id":753,"name":"ParameterList","src":"6519:35:0"},{"children":[{"attributes":{"constant":false,"name":"success","scope":779,"stateVariable":false,"storageLocation":"default","type":"bool","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"bool","type":"bool"},"id":754,"name":"ElementaryTypeName","src":"6573:4:0"}],"id":755,"name":"VariableDeclaration","src":"6573:12:0"}],"id":756,"name":"ParameterList","src":"6572:14:0"},{"children":[{"attributes":{"assignments":[758]},"children":[{"attributes":{"constant":false,"name":"owner","scope":779,"stateVariable":false,"storageLocation":"default","type":"address","value":null,"visibility":"internal"},"children":[{"attributes":{"name":"address","type":"address"},"id":757,"name":"ElementaryTypeName","src":"6593:7:0"}],"id":758,"name":"VariableDeclaration","src":"6593:13:0"},{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":false,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":759,"name":"Identifier","src":"6609:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":750,"type":"bytes32","value":"_routingCode"},"id":760,"name":"Identifier","src":"6624:12:0"}],"id":761,"name":"IndexAccess","src":"6609:28:0"}],"id":762,"name":"VariableDeclarationStatement","src":"6593:44:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"isStructConstructorCall":false,"lValueRequested":false,"names":[null],"type":"tuple()","type_conversion":false},"children":[{"attributes":{"argumentTypes":[{"typeIdentifier":"t_bool","typeString":"bool"}],"overloadedDeclarations":[null],"referencedDeclaration":855,"type":"function (bool) pure","value":"require"},"id":763,"name":"Identifier","src":"6643:7:0"},{"attributes":{"argumentTypes":null,"commonType":{"typeIdentifier":"t_address","typeString":"address"},"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"==","type":"bool"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"member_name":"sender","referencedDeclaration":null,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":852,"type":"msg","value":"msg"},"id":764,"name":"Identifier","src":"6651:3:0"}],"id":765,"name":"MemberAccess","src":"6651:10:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":758,"type":"address","value":"owner"},"id":766,"name":"Identifier","src":"6665:5:0"}],"id":767,"name":"BinaryOperation","src":"6651:19:0"}],"id":768,"name":"FunctionCall","src":"6643:28:0"}],"id":769,"name":"ExpressionStatement","src":"6643:28:0"},{"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":false,"isPure":false,"lValueRequested":false,"operator":"=","type":"address"},"children":[{"attributes":{"argumentTypes":null,"isConstant":false,"isLValue":true,"isPure":false,"lValueRequested":true,"type":"address"},"children":[{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":62,"type":"mapping(bytes32 => address)","value":"routingCodeMap"},"id":770,"name":"Identifier","src":"6678:14:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":750,"type":"bytes32","value":"_routingCode"},"id":771,"name":"Identifier","src":"6693:12:0"}],"id":772,"name":"IndexAccess","src":"6678:28:0"},{"attributes":{"argumentTypes":null,"overloadedDeclarations":[null],"referencedDeclaration":752,"type":"address","value":"_to"},"id":773,"name":"Identifier","src":"6709:3:0"}],"id":774,"name":"Assignment","src":"6678:34:0"}],"id":775,"name":"ExpressionStatement","src":"6678:34:0"},{"attributes":{"functionReturnParameters":756},"children":[{"attributes":{"argumentTypes":null,"hexvalue":"74727565","isConstant":false,"isLValue":false,"isPure":true,"lValueRequested":false,"subdenomination":null,"token":"bool","type":"bool","value":"true"},"id":776,"name":"Literal","src":"6725:4:0"}],"id":777,"name":"Return","src":"6718:11:0"}],"id":778,"name":"Block","src":"6587:147:0"}],"id":779,"name":"FunctionDefinition","src":"6491:243:0"}],"id":780,"name":"ContractDefinition","src":"5205:1531:0"},{"attributes":{"contractDependencies":[44,56,139,200,581,780],"contractKind":"contract","documentation":null,"fullyImplemented":true,"linearizedBaseContracts":[783,780,581,200,139,56,44],"name":"FastCashMoneyPlus","nodes":[null],"scope":784},"children":[{"attributes":{"arguments":[null]},"children":[{"attributes":{"contractScope":null,"name":"FastCashMoneyPlusTransfer","referencedDeclaration":780,"type":"contract FastCashMoneyPlusTransfer"},"id":781,"name":"UserDefinedTypeName","src":"6768:25:0"}],"id":782,"name":"InheritanceSpecifier","src":"6768:25:0"}],"id":783,"name":"ContractDefinition","src":"6738:60:0"}],"id":784,"name":"SourceUnit","src":"0:6799:0"},"compiler":{"name":"solc","version":"0.4.18+commit.9cf6e910.Emscripten.clang"},"networks":{"4447":{"events":{},"links":{},"address":"0x345ca3e014aaf5dca488057592ee47305d9b3e10"}},"schemaVersion":"1.0.1","updatedAt":"2017-12-26T16:53:41.074Z"}
 
 /***/ }),
-/* 427 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Web3 = __webpack_require__(428);
+var Web3 = __webpack_require__(435);
 
 // dont override global variable
 if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
@@ -34152,7 +34159,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 428 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -34182,23 +34189,23 @@ module.exports = Web3;
  * @date 2014
  */
 
-var RequestManager = __webpack_require__(429);
+var RequestManager = __webpack_require__(436);
 var Iban = __webpack_require__(165);
-var Eth = __webpack_require__(452);
-var DB = __webpack_require__(471);
-var Shh = __webpack_require__(472);
-var Net = __webpack_require__(473);
-var Personal = __webpack_require__(474);
-var Swarm = __webpack_require__(475);
-var Settings = __webpack_require__(476);
-var version = __webpack_require__(477);
+var Eth = __webpack_require__(459);
+var DB = __webpack_require__(478);
+var Shh = __webpack_require__(479);
+var Net = __webpack_require__(480);
+var Personal = __webpack_require__(481);
+var Swarm = __webpack_require__(482);
+var Settings = __webpack_require__(483);
+var version = __webpack_require__(484);
 var utils = __webpack_require__(32);
 var sha3 = __webpack_require__(157);
-var extend = __webpack_require__(478);
-var Batch = __webpack_require__(479);
+var extend = __webpack_require__(485);
+var Batch = __webpack_require__(486);
 var Property = __webpack_require__(116);
-var HttpProvider = __webpack_require__(480);
-var IpcProvider = __webpack_require__(485);
+var HttpProvider = __webpack_require__(487);
+var IpcProvider = __webpack_require__(492);
 var BigNumber = __webpack_require__(156);
 
 
@@ -34310,7 +34317,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 429 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -34581,7 +34588,7 @@ module.exports = RequestManager;
 
 
 /***/ }),
-/* 430 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -34662,7 +34669,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 431 */
+/* 438 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -34816,7 +34823,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 432 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -34901,7 +34908,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 433 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -34989,7 +34996,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 434 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -35261,7 +35268,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 435 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35411,7 +35418,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 436 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35494,7 +35501,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 437 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35557,7 +35564,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 438 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35678,7 +35685,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 439 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35737,7 +35744,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 440 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35782,7 +35789,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 441 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35836,7 +35843,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 442 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35885,7 +35892,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 443 */
+/* 450 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35930,7 +35937,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 444 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -35980,7 +35987,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 445 */
+/* 452 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -36015,7 +36022,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 446 */
+/* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -36086,7 +36093,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 447 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -36323,7 +36330,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 448 */
+/* 455 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -37098,7 +37105,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 449 */
+/* 456 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -37242,7 +37249,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 450 */
+/* 457 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -37439,7 +37446,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 451 */
+/* 458 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
@@ -37634,7 +37641,7 @@ module.exports = RequestManager;
 }));
 
 /***/ }),
-/* 452 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37668,13 +37675,13 @@ var utils = __webpack_require__(32);
 var Method = __webpack_require__(108);
 var Property = __webpack_require__(116);
 var c = __webpack_require__(164);
-var Contract = __webpack_require__(453);
+var Contract = __webpack_require__(460);
 var watches = __webpack_require__(167);
 var Filter = __webpack_require__(166);
-var IsSyncing = __webpack_require__(465);
-var namereg = __webpack_require__(466);
+var IsSyncing = __webpack_require__(472);
+var namereg = __webpack_require__(473);
 var Iban = __webpack_require__(165);
-var transfer = __webpack_require__(469);
+var transfer = __webpack_require__(476);
 
 var blockCall = function (args) {
     return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
@@ -37995,7 +38002,7 @@ module.exports = Eth;
 
 
 /***/ }),
-/* 453 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -38023,8 +38030,8 @@ module.exports = Eth;
 var utils = __webpack_require__(32);
 var coder = __webpack_require__(387);
 var SolidityEvent = __webpack_require__(399);
-var SolidityFunction = __webpack_require__(463);
-var AllEvents = __webpack_require__(464);
+var SolidityFunction = __webpack_require__(470);
+var AllEvents = __webpack_require__(471);
 
 /**
  * Should be called to encode constructor params
@@ -38311,7 +38318,7 @@ module.exports = ContractFactory;
 
 
 /***/ }),
-/* 454 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38343,7 +38350,7 @@ module.exports = SolidityTypeAddress;
 
 
 /***/ }),
-/* 455 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38375,7 +38382,7 @@ module.exports = SolidityTypeBool;
 
 
 /***/ }),
-/* 456 */
+/* 463 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38413,7 +38420,7 @@ module.exports = SolidityTypeInt;
 
 
 /***/ }),
-/* 457 */
+/* 464 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38451,7 +38458,7 @@ module.exports = SolidityTypeUInt;
 
 
 /***/ }),
-/* 458 */
+/* 465 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38477,7 +38484,7 @@ module.exports = SolidityTypeDynamicBytes;
 
 
 /***/ }),
-/* 459 */
+/* 466 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38503,7 +38510,7 @@ module.exports = SolidityTypeString;
 
 
 /***/ }),
-/* 460 */
+/* 467 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38541,7 +38548,7 @@ module.exports = SolidityTypeReal;
 
 
 /***/ }),
-/* 461 */
+/* 468 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38579,7 +38586,7 @@ module.exports = SolidityTypeUReal;
 
 
 /***/ }),
-/* 462 */
+/* 469 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(55);
@@ -38614,7 +38621,7 @@ module.exports = SolidityTypeBytes;
 
 
 /***/ }),
-/* 463 */
+/* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -38903,7 +38910,7 @@ module.exports = SolidityFunction;
 
 
 /***/ }),
-/* 464 */
+/* 471 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -38997,7 +39004,7 @@ module.exports = AllSolidityEvents;
 
 
 /***/ }),
-/* 465 */
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39096,7 +39103,7 @@ module.exports = IsSyncing;
 
 
 /***/ }),
-/* 466 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39121,8 +39128,8 @@ module.exports = IsSyncing;
  * @date 2015
  */
 
-var globalRegistrarAbi = __webpack_require__(467);
-var icapRegistrarAbi= __webpack_require__(468);
+var globalRegistrarAbi = __webpack_require__(474);
+var icapRegistrarAbi= __webpack_require__(475);
 
 var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
 var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
@@ -39141,19 +39148,19 @@ module.exports = {
 
 
 /***/ }),
-/* 467 */
+/* 474 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
 
 /***/ }),
-/* 468 */
+/* 475 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
 
 /***/ }),
-/* 469 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39179,7 +39186,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],
  */
 
 var Iban = __webpack_require__(165);
-var exchangeAbi = __webpack_require__(470);
+var exchangeAbi = __webpack_require__(477);
 
 /**
  * Should be used to make Iban transfer
@@ -39251,13 +39258,13 @@ module.exports = transfer;
 
 
 /***/ }),
-/* 470 */
+/* 477 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
 
 /***/ }),
-/* 471 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39329,7 +39336,7 @@ module.exports = DB;
 
 
 /***/ }),
-/* 472 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39479,7 +39486,7 @@ module.exports = Shh;
 
 
 /***/ }),
-/* 473 */
+/* 480 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39537,7 +39544,7 @@ module.exports = Net;
 
 
 /***/ }),
-/* 474 */
+/* 481 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39659,7 +39666,7 @@ module.exports = Personal;
 
 
 /***/ }),
-/* 475 */
+/* 482 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39811,7 +39818,7 @@ module.exports = Swarm;
 
 
 /***/ }),
-/* 476 */
+/* 483 */
 /***/ (function(module, exports) {
 
 
@@ -39826,13 +39833,13 @@ module.exports = Settings;
 
 
 /***/ }),
-/* 477 */
+/* 484 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"0.20.1"}
 
 /***/ }),
-/* 478 */
+/* 485 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var formatters = __webpack_require__(78);
@@ -39886,7 +39893,7 @@ module.exports = extend;
 
 
 /***/ }),
-/* 479 */
+/* 486 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39958,7 +39965,7 @@ module.exports = Batch;
 
 
 /***/ }),
-/* 480 */
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -39994,7 +40001,7 @@ if (typeof window !== 'undefined' && window.XMLHttpRequest) {
   XMLHttpRequest = window.XMLHttpRequest; // jshint ignore: line
 // node
 } else {
-  XMLHttpRequest = __webpack_require__(484).XMLHttpRequest; // jshint ignore: line
+  XMLHttpRequest = __webpack_require__(491).XMLHttpRequest; // jshint ignore: line
 }
 
 var XHR2 = __webpack_require__(388); // jshint ignore: line
@@ -40122,7 +40129,7 @@ module.exports = HttpProvider;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(109).Buffer))
 
 /***/ }),
-/* 481 */
+/* 488 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40243,7 +40250,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 482 */
+/* 489 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -40333,7 +40340,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 483 */
+/* 490 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -40344,7 +40351,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 484 */
+/* 491 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40360,7 +40367,7 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 
 /***/ }),
-/* 485 */
+/* 492 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40574,11 +40581,11 @@ module.exports = IpcProvider;
 
 
 /***/ }),
-/* 486 */
+/* 493 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Schema = __webpack_require__(487);
-var Contract = __webpack_require__(532);
+var Schema = __webpack_require__(494);
+var Contract = __webpack_require__(539);
 
 var contract = function(options) {
   var binary = Schema.normalize(options || {});
@@ -40643,16 +40650,16 @@ if (typeof window !== "undefined") {
 
 
 /***/ }),
-/* 487 */
+/* 494 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var sha3 = __webpack_require__(488);
-var pkgVersion = __webpack_require__(490).version;
-var Ajv = __webpack_require__(491);
+var sha3 = __webpack_require__(495);
+var pkgVersion = __webpack_require__(497).version;
+var Ajv = __webpack_require__(498);
 
-var contractObjectSchema = __webpack_require__(529);
-var networkObjectSchema = __webpack_require__(530);
-var abiSchema = __webpack_require__(531);
+var contractObjectSchema = __webpack_require__(536);
+var networkObjectSchema = __webpack_require__(537);
+var abiSchema = __webpack_require__(538);
 
 
 /**
@@ -40872,13 +40879,13 @@ module.exports = TruffleContractSchema;
 
 
 /***/ }),
-/* 488 */
+/* 495 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory, undef) {
 	if (true) {
 		// CommonJS
-		module.exports = exports = factory(__webpack_require__(400), __webpack_require__(489));
+		module.exports = exports = factory(__webpack_require__(400), __webpack_require__(496));
 	}
 	else if (typeof define === "function" && define.amd) {
 		// AMD
@@ -41200,7 +41207,7 @@ module.exports = TruffleContractSchema;
 }));
 
 /***/ }),
-/* 489 */
+/* 496 */
 /***/ (function(module, exports, __webpack_require__) {
 
 ;(function (root, factory) {
@@ -41509,27 +41516,27 @@ module.exports = TruffleContractSchema;
 }));
 
 /***/ }),
-/* 490 */
+/* 497 */
 /***/ (function(module, exports) {
 
 module.exports = {"_args":[["truffle-contract-schema@1.0.1","/Users/spikelny/Desktop/projects/fastcash-ico"]],"_from":"truffle-contract-schema@1.0.1","_id":"truffle-contract-schema@1.0.1","_inBundle":false,"_integrity":"sha512-37ZO9FVvmW/PZz/sh00LAz7HN2U4FHERuxI4mCbUR6h3r2cRgZ4YBfzHuAHOnZlrVzM1qx/Dx/1Ng3UyfWseEA==","_location":"/truffle-contract-schema","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"truffle-contract-schema@1.0.1","name":"truffle-contract-schema","escapedName":"truffle-contract-schema","rawSpec":"1.0.1","saveSpec":null,"fetchSpec":"1.0.1"},"_requiredBy":["/truffle-contract"],"_resolved":"https://registry.npmjs.org/truffle-contract-schema/-/truffle-contract-schema-1.0.1.tgz","_spec":"1.0.1","_where":"/Users/spikelny/Desktop/projects/fastcash-ico","author":{"name":"Tim Coulter","email":"tim.coulter@consensys.net"},"bugs":{"url":"https://github.com/trufflesuite/truffle-schema/issues"},"dependencies":{"ajv":"^5.1.1","crypto-js":"^3.1.9-1"},"description":"JSON schema for contract artifacts","devDependencies":{"mocha":"^3.2.0","solc":"^0.4.16"},"homepage":"https://github.com/trufflesuite/truffle-schema#readme","keywords":["ethereum","json","schema","contract","artifacts"],"license":"MIT","main":"index.js","name":"truffle-contract-schema","repository":{"type":"git","url":"git+https://github.com/trufflesuite/truffle-schema.git"},"scripts":{"test":"mocha"},"version":"1.0.1"}
 
 /***/ }),
-/* 491 */
+/* 498 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var compileSchema = __webpack_require__(492)
+var compileSchema = __webpack_require__(499)
   , resolve = __webpack_require__(389)
-  , Cache = __webpack_require__(501)
+  , Cache = __webpack_require__(508)
   , SchemaObject = __webpack_require__(401)
   , stableStringify = __webpack_require__(402)
-  , formats = __webpack_require__(502)
-  , rules = __webpack_require__(503)
-  , $dataMetaSchema = __webpack_require__(522)
-  , patternGroups = __webpack_require__(523)
+  , formats = __webpack_require__(509)
+  , rules = __webpack_require__(510)
+  , $dataMetaSchema = __webpack_require__(529)
+  , patternGroups = __webpack_require__(530)
   , util = __webpack_require__(117)
   , co = __webpack_require__(404);
 
@@ -41548,8 +41555,8 @@ Ajv.prototype.errorsText = errorsText;
 Ajv.prototype._addSchema = _addSchema;
 Ajv.prototype._compile = _compile;
 
-Ajv.prototype.compileAsync = __webpack_require__(524);
-var customKeyword = __webpack_require__(525);
+Ajv.prototype.compileAsync = __webpack_require__(531);
+var customKeyword = __webpack_require__(532);
 Ajv.prototype.addKeyword = customKeyword.add;
 Ajv.prototype.getKeyword = customKeyword.get;
 Ajv.prototype.removeKeyword = customKeyword.remove;
@@ -41966,11 +41973,11 @@ function addFormat(name, format) {
 function addDraft6MetaSchema(self) {
   var $dataSchema;
   if (self._opts.$data) {
-    $dataSchema = __webpack_require__(527);
+    $dataSchema = __webpack_require__(534);
     self.addMetaSchema($dataSchema, $dataSchema.$id, true);
   }
   if (self._opts.meta === false) return;
-  var metaSchema = __webpack_require__(528);
+  var metaSchema = __webpack_require__(535);
   if (self._opts.$data) metaSchema = $dataMetaSchema(metaSchema, META_SUPPORT_DATA);
   self.addMetaSchema(metaSchema, META_SCHEMA_ID, true);
   self._refs['http://json-schema.org/schema'] = META_SCHEMA_ID;
@@ -42024,7 +42031,7 @@ function noop() {}
 
 
 /***/ }),
-/* 492 */
+/* 499 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42411,7 +42418,7 @@ function vars(arr, statement) {
 
 
 /***/ }),
-/* 493 */
+/* 500 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42438,8 +42445,8 @@ function vars(arr, statement) {
 
 
 
-var punycode = __webpack_require__(494);
-var util = __webpack_require__(495);
+var punycode = __webpack_require__(501);
+var util = __webpack_require__(502);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -42514,7 +42521,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
       'gopher:': true,
       'file:': true
     },
-    querystring = __webpack_require__(496);
+    querystring = __webpack_require__(503);
 
 function urlParse(url, parseQueryString, slashesDenoteHost) {
   if (url && util.isObject(url) && url instanceof Url) return url;
@@ -43150,7 +43157,7 @@ Url.prototype.parseHost = function() {
 
 
 /***/ }),
-/* 494 */
+/* 501 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/punycode v1.4.1 by @mathias */
@@ -43689,7 +43696,7 @@ Url.prototype.parseHost = function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(158)(module), __webpack_require__(58)))
 
 /***/ }),
-/* 495 */
+/* 502 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43712,18 +43719,18 @@ module.exports = {
 
 
 /***/ }),
-/* 496 */
+/* 503 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(497);
-exports.encode = exports.stringify = __webpack_require__(498);
+exports.decode = exports.parse = __webpack_require__(504);
+exports.encode = exports.stringify = __webpack_require__(505);
 
 
 /***/ }),
-/* 497 */
+/* 504 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43814,7 +43821,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 498 */
+/* 505 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43906,7 +43913,7 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 499 */
+/* 506 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43933,7 +43940,7 @@ module.exports = function ucs2length(str) {
 
 
 /***/ }),
-/* 500 */
+/* 507 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44021,7 +44028,7 @@ function escapeJsonPtr(str) {
 
 
 /***/ }),
-/* 501 */
+/* 508 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44054,7 +44061,7 @@ Cache.prototype.clear = function Cache_clear() {
 
 
 /***/ }),
-/* 502 */
+/* 509 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44196,13 +44203,13 @@ function regex(str) {
 
 
 /***/ }),
-/* 503 */
+/* 510 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var ruleModules = __webpack_require__(504)
+var ruleModules = __webpack_require__(511)
   , toHash = __webpack_require__(117).toHash;
 
 module.exports = function rules() {
@@ -44261,7 +44268,7 @@ module.exports = function rules() {
 
 
 /***/ }),
-/* 504 */
+/* 511 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44269,15 +44276,15 @@ module.exports = function rules() {
 
 //all requires must be explicit because browserify won't work with dynamic requires
 module.exports = {
-  '$ref': __webpack_require__(505),
-  allOf: __webpack_require__(506),
-  anyOf: __webpack_require__(507),
-  const: __webpack_require__(508),
-  contains: __webpack_require__(509),
-  dependencies: __webpack_require__(510),
-  'enum': __webpack_require__(511),
-  format: __webpack_require__(512),
-  items: __webpack_require__(513),
+  '$ref': __webpack_require__(512),
+  allOf: __webpack_require__(513),
+  anyOf: __webpack_require__(514),
+  const: __webpack_require__(515),
+  contains: __webpack_require__(516),
+  dependencies: __webpack_require__(517),
+  'enum': __webpack_require__(518),
+  format: __webpack_require__(519),
+  items: __webpack_require__(520),
   maximum: __webpack_require__(405),
   minimum: __webpack_require__(405),
   maxItems: __webpack_require__(406),
@@ -44286,20 +44293,20 @@ module.exports = {
   minLength: __webpack_require__(407),
   maxProperties: __webpack_require__(408),
   minProperties: __webpack_require__(408),
-  multipleOf: __webpack_require__(514),
-  not: __webpack_require__(515),
-  oneOf: __webpack_require__(516),
-  pattern: __webpack_require__(517),
-  properties: __webpack_require__(518),
-  propertyNames: __webpack_require__(519),
-  required: __webpack_require__(520),
-  uniqueItems: __webpack_require__(521),
+  multipleOf: __webpack_require__(521),
+  not: __webpack_require__(522),
+  oneOf: __webpack_require__(523),
+  pattern: __webpack_require__(524),
+  properties: __webpack_require__(525),
+  propertyNames: __webpack_require__(526),
+  required: __webpack_require__(527),
+  uniqueItems: __webpack_require__(528),
   validate: __webpack_require__(403)
 };
 
 
 /***/ }),
-/* 505 */
+/* 512 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44429,7 +44436,7 @@ module.exports = function generate_ref(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 506 */
+/* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44479,7 +44486,7 @@ module.exports = function generate_allOf(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 507 */
+/* 514 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44559,7 +44566,7 @@ module.exports = function generate_anyOf(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 508 */
+/* 515 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44621,7 +44628,7 @@ module.exports = function generate_const(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 509 */
+/* 516 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44709,7 +44716,7 @@ module.exports = function generate_contains(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 510 */
+/* 517 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44883,7 +44890,7 @@ module.exports = function generate_dependencies(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 511 */
+/* 518 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44955,7 +44962,7 @@ module.exports = function generate_enum(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 512 */
+/* 519 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45111,7 +45118,7 @@ module.exports = function generate_format(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 513 */
+/* 520 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45258,7 +45265,7 @@ module.exports = function generate_items(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 514 */
+/* 521 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45341,7 +45348,7 @@ module.exports = function generate_multipleOf(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 515 */
+/* 522 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45431,7 +45438,7 @@ module.exports = function generate_not(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 516 */
+/* 523 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45508,7 +45515,7 @@ module.exports = function generate_oneOf(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 517 */
+/* 524 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45589,7 +45596,7 @@ module.exports = function generate_pattern(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 518 */
+/* 525 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46064,7 +46071,7 @@ module.exports = function generate_properties(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 519 */
+/* 526 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46152,7 +46159,7 @@ module.exports = function generate_propertyNames(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 520 */
+/* 527 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46427,7 +46434,7 @@ module.exports = function generate_required(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 521 */
+/* 528 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46505,7 +46512,7 @@ module.exports = function generate_uniqueItems(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 522 */
+/* 529 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46561,7 +46568,7 @@ module.exports = function (metaSchema, keywordsJsonPointers) {
 
 
 /***/ }),
-/* 523 */
+/* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46604,7 +46611,7 @@ module.exports = function (ajv) {
 
 
 /***/ }),
-/* 524 */
+/* 531 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46701,14 +46708,14 @@ function compileAsync(schema, meta, callback) {
 
 
 /***/ }),
-/* 525 */
+/* 532 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var IDENTIFIER = /^[a-z_$][a-z0-9_$-]*$/i;
-var customRuleCode = __webpack_require__(526);
+var customRuleCode = __webpack_require__(533);
 
 module.exports = {
   add: addKeyword,
@@ -46843,7 +46850,7 @@ function removeKeyword(keyword) {
 
 
 /***/ }),
-/* 526 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47076,42 +47083,42 @@ module.exports = function generate_custom(it, $keyword, $ruleType) {
 
 
 /***/ }),
-/* 527 */
+/* 534 */
 /***/ (function(module, exports) {
 
 module.exports = {"$schema":"http://json-schema.org/draft-06/schema#","$id":"https://raw.githubusercontent.com/epoberezkin/ajv/master/lib/refs/$data.json#","description":"Meta-schema for $data reference (JSON-schema extension proposal)","type":"object","required":["$data"],"properties":{"$data":{"type":"string","anyOf":[{"format":"relative-json-pointer"},{"format":"json-pointer"}]}},"additionalProperties":false}
 
 /***/ }),
-/* 528 */
+/* 535 */
 /***/ (function(module, exports) {
 
 module.exports = {"$schema":"http://json-schema.org/draft-06/schema#","$id":"http://json-schema.org/draft-06/schema#","title":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"nonNegativeInteger":{"type":"integer","minimum":0},"nonNegativeIntegerDefault0":{"allOf":[{"$ref":"#/definitions/nonNegativeInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"uniqueItems":true,"default":[]}},"type":["object","boolean"],"properties":{"$id":{"type":"string","format":"uri-reference"},"$schema":{"type":"string","format":"uri"},"$ref":{"type":"string","format":"uri-reference"},"title":{"type":"string"},"description":{"type":"string"},"default":{},"examples":{"type":"array","items":{}},"multipleOf":{"type":"number","exclusiveMinimum":0},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"number"},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"number"},"maxLength":{"$ref":"#/definitions/nonNegativeInteger"},"minLength":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"$ref":"#"},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":{}},"maxItems":{"$ref":"#/definitions/nonNegativeInteger"},"minItems":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"contains":{"$ref":"#"},"maxProperties":{"$ref":"#/definitions/nonNegativeInteger"},"minProperties":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"$ref":"#"},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"propertyNames":{"$ref":"#"},"const":{},"enum":{"type":"array","minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"default":{}}
 
 /***/ }),
-/* 529 */
+/* 536 */
 /***/ (function(module, exports) {
 
 module.exports = {"id":"contract-object.spec.json","$schema":"http://json-schema.org/schema#","title":"Contract Object","description":"Describes a contract consumable by Truffle, possibly including deployed instances on networks","type":"object","properties":{"contractName":{"allOf":[{"$ref":"#/definitions/ContractName"},{"description":"Name used to identify the contract","default":"Contract"}]},"abi":{"allOf":[{"$ref":"abi.spec.json#"},{"description":"Interface description returned by compiler for source"}]},"bytecode":{"allOf":[{"$ref":"#/definitions/Bytecode"},{"description":"Bytecode sent as contract-creation transaction data, with unresolved link references"}]},"deployedBytecode":{"allOf":[{"$ref":"#/definitions/Bytecode"},{"description":"On-chain deployed contract bytecode, with unresolved link references"}]},"sourceMap":{"allOf":[{"$ref":"#/definitions/SourceMap"},{"description":"Source mapping for contract-creation transaction data bytecode"}]},"deployedSourceMap":{"allOf":[{"$ref":"#/definitions/SourceMap"},{"description":"Source mapping for contract bytecode"}]},"source":{"$ref":"#/definitions/Source"},"sourcePath":{"$ref":"#/definitions/SourcePath"},"ast":{"$ref":"#/definitions/AST"},"compiler":{"type":"object","properties":{"name":{"type":"string"},"version":{"type":"string"}}},"networks":{"patternProperties":{"^[a-zA-Z0-9]+$":{"$ref":"network-object.spec.json#"}},"additionalProperties":false},"schemaVersion":{"$ref":"#/definitions/SchemaVersion"},"updatedAt":{"type":"string","format":"date-time"}},"required":["abi"],"patternProperties":{"^x-":{"anyOf":[{"type":"string"},{"type":"number"},{"type":"object"},{"type":"array"}]}},"additionalProperties":false,"definitions":{"ContractName":{"type":"string","pattern":"^[a-zA-Z_][a-zA-Z0-9_]*$"},"Bytecode":{"type":"string","pattern":"^0x0$|^0x([a-fA-F0-9]{2}|__.{38})+$"},"Source":{"type":"string"},"SourceMap":{"type":"string","examples":["315:637:1:-;;;452:55;;;;;;;-1:-1:-1;;;;;485:9:1;476:19;:8;:19;;;;;;;;;;498:5;476:27;;452:55;315:637;;;;;;;"]},"SourcePath":{"type":"string"},"AST":{"type":"object"},"SchemaVersion":{"type":"string","pattern":"[0-9]+\\.[0-9]+\\.[0-9]+"}}}
 
 /***/ }),
-/* 530 */
+/* 537 */
 /***/ (function(module, exports) {
 
 module.exports = {"id":"network-object.spec.json","$schema":"http://json-schema.org/schema#","title":"Network Object","type":"object","properties":{"address":{"$ref":"#/definitions/Address"},"events":{"type":"object","patternProperties":{"^0x[a-fA-F0-9]{64}$":{"$ref":"abi.spec.json#/definitions/Event"}},"additionalProperties":false},"links":{"type":"object","patternProperties":{"^[a-zA-Z_][a-zA-Z0-9_]*$":{"$ref":"#/definitions/Link"}},"additionalProperties":false}},"additionalProperties":false,"definitions":{"Address":{"type":"string","pattern":"^0x[a-fA-F0-9]{40}$"},"Link":{"type":"object","properties":{"address":{"$ref":"#/definitions/Address"},"events":{"type":"object","patternProperties":{"^0x[a-fA-F0-9]{64}$":{"$ref":"abi.spec.json#/definitions/Event"}},"additionalProperties":false}}}}}
 
 /***/ }),
-/* 531 */
+/* 538 */
 /***/ (function(module, exports) {
 
 module.exports = {"id":"abi.spec.json","$schema":"http://json-schema.org/schema#","title":"ABI","type":"array","items":{"oneOf":[{"$ref":"#/definitions/Event"},{"$ref":"#/definitions/ConstructorFunction"},{"$ref":"#/definitions/FallbackFunction"},{"$ref":"#/definitions/NormalFunction"}]},"definitions":{"Name":{"type":"string","pattern":"^$|^[a-zA-Z_\\$][a-zA-Z_\\$0-9]*$"},"Type":{"type":"string","oneOf":[{"pattern":"^u?int(8|16|24|32|40|48|56|64|72|80|88|96|104|112|120|128|136|144|152|160|168|176|184|192|200|208|216|224|232|240|248|256)?(\\[[0-9]*\\])?$"},{"pattern":"^address(\\[[0-9]*\\])?$"},{"pattern":"^bool(\\[[0-9]*\\])?$"},{"pattern":"^u?fixed(0x8|8x0|0x16|8x8|16x0|0x24|8x16|16x8|24x0|0x32|8x24|16x16|24x8|32x0|0x40|8x32|16x24|24x16|32x8|40x0|0x48|8x40|16x32|24x24|32x16|40x8|48x0|0x56|8x48|16x40|24x32|32x24|40x16|48x8|56x0|0x64|8x56|16x48|24x40|32x32|40x24|48x16|56x8|64x0|0x72|8x64|16x56|24x48|32x40|40x32|48x24|56x16|64x8|72x0|0x80|8x72|16x64|24x56|32x48|40x40|48x32|56x24|64x16|72x8|80x0|0x88|8x80|16x72|24x64|32x56|40x48|48x40|56x32|64x24|72x16|80x8|88x0|0x96|8x88|16x80|24x72|32x64|40x56|48x48|56x40|64x32|72x24|80x16|88x8|96x0|0x104|8x96|16x88|24x80|32x72|40x64|48x56|56x48|64x40|72x32|80x24|88x16|96x8|104x0|0x112|8x104|16x96|24x88|32x80|40x72|48x64|56x56|64x48|72x40|80x32|88x24|96x16|104x8|112x0|0x120|8x112|16x104|24x96|32x88|40x80|48x72|56x64|64x56|72x48|80x40|88x32|96x24|104x16|112x8|120x0|0x128|8x120|16x112|24x104|32x96|40x88|48x80|56x72|64x64|72x56|80x48|88x40|96x32|104x24|112x16|120x8|128x0|0x136|8x128|16x120|24x112|32x104|40x96|48x88|56x80|64x72|72x64|80x56|88x48|96x40|104x32|112x24|120x16|128x8|136x0|0x144|8x136|16x128|24x120|32x112|40x104|48x96|56x88|64x80|72x72|80x64|88x56|96x48|104x40|112x32|120x24|128x16|136x8|144x0|0x152|8x144|16x136|24x128|32x120|40x112|48x104|56x96|64x88|72x80|80x72|88x64|96x56|104x48|112x40|120x32|128x24|136x16|144x8|152x0|0x160|8x152|16x144|24x136|32x128|40x120|48x112|56x104|64x96|72x88|80x80|88x72|96x64|104x56|112x48|120x40|128x32|136x24|144x16|152x8|160x0|0x168|8x160|16x152|24x144|32x136|40x128|48x120|56x112|64x104|72x96|80x88|88x80|96x72|104x64|112x56|120x48|128x40|136x32|144x24|152x16|160x8|168x0|0x176|8x168|16x160|24x152|32x144|40x136|48x128|56x120|64x112|72x104|80x96|88x88|96x80|104x72|112x64|120x56|128x48|136x40|144x32|152x24|160x16|168x8|176x0|0x184|8x176|16x168|24x160|32x152|40x144|48x136|56x128|64x120|72x112|80x104|88x96|96x88|104x80|112x72|120x64|128x56|136x48|144x40|152x32|160x24|168x16|176x8|184x0|0x192|8x184|16x176|24x168|32x160|40x152|48x144|56x136|64x128|72x120|80x112|88x104|96x96|104x88|112x80|120x72|128x64|136x56|144x48|152x40|160x32|168x24|176x16|184x8|192x0|0x200|8x192|16x184|24x176|32x168|40x160|48x152|56x144|64x136|72x128|80x120|88x112|96x104|104x96|112x88|120x80|128x72|136x64|144x56|152x48|160x40|168x32|176x24|184x16|192x8|200x0|0x208|8x200|16x192|24x184|32x176|40x168|48x160|56x152|64x144|72x136|80x128|88x120|96x112|104x104|112x96|120x88|128x80|136x72|144x64|152x56|160x48|168x40|176x32|184x24|192x16|200x8|208x0|0x216|8x208|16x200|24x192|32x184|40x176|48x168|56x160|64x152|72x144|80x136|88x128|96x120|104x112|112x104|120x96|128x88|136x80|144x72|152x64|160x56|168x48|176x40|184x32|192x24|200x16|208x8|216x0|0x224|8x216|16x208|24x200|32x192|40x184|48x176|56x168|64x160|72x152|80x144|88x136|96x128|104x120|112x112|120x104|128x96|136x88|144x80|152x72|160x64|168x56|176x48|184x40|192x32|200x24|208x16|216x8|224x0|0x232|8x224|16x216|24x208|32x200|40x192|48x184|56x176|64x168|72x160|80x152|88x144|96x136|104x128|112x120|120x112|128x104|136x96|144x88|152x80|160x72|168x64|176x56|184x48|192x40|200x32|208x24|216x16|224x8|232x0|0x240|8x232|16x224|24x216|32x208|40x200|48x192|56x184|64x176|72x168|80x160|88x152|96x144|104x136|112x128|120x120|128x112|136x104|144x96|152x88|160x80|168x72|176x64|184x56|192x48|200x40|208x32|216x24|224x16|232x8|240x0|0x248|8x240|16x232|24x224|32x216|40x208|48x200|56x192|64x184|72x176|80x168|88x160|96x152|104x144|112x136|120x128|128x120|136x112|144x104|152x96|160x88|168x80|176x72|184x64|192x56|200x48|208x40|216x32|224x24|232x16|240x8|248x0|0x256|8x248|16x240|24x232|32x224|40x216|48x208|56x200|64x192|72x184|80x176|88x168|96x160|104x152|112x144|120x136|128x128|136x120|144x112|152x104|160x96|168x88|176x80|184x72|192x64|200x56|208x48|216x40|224x32|232x24|240x16|248x8|256x0)?(\\[[0-9]*\\])?$"},{"pattern":"^bytes(0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32)(\\[[0-9]*\\])?"},{"pattern":"^bytes$"},{"pattern":"^function(\\[[0-9]*\\])?$"},{"pattern":"^string$"}]},"StateMutability":{"type":"string","enum":["pure","view","nonpayable","payable"]},"NormalFunction":{"type":"object","properties":{"type":{"type":"string","enum":["function"],"default":"function"},"name":{"$ref":"#/definitions/Name"},"inputs":{"type":"array","items":{"$ref":"#/definitions/Parameter"}},"outputs":{"type":"array","items":{"$ref":"#/definitions/Parameter"},"default":[]},"stateMutability":{"$ref":"#/definitions/StateMutability"},"constant":{"type":"boolean"},"payable":{"type":"boolean","default":false}},"required":["name","inputs","constant"],"additionalProperties":false},"ConstructorFunction":{"type":"object","properties":{"type":{"type":"string","enum":["constructor"]},"inputs":{"type":"array","items":{"$ref":"#/definitions/Parameter"}},"payable":{"type":"boolean","default":false}},"required":["type","inputs"],"additionalProperties":false},"FallbackFunction":{"type":"object","properties":{"type":{"type":"string","enum":["fallback"]},"constant":{"type":"boolean"},"payable":{"type":"boolean","default":false}},"required":["type"],"additionalProperties":false},"Event":{"type":"object","properties":{"type":{"type":"string","enum":["event"]},"name":{"$ref":"#/definitions/Name"},"inputs":{"type":"array","items":{"$ref":"#/definitions/EventParameter"}},"anonymous":{"type":"boolean"}},"required":["type","name","inputs","anonymous"],"additionalProperties":false},"Parameter":{"type":"object","properties":{"name":{"$ref":"#/definitions/Name"},"type":{"$ref":"#/definitions/Type"}},"required":["name","type"]},"EventParameter":{"type":"object","properties":{"name":{"$ref":"#/definitions/Name"},"type":{"$ref":"#/definitions/Type"},"indexed":{"type":"boolean"}},"required":["name","type","indexed"]}}}
 
 /***/ }),
-/* 532 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, module) {var ethJSABI = __webpack_require__(533);
-var BlockchainUtils = __webpack_require__(542);
-var Web3 = __webpack_require__(577);
+/* WEBPACK VAR INJECTION */(function(global, module) {var ethJSABI = __webpack_require__(540);
+var BlockchainUtils = __webpack_require__(549);
+var Web3 = __webpack_require__(584);
 
 // For browserified version. If browserify gave us an empty version,
 // look for the one provided by the user.
@@ -48026,7 +48033,7 @@ var contract = (function(module) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(58), __webpack_require__(158)(module)))
 
 /***/ }),
-/* 533 */
+/* 540 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48034,7 +48041,7 @@ var contract = (function(module) {
 
 /* eslint-disable */
 
-var utils = __webpack_require__(534);
+var utils = __webpack_require__(541);
 var uint256Coder = utils.uint256Coder;
 var coderBoolean = utils.coderBoolean;
 var coderFixedBytes = utils.coderFixedBytes;
@@ -48166,15 +48173,15 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(109).Buffer))
 
 /***/ }),
-/* 534 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(Buffer) {
 
-var BN = __webpack_require__(535);
-var numberToBN = __webpack_require__(536);
-var keccak256 = __webpack_require__(540).keccak_256;
+var BN = __webpack_require__(542);
+var numberToBN = __webpack_require__(543);
+var keccak256 = __webpack_require__(547).keccak_256;
 
 // from ethereumjs-util
 function stripZeros(aInput) {
@@ -48590,7 +48597,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(109).Buffer))
 
 /***/ }),
-/* 535 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -52024,11 +52031,11 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(158)(module)))
 
 /***/ }),
-/* 536 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var BN = __webpack_require__(537);
-var stripHexPrefix = __webpack_require__(538);
+var BN = __webpack_require__(544);
+var stripHexPrefix = __webpack_require__(545);
 
 /**
  * Returns a BN object, converts a number value to a BN
@@ -52068,7 +52075,7 @@ module.exports = function numberToBN(arg) {
 
 
 /***/ }),
-/* 537 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {(function (module, exports) {
@@ -55502,10 +55509,10 @@ module.exports = function numberToBN(arg) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(158)(module)))
 
 /***/ }),
-/* 538 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isHexPrefixed = __webpack_require__(539);
+var isHexPrefixed = __webpack_require__(546);
 
 /**
  * Removes '0x' from a given `String` is present
@@ -55522,7 +55529,7 @@ module.exports = function stripHexPrefix(str) {
 
 
 /***/ }),
-/* 539 */
+/* 546 */
 /***/ (function(module, exports) {
 
 /**
@@ -55541,7 +55548,7 @@ module.exports = function isHexPrefixed(str) {
 
 
 /***/ }),
-/* 540 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/**
@@ -56016,10 +56023,10 @@ module.exports = function isHexPrefixed(str) {
   }
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(541), __webpack_require__(58)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(548), __webpack_require__(58)))
 
 /***/ }),
-/* 541 */
+/* 548 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -56209,12 +56216,12 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 542 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // TODO: remove web3 requirement
 // Call functions directly on the provider.
-var Web3 = __webpack_require__(543);
+var Web3 = __webpack_require__(550);
 
 var Blockchain = {
   parse: function(uri) {
@@ -56276,10 +56283,10 @@ module.exports = Blockchain;
 
 
 /***/ }),
-/* 543 */
+/* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Web3 = __webpack_require__(544);
+var Web3 = __webpack_require__(551);
 
 // dont override global variable
 if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
@@ -56290,7 +56297,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 544 */
+/* 551 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -56320,23 +56327,23 @@ module.exports = Web3;
  * @date 2014
  */
 
-var RequestManager = __webpack_require__(545);
+var RequestManager = __webpack_require__(552);
 var Iban = __webpack_require__(169);
-var Eth = __webpack_require__(546);
-var DB = __webpack_require__(565);
-var Shh = __webpack_require__(566);
-var Net = __webpack_require__(567);
-var Personal = __webpack_require__(568);
-var Swarm = __webpack_require__(569);
-var Settings = __webpack_require__(570);
-var version = __webpack_require__(571);
+var Eth = __webpack_require__(553);
+var DB = __webpack_require__(572);
+var Shh = __webpack_require__(573);
+var Net = __webpack_require__(574);
+var Personal = __webpack_require__(575);
+var Swarm = __webpack_require__(576);
+var Settings = __webpack_require__(577);
+var version = __webpack_require__(578);
 var utils = __webpack_require__(34);
 var sha3 = __webpack_require__(159);
-var extend = __webpack_require__(572);
-var Batch = __webpack_require__(573);
+var extend = __webpack_require__(579);
+var Batch = __webpack_require__(580);
 var Property = __webpack_require__(119);
-var HttpProvider = __webpack_require__(574);
-var IpcProvider = __webpack_require__(576);
+var HttpProvider = __webpack_require__(581);
+var IpcProvider = __webpack_require__(583);
 var BigNumber = __webpack_require__(59);
 
 
@@ -56448,7 +56455,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 545 */
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -56719,7 +56726,7 @@ module.exports = RequestManager;
 
 
 /***/ }),
-/* 546 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56753,13 +56760,13 @@ var utils = __webpack_require__(34);
 var Method = __webpack_require__(110);
 var Property = __webpack_require__(119);
 var c = __webpack_require__(168);
-var Contract = __webpack_require__(547);
+var Contract = __webpack_require__(554);
 var watches = __webpack_require__(171);
 var Filter = __webpack_require__(170);
-var IsSyncing = __webpack_require__(559);
-var namereg = __webpack_require__(560);
+var IsSyncing = __webpack_require__(566);
+var namereg = __webpack_require__(567);
 var Iban = __webpack_require__(169);
-var transfer = __webpack_require__(563);
+var transfer = __webpack_require__(570);
 
 var blockCall = function (args) {
     return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
@@ -57080,7 +57087,7 @@ module.exports = Eth;
 
 
 /***/ }),
-/* 547 */
+/* 554 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -57108,8 +57115,8 @@ module.exports = Eth;
 var utils = __webpack_require__(34);
 var coder = __webpack_require__(392);
 var SolidityEvent = __webpack_require__(411);
-var SolidityFunction = __webpack_require__(557);
-var AllEvents = __webpack_require__(558);
+var SolidityFunction = __webpack_require__(564);
+var AllEvents = __webpack_require__(565);
 
 /**
  * Should be called to encode constructor params
@@ -57396,7 +57403,7 @@ module.exports = ContractFactory;
 
 
 /***/ }),
-/* 548 */
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57428,7 +57435,7 @@ module.exports = SolidityTypeAddress;
 
 
 /***/ }),
-/* 549 */
+/* 556 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57460,7 +57467,7 @@ module.exports = SolidityTypeBool;
 
 
 /***/ }),
-/* 550 */
+/* 557 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57498,7 +57505,7 @@ module.exports = SolidityTypeInt;
 
 
 /***/ }),
-/* 551 */
+/* 558 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57536,7 +57543,7 @@ module.exports = SolidityTypeUInt;
 
 
 /***/ }),
-/* 552 */
+/* 559 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57562,7 +57569,7 @@ module.exports = SolidityTypeDynamicBytes;
 
 
 /***/ }),
-/* 553 */
+/* 560 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57588,7 +57595,7 @@ module.exports = SolidityTypeString;
 
 
 /***/ }),
-/* 554 */
+/* 561 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57626,7 +57633,7 @@ module.exports = SolidityTypeReal;
 
 
 /***/ }),
-/* 555 */
+/* 562 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57664,7 +57671,7 @@ module.exports = SolidityTypeUReal;
 
 
 /***/ }),
-/* 556 */
+/* 563 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(56);
@@ -57699,7 +57706,7 @@ module.exports = SolidityTypeBytes;
 
 
 /***/ }),
-/* 557 */
+/* 564 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -57988,7 +57995,7 @@ module.exports = SolidityFunction;
 
 
 /***/ }),
-/* 558 */
+/* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -58082,7 +58089,7 @@ module.exports = AllSolidityEvents;
 
 
 /***/ }),
-/* 559 */
+/* 566 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -58177,389 +58184,6 @@ IsSyncing.prototype.stopWatching = function () {
 };
 
 module.exports = IsSyncing;
-
-
-
-/***/ }),
-/* 560 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-    This file is part of web3.js.
-
-    web3.js is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    web3.js is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-/** 
- * @file namereg.js
- * @author Marek Kotewicz <marek@ethdev.com>
- * @date 2015
- */
-
-var globalRegistrarAbi = __webpack_require__(561);
-var icapRegistrarAbi= __webpack_require__(562);
-
-var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
-var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
-
-module.exports = {
-    global: {
-        abi: globalRegistrarAbi,
-        address: globalNameregAddress
-    },
-    icap: {
-        abi: icapRegistrarAbi,
-        address: icapNameregAddress
-    }
-};
-
-
-
-/***/ }),
-/* 561 */
-/***/ (function(module, exports) {
-
-module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
-
-/***/ }),
-/* 562 */
-/***/ (function(module, exports) {
-
-module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
-
-/***/ }),
-/* 563 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-    This file is part of web3.js.
-
-    web3.js is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    web3.js is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-/** 
- * @file transfer.js
- * @author Marek Kotewicz <marek@ethdev.com>
- * @date 2015
- */
-
-var Iban = __webpack_require__(169);
-var exchangeAbi = __webpack_require__(564);
-
-/**
- * Should be used to make Iban transfer
- *
- * @method transfer
- * @param {String} from
- * @param {String} to iban
- * @param {Value} value to be tranfered
- * @param {Function} callback, callback
- */
-var transfer = function (eth, from, to, value, callback) {
-    var iban = new Iban(to); 
-    if (!iban.isValid()) {
-        throw new Error('invalid iban address');
-    }
-
-    if (iban.isDirect()) {
-        return transferToAddress(eth, from, iban.address(), value, callback);
-    }
-    
-    if (!callback) {
-        var address = eth.icapNamereg().addr(iban.institution());
-        return deposit(eth, from, address, value, iban.client());
-    }
-
-    eth.icapNamereg().addr(iban.institution(), function (err, address) {
-        return deposit(eth, from, address, value, iban.client(), callback);
-    });
-    
-};
-
-/**
- * Should be used to transfer funds to certain address
- *
- * @method transferToAddress
- * @param {String} from
- * @param {String} to
- * @param {Value} value to be tranfered
- * @param {Function} callback, callback
- */
-var transferToAddress = function (eth, from, to, value, callback) {
-    return eth.sendTransaction({
-        address: to,
-        from: from,
-        value: value
-    }, callback);
-};
-
-/**
- * Should be used to deposit funds to generic Exchange contract (must implement deposit(bytes32) method!)
- *
- * @method deposit
- * @param {String} from
- * @param {String} to
- * @param {Value} value to be transfered
- * @param {String} client unique identifier
- * @param {Function} callback, callback
- */
-var deposit = function (eth, from, to, value, client, callback) {
-    var abi = exchangeAbi;
-    return eth.contract(abi).at(to).deposit(client, {
-        from: from,
-        value: value
-    }, callback);
-};
-
-module.exports = transfer;
-
-
-
-/***/ }),
-/* 564 */
-/***/ (function(module, exports) {
-
-module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
-
-/***/ }),
-/* 565 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-    This file is part of web3.js.
-
-    web3.js is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    web3.js is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-/** @file db.js
- * @authors:
- *   Marek Kotewicz <marek@ethdev.com>
- * @date 2015
- */
-
-var Method = __webpack_require__(110);
-
-var DB = function (web3) {
-    this._requestManager = web3._requestManager;
-
-    var self = this;
-    
-    methods().forEach(function(method) { 
-        method.attachToObject(self);
-        method.setRequestManager(web3._requestManager);
-    });
-};
-
-var methods = function () {
-    var putString = new Method({
-        name: 'putString',
-        call: 'db_putString',
-        params: 3
-    });
-
-    var getString = new Method({
-        name: 'getString',
-        call: 'db_getString',
-        params: 2
-    });
-
-    var putHex = new Method({
-        name: 'putHex',
-        call: 'db_putHex',
-        params: 3
-    });
-
-    var getHex = new Method({
-        name: 'getHex',
-        call: 'db_getHex',
-        params: 2
-    });
-
-    return [
-        putString, getString, putHex, getHex
-    ];
-};
-
-module.exports = DB;
-
-
-/***/ }),
-/* 566 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-    This file is part of web3.js.
-
-    web3.js is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Lesser General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    web3.js is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public License
-    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
-*/
-/** @file shh.js
- * @authors:
- *   Fabian Vogelsteller <fabian@ethereum.org>
- *   Marek Kotewicz <marek@ethcore.io>
- * @date 2017
- */
-
-var Method = __webpack_require__(110);
-var Filter = __webpack_require__(170);
-var watches = __webpack_require__(171);
-
-var Shh = function (web3) {
-    this._requestManager = web3._requestManager;
-
-    var self = this;
-
-    methods().forEach(function(method) {
-        method.attachToObject(self);
-        method.setRequestManager(self._requestManager);
-    });
-};
-
-Shh.prototype.newMessageFilter = function (options, callback, filterCreationErrorCallback) {
-    return new Filter(options, 'shh', this._requestManager, watches.shh(), null, callback, filterCreationErrorCallback);
-};
-
-var methods = function () {
-
-    return [
-        new Method({
-            name: 'version',
-            call: 'shh_version',
-            params: 0
-        }),
-        new Method({
-            name: 'info',
-            call: 'shh_info',
-            params: 0
-        }),
-        new Method({
-            name: 'setMaxMessageSize',
-            call: 'shh_setMaxMessageSize',
-            params: 1
-        }),
-        new Method({
-            name: 'setMinPoW',
-            call: 'shh_setMinPoW',
-            params: 1
-        }),
-        new Method({
-            name: 'markTrustedPeer',
-            call: 'shh_markTrustedPeer',
-            params: 1
-        }),
-        new Method({
-            name: 'newKeyPair',
-            call: 'shh_newKeyPair',
-            params: 0
-        }),
-        new Method({
-            name: 'addPrivateKey',
-            call: 'shh_addPrivateKey',
-            params: 1
-        }),
-        new Method({
-            name: 'deleteKeyPair',
-            call: 'shh_deleteKeyPair',
-            params: 1
-        }),
-        new Method({
-            name: 'hasKeyPair',
-            call: 'shh_hasKeyPair',
-            params: 1
-        }),
-        new Method({
-            name: 'getPublicKey',
-            call: 'shh_getPublicKey',
-            params: 1
-        }),
-        new Method({
-            name: 'getPrivateKey',
-            call: 'shh_getPrivateKey',
-            params: 1
-        }),
-        new Method({
-            name: 'newSymKey',
-            call: 'shh_newSymKey',
-            params: 0
-        }),
-        new Method({
-            name: 'addSymKey',
-            call: 'shh_addSymKey',
-            params: 1
-        }),
-        new Method({
-            name: 'generateSymKeyFromPassword',
-            call: 'shh_generateSymKeyFromPassword',
-            params: 1
-        }),
-        new Method({
-            name: 'hasSymKey',
-            call: 'shh_hasSymKey',
-            params: 1
-        }),
-        new Method({
-            name: 'getSymKey',
-            call: 'shh_getSymKey',
-            params: 1
-        }),
-        new Method({
-            name: 'deleteSymKey',
-            call: 'shh_deleteSymKey',
-            params: 1
-        }),
-
-        // subscribe and unsubscribe missing
-
-        new Method({
-            name: 'post',
-            call: 'shh_post',
-            params: 1,
-            inputFormatter: [null]
-        })
-    ];
-};
-
-module.exports = Shh;
 
 
 
@@ -58583,6 +58207,389 @@ module.exports = Shh;
     You should have received a copy of the GNU Lesser General Public License
     along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
 */
+/** 
+ * @file namereg.js
+ * @author Marek Kotewicz <marek@ethdev.com>
+ * @date 2015
+ */
+
+var globalRegistrarAbi = __webpack_require__(568);
+var icapRegistrarAbi= __webpack_require__(569);
+
+var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
+var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
+
+module.exports = {
+    global: {
+        abi: globalRegistrarAbi,
+        address: globalNameregAddress
+    },
+    icap: {
+        abi: icapRegistrarAbi,
+        address: icapNameregAddress
+    }
+};
+
+
+
+/***/ }),
+/* 568 */
+/***/ (function(module, exports) {
+
+module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
+
+/***/ }),
+/* 569 */
+/***/ (function(module, exports) {
+
+module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
+
+/***/ }),
+/* 570 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+    This file is part of web3.js.
+
+    web3.js is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    web3.js is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/** 
+ * @file transfer.js
+ * @author Marek Kotewicz <marek@ethdev.com>
+ * @date 2015
+ */
+
+var Iban = __webpack_require__(169);
+var exchangeAbi = __webpack_require__(571);
+
+/**
+ * Should be used to make Iban transfer
+ *
+ * @method transfer
+ * @param {String} from
+ * @param {String} to iban
+ * @param {Value} value to be tranfered
+ * @param {Function} callback, callback
+ */
+var transfer = function (eth, from, to, value, callback) {
+    var iban = new Iban(to); 
+    if (!iban.isValid()) {
+        throw new Error('invalid iban address');
+    }
+
+    if (iban.isDirect()) {
+        return transferToAddress(eth, from, iban.address(), value, callback);
+    }
+    
+    if (!callback) {
+        var address = eth.icapNamereg().addr(iban.institution());
+        return deposit(eth, from, address, value, iban.client());
+    }
+
+    eth.icapNamereg().addr(iban.institution(), function (err, address) {
+        return deposit(eth, from, address, value, iban.client(), callback);
+    });
+    
+};
+
+/**
+ * Should be used to transfer funds to certain address
+ *
+ * @method transferToAddress
+ * @param {String} from
+ * @param {String} to
+ * @param {Value} value to be tranfered
+ * @param {Function} callback, callback
+ */
+var transferToAddress = function (eth, from, to, value, callback) {
+    return eth.sendTransaction({
+        address: to,
+        from: from,
+        value: value
+    }, callback);
+};
+
+/**
+ * Should be used to deposit funds to generic Exchange contract (must implement deposit(bytes32) method!)
+ *
+ * @method deposit
+ * @param {String} from
+ * @param {String} to
+ * @param {Value} value to be transfered
+ * @param {String} client unique identifier
+ * @param {Function} callback, callback
+ */
+var deposit = function (eth, from, to, value, client, callback) {
+    var abi = exchangeAbi;
+    return eth.contract(abi).at(to).deposit(client, {
+        from: from,
+        value: value
+    }, callback);
+};
+
+module.exports = transfer;
+
+
+
+/***/ }),
+/* 571 */
+/***/ (function(module, exports) {
+
+module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
+
+/***/ }),
+/* 572 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+    This file is part of web3.js.
+
+    web3.js is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    web3.js is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/** @file db.js
+ * @authors:
+ *   Marek Kotewicz <marek@ethdev.com>
+ * @date 2015
+ */
+
+var Method = __webpack_require__(110);
+
+var DB = function (web3) {
+    this._requestManager = web3._requestManager;
+
+    var self = this;
+    
+    methods().forEach(function(method) { 
+        method.attachToObject(self);
+        method.setRequestManager(web3._requestManager);
+    });
+};
+
+var methods = function () {
+    var putString = new Method({
+        name: 'putString',
+        call: 'db_putString',
+        params: 3
+    });
+
+    var getString = new Method({
+        name: 'getString',
+        call: 'db_getString',
+        params: 2
+    });
+
+    var putHex = new Method({
+        name: 'putHex',
+        call: 'db_putHex',
+        params: 3
+    });
+
+    var getHex = new Method({
+        name: 'getHex',
+        call: 'db_getHex',
+        params: 2
+    });
+
+    return [
+        putString, getString, putHex, getHex
+    ];
+};
+
+module.exports = DB;
+
+
+/***/ }),
+/* 573 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+    This file is part of web3.js.
+
+    web3.js is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    web3.js is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+*/
+/** @file shh.js
+ * @authors:
+ *   Fabian Vogelsteller <fabian@ethereum.org>
+ *   Marek Kotewicz <marek@ethcore.io>
+ * @date 2017
+ */
+
+var Method = __webpack_require__(110);
+var Filter = __webpack_require__(170);
+var watches = __webpack_require__(171);
+
+var Shh = function (web3) {
+    this._requestManager = web3._requestManager;
+
+    var self = this;
+
+    methods().forEach(function(method) {
+        method.attachToObject(self);
+        method.setRequestManager(self._requestManager);
+    });
+};
+
+Shh.prototype.newMessageFilter = function (options, callback, filterCreationErrorCallback) {
+    return new Filter(options, 'shh', this._requestManager, watches.shh(), null, callback, filterCreationErrorCallback);
+};
+
+var methods = function () {
+
+    return [
+        new Method({
+            name: 'version',
+            call: 'shh_version',
+            params: 0
+        }),
+        new Method({
+            name: 'info',
+            call: 'shh_info',
+            params: 0
+        }),
+        new Method({
+            name: 'setMaxMessageSize',
+            call: 'shh_setMaxMessageSize',
+            params: 1
+        }),
+        new Method({
+            name: 'setMinPoW',
+            call: 'shh_setMinPoW',
+            params: 1
+        }),
+        new Method({
+            name: 'markTrustedPeer',
+            call: 'shh_markTrustedPeer',
+            params: 1
+        }),
+        new Method({
+            name: 'newKeyPair',
+            call: 'shh_newKeyPair',
+            params: 0
+        }),
+        new Method({
+            name: 'addPrivateKey',
+            call: 'shh_addPrivateKey',
+            params: 1
+        }),
+        new Method({
+            name: 'deleteKeyPair',
+            call: 'shh_deleteKeyPair',
+            params: 1
+        }),
+        new Method({
+            name: 'hasKeyPair',
+            call: 'shh_hasKeyPair',
+            params: 1
+        }),
+        new Method({
+            name: 'getPublicKey',
+            call: 'shh_getPublicKey',
+            params: 1
+        }),
+        new Method({
+            name: 'getPrivateKey',
+            call: 'shh_getPrivateKey',
+            params: 1
+        }),
+        new Method({
+            name: 'newSymKey',
+            call: 'shh_newSymKey',
+            params: 0
+        }),
+        new Method({
+            name: 'addSymKey',
+            call: 'shh_addSymKey',
+            params: 1
+        }),
+        new Method({
+            name: 'generateSymKeyFromPassword',
+            call: 'shh_generateSymKeyFromPassword',
+            params: 1
+        }),
+        new Method({
+            name: 'hasSymKey',
+            call: 'shh_hasSymKey',
+            params: 1
+        }),
+        new Method({
+            name: 'getSymKey',
+            call: 'shh_getSymKey',
+            params: 1
+        }),
+        new Method({
+            name: 'deleteSymKey',
+            call: 'shh_deleteSymKey',
+            params: 1
+        }),
+
+        // subscribe and unsubscribe missing
+
+        new Method({
+            name: 'post',
+            call: 'shh_post',
+            params: 1,
+            inputFormatter: [null]
+        })
+    ];
+};
+
+module.exports = Shh;
+
+
+
+/***/ }),
+/* 574 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+    This file is part of web3.js.
+
+    web3.js is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    web3.js is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+*/
 /** @file eth.js
  * @authors:
  *   Marek Kotewicz <marek@ethdev.com>
@@ -58622,7 +58629,7 @@ module.exports = Net;
 
 
 /***/ }),
-/* 568 */
+/* 575 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58744,7 +58751,7 @@ module.exports = Personal;
 
 
 /***/ }),
-/* 569 */
+/* 576 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58896,7 +58903,7 @@ module.exports = Swarm;
 
 
 /***/ }),
-/* 570 */
+/* 577 */
 /***/ (function(module, exports) {
 
 
@@ -58911,13 +58918,13 @@ module.exports = Settings;
 
 
 /***/ }),
-/* 571 */
+/* 578 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"0.20.3"}
 
 /***/ }),
-/* 572 */
+/* 579 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var formatters = __webpack_require__(79);
@@ -58971,7 +58978,7 @@ module.exports = extend;
 
 
 /***/ }),
-/* 573 */
+/* 580 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -59043,7 +59050,7 @@ module.exports = Batch;
 
 
 /***/ }),
-/* 574 */
+/* 581 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -59079,7 +59086,7 @@ if (typeof window !== 'undefined' && window.XMLHttpRequest) {
   XMLHttpRequest = window.XMLHttpRequest; // jshint ignore: line
 // node
 } else {
-  XMLHttpRequest = __webpack_require__(575).XMLHttpRequest; // jshint ignore: line
+  XMLHttpRequest = __webpack_require__(582).XMLHttpRequest; // jshint ignore: line
 }
 
 var XHR2 = __webpack_require__(388); // jshint ignore: line
@@ -59213,7 +59220,7 @@ module.exports = HttpProvider;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(109).Buffer))
 
 /***/ }),
-/* 575 */
+/* 582 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59229,7 +59236,7 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 
 /***/ }),
-/* 576 */
+/* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59443,10 +59450,10 @@ module.exports = IpcProvider;
 
 
 /***/ }),
-/* 577 */
+/* 584 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Web3 = __webpack_require__(578);
+var Web3 = __webpack_require__(585);
 
 // dont override global variable
 if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
@@ -59457,7 +59464,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 578 */
+/* 585 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -59487,23 +59494,23 @@ module.exports = Web3;
  * @date 2014
  */
 
-var RequestManager = __webpack_require__(579);
+var RequestManager = __webpack_require__(586);
 var Iban = __webpack_require__(173);
-var Eth = __webpack_require__(580);
-var DB = __webpack_require__(599);
-var Shh = __webpack_require__(600);
-var Net = __webpack_require__(601);
-var Personal = __webpack_require__(602);
-var Swarm = __webpack_require__(603);
-var Settings = __webpack_require__(604);
-var version = __webpack_require__(605);
+var Eth = __webpack_require__(587);
+var DB = __webpack_require__(606);
+var Shh = __webpack_require__(607);
+var Net = __webpack_require__(608);
+var Personal = __webpack_require__(609);
+var Swarm = __webpack_require__(610);
+var Settings = __webpack_require__(611);
+var version = __webpack_require__(612);
 var utils = __webpack_require__(35);
 var sha3 = __webpack_require__(160);
-var extend = __webpack_require__(606);
-var Batch = __webpack_require__(607);
+var extend = __webpack_require__(613);
+var Batch = __webpack_require__(614);
 var Property = __webpack_require__(121);
-var HttpProvider = __webpack_require__(608);
-var IpcProvider = __webpack_require__(610);
+var HttpProvider = __webpack_require__(615);
+var IpcProvider = __webpack_require__(617);
 var BigNumber = __webpack_require__(59);
 
 
@@ -59615,7 +59622,7 @@ module.exports = Web3;
 
 
 /***/ }),
-/* 579 */
+/* 586 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -59886,7 +59893,7 @@ module.exports = RequestManager;
 
 
 /***/ }),
-/* 580 */
+/* 587 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59920,13 +59927,13 @@ var utils = __webpack_require__(35);
 var Method = __webpack_require__(111);
 var Property = __webpack_require__(121);
 var c = __webpack_require__(172);
-var Contract = __webpack_require__(581);
+var Contract = __webpack_require__(588);
 var watches = __webpack_require__(175);
 var Filter = __webpack_require__(174);
-var IsSyncing = __webpack_require__(593);
-var namereg = __webpack_require__(594);
+var IsSyncing = __webpack_require__(600);
+var namereg = __webpack_require__(601);
 var Iban = __webpack_require__(173);
-var transfer = __webpack_require__(597);
+var transfer = __webpack_require__(604);
 
 var blockCall = function (args) {
     return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
@@ -60247,7 +60254,7 @@ module.exports = Eth;
 
 
 /***/ }),
-/* 581 */
+/* 588 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -60275,8 +60282,8 @@ module.exports = Eth;
 var utils = __webpack_require__(35);
 var coder = __webpack_require__(393);
 var SolidityEvent = __webpack_require__(414);
-var SolidityFunction = __webpack_require__(591);
-var AllEvents = __webpack_require__(592);
+var SolidityFunction = __webpack_require__(598);
+var AllEvents = __webpack_require__(599);
 
 /**
  * Should be called to encode constructor params
@@ -60563,7 +60570,7 @@ module.exports = ContractFactory;
 
 
 /***/ }),
-/* 582 */
+/* 589 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60595,7 +60602,7 @@ module.exports = SolidityTypeAddress;
 
 
 /***/ }),
-/* 583 */
+/* 590 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60627,7 +60634,7 @@ module.exports = SolidityTypeBool;
 
 
 /***/ }),
-/* 584 */
+/* 591 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60665,7 +60672,7 @@ module.exports = SolidityTypeInt;
 
 
 /***/ }),
-/* 585 */
+/* 592 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60703,7 +60710,7 @@ module.exports = SolidityTypeUInt;
 
 
 /***/ }),
-/* 586 */
+/* 593 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60729,7 +60736,7 @@ module.exports = SolidityTypeDynamicBytes;
 
 
 /***/ }),
-/* 587 */
+/* 594 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60755,7 +60762,7 @@ module.exports = SolidityTypeString;
 
 
 /***/ }),
-/* 588 */
+/* 595 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60793,7 +60800,7 @@ module.exports = SolidityTypeReal;
 
 
 /***/ }),
-/* 589 */
+/* 596 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60831,7 +60838,7 @@ module.exports = SolidityTypeUReal;
 
 
 /***/ }),
-/* 590 */
+/* 597 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var f = __webpack_require__(57);
@@ -60866,7 +60873,7 @@ module.exports = SolidityTypeBytes;
 
 
 /***/ }),
-/* 591 */
+/* 598 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61155,7 +61162,7 @@ module.exports = SolidityFunction;
 
 
 /***/ }),
-/* 592 */
+/* 599 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61249,7 +61256,7 @@ module.exports = AllSolidityEvents;
 
 
 /***/ }),
-/* 593 */
+/* 600 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61348,7 +61355,7 @@ module.exports = IsSyncing;
 
 
 /***/ }),
-/* 594 */
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61373,8 +61380,8 @@ module.exports = IsSyncing;
  * @date 2015
  */
 
-var globalRegistrarAbi = __webpack_require__(595);
-var icapRegistrarAbi= __webpack_require__(596);
+var globalRegistrarAbi = __webpack_require__(602);
+var icapRegistrarAbi= __webpack_require__(603);
 
 var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
 var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
@@ -61393,19 +61400,19 @@ module.exports = {
 
 
 /***/ }),
-/* 595 */
+/* 602 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"name","outputs":[{"name":"o_name","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"content","outputs":[{"name":"","type":"bytes32"}],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"subRegistrar","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_registrar","type":"address"}],"name":"setSubRegistrar","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"Registrar","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"},{"name":"_primary","type":"bool"}],"name":"setAddress","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_content","type":"bytes32"}],"name":"setContent","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"disown","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_winner","type":"address"}],"name":"AuctionEnded","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_name","type":"bytes32"},{"indexed":false,"name":"_bidder","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"NewBid","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"},{"indexed":true,"name":"addr","type":"address"}],"name":"PrimaryChanged","type":"event"}]
 
 /***/ }),
-/* 596 */
+/* 603 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"owner","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_refund","type":"address"}],"name":"disown","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],"name":"addr","outputs":[{"name":"","type":"address"}],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"}],"name":"reserve","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_newOwner","type":"address"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"_name","type":"bytes32"},{"name":"_a","type":"address"}],"name":"setAddr","outputs":[],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"bytes32"}],"name":"Changed","type":"event"}]
 
 /***/ }),
-/* 597 */
+/* 604 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61431,7 +61438,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"_name","type":"bytes32"}],
  */
 
 var Iban = __webpack_require__(173);
-var exchangeAbi = __webpack_require__(598);
+var exchangeAbi = __webpack_require__(605);
 
 /**
  * Should be used to make Iban transfer
@@ -61503,13 +61510,13 @@ module.exports = transfer;
 
 
 /***/ }),
-/* 598 */
+/* 605 */
 /***/ (function(module, exports) {
 
 module.exports = [{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"value","type":"uint256"}],"name":"transfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"from","type":"bytes32"},{"name":"to","type":"address"},{"name":"indirectId","type":"bytes32"},{"name":"value","type":"uint256"}],"name":"icapTransfer","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"to","type":"bytes32"}],"name":"deposit","outputs":[],"payable":true,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"AnonymousDeposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"bytes32"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"indirectId","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"IcapTransfer","type":"event"}]
 
 /***/ }),
-/* 599 */
+/* 606 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61581,7 +61588,7 @@ module.exports = DB;
 
 
 /***/ }),
-/* 600 */
+/* 607 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61731,7 +61738,7 @@ module.exports = Shh;
 
 
 /***/ }),
-/* 601 */
+/* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -61789,7 +61796,7 @@ module.exports = Net;
 
 
 /***/ }),
-/* 602 */
+/* 609 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61911,7 +61918,7 @@ module.exports = Personal;
 
 
 /***/ }),
-/* 603 */
+/* 610 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62063,7 +62070,7 @@ module.exports = Swarm;
 
 
 /***/ }),
-/* 604 */
+/* 611 */
 /***/ (function(module, exports) {
 
 
@@ -62078,13 +62085,13 @@ module.exports = Settings;
 
 
 /***/ }),
-/* 605 */
+/* 612 */
 /***/ (function(module, exports) {
 
 module.exports = {"version":"0.20.3"}
 
 /***/ }),
-/* 606 */
+/* 613 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var formatters = __webpack_require__(80);
@@ -62138,7 +62145,7 @@ module.exports = extend;
 
 
 /***/ }),
-/* 607 */
+/* 614 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -62210,7 +62217,7 @@ module.exports = Batch;
 
 
 /***/ }),
-/* 608 */
+/* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -62246,7 +62253,7 @@ if (typeof window !== 'undefined' && window.XMLHttpRequest) {
   XMLHttpRequest = window.XMLHttpRequest; // jshint ignore: line
 // node
 } else {
-  XMLHttpRequest = __webpack_require__(609).XMLHttpRequest; // jshint ignore: line
+  XMLHttpRequest = __webpack_require__(616).XMLHttpRequest; // jshint ignore: line
 }
 
 var XHR2 = __webpack_require__(388); // jshint ignore: line
@@ -62380,7 +62387,7 @@ module.exports = HttpProvider;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(109).Buffer))
 
 /***/ }),
-/* 609 */
+/* 616 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62396,7 +62403,7 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 
 /***/ }),
-/* 610 */
+/* 617 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62610,7 +62617,7 @@ module.exports = IpcProvider;
 
 
 /***/ }),
-/* 611 */
+/* 618 */
 /***/ (function(module, exports) {
 
 module.exports=function(scope){ return `<div id="warning">
@@ -62673,7 +62680,7 @@ module.exports=function(scope){ return `<div id="warning">
   </div>
   <div id="warningContainer">
     <div class="warningIcon"></div>
-    WARNING: This site has been flagged as fraudulent and/or potentially misleading. Please proceed with caution, and beware of of deceptive content.
+    WARNING: This page has been flagged as fraudulent and potentially misleading. Please proceed with caution, and beware of of deceptive content ahead.
     <div id="warningButtonContainer">
       <a class="warning-btn" href="http://steviep.xyz/sounds">Back to Safety</a>
       <div class="closeWarning warning-btn">Continue</div>
@@ -62683,7 +62690,7 @@ module.exports=function(scope){ return `<div id="warning">
 `};
 
 /***/ }),
-/* 612 */
+/* 619 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62701,7 +62708,7 @@ var _3 = _interopRequireDefault(_2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var keyWords = ['god', 'sex', 'power', 'love', 'wealth', 'fast', 'cash', 'now', 'money', 'click', 'fuck', 'opportunity', 'digital', 'dream', 'energy', 'spirit', 'pure', 'clean', 'plus', 'advanced', 'electric', 'freedom', 'life', 'death', 'accumulation', 'easy', 'fear', 'destiny', 'believe', 'seared', 'immediate', 'pump', 'bang', 'cool', 'secure', 'mint', 'fresh', 'transparent', 'sweet', 'crypto', 'growth', 'vibrant', 'buzz', 'gold', 'dynamic', 'ace', 'glorious', 'corruption'];
+var keyWords = ['god', 'sex', 'power', 'love', 'wealth', 'fast', 'cash', 'now', 'money', 'click', 'fuck', 'opportunity', 'digital', 'dream', 'energy', 'spirit', 'pure', 'clean', 'plus', 'advanced', 'electric', 'freedom', 'life', 'death', 'accumulation', 'easy', 'fear', 'destiny', 'believe', 'seared', 'immediate', 'pump', 'bang', 'cool', 'fat', 'secure', 'mint', 'fresh', 'transparent', 'sweet', 'crypto', 'growth', 'vibrant', 'buzz', 'gold', 'dynamic', 'ace', 'glorious', 'corruption'];
 
 function randInsert(original, content) {
   var randIx = _3.default.random(2, original.length - 1, true);
