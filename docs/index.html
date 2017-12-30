@@ -18,6 +18,8 @@
 
 body {
   background-color: #003;
+  color: #ffe;
+  border-color: #000
 }
 
 nav {
@@ -332,6 +334,7 @@ nav .nav-menu .nav-menu-item {
 }
 
 #signupModal {
+  color: #000;
   height: 100vh;
   width: 100vw;
   padding-bottom: 50vh;
@@ -10462,54 +10465,36 @@ module.exports = function (regExp, replace) {
 
 /***/ }),
 /* 378 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 400" xml:space="preserve">
-<path d="M150.2,133c19.5-18.4,46.2-28.5,72.5-28.5c22.5,0,40.5,4.9,49.9,10.5l10.1-25.2c-6.8-5.3-26.7-12.4-54.8-12.4
-  c-37.2,0-69.4,12-95.4,34.2c-7.8,6.5-14.9,13.8-21.1,21.8L127,53.3h143.2l7.2-39.3H88.3L17.5,386.6h45.9l21.3-111.9
-  c13.3,40,47.4,63.5,96.3,63.5c28.5,0,51.4-5.6,65.7-12l-4.1-25.5c-13.9,7.1-34.9,10.9-54.1,10.9c-56.3,0-77-37.2-77-82.6
-  c0-3.7,0.1-7.4,0.4-11H227l7.7-39.3H120.5C127.2,160.7,137.4,144.9,150.2,133z"/>
-</svg>
-`};
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 300 400\" xml:space=\"preserve\">\n<path d=\"M150.2,133c19.5-18.4,46.2-28.5,72.5-28.5c22.5,0,40.5,4.9,49.9,10.5l10.1-25.2c-6.8-5.3-26.7-12.4-54.8-12.4\n  c-37.2,0-69.4,12-95.4,34.2c-7.8,6.5-14.9,13.8-21.1,21.8L127,53.3h143.2l7.2-39.3H88.3L17.5,386.6h45.9l21.3-111.9\n  c13.3,40,47.4,63.5,96.3,63.5c28.5,0,51.4-5.6,65.7-12l-4.1-25.5c-13.9,7.1-34.9,10.9-54.1,10.9c-56.3,0-77-37.2-77-82.6\n  c0-3.7,0.1-7.4,0.4-11H227l7.7-39.3H120.5C127.2,160.7,137.4,144.9,150.2,133z\"/>\n</svg>\n";
+};
 
 /***/ }),
 /* 379 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 400" xml:space="preserve">
-<g>
-  <path d="M151.9,82l-31.4,105.5h35c15.7,0,27.5-2.4,35.3-7.3c7.8-4.8,15.8-15.2,24.1-31h7.5l-27.7,97.1h-7.9
-    c2-7.9,2.9-14.3,2.9-19.5c0-8-2.7-14.2-8-18.6c-5.3-4.4-15.2-6.6-29.8-6.6h-35.4l-23.2,80.4c-4.2,14.3-6.3,23.8-6.3,28.5
-    c0,4.8,1.8,8.6,5.4,11.2c3.6,2.6,12.4,4.4,26.4,5.3l-2.4,7.3H11.2l2.6-7.3c10.2-0.3,17-1.2,20.4-2.8c5.2-2.2,9.1-5.2,11.6-9
-    c3.5-5.4,7.7-16.4,12.6-33.2l47-160.5c3.8-13,5.7-23.1,5.7-30.5c0-3.4-0.9-6.3-2.6-8.7c-1.7-2.4-4.2-4.2-7.6-5.4
-    c-3.3-1.2-10-1.8-19.9-1.8l2.4-7.3H290l-19.6,67.4h-7.5c1.4-8.1,2.2-14.8,2.2-20c0-8.6-2.4-15.5-7.2-20.5
-    c-4.8-5-10.9-8.6-18.4-10.7c-5.2-1.3-17-2-35.2-2H151.9z"/>
-</g>
-<g>
-  <path d="M245.7,116.4l-11.9,51.9h-4.3l-0.5-13c-0.4-4.7-1.3-8.9-2.7-12.6c-1.4-3.7-3.5-6.9-6.4-9.6c-2.8-2.7-6.4-4.8-10.8-6.4
-    c-4.3-1.5-9.1-2.3-14.4-2.3c-14.1,0-26.4,3.9-37,11.6c-13.5,9.8-24,23.7-31.7,41.7c-6.3,14.8-9.5,29.8-9.5,45
-    c0,15.5,4.5,27.9,13.6,37.2c9.1,9.3,20.8,13.9,35.3,13.9c10.9,0,20.7-2.4,29.2-7.3c8.5-4.9,16.5-12.4,23.8-22.6h5.6
-    c-8.7,13.8-18.3,23.9-28.8,30.4c-10.6,6.5-23.2,9.7-37.9,9.7c-13.1,0-24.7-2.7-34.7-8.2c-10.1-5.5-17.8-13.2-23-23.1
-    c-5.3-9.9-7.9-20.6-7.9-32c0-17.5,4.7-34.5,14.1-51c9.4-16.5,22.2-29.5,38.6-39c16.3-9.5,32.8-14.2,49.4-14.2
-    c7.8,0,16.5,1.9,26.2,5.6c4.3,1.6,7.3,2.4,9.2,2.4c1.9,0,3.5-0.4,5-1.2c1.4-0.8,3.8-3,7.1-6.7H245.7z"/>
-</g>
-</svg>
-`};
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 300 400\" xml:space=\"preserve\">\n<g>\n  <path d=\"M151.9,82l-31.4,105.5h35c15.7,0,27.5-2.4,35.3-7.3c7.8-4.8,15.8-15.2,24.1-31h7.5l-27.7,97.1h-7.9\n    c2-7.9,2.9-14.3,2.9-19.5c0-8-2.7-14.2-8-18.6c-5.3-4.4-15.2-6.6-29.8-6.6h-35.4l-23.2,80.4c-4.2,14.3-6.3,23.8-6.3,28.5\n    c0,4.8,1.8,8.6,5.4,11.2c3.6,2.6,12.4,4.4,26.4,5.3l-2.4,7.3H11.2l2.6-7.3c10.2-0.3,17-1.2,20.4-2.8c5.2-2.2,9.1-5.2,11.6-9\n    c3.5-5.4,7.7-16.4,12.6-33.2l47-160.5c3.8-13,5.7-23.1,5.7-30.5c0-3.4-0.9-6.3-2.6-8.7c-1.7-2.4-4.2-4.2-7.6-5.4\n    c-3.3-1.2-10-1.8-19.9-1.8l2.4-7.3H290l-19.6,67.4h-7.5c1.4-8.1,2.2-14.8,2.2-20c0-8.6-2.4-15.5-7.2-20.5\n    c-4.8-5-10.9-8.6-18.4-10.7c-5.2-1.3-17-2-35.2-2H151.9z\"/>\n</g>\n<g>\n  <path d=\"M245.7,116.4l-11.9,51.9h-4.3l-0.5-13c-0.4-4.7-1.3-8.9-2.7-12.6c-1.4-3.7-3.5-6.9-6.4-9.6c-2.8-2.7-6.4-4.8-10.8-6.4\n    c-4.3-1.5-9.1-2.3-14.4-2.3c-14.1,0-26.4,3.9-37,11.6c-13.5,9.8-24,23.7-31.7,41.7c-6.3,14.8-9.5,29.8-9.5,45\n    c0,15.5,4.5,27.9,13.6,37.2c9.1,9.3,20.8,13.9,35.3,13.9c10.9,0,20.7-2.4,29.2-7.3c8.5-4.9,16.5-12.4,23.8-22.6h5.6\n    c-8.7,13.8-18.3,23.9-28.8,30.4c-10.6,6.5-23.2,9.7-37.9,9.7c-13.1,0-24.7-2.7-34.7-8.2c-10.1-5.5-17.8-13.2-23-23.1\n    c-5.3-9.9-7.9-20.6-7.9-32c0-17.5,4.7-34.5,14.1-51c9.4-16.5,22.2-29.5,38.6-39c16.3-9.5,32.8-14.2,49.4-14.2\n    c7.8,0,16.5,1.9,26.2,5.6c4.3,1.6,7.3,2.4,9.2,2.4c1.9,0,3.5-0.4,5-1.2c1.4-0.8,3.8-3,7.1-6.7H245.7z\"/>\n</g>\n</svg>\n";
+};
 
 /***/ }),
 /* 380 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<svg version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g fill="none" fill-rule="evenodd" id="Icons new Arranged Names Color" stroke="none" stroke-width="1">
-    <g fill="#FF0000" id="101 Warning">
-      <path d="M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 " fill="#FFFFFF"></path>
-      <path d="M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 C3.32321557,27 2.47386317,25.4826642 3.63914331,23.59738 Z M16,20 C16.5522847,20 17,19.5469637 17,19.0029699 L17,12.9970301 C17,12.4463856 16.5561352,12 16,12 C15.4477153,12 15,12.4530363 15,12.9970301 L15,19.0029699 C15,19.5536144 15.4438648,20 16,20 Z M16,24 C16.5522848,24 17,23.5522848 17,23 C17,22.4477152 16.5522848,22 16,22 C15.4477152,22 15,22.4477152 15,23 C15,23.5522848 15.4477152,24 16,24 Z M16,24" id="Triangle 29" />
-    </g>
-  </g>
-</svg>
-`};
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<svg version=\"1.1\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:sketch=\"http://www.bohemiancoding.com/sketch/ns\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n  <g fill=\"none\" fill-rule=\"evenodd\" id=\"Icons new Arranged Names Color\" stroke=\"none\" stroke-width=\"1\">\n    <g fill=\"#FF0000\" id=\"101 Warning\">\n      <path d=\"M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 \" fill=\"#FFFFFF\"></path>\n      <path d=\"M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 C3.32321557,27 2.47386317,25.4826642 3.63914331,23.59738 Z M16,20 C16.5522847,20 17,19.5469637 17,19.0029699 L17,12.9970301 C17,12.4463856 16.5561352,12 16,12 C15.4477153,12 15,12.4530363 15,12.9970301 L15,19.0029699 C15,19.5536144 15.4438648,20 16,20 Z M16,24 C16.5522848,24 17,23.5522848 17,23 C17,22.4477152 16.5522848,22 16,22 C15.4477152,22 15,22.4477152 15,23 C15,23.5522848 15.4477152,24 16,24 Z M16,24\" id=\"Triangle 29\" />\n    </g>\n  </g>\n</svg>\n";
+};
 
 /***/ }),
 /* 381 */
@@ -11542,201 +11527,69 @@ var modal = exports.modal = function modal(trigger) {
 
 /***/ }),
 /* 424 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<div id="signupModal">
-  <div id="signupModalBG"></div>
-  <div id="signupModalContent">
-    <h1>DON'T WAIT! JOIN FASTCASHMONEYPLUS TODAY, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>
+"use strict";
 
-    <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>
 
-    <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about "What Could Have Been" if you had bought FashCash early on. "I remember discovering FastCash early on," you'll tell your children at the dinner table, "and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!".</h3>
-
-    <button id="signupGetStarted">GET STARTED NOW</button>
-  </div>
-</div>
-`};
+module.exports = function (scope) {
+  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n  <div id=\"signupModalContent\">\n    <h1>DON'T WAIT! JOIN FASTCASHMONEYPLUS TODAY, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n    <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>\n\n    <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about \"What Could Have Been\" if you had bought FashCash early on. \"I remember discovering FastCash early on,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!\".</h3>\n\n    <button id=\"signupGetStarted\">GET STARTED NOW</button>\n  </div>\n</div>\n";
+};
 
 /***/ }),
 /* 425 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<div id="signupModal-1">
-  <h1>DON'T WAIT! JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>
+"use strict";
 
-  <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>
 
-  <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about "What Could Have Been" if you had bought FashCash early on. "I remember discovering FastCash early on," you'll tell your children at the dinner table, "and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!".</h3>
-
-  <button id="signupContinue-1" class="signupContinue">GET STARTED NOW</button>
-</div>
-`};
+module.exports = function (scope) {
+  return "<div id=\"signupModal-1\">\n  <h1>DON'T WAIT! JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n  <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>\n\n  <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about \"What Could Have Been\" if you had bought FashCash early on. \"I remember discovering FastCash early on,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!\".</h3>\n\n  <button id=\"signupContinue-1\" class=\"signupContinue\">GET STARTED NOW</button>\n</div>\n";
+};
 
 /***/ }),
 /* 426 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<div id="signupModal-2">
-  <style>
-    .modal-input {
-      font-size: 22px;
-      background-color: #feb;
-      border: 3px solid #888;
-    }
-
-    .modal-input:active,
-    .modal-input:focus {
-      background-color: #def;
-    }
-
-    .modal-input-section {
-      margin-top: 5px;
-    }
-    .modal-input-section label {
-      font-size: 20px;
-      font-family: sans-serif;
-    }
-  </style>
-  <h2>CREATE ACCOUNT</h2>
-
-  <div class="modal-input-section">
-    <label>
-      EMAIL ADDRESS:
-      <input id="signupEmail" class="modal-input" placeholder="EMAIL ADDRESS">
-      <br>
-      <label style="user-select: none; pointer-events: none"><input type="checkbox" checked>signup for fastcashmoneyplus.biz updates and promotions</label>
-    </label>
-  </div>
-
-  <div class="modal-input-section">
-    <label>
-      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:
-      <input class="modal-input" placeholder="SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT">
-    </label>
-  </div>
-
-  <div class="modal-input-section">
-    <label>
-      FULL LEGAL NAME:
-      <input class="modal-input" placeholder="FULL LEGAL NAME">
-    </label>
-  </div>
-
-  <div class="modal-input-section">
-    <label>
-      DATE OF BIRTH dd/mm/yyyy:
-      <input class="modal-input" placeholder="DATE OF BIRTH dd/mm/yyyy">
-    </label>
-  </div>
+"use strict";
 
 
-  <div>
-    <button id="signupContinue-2" class="signupContinue">INVEST NOW</button>
-  </div>
-</div>
-`};
+module.exports = function (scope) {
+  return "<div id=\"signupModal-2\">\n  <style>\n    .modal-input {\n      font-size: 22px;\n      background-color: #feb;\n      border: 3px solid #888;\n    }\n\n    .modal-input:active,\n    .modal-input:focus {\n      background-color: #def;\n    }\n\n    .modal-input-section {\n      margin-top: 5px;\n    }\n    .modal-input-section label {\n      font-size: 20px;\n      font-family: sans-serif;\n    }\n  </style>\n  <h2>CREATE ACCOUNT</h2>\n\n  <div class=\"modal-input-section\">\n    <label>\n      EMAIL ADDRESS:\n      <input id=\"signupEmail\" class=\"modal-input\" placeholder=\"EMAIL ADDRESS\">\n      <br>\n      <label style=\"user-select: none; pointer-events: none\"><input type=\"checkbox\" checked>signup for fastcashmoneyplus.biz updates and promotions</label>\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:\n      <input class=\"modal-input\" placeholder=\"SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      FULL LEGAL NAME:\n      <input class=\"modal-input\" placeholder=\"FULL LEGAL NAME\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      DATE OF BIRTH dd/mm/yyyy:\n      <input class=\"modal-input\" placeholder=\"DATE OF BIRTH dd/mm/yyyy\">\n    </label>\n  </div>\n\n\n  <div>\n    <button id=\"signupContinue-2\" class=\"signupContinue\">INVEST NOW</button>\n  </div>\n</div>\n";
+};
 
 /***/ }),
 /* 427 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<div id="signupModal-3">
-  <style>
-    #confirmationList {
-      padding-left: 40px;
-      margin-top: 5px;
-    }
-    #confirmationList li {
-      margin-top: 15px
-    }
-    #confirmationList label {
-      font-family: sans-serif;
-      font-size: 20px;
-    }
-    #confirmationList input {
-      transform: scale(1.5);
-    }
-  </style>
-  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>
+"use strict";
 
-  <ul id="confirmationList">
-    <li>
-      <label>
-        <input type="checkbox"> I have read, and agree to, the <a href="#">Terms of Service</a>
-      </label>
-    </li>
 
-    <li>
-      <label>
-        <input type="checkbox"> I have read the <a href="#">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.
-      </label>
-    </li>
-
-    <li>
-      <label>
-        <input type="checkbox"> I have read the <a href="#">FastCashMoneyPlus smart contract source code</a>.
-      </label>
-    </li>
-
-    <li>
-      <label>
-        <input type="checkbox"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, or Uraguay.
-      </label>
-    </li>
-
-    <li>
-      <label>
-        <input type="checkbox"> I am older than 18.
-      </label>
-    </li>
-
-    <li>
-      <label>
-        <input type="checkbox"> I am not a robot.
-      </label>
-    </li>
-
-    <li>
-      <label>
-        <input type="checkbox"> I'm ready to start making FAST CASH NOW!.
-      </label>
-    </li>
-  </ul>
-</div>
-`};
+module.exports = function (scope) {
+  return "<div id=\"signupModal-3\">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id=\"confirmationList\">\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read, and agree to, the <a href=\"#\">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I'm ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n";
+};
 
 /***/ }),
 /* 428 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<div id="signupModal-4">
-  <style>
-    #signupModal-4 h2 {
-      margin-top: 30px;
-    }
-  </style>
-  <h1>You're all set to invest in FastCashMoneyPlus!</h1>
+"use strict";
 
-  <h2>The FastCashMoneyPlus.biz investment console will walk you through the remaining steps to invest in the highly-sought-after FastCashMoneyPlus ICO!</h2>
 
-  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>
-
-  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>
-
-  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>
-  <a href="./invest.html" target="_blank" style="font-size: 25px; margin-top: 20px">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>
-</div>
-`};
+module.exports = function (scope) {
+  return "<div id=\"signupModal-4\">\n  <style>\n    #signupModal-4 h2 {\n      margin-top: 30px;\n    }\n  </style>\n  <h1>You're all set to invest in FastCashMoneyPlus!</h1>\n\n  <h2>The FastCashMoneyPlus.biz investment console will walk you through the remaining steps to invest in the highly-sought-after FastCashMoneyPlus ICO!</h2>\n\n  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>\n\n  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>\n\n  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>\n  <a href=\"./invest.html\" target=\"_blank\" style=\"font-size: 25px; margin-top: 20px\">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>\n</div>\n";
+};
 
 /***/ }),
 /* 429 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<div id="signupModal-loading" style="overflow-wrap: break-word; width: 35em;font-size: 22px;">
-  LOADING
-</div>
-`};
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<div id=\"signupModal-loading\" style=\"overflow-wrap: break-word; width: 35em;font-size: 22px;\">\n  LOADING\n</div>\n";
+};
 
 /***/ })
 /******/ ]);</script></body>

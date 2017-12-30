@@ -2,6 +2,8 @@
 
 body {
   background-color: #003;
+  color: #ffe;
+  border-color: #000
 }
 
 nav {
@@ -316,6 +318,7 @@ nav .nav-menu .nav-menu-item {
 }
 
 #signupModal {
+  color: #000;
   height: 100vh;
   width: 100vw;
   padding-bottom: 50vh;

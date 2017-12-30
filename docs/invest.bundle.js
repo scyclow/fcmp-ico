@@ -27875,54 +27875,36 @@ module.exports = function (regExp, replace) {
 
 /***/ }),
 /* 378 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 400" xml:space="preserve">
-<path d="M150.2,133c19.5-18.4,46.2-28.5,72.5-28.5c22.5,0,40.5,4.9,49.9,10.5l10.1-25.2c-6.8-5.3-26.7-12.4-54.8-12.4
-  c-37.2,0-69.4,12-95.4,34.2c-7.8,6.5-14.9,13.8-21.1,21.8L127,53.3h143.2l7.2-39.3H88.3L17.5,386.6h45.9l21.3-111.9
-  c13.3,40,47.4,63.5,96.3,63.5c28.5,0,51.4-5.6,65.7-12l-4.1-25.5c-13.9,7.1-34.9,10.9-54.1,10.9c-56.3,0-77-37.2-77-82.6
-  c0-3.7,0.1-7.4,0.4-11H227l7.7-39.3H120.5C127.2,160.7,137.4,144.9,150.2,133z"/>
-</svg>
-`};
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 300 400\" xml:space=\"preserve\">\n<path d=\"M150.2,133c19.5-18.4,46.2-28.5,72.5-28.5c22.5,0,40.5,4.9,49.9,10.5l10.1-25.2c-6.8-5.3-26.7-12.4-54.8-12.4\n  c-37.2,0-69.4,12-95.4,34.2c-7.8,6.5-14.9,13.8-21.1,21.8L127,53.3h143.2l7.2-39.3H88.3L17.5,386.6h45.9l21.3-111.9\n  c13.3,40,47.4,63.5,96.3,63.5c28.5,0,51.4-5.6,65.7-12l-4.1-25.5c-13.9,7.1-34.9,10.9-54.1,10.9c-56.3,0-77-37.2-77-82.6\n  c0-3.7,0.1-7.4,0.4-11H227l7.7-39.3H120.5C127.2,160.7,137.4,144.9,150.2,133z\"/>\n</svg>\n";
+};
 
 /***/ }),
 /* 379 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 400" xml:space="preserve">
-<g>
-  <path d="M151.9,82l-31.4,105.5h35c15.7,0,27.5-2.4,35.3-7.3c7.8-4.8,15.8-15.2,24.1-31h7.5l-27.7,97.1h-7.9
-    c2-7.9,2.9-14.3,2.9-19.5c0-8-2.7-14.2-8-18.6c-5.3-4.4-15.2-6.6-29.8-6.6h-35.4l-23.2,80.4c-4.2,14.3-6.3,23.8-6.3,28.5
-    c0,4.8,1.8,8.6,5.4,11.2c3.6,2.6,12.4,4.4,26.4,5.3l-2.4,7.3H11.2l2.6-7.3c10.2-0.3,17-1.2,20.4-2.8c5.2-2.2,9.1-5.2,11.6-9
-    c3.5-5.4,7.7-16.4,12.6-33.2l47-160.5c3.8-13,5.7-23.1,5.7-30.5c0-3.4-0.9-6.3-2.6-8.7c-1.7-2.4-4.2-4.2-7.6-5.4
-    c-3.3-1.2-10-1.8-19.9-1.8l2.4-7.3H290l-19.6,67.4h-7.5c1.4-8.1,2.2-14.8,2.2-20c0-8.6-2.4-15.5-7.2-20.5
-    c-4.8-5-10.9-8.6-18.4-10.7c-5.2-1.3-17-2-35.2-2H151.9z"/>
-</g>
-<g>
-  <path d="M245.7,116.4l-11.9,51.9h-4.3l-0.5-13c-0.4-4.7-1.3-8.9-2.7-12.6c-1.4-3.7-3.5-6.9-6.4-9.6c-2.8-2.7-6.4-4.8-10.8-6.4
-    c-4.3-1.5-9.1-2.3-14.4-2.3c-14.1,0-26.4,3.9-37,11.6c-13.5,9.8-24,23.7-31.7,41.7c-6.3,14.8-9.5,29.8-9.5,45
-    c0,15.5,4.5,27.9,13.6,37.2c9.1,9.3,20.8,13.9,35.3,13.9c10.9,0,20.7-2.4,29.2-7.3c8.5-4.9,16.5-12.4,23.8-22.6h5.6
-    c-8.7,13.8-18.3,23.9-28.8,30.4c-10.6,6.5-23.2,9.7-37.9,9.7c-13.1,0-24.7-2.7-34.7-8.2c-10.1-5.5-17.8-13.2-23-23.1
-    c-5.3-9.9-7.9-20.6-7.9-32c0-17.5,4.7-34.5,14.1-51c9.4-16.5,22.2-29.5,38.6-39c16.3-9.5,32.8-14.2,49.4-14.2
-    c7.8,0,16.5,1.9,26.2,5.6c4.3,1.6,7.3,2.4,9.2,2.4c1.9,0,3.5-0.4,5-1.2c1.4-0.8,3.8-3,7.1-6.7H245.7z"/>
-</g>
-</svg>
-`};
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 300 400\" xml:space=\"preserve\">\n<g>\n  <path d=\"M151.9,82l-31.4,105.5h35c15.7,0,27.5-2.4,35.3-7.3c7.8-4.8,15.8-15.2,24.1-31h7.5l-27.7,97.1h-7.9\n    c2-7.9,2.9-14.3,2.9-19.5c0-8-2.7-14.2-8-18.6c-5.3-4.4-15.2-6.6-29.8-6.6h-35.4l-23.2,80.4c-4.2,14.3-6.3,23.8-6.3,28.5\n    c0,4.8,1.8,8.6,5.4,11.2c3.6,2.6,12.4,4.4,26.4,5.3l-2.4,7.3H11.2l2.6-7.3c10.2-0.3,17-1.2,20.4-2.8c5.2-2.2,9.1-5.2,11.6-9\n    c3.5-5.4,7.7-16.4,12.6-33.2l47-160.5c3.8-13,5.7-23.1,5.7-30.5c0-3.4-0.9-6.3-2.6-8.7c-1.7-2.4-4.2-4.2-7.6-5.4\n    c-3.3-1.2-10-1.8-19.9-1.8l2.4-7.3H290l-19.6,67.4h-7.5c1.4-8.1,2.2-14.8,2.2-20c0-8.6-2.4-15.5-7.2-20.5\n    c-4.8-5-10.9-8.6-18.4-10.7c-5.2-1.3-17-2-35.2-2H151.9z\"/>\n</g>\n<g>\n  <path d=\"M245.7,116.4l-11.9,51.9h-4.3l-0.5-13c-0.4-4.7-1.3-8.9-2.7-12.6c-1.4-3.7-3.5-6.9-6.4-9.6c-2.8-2.7-6.4-4.8-10.8-6.4\n    c-4.3-1.5-9.1-2.3-14.4-2.3c-14.1,0-26.4,3.9-37,11.6c-13.5,9.8-24,23.7-31.7,41.7c-6.3,14.8-9.5,29.8-9.5,45\n    c0,15.5,4.5,27.9,13.6,37.2c9.1,9.3,20.8,13.9,35.3,13.9c10.9,0,20.7-2.4,29.2-7.3c8.5-4.9,16.5-12.4,23.8-22.6h5.6\n    c-8.7,13.8-18.3,23.9-28.8,30.4c-10.6,6.5-23.2,9.7-37.9,9.7c-13.1,0-24.7-2.7-34.7-8.2c-10.1-5.5-17.8-13.2-23-23.1\n    c-5.3-9.9-7.9-20.6-7.9-32c0-17.5,4.7-34.5,14.1-51c9.4-16.5,22.2-29.5,38.6-39c16.3-9.5,32.8-14.2,49.4-14.2\n    c7.8,0,16.5,1.9,26.2,5.6c4.3,1.6,7.3,2.4,9.2,2.4c1.9,0,3.5-0.4,5-1.2c1.4-0.8,3.8-3,7.1-6.7H245.7z\"/>\n</g>\n</svg>\n";
+};
 
 /***/ }),
 /* 380 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<svg version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g fill="none" fill-rule="evenodd" id="Icons new Arranged Names Color" stroke="none" stroke-width="1">
-    <g fill="#FF0000" id="101 Warning">
-      <path d="M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 " fill="#FFFFFF"></path>
-      <path d="M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 C3.32321557,27 2.47386317,25.4826642 3.63914331,23.59738 Z M16,20 C16.5522847,20 17,19.5469637 17,19.0029699 L17,12.9970301 C17,12.4463856 16.5561352,12 16,12 C15.4477153,12 15,12.4530363 15,12.9970301 L15,19.0029699 C15,19.5536144 15.4438648,20 16,20 Z M16,24 C16.5522848,24 17,23.5522848 17,23 C17,22.4477152 16.5522848,22 16,22 C15.4477152,22 15,22.4477152 15,23 C15,23.5522848 15.4477152,24 16,24 Z M16,24" id="Triangle 29" />
-    </g>
-  </g>
-</svg>
-`};
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<svg version=\"1.1\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:sketch=\"http://www.bohemiancoding.com/sketch/ns\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n  <g fill=\"none\" fill-rule=\"evenodd\" id=\"Icons new Arranged Names Color\" stroke=\"none\" stroke-width=\"1\">\n    <g fill=\"#FF0000\" id=\"101 Warning\">\n      <path d=\"M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 \" fill=\"#FFFFFF\"></path>\n      <path d=\"M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 C3.32321557,27 2.47386317,25.4826642 3.63914331,23.59738 Z M16,20 C16.5522847,20 17,19.5469637 17,19.0029699 L17,12.9970301 C17,12.4463856 16.5561352,12 16,12 C15.4477153,12 15,12.4530363 15,12.9970301 L15,19.0029699 C15,19.5536144 15.4438648,20 16,20 Z M16,24 C16.5522848,24 17,23.5522848 17,23 C17,22.4477152 16.5522848,22 16,22 C15.4477152,22 15,22.4477152 15,23 C15,23.5522848 15.4477152,24 16,24 Z M16,24\" id=\"Triangle 29\" />\n    </g>\n  </g>\n</svg>\n";
+};
 
 /***/ }),
 /* 381 */,
@@ -62618,76 +62600,14 @@ module.exports = IpcProvider;
 
 /***/ }),
 /* 618 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports=function(scope){ return `<div id="warning">
-  <style>
-    #warning {
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-      background-color: gray;
-      top: 0;
-      overflow: scroll;
-      font-family: Gadget, sans-serif;
-    }
+"use strict";
 
-    .closeWarning-x {
-      padding: 10px;
-      cursor: pointer;
-      color: white;
-      font-family: sans-serif;
-    }
 
-    #warningHeader {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    #warningContainer {
-      color: white;
-      font-size: 30px;
-      padding: 20px;
-      padding-top: 0;
-    }
-
-    .warningIcon {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    #warningButtonContainer {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .warning-btn {
-      font-size: 25px;
-      padding: 10px;
-      background-color: dodgerblue;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      cursor: pointer
-    }
-
-  </style>
-  <div id="warningHeader">
-    <div class="closeWarning closeWarning-x">X</div>
-  </div>
-  <div id="warningContainer">
-    <div class="warningIcon"></div>
-    WARNING: This page has been flagged as fraudulent and potentially misleading. Please proceed with caution, and beware of of deceptive content ahead.
-    <div id="warningButtonContainer">
-      <a class="warning-btn" href="http://steviep.xyz/sounds">Back to Safety</a>
-      <div class="closeWarning warning-btn">Continue</div>
-    </div>
-  </div>
-</div>
-`};
+module.exports = function (scope) {
+  return "<div id=\"warning\">\n  <style>\n    #warning {\n      position: fixed;\n      width: 100vw;\n      height: 100vh;\n      background-color: gray;\n      top: 0;\n      overflow: scroll;\n      font-family: Gadget, sans-serif;\n    }\n\n    .closeWarning-x {\n      padding: 10px;\n      cursor: pointer;\n      color: white;\n      font-family: sans-serif;\n    }\n\n    #warningHeader {\n      width: 100%;\n      display: flex;\n      justify-content: flex-end;\n    }\n\n    #warningContainer {\n      color: white;\n      font-size: 30px;\n      padding: 20px;\n      padding-top: 0;\n    }\n\n    .warningIcon {\n      display: flex;\n      justify-content: center;\n      margin-bottom: 10px;\n    }\n\n    #warningButtonContainer {\n      margin-top: 20px;\n      display: flex;\n      justify-content: space-around;\n    }\n\n    .warning-btn {\n      font-size: 25px;\n      padding: 10px;\n      background-color: dodgerblue;\n      color: white;\n      border-radius: 8px;\n      text-decoration: none;\n      cursor: pointer\n    }\n\n  </style>\n  <div id=\"warningHeader\">\n    <div class=\"closeWarning closeWarning-x\">X</div>\n  </div>\n  <div id=\"warningContainer\">\n    <div class=\"warningIcon\"></div>\n    WARNING: This page has been flagged as fraudulent and potentially misleading. Please proceed with caution, and beware of of deceptive content ahead.\n    <div id=\"warningButtonContainer\">\n      <a class=\"warning-btn\" href=\"http://steviep.xyz/sounds\">Back to Safety</a>\n      <div class=\"closeWarning warning-btn\">Continue</div>\n    </div>\n  </div>\n</div>\n";
+};
 
 /***/ }),
 /* 619 */

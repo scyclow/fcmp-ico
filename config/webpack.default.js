@@ -67,7 +67,7 @@ module.exports = {
       {
         test: /\.(html|svg)$/,
         exclude: /node_modules/,
-        loader: 'template-string-loader'
+        loader: 'babel-loader!template-string-loader'
       }
     ]
   }
