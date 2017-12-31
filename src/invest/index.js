@@ -296,10 +296,10 @@ function renderFromTransactionData({ usd2fc, usd2eth, amountInMoneyBucks, newRou
   }
 
   if (newRoutingCode && amountInWei) {
-    const buyData = getBuyData(INSTANCE, newRoutingCode, referal, amountInWei)
+    const buyData = getBuyData(newRoutingCode, referal, amountInWei)
     // TODO -- hardcode as actual address
-    $toAddressData.innerHTML = buyData.to
-    $dataData.innerHTML = buyData.data
+    $toAddressData.innerHTML = ''
+    $dataData.innerHTML = buyData
   }
 }
 

@@ -12,7 +12,8 @@ module.exports = {
   entry: {
     index: './index.js',
     invest: './invest/index.js',
-    flasher: './flasher/index.js'
+    flasher: './flasher/index.js',
+    wallet: './wallet/index.js',
   },
   output: {
     path: rootDir('docs'),
@@ -50,6 +51,13 @@ module.exports = {
       filename: 'flasher.html',
       inject: 'body',
       chunks: ['flasher'],
+      inlineSource: '.(js|css)$'
+    }),
+    html({
+      template: rootDir(`src/wallet/index.html`),
+      filename: 'wallet.html',
+      inject: 'body',
+      chunks: ['wallet'],
       inlineSource: '.(js|css)$'
     }),
   ],

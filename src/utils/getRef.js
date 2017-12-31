@@ -1,6 +1,6 @@
 // @flow
 
-function getQueryParams() {
+export function getQueryParams() {
   return location.search.slice(1).split('&').reduce((params, param) => {
     const [key, value] = param.split('=');
     params[key] = value;

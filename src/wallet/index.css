@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 2px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+nav h1 {
+  margin-bottom: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#content {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.refLink {
+  color: #000;
+  font-size: 25px;
+  background-color: #fed;
+  padding: 5px;
+  min-width: 80%;
+  resize: none;
+}
+
+.refCopy {
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#share {
+  margin-top: 10px;
+}
+
+#transferSection {
+  margin-top: 30px;
+}
+
+.fnInput {
+  font-size: 20px;
+  background-color: #fed;
+  background-color: #feb;
+  border: 2px solid #888;
+  padding: 5px;
+}
+
+.fnInput:active,
+.fnInput:focus {
+  background-color: #def;
+}
+
+.formData {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #dddddd;
+  font-size: 18px;
+  padding: 5px;
+  max-width: 90vw;
+  word-break: break-all;
+}
+
+.formData-name {
+  padding: 5px;
+  background-color: #eeeeee;
+  font-size: 17px;
+  font-family: sans-serif;
+}
+
+.formData, .formData-name {
+  border: 1px solid black;
+}
+
+.inputTable {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#weiAmount {
+  width: 300px;
+}
+
+.easyButton {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid;
+  cursor: pointer;
+  animation: EasyButton 12s ease infinite;
+  transition: 500ms;
+}
+
+.easyButton:hover {
+  border: 15px solid;
+  border-radius: 25px;
+}
+
+.easyButton:active {
+  border-radius: 0;
+  border: 0;
+}
+
+
+@keyframes EasyButton {
+  0% {
+    color: #ff0000;
+    background-color: #00ffff;
+  }
+
+  17% {
+    color: #ffff00;
+    background-color: #0000ff;
+  }
+
+  33% {
+    color: #00ff00;
+    background-color: #ff00ff;
+  }
+
+  50% {
+    color: #00ffff;
+    background-color: #ff0000;
+  }
+
+  66% {
+    color: #0000ff;
+    background-color: #ffff00;
+  }
+
+  83% {
+    color: #ff00ff;
+    background-color: #00ff00;
+  }
+
+  100% {
+    color: #ff0000;
+    background-color: #00ffff;
+  }
+}

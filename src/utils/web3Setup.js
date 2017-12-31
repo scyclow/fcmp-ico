@@ -29,18 +29,45 @@ async function getNum(fn) {
 }
 
 export function getBuyData(
-  inst: any,
   routingCode: string,
   referal: string,
   value: number
-): { data: string, to: string } {
-  if (inst) {
-    return inst.buy.request(routingCode, referal, { value }).params[0]
-  } else {
-    const web3 = new Web3(new Web3.providers.HttpProvider(''))
-    const fakeInst = web3.eth.contract(FastCashMoneyPlusArtifact.abi).at('')
-    return { data: fakeInst.buy.getData(routingCode, referal) }
-  }
+): string {
+
+  const web3 = new Web3(new Web3.providers.HttpProvider(''))
+  const fakeInst = web3.eth.contract(FastCashMoneyPlusArtifact.abi).at('')
+  return fakeInst.buy.getData(routingCode, referal)
+}
+
+export function getTransferData(
+  to: string,
+  amount: number
+): string {
+  const web3 = new Web3(new Web3.providers.HttpProvider(''))
+  const fakeInst = web3.eth.contract(FastCashMoneyPlusArtifact.abi).at('')
+
+  const toBytes = web3.fromUtf8(to)
+  const amountInMoneyBucks = amount * (10 ** 18)
+  return fakeInst.transferToAccount.getData(toBytes, amountInMoneyBucks)
+}
+
+export function executeTransfer(inst, to, amount) {
+  const toBytes = web3.fromUtf8(to)
+  const amountInMoneyBucks = amount * (10 ** 18)
+  return inst.transferToAccount(
+    toBytes,
+    amountInMoneyBucks,
+    { from: web3.eth.coinbase, gas: 150000 }
+  )
+}
+
+export function simpleBuy(amount) {
+  return web3.eth.sendTransaction({
+    amount,
+    to: '', // TODO -- hardcode address
+    from: web3.eth.coinbase,
+    gas: 150000,
+  })
 }
 
 // FastCashMoneyPlus.deployed().then(async i => {

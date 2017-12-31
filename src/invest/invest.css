@@ -132,6 +132,7 @@ p {
 .formData-name {
   background-color: #eeeeee;
   font-size: 17px;
+  font-family: sans-serif;
 }
 
 .formData, .formData-name {
@@ -216,12 +217,12 @@ p {
 
   83% {
     color: #0000ff;
-    /*background: linear-gradient(300deg, #ff00ff, #00ffff);*/
+    background: linear-gradient(300deg, #ff00ff, #00ffff);
   }
 
   100% {
     color: #ff00ff;
-    /*background: linear-gradient(360deg, #ff0000, #0000ff);*/
+    background: linear-gradient(360deg, #ff0000, #0000ff);
   }
 }
 
