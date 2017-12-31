@@ -1,478 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>INVEST NOW | FA$TCA$HMONEYPLU$.biz</title>
-  <META charset="UTF-8">
-  <META name="theme-color" content="#ffffff">
-  <META name="viewport" content="width=device-width, initial-scale=1.0">
-  <META http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <META
-    name="description"
-    content="_________"
-  >
-  <META
-    name="keywords"
-    content="god, hell, satan, fuck, shit, sex, power, the, love, wealth, happiness"
-  >
-<style type="text/css">* {
-  padding: 0;
-  margin: 0;
-}
-
-#hero {
-  font-size: 60px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-h1, h2, h3, h4 {
-  display: inline-block;
-}
-
-hr {
-  margin-top: 43px;
-  margin-bottom: 20px;
-}
-
-p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-#container {
-  padding: 2%;
-}
-
-.highlight {
-  padding: 5px;
-  background-color: yellow;
-  border: 1px solid orange;
-}
-
-.hl-inline {
-  background-color: yellow;
-}
-
-.highlight .highlight {
-  background-color: #00ffff;
-  border: 2px solid #a600ff;
-}
-
-.highlight .highlight .highlight {
-  background: linear-gradient(135deg, #f00, #00f);
-  padding: 0 5px;
-  border: 0;
-  color: #33ff00;
-}
-
-.sectionHeader {
-  margin-bottom: 10px;
-}
-
-.tinyFont {
-  font-size: 0.8em;
-}
-
-.label {
-  font-family: sans-serif;
-}
-
-.sansSerif {
-  font-family: sans-serif;
-}
-
-#tableContainer td {
-  border: 1px solid black;
-  padding: 3px;
-}
-
-#tableContainer {
-  font-family: sans-serif;
-}
-
-#generateRoutingCode {
-  padding: 10px;
-  font-size: 25px;
-  border-radius: 3px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#aaa));
-  background: linear-gradient(180deg, #ddd, #aaa);
-  cursor: pointer;
-}
-
-#routingCode {
-  width: 100%;
-  min-width: 510px;
-  font-size: 20px;
-  padding: 4px;
-}
-
-#purchaseAmountSlider {
-  width: 100%;
-}
-
-#amountOfFastcash {
-  font-size: 23px;
-  padding: 4px;
-}
-
-#fastcashLeft {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-#fastcashChooser {
-  margin-top: 40px;
-}
-
-#pleaseContact {
-  background-color: pink;
-  text-align: center;
-  font-size: 23px;
-}
-
-.confirmBox {
-  font-size: 18px;
-  margin-top: 10px;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.formData {
-  font-family: "Courier New", Courier, monospace;
-  background-color: #dddddd;
-  font-size: 18px;
-  padding: 3px;
-  max-width: 90vw;
-  word-break: break-all;
-}
-
-.formData-name {
-  background-color: #eeeeee;
-  font-size: 17px;
-  font-family: sans-serif;
-}
-
-.formData, .formData-name {
-  border: 1px solid black;
-}
-
-#stepsToComplete {
-  margin-top: 40px;
-  margin-bottom: 60px;
-  font-size: 20px;
-  border: 3px solid red;
-}
-
-#myEtherPurchase, #metaMaskPurchase {
-  font-size: 20px;
-  margin-bottom: 60px;
-}
-
-.pLarge {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-#easyCheckoutContainer {
-  margin-top: 130px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 40px;
-  height: 130px
-}
-
-#easyCheckout {
-  font-size: 40px;
-  padding: 20px;
-  cursor: pointer;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
-  background: linear-gradient(0deg, #ff0000, #0000ff);
-  -webkit-animation: Checkout 12s ease infinite;
-          animation: Checkout 12s ease infinite;
-  -webkit-transition: 200ms;
-  transition: 200ms;
-  border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 0 0 50px black;
-          box-shadow: 0 0 50px black;
-}
-
-#easyCheckout:hover {
-  border: 15px solid;
-  border-radius: 25px;
-}
-
-#easyCheckout:active {
-  border: 0;
-  -webkit-box-shadow: 0 0;
-          box-shadow: 0 0;
-}
-
-#gotoWallet {
-  display: block;
-  font-size: 60px;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  -webkit-transition: 250ms;
-  transition: 250ms;
-  padding: 20px;
-  border-radius: 5px;
-  border: 6px solid #00f;
-  background-color: #ddddff;
-  color: #00f;
-}
-
-#gotoWallet:hover {
-  background-color: #ffdd00;
-}
-
-
-
-@-webkit-keyframes Checkout {
-  0% {
-    color: #ff0000;
-    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
-    background: linear-gradient(0deg, #ff0000, #0000ff);
-  }
-
-  17% {
-    color: #ff0000;
-    background: linear-gradient(60deg, #ffff00, #ff00ff);
-  }
-
-  33% {
-    color: #ffff00;
-    background: linear-gradient(120deg, #00ff00, #ff0000);
-  }
-
-  50% {
-    color: #00ff00;
-    background: -webkit-gradient(linear, left top, left bottom, from(#00ffff), to(#ffff00));
-    background: linear-gradient(180deg, #00ffff, #ffff00);
-  }
-
-  66% {
-    color: #00ffff;
-    background: linear-gradient(240deg, #0000ff, #00ff00);
-  }
-
-  83% {
-    color: #0000ff;
-    background: linear-gradient(300deg, #ff00ff, #00ffff);
-  }
-
-  100% {
-    color: #ff00ff;
-    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
-    background: linear-gradient(360deg, #ff0000, #0000ff);
-  }
-}
-
-
-
-@keyframes Checkout {
-  0% {
-    color: #ff0000;
-    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
-    background: linear-gradient(0deg, #ff0000, #0000ff);
-  }
-
-  17% {
-    color: #ff0000;
-    background: linear-gradient(60deg, #ffff00, #ff00ff);
-  }
-
-  33% {
-    color: #ffff00;
-    background: linear-gradient(120deg, #00ff00, #ff0000);
-  }
-
-  50% {
-    color: #00ff00;
-    background: -webkit-gradient(linear, left top, left bottom, from(#00ffff), to(#ffff00));
-    background: linear-gradient(180deg, #00ffff, #ffff00);
-  }
-
-  66% {
-    color: #00ffff;
-    background: linear-gradient(240deg, #0000ff, #00ff00);
-  }
-
-  83% {
-    color: #0000ff;
-    background: linear-gradient(300deg, #ff00ff, #00ffff);
-  }
-
-  100% {
-    color: #ff00ff;
-    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
-    background: linear-gradient(360deg, #ff0000, #0000ff);
-  }
-}
-
-
-
-</style></head>
-
-<body>
-
-<div id="container">
-  <div id="loadingContainer"></div>
-  <div id="investmentContainer">
-    <h1 id="hero">ARE YOU READY TO MAKE FAST CASH NOW?</h1>
-
-    <p><h4 class="highlight" style="border: 0">PAY ATTENTION </h4> and read these directions VERY CAREFULLY. Failing to read the directions may result in you losing your fastcash.</p>
-    <p>Even though the whole investment process may appear to be intimidating, rest assured that THIS IS THE <span class="hl-inline">ONLY</span> <span class="hl-inline">SURE-FIRE</span> <span class="hl-inline">WAY</span> TO MAKE BOAT-LOADS OF CASH. While certain terms, such as "crypto", "investment", "private key", and so forth, migh sound confusing now, everything will make sense once you are a certified fastcash investor.</p>
-
-    <hr>
-    <div class="highlight sectionHeader">
-      <h2>STEP 1.</h2>
-      <h3>GENERATE A FASTCASH ADDRESS</h3>
-    </div>
-    <p>
-      This is a very important step on your journey to fastcash wealth. Your fastcash address will be used for all fastcash transfers AND referal bonuses[1]. Please click the button to generate your address now.
-    </p>
-    <p class="tinyFont">
-      1. by refering your friends and family to this incredible investment opportunity, you will receive immediately receive BONUS FASTCASH equal to 10% of the amount of fastcash that they invest in)
-    </p>
-    <h1 class="highlight">GENERATE FASTCASH ADDRESS HERE: <button id="generateRoutingCode">GENERATE</button></h1>
-
-    <div>
-      <h2 class="label">YOUR FASTCASH ADDRESS IS:</h2>
-      <input id="routingCode" value="please click the button to generate a fastcash address" disabled />
-    </div>
-
-    <hr>
-    <div class="highlight">
-      <a name="chooser"></a>
-      <h2>STEP 2.</h2>
-      <h3>CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN</h3>
-    </div>
-    <p>
-      Please choose how much fastcash you'd wish to purchase at this time. If you're unsure of an amount, err on the side of more, rather than less. You don't want to regret buying too little later on! Buy as much as you can now, before it's too late!
-    </p>
-    <h2 id="fastcashLeft"></h2>
-    <br>
-
-    <h3>This table displays the current conversion rate:</h3>
-    <div id="tableContainer"></div>
-    <p class="tinyFont">
-      The conversion rate of fastcash to usd is determined by a deterministic formula, in which the price of fastcash (denominated in eth), increases at a rate of 20% for 71 weeks after the initial launch (January of 2018). The conversion rate of usd to eth is determined by a trusted third party, and refreshed once at the begining of every week. The smallest denomination of fastcash is the MONEYBUCK, which is equivalent to 1 10e-18 fastcash. To determine the price of MONEYBUCKS relative to WEI, simply apply the following formula: ((4 * (10 ** (week + 18 - (10 + MAX(0, week - 15))))) / ( USDWEI / 10 ** 10 ) * ((12 ** week) / (10 ** MAX(0, week - 15)))) where all values of [week] are between 0 and 71 (inclusive).
-    </p>
-    <div id="fastcashChooser">
-      <h1 class="highlight">CHOOSE YOUR FASTCASH HERE:</h1>
-      <div id="fastcashChooserErr" style="color: red"></div>
-      <input id="purchaseAmountSlider" type="range" min="0" max="10000" value="0">
-      <br>
-      <span class="fc-ss"></span><input id="amountOfFastcash" type="number">
-      <div id="amountOfMoneybucks"></div>
-      <div id="pleaseContact"></div>
-    </div>
-
-    <hr>
-    <div class="highlight sectionHeader">
-      <h2>STEP 3.</h2>
-      <h3>ACQUIRE ETHEREUM SO YOU CAN BUY YOUR FASTCASH</h3>
-    </div>
-
-    <p>To make things easier on our investors, we chose to accept transactions in Ethereum. This means that you NEED ETHEREUM to buy your fastcash.</p>
-    <ul style="margin-left: 30px">
-      <li>
-        You can acquire Ethereum (ETH) on any number of exchanges. We reccomend <a href="https://www.coinbase.com/" target="_blank">coinbase</a>.
-      </li>
-      <li>
-        If you're unsure how much ethereum to buy, <a href="#chooser"> CLICK HERE TO GO TO THE FASTCASH SELECTION TOOL</a> to get an estimate on how much you need.
-      </li>
-    </ul>
-    <h3 class="highlight">
-      <a href="https://www.coinbase.com/" target="_blank">CLICK HERE TO GO TO COINBASE TO BUY ETHEREUM</a>
-    </h3>
-
-    <label class="confirmBox">--><input type="checkbox"><--Click this once you've bought your etherem</label>
-
-    <p>After you've bought your ethereum, (or if you already have ethereum) please continue to the next step:</p>
-
-    <hr>
-    <div class="highlight sectionHeader">
-      <h2>STEP 4.</h2>
-      <h3>TRANSFER ETHEREUM TO A WALLET</h3>
-    </div>
-    <p>To purchase fastcash, you need to send your ethereum to the FastCashMoneyPlus Contract from a dedicated wallet. The FastCashMoneyPlus Contract will identify your ethereum wallet as the true holder of your fastcash balance. HOWEVER, if you send the Contract ethereum from your coinbase account, then coinbase will own your fastcash instead of you. DON'T DO THIS</p>
-    <h3 class="highlight" style="margin-top: 15px; margin-bottom: 21px">DO NOT MAKE A FASTCASH TRANSACTION FROM COINBASE OR ELSE YOU WILL LOSE YOUR ETHEREUM AND YOUR FASTCASH!!!</h3>
-
-    <p>There are a few different ways you can set up a wallet.</p>
-    <ol style="margin-left: 35px">
-      <li >[RECOMENDED] Download the <a href="https://metamask.io/" target="_blank">MetaMask Browser Extension</a>, set up a wallet with it, transfer your ethereum to that wallet, and RELOAD THIS PAGE WITH THE BROWSER EXTENSION ENABLED.</li>
-      <li class="highlight">[RECOMENDED] Download the <a href="https://metamask.io/" target="_blank">MetaMask Browser Extension</a>, set up a wallet with it, transfer your ethereum to that wallet, and RELOAD THIS PAGE WITH THE BROWSER EXTENSION ENABLED.</li>
-      <li>Go to <a href="https://www.myetherwallet.com/">www.myetherwallet.com/</a> and create an ethereum wallet there. Then, tranfer your ether to this wallet. If you buy fastcash from this wallet, it will be more difficult to </li>
-      <li>You can also use any other third party wallet. However, these instructions will walk you through MyEtherWallet</li>
-    </ol>
-    <label class="confirmBox">--><input type="checkbox"><--Click this once you've transfered your etherem to your new wallet</label>
-
-    <hr>
-    <div class="highlight sectionHeader">
-      <h1>STEP 5.</h1>
-      <h1>BUY FASTCASH</h1>
-    </div>
-    <p class="pLarge">CONGRATULATIONS TO YOU! You've reached the final step in your fastcash journey! You're one step away from embarking on the greatest wealth-creation adventure of your life! Before you continue PLEASE GO BACK AND CONFIRM THAT YOU've COMPLETED ALL OF THE PREVIOUS STEPS.</p>
-
-    <div id="stepsToComplete" class="highlight"></div>
-
-    <div id="myEtherPurchase" class="highlight">
-      <h3 class="highlight">If you are using MyEtherWallet (or a similar third party wallet):</h3>
-      <ul style="margin-left: 30px; margin-bottom: 20px">
-        <li class="highlight">Go to "<span class="formData-name">Send Ether & Tokens</span>" (and unlock your wallet)</li>
-        <li class="highlight">CLICK "<span class="formData-name">+Advanced: Add Data</span>"</li>
-        <li class="highlight">Enter the following values for each field:<br>
-          <table>
-            <tr>
-              <td class="formData-name">To Address</td>
-              <td id="toAddressData" class="formData"></td>
-            </tr>
-            <tr>
-              <td class="formData-name">Amount to Send</td>
-              <td id="amountToSendData" class="formData"></td>
-            </tr>
-            <tr>
-              <td class="formData-name">Gas Limit</td>
-              <td class="formData">150000</td>
-            </tr>
-            <tr>
-              <td class="formData-name">Data</td>
-              <td id="dataData" class="formData"></td>
-            </tr>
-          </table>
-        </li>
-        <li class="highlight">GENERATE YOUR TRANSACTION!!!</li>
-      </ul>
-    </div>
-
-    <div id="metaMaskPurchase" class="highlight">
-      <h3 class="highlight">If you are using MetaMask or an Ethereum browser (like Mist), proceed to <span class="highlight">EASY CHECKOUT</span>:</h3>
-      <p></p>
-
-      <div class="highlight" id="easyCheckoutContainer">
-        <h1 id="easyCheckoutError"></h1>
-        <button id="easyCheckout">EASY CHECKOUT</button>
-      </div>
-    </div>
-
-    <h2 style="text-align: center">YOU ARE NOW A PROUD INVESTOR IN FASTCASH! Pat yourself on the back! You are going to be very rich soon enough, and you deserve it! But it's only fair that you take your friends and loved ones along for the ride! And to make it easier, you will receive a FASTCASH BONUS! You can do all these things and more (such as transfering fastcash, and buying MORE fastcash) in the official FastCashMoneyPlus.biz FastCash wallet! To go to your wallet, click the link below:</h2>
-    <a id="gotoWallet" target="_blank" href="./wallet.html">Click here to GO TO YOUR FASTCASH WALLET NOW!</a>
-  </div>
-</div>
-
-<script type="text/javascript">/******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -534,7 +60,7 @@ p {
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 616);
+/******/ 	return __webpack_require__(__webpack_require__.s = 622);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -62691,13 +62217,19 @@ module.exports = IpcProvider;
 /* 613 */,
 /* 614 */,
 /* 615 */,
-/* 616 */
+/* 616 */,
+/* 617 */,
+/* 618 */,
+/* 619 */,
+/* 620 */,
+/* 621 */,
+/* 622 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(617);
+__webpack_require__(623);
 
 __webpack_require__(187);
 
@@ -62713,450 +62245,117 @@ var _2 = __webpack_require__(65);
 
 var _3 = _interopRequireDefault(_2);
 
-var _warning = __webpack_require__(618);
-
-var _warning2 = _interopRequireDefault(_warning);
-
-var _routingCodeGenerator = __webpack_require__(619);
-
 var _getRef = __webpack_require__(392);
 
 var _symbol = __webpack_require__(186);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 var fcSymbol = (0, _symbol.sansSerif)({ size: 10 }).outerHTML;
-var fcSymbolLarge = (0, _symbol.sansSerif)({ size: 18 }).outerHTML;
-var fcSerifLarge = (0, _symbol.serif)({ size: 18, adjusted: true }).outerHTML;
-var warningIcon = (0, _symbol.warning)().outerHTML;
+
 _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
-  return elem.innerHTML = fcSymbolLarge;
+  return elem.innerHTML = fcSymbol;
 });
 
-// audio stuff
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var MAX_VOLUME = 0.04;
-
-function createSource() {
-  var srcType = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'sine';
-
-  var ctx = new AudioContext();
-
-  var source = ctx.createOscillator();
-  var gain = ctx.createGain();
-
-  source.connect(gain);
-  gain.connect(ctx.destination);
-
-  // window.gain = gain
-  gain.gain.value = MAX_VOLUME;
-  source.type = srcType;
-  source.start();
-  return { source: source, gain: gain };
-}
-
-// TODO update
-var weeksSinceStart = 0;
-
-var STATE = {
-  referal: (0, _getRef.getRef)() || '',
-  newRoutingCode: '',
-  amountInMoneyBucks: 0,
-  fastcashLeft: 1000000,
-  usd2fc: 4 / Math.pow(1.2, weeksSinceStart),
-  usd2eth: 1500000000000000 / Math.pow(10, 18)
-};
+var routingCode = (0, _getRef.getQueryParams)().routingCode || localStorage.getItem('routingCode') || null;
+localStorage.setItem('routingCode', routingCode);
 
 var INSTANCE = void 0;
-var LOADING_TIME = 2500;
+(0, _web3Setup2.default)().then(function (i) {
+  return INSTANCE = i;
+}).catch(console.error);
 
-var _getQueryParams = (0, _getRef.getQueryParams)(),
-    noWarning = _getQueryParams.noWarning;
-
-if (!noWarning) {
-  // LOADING
-  var $loadingContainer = _$2.default.id('loadingContainer');
-  $loadingContainer.innerHTML = '<h1>LOADING INVESTMENT CONSOLE...</h1>';
-  var showSerif = true;
-  var loader = setInterval(function () {
-    $loadingContainer.appendChild(showSerif ? (0, _symbol.serif)() : (0, _symbol.sansSerif)());
-    showSerif = !showSerif;
-  }, 50);
-
-  var stopLoading = function stopLoading() {
-    clearInterval(loader);
-    (0, _$2.default)($loadingContainer, 'display', 'none');
-  };
-
-  // const LOADING_TIME = 0
-
-  setTimeout(stopLoading, LOADING_TIME);
-}
-
-// WARNING
-var displayWarning = void 0;
-var warningDisplayed = noWarning ? Promise.resolve() : new Promise(function (res) {
-  return displayWarning = res;
-});
-
-var warningElem = document.createElement('div');
-warningElem.innerHTML = (0, _warning2.default)();
-
-setTimeout(function () {
-  if (!noWarning) {
-    document.body.appendChild(warningElem);
-    displayWarning();
-    console.log('ok');
-    _3.default.each(_$2.default.cls('warningIcon'), function (elem) {
-      return elem.innerHTML = warningIcon;
-    });
-    _3.default.each(_$2.default.cls('closeWarning'), function (elem) {
-      return _$2.default.onClick(elem)(function () {
-        return document.body.removeChild(warningElem);
-      });
-    });
-  }
-}, LOADING_TIME - 100);
-
-// ROUTING CODE BUTTON
-var $gotoWallet = _$2.default.id('gotoWallet');
-var emptyAddress = "0x0000000000000000000000000000000000000000";
-var routingCodeTries = 0;
-var generateCode = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var proposedCode, existingCode, tries, interval;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            // there should be some
-            proposedCode = (0, _routingCodeGenerator.createAddress)();
-            existingCode = void 0;
-
-            if (!INSTANCE) {
-              _context.next = 6;
-              break;
-            }
-
-            _context.next = 5;
-            return INSTANCE.routingCodeMap.call(proposedCode);
-
-          case 5:
-            existingCode = _context.sent;
-
-          case 6:
-            tries = 0;
-
-            if (!(!existingCode || existingCode === emptyAddress)) {
-              _context.next = 15;
-              break;
-            }
-
-            STATE.newRoutingCode = proposedCode;
-            $gotoWallet.href = './wallet.html?routingCode=' + proposedCode;
-            interval = setInterval(function () {
-              $routingCode.value = (0, _routingCodeGenerator.createAddress)();
-            }, 30);
-
-
-            setTimeout(function () {
-              clearInterval(interval);
-              $routingCode.value = proposedCode;
-            }, _3.default.random(1500, 300, true));
-
-            renderFromTransactionData(STATE);
-            _context.next = 18;
-            break;
-
-          case 15:
-            if (!(routingCodeTries++ > 2)) {
-              _context.next = 17;
-              break;
-            }
-
-            return _context.abrupt('return', console.error('cannot generate routing code'));
-
-          case 17:
-            generateCode();
-
-          case 18:
-          case 'end':
-            return _context.stop();
-        }
-      }
-    }, _callee, undefined);
-  }));
-
-  return function generateCode() {
-    return _ref.apply(this, arguments);
-  };
-}();
-
-// INVESTMENT
-var $investmentContainer = _$2.default.id('investmentContainer');
-var $tableContainer = _$2.default.id('tableContainer');
-var $generateRoutingCode = _$2.default.id('generateRoutingCode');
-var $routingCode = _$2.default.id('routingCode');
-var $purchaseAmountSlider = _$2.default.id('purchaseAmountSlider');
-var $amountOfFastcash = _$2.default.id('amountOfFastcash');
-var $amountOfMoneybucks = _$2.default.id('amountOfMoneybucks');
-var $pleaseContact = _$2.default.id('pleaseContact');
-var $fastcashLeft = _$2.default.id('fastcashLeft');
-var $fastcashChooser = _$2.default.id('fastcashChooser');
-var $fastcashChooserErr = _$2.default.id('fastcashChooserErr');
-var $stepsToComplete = _$2.default.id('stepsToComplete');
-var $toAddressData = _$2.default.id('toAddressData');
+var $refLinkLong = _$2.default.id('refLinkLong');
+var $refLinkShort = _$2.default.id('refLinkShort');
+var $refLongCopy = _$2.default.id('refLongCopy');
+var $refShortCopy = _$2.default.id('refShortCopy');
+var $emailShare = _$2.default.id('emailShare');
+var $twitterShare = _$2.default.id('twitterShare');
+var $transferAddressInput = _$2.default.id('transferAddressInput');
+var $transferAmountInput = _$2.default.id('transferAmountInput');
+var $transferData = _$2.default.id('transferData');
+var $executeTransfer = _$2.default.id('executeTransfer');
+var $executeBuy = _$2.default.id('executeBuy');
+var $weiAmount = _$2.default.id('weiAmount');
 var $amountToSendData = _$2.default.id('amountToSendData');
-var $dataData = _$2.default.id('dataData');
-var $easyCheckout = _$2.default.id('easyCheckout');
-var $easyCheckoutError = _$2.default.id('easyCheckoutError');
 
-(0, _$2.default)($investmentContainer, 'visibility', 'hidden');
+$refLinkLong.innerHTML = 'https://fastcashmoneyplus.biz/?ref=' + routingCode;
+$refLinkShort.innerHTML = 'https://fast.plus?r=' + routingCode;
 
-function renderPage(_ref2) {
-  var fastcashLeft = _ref2.fastcashLeft,
-      referal = _ref2.referal,
-      usd2fc = _ref2.usd2fc,
-      usd2eth = _ref2.usd2eth,
-      amountInMoneyBucks = _ref2.amountInMoneyBucks,
-      newRoutingCode = _ref2.newRoutingCode;
+$refLongCopy.onclick = function () {
+  $refLinkLong.select();
+  document.execCommand('Copy');
+  alert('Copied to clipboard!');
+};
+$refShortCopy.onclick = function () {
+  $refLinkShort.select();
+  document.execCommand('Copy');
+  alert('Copied to clipboard!');
+};
 
-  console.log('rendering page');
-  $fastcashLeft.innerHTML = 'THERE IS CURRENTLY ' + fcSerifLarge + fastcashLeft + ' LEFT! (week ' + weeksSinceStart + ')';
-  (0, _$2.default)($investmentContainer, 'visibility', 'visible');
-  var fc2usd = 1 / usd2fc;
-  var eth2usd = 1 / usd2eth;
-  var fc2eth = fc2usd * usd2eth;
-  var eth2fc = 1 / fc2eth;
+var emailBody = encodeURI('\n  Hello! I just came accross this INCREDIBLE investment opportunity,\n  and wanted to share it with you before anyone else! If you\'re looking\n  to get RICH QUICK, then it has your name written all over it!\n  Simply visit this link:\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  |    https://fastcashmoneyplus.biz/?ref=' + routingCode + '    |\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  and follow the instructions!\n');
 
-  var conversionTable = '\n    <table>\n      <thead>\n        <tr><th>BASE CURRENCY</th><th>EQUALS</th></tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>$1 (USD)</td><td>' + fcSymbol + usd2fc + ' (FASTCASH)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td>$' + fc2usd + ' (USD)</td>\n        </tr>\n        <tr>\n          <td>$1 (USD)</td><td>&#x39E;' + usd2eth + ' (ETH)</td>\n        </tr>\n        <tr>\n          <td>&#x39E;1 (ETH)</td><td>$' + eth2usd + ' (USD)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td>&#x39E;' + fc2eth + ' (ETH)</td>\n        </tr>\n        <tr>\n          <td>&#x39E;1 (ETH)</td><td>' + fcSymbol + eth2fc + ' (FASTCASH)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td> 1000000000000000000 MONEYBUCKS</td>\n        </tr>\n      </tbody>\n    </table>\n  ';
-  $tableContainer.innerHTML = conversionTable;
+var emailSubject = encodeURI('CHECK OUT THIS AMAZING INVESTMENT OPPORTUNITY!');
+$emailShare.href = 'mailto:?Subject=' + emailSubject + '&Body=' + emailBody;
 
-  _$2.default.onClick($generateRoutingCode)(generateCode);
+var twitterStatus = encodeURI('Check out this website to make fast cash now! https://fast.plus?r=' + routingCode + ' #FASTCASH #cryptocurrency #btc #eth').replace('#', '%23');
+var twitterHashtags = '';
+$twitterShare.href = 'https://twitter.com/home?status=' + twitterStatus;
 
-  // CHOOSE FASTCASH
-
-  $amountOfFastcash.innerHTML = (0, _symbol.sansSerif)({ size: 18 }).outerHTML + '0';
-
-  var chooserErr = function chooserErr() {
-    (0, _$2.default)($fastcashChooser, 'border', '3px solid red');
-    $fastcashChooserErr.innerHTML = 'This is an invalid amount of fastcash';
-  };
-  chooserErr();
-
-  var changeAmount = function changeAmount(amt) {
-    var amountInMoneyBucks = amt * Math.pow(10, 18);
-    STATE.amountInMoneyBucks = amountInMoneyBucks;
-    $pleaseContact.innerHTML = amt === fastcashLeft ? 'Please contact a FastCashMoneyPlus.biz representative' : '';
-    renderFromTransactionData(STATE);
-    if (!amt) {
-      chooserErr();
-    } else {
-      (0, _$2.default)($fastcashChooser, 'border', '0');
-      $fastcashChooserErr.innerHTML = '';
-    }
-    $amountOfMoneybucks.innerHTML = '(' + amountInMoneyBucks + ' MoneyBucks, <br>$' + (amt * fc2usd).toFixed(2) + ' (USD), <br>&#x39E;' + amt * fc2eth + ' (ETHEREUM) )';
-    // do stuff with sound
-  };
-
-  var expFactor = 5;
-  var convertToFc = function convertToFc(amt) {
-    return Math.pow(amt, expFactor) / Math.pow(10, expFactor + 9) * (fastcashLeft / 1000000);
-  };
-  var convertFromFc = function convertFromFc(amt) {
-    return Math.pow(amt * Math.pow(10, expFactor + 9), 1 / expFactor);
-  };
-
-  $purchaseAmountSlider.addEventListener('input', function (event) {
-    var value = convertToFc(event.target.valueAsNumber);
-    changeAmount(value);
-    $amountOfFastcash.value = value;
-  });
-
-  $amountOfFastcash.addEventListener('change', function (event) {
-    var value = Number(event.target.value);
-    changeAmount(value);
-    $purchaseAmountSlider.value = convertFromFc(value);
-  });
-
-  $easyCheckout.addEventListener('click', function (event) {
-    console.log('click');
-    if (!INSTANCE) {
-      $easyCheckoutError.innerHTML = 'PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE';
-      return;
-    }
-
-    if (!STATE.newRoutingCode) {
-      $easyCheckoutError.innerHTML = 'PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN';
-      return;
-    }
-
-    if (!STATE.amountInMoneyBucks) {
-      $easyCheckoutError.innerHTML = 'PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN';
-      return;
-    }
-
-    $easyCheckoutError.innerHTML = '';
-
-    var amountInWei = STATE.amountInMoneyBucks * fc2eth;
-
-    INSTANCE.buy(STATE.newRoutingCode, STATE.referal, { from: web3.eth.coinbase, value: amountInWei, gas: 150000 }).then(function (r) {
-      window.alert('SUCCESS! Here is your receipt: ' + JSON.stringify(r));
-    }).catch(function (e) {
-      console.error(e);
-      window.alert('ERROR:' + e.message);
-    });
-  });
-
-  renderFromTransactionData(STATE);
+function populateTransferData(address, amount) {
+  $transferData.innerHTML = address && amount ? (0, _web3Setup.getTransferData)(address, amount) : '';
 }
 
-function renderFromTransactionData(_ref3) {
-  var usd2fc = _ref3.usd2fc,
-      usd2eth = _ref3.usd2eth,
-      amountInMoneyBucks = _ref3.amountInMoneyBucks,
-      newRoutingCode = _ref3.newRoutingCode,
-      referal = _ref3.referal;
+var transferAddress = void 0;
+var transferAmount = void 0;
+$transferAddressInput.onchange = function (event) {
+  transferAddress = event.target.value;
+  populateTransferData(transferAddress, transferAmount);
+};
+$transferAmountInput.onchange = function (event) {
+  transferAmount = event.target.valueAsNumber;
+  populateTransferData(transferAddress, transferAmount);
+};
 
-  var fc2usd = 1 / usd2fc;
-  var eth2usd = 1 / usd2eth;
-  var fc2eth = fc2usd * usd2eth;
-
-  var leftToDo = 'Please do the following things before continuing: ';
-  if (!amountInMoneyBucks) leftToDo += '<br>1. Choose the amount of fastcash you\'d like to buy';
-  if (!newRoutingCode) leftToDo += '<br>2. Generate a fastcash address';
-  if (amountInMoneyBucks && newRoutingCode) leftToDo = 'ALMOST THERE! <h3 class="sansSerif">PLEASE NOTE THAT ALL TRANSACTIONS ARE NON-REFUNDABLE, AND THAT BY PURCHASING FASTCASH, YOU WAIVE ALL FUTURE LIABILITIES RELATING TO FASTCASHMONEYPLUS.biz</h3>';
-
-  $stepsToComplete.innerHTML = leftToDo;
-
-  var amountInWei = amountInMoneyBucks * fc2eth;
-  if (amountInWei) {
-    $amountToSendData.innerHTML = amountInWei;
+$executeTransfer.onclick = function () {
+  if (!INSTANCE) {
+    alert('Please try again with an ethereum enabled browser or plugin (ex. MetaMask). Or, try executing your transfer from a wallet with the above data');
+    return;
   }
 
-  if (newRoutingCode && amountInWei) {
-    var buyData = (0, _web3Setup.getBuyData)(newRoutingCode, referal, amountInWei);
-    // TODO -- hardcode as actual address
-    $toAddressData.innerHTML = '';
-    $dataData.innerHTML = buyData;
+  if (!transferAddress || !transferAddress) {
+    alert('Please fill out BOTH required fields for transfering FASTCASH');
+    return;
   }
-}
 
-Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
-  var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(_instance) {
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            INSTANCE = _instance[0];
-            _context2.t0 = INSTANCE;
-            _context2.next = 4;
-            return INSTANCE.centralBanker();
+  (0, _web3Setup.executeTransfer)(INSTANCE, transferAddress, transferAmount);
+};
 
-          case 4:
-            _context2.t1 = _context2.sent;
-            _context2.next = 7;
-            return _context2.t0.balanceOf.call(_context2.t0, _context2.t1);
+var buyAmount = void 0;
+$weiAmount.onchange = function (event) {
+  buyAmount = event.target.valueAsNumber;
+  $amountToSendData.innerHTML = buyAmount;
+};
 
-          case 7:
-            _context2.t2 = _context2.sent.toNumber();
-            _context2.t3 = Math.pow(10, 18);
-            STATE.fastcashLeft = _context2.t2 / _context2.t3;
-            _context2.next = 12;
-            return INSTANCE.getCurrentExchangeRate.call();
+$executeBuy.onclick = function () {
+  if (!INSTANCE) {
+    alert('Please try again with an ethereum enabled browser or plugin (ex. MetaMask). Or, try executing your transfer from a wallet with the above data');
+    return;
+  }
 
-          case 12:
-            _context2.t4 = _context2.sent.toNumber();
-            _context2.t5 = Math.pow(10, 18);
-            STATE.usd2fc = _context2.t4 / _context2.t5;
-            _context2.next = 17;
-            return INSTANCE.USDWEI.call();
+  if (!buyAmount) {
+    alert('Please select an amount to BUY MORE FASTCASH');
+    return;
+  }
 
-          case 17:
-            _context2.t6 = _context2.sent.toNumber();
-            _context2.t7 = Math.pow(10, 18);
-            STATE.usd2eth = _context2.t6 / _context2.t7;
-
-
-            renderPage(STATE);
-
-          case 21:
-          case 'end':
-            return _context2.stop();
-        }
-      }
-    }, _callee2, undefined);
-  }));
-
-  return function (_x2) {
-    return _ref4.apply(this, arguments);
-  };
-}()).catch(function (e) {
-  console.error(e);
-  return warningDisplayed;
-}).then(function () {
-  renderPage(STATE);
-});
+  (0, _web3Setup.simpleBuy)(buyAmount);
+};
 
 /***/ }),
-/* 617 */
+/* 623 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
-/***/ }),
-/* 618 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"warning\">\n  <style>\n    #warning {\n      position: fixed;\n      width: 100vw;\n      height: 100vh;\n      background-color: gray;\n      top: 0;\n      overflow: scroll;\n      font-family: Gadget, sans-serif;\n    }\n\n    .closeWarning-x {\n      padding: 10px;\n      cursor: pointer;\n      color: white;\n      font-family: sans-serif;\n    }\n\n    #warningHeader {\n      width: 100%;\n      display: flex;\n      justify-content: flex-end;\n    }\n\n    #warningContainer {\n      color: white;\n      font-size: 30px;\n      padding: 20px;\n      padding-top: 0;\n    }\n\n    .warningIcon {\n      display: flex;\n      justify-content: center;\n      margin-bottom: 10px;\n    }\n\n    #warningButtonContainer {\n      margin-top: 20px;\n      display: flex;\n      justify-content: space-around;\n    }\n\n    .warning-btn {\n      font-size: 25px;\n      padding: 10px;\n      background-color: dodgerblue;\n      color: white;\n      border-radius: 8px;\n      text-decoration: none;\n      cursor: pointer\n    }\n\n  </style>\n  <div id=\"warningHeader\">\n    <div class=\"closeWarning closeWarning-x\">X</div>\n  </div>\n  <div id=\"warningContainer\">\n    <div class=\"warningIcon\"></div>\n    WARNING: This page has been flagged as fraudulent and potentially misleading. Please proceed with caution, and beware of of deceptive content ahead.\n    <div id=\"warningButtonContainer\">\n      <a class=\"warning-btn\" href=\"http://steviep.xyz/sounds\">Back to Safety</a>\n      <div class=\"closeWarning warning-btn\">Continue</div>\n    </div>\n  </div>\n</div>\n";
-};
-
-/***/ }),
-/* 619 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.makeHash = makeHash;
-exports.createAddress = createAddress;
-
-var _2 = __webpack_require__(65);
-
-var _3 = _interopRequireDefault(_2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var keyWords = ['god', 'sex', 'power', 'love', 'wealth', 'fast', 'cash', 'now', 'money', 'click', 'fuck', 'opportunity', 'digital', 'dream', 'energy', 'spirit', 'pure', 'clean', 'plus', 'advanced', 'electric', 'freedom', 'life', 'death', 'accumulation', 'easy', 'fear', 'destiny', 'believe', 'seared', 'immediate', 'pump', 'bang', 'cool', 'fat', 'secure', 'mint', 'fresh', 'transparent', 'sweet', 'crypto', 'growth', 'vibrant', 'buzz', 'gold', 'dynamic', 'ace', 'glorious', 'corruption', 'viral'];
-
-function randInsert(original, content) {
-  var randIx = _3.default.random(2, original.length - 1, true);
-
-  return original.slice(0, randIx) + content + original.slice(randIx);
-};
-
-var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+$';
-function makeHash(min, max) {
-  return _3.default.times(_3.default.random(min, max, true), function (i) {
-    return _3.default.sample(chars);
-  }).join('');
-}
-
-function createAddress() {
-  var hash = makeHash(13, 20);
-
-  return [_3.default.sample(keyWords), _3.default.sample(keyWords).toUpperCase(), '_', _3.default.sample(keyWords).toUpperCase(), hash].join('');
-}
-
 /***/ })
-/******/ ]);</script></body>
-</html>
+/******/ ]);

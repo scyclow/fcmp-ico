@@ -7,7 +7,7 @@ import $ from 'utils/$';
 import _ from 'utils/_';
 import warning from './warning.html';
 import {createAddress} from 'utils/routingCodeGenerator'
-import {getRef} from 'utils/getRef'
+import {getRef, getQueryParams} from 'utils/getRef'
 import { serif, sansSerif, warning as _warningIcon } from 'components/symbol'
 const fcSymbol = sansSerif({ size: 10 }).outerHTML
 const fcSymbolLarge = sansSerif({ size: 18 }).outerHTML
@@ -51,47 +51,55 @@ const STATE = {
 }
 
 let INSTANCE;
+const LOADING_TIME = 2500
 
+const { noWarning } = getQueryParams()
+if (!noWarning) {
 // LOADING
-const $loadingContainer = $.id('loadingContainer')
-$loadingContainer.innerHTML = '<h1>LOADING INVESTMENT CONSOLE...</h1>'
-let showSerif = true;
-const loader = setInterval(() => {
-  $loadingContainer.appendChild(showSerif ? serif() : sansSerif())
-  showSerif = !showSerif;
-}, 50)
+  const $loadingContainer = $.id('loadingContainer')
+  $loadingContainer.innerHTML = '<h1>LOADING INVESTMENT CONSOLE...</h1>'
+  let showSerif = true;
+  const loader = setInterval(() => {
+    $loadingContainer.appendChild(showSerif ? serif() : sansSerif())
+    showSerif = !showSerif;
+  }, 50)
 
-const stopLoading = () => {
-  clearInterval(loader)
-  $($loadingContainer, 'display', 'none');
+  const stopLoading = () => {
+    clearInterval(loader)
+    $($loadingContainer, 'display', 'none');
+  }
+
+  // const LOADING_TIME = 0
+
+  setTimeout(stopLoading, LOADING_TIME)
 }
 
-const LOADING_TIME = 2500
-// const LOADING_TIME = 0
-
-setTimeout(stopLoading, LOADING_TIME)
 
 
 // WARNING
 let displayWarning;
-const warningDisplayed = new Promise(res => displayWarning = res)
+const warningDisplayed = noWarning
+  ? Promise.resolve()
+  : new Promise(res => displayWarning = res)
 
 const warningElem = document.createElement('div')
 warningElem.innerHTML = warning();
 
 setTimeout(() => {
-  document.body.appendChild(warningElem)
-  displayWarning()
-  console.log('ok')
-  _.each($.cls('warningIcon'), elem => elem.innerHTML = warningIcon)
-  _.each($.cls('closeWarning'), elem =>
-    $.onClick(elem)(() => document.body.removeChild(warningElem))
-  )
-
+  if (!noWarning) {
+    document.body.appendChild(warningElem)
+    displayWarning()
+    console.log('ok')
+    _.each($.cls('warningIcon'), elem => elem.innerHTML = warningIcon)
+    _.each($.cls('closeWarning'), elem =>
+      $.onClick(elem)(() => document.body.removeChild(warningElem))
+    )
+  }
 }, LOADING_TIME - 100)
 
 
 // ROUTING CODE BUTTON
+const $gotoWallet = $.id('gotoWallet')
 const emptyAddress = "0x0000000000000000000000000000000000000000";
 let routingCodeTries = 0
 const generateCode = async () => {
@@ -106,6 +114,7 @@ const generateCode = async () => {
   let tries = 0
   if (!existingCode || existingCode === emptyAddress) {
     STATE.newRoutingCode = proposedCode;
+    $gotoWallet.href = `./wallet.html?routingCode=${proposedCode}`
     const interval = setInterval(() => {
       $routingCode.value = createAddress()
     }, 30)

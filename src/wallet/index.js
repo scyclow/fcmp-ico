@@ -110,7 +110,7 @@ $executeBuy.onclick = () => {
   }
 
   if (!buyAmount) {
-    alert('Please fill out BOTH required fields for transfering FASTCASH')
+    alert('Please select an amount to BUY MORE FASTCASH')
     return
   }
 

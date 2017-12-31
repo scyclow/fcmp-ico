@@ -187,6 +187,24 @@ p {
   box-shadow: 0 0;
 }
 
+#gotoWallet {
+  display: block;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: 250ms;
+  padding: 20px;
+  border-radius: 5px;
+  border: 6px solid #00f;
+  background-color: #ddddff;
+  color: #00f;
+}
+
+#gotoWallet:hover {
+  background-color: #ffdd00;
+}
+
 
 
 @keyframes Checkout {

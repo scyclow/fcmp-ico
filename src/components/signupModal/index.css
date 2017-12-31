@@ -51,5 +51,17 @@
   height: 120px;
   cursor: pointer;
   margin-top: 40px;
+}
 
+.gotoConsole {
+  font-size: 25px;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  transition: 250ms;
+  padding: 5px;
+}
+
+.gotoConsole:hover {
+  background-color: #ffdd00;
 }

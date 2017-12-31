@@ -133,6 +133,7 @@ p {
 .formData-name {
   background-color: #eeeeee;
   font-size: 17px;
+  font-family: sans-serif;
 }
 
 .formData, .formData-name {
@@ -199,6 +200,25 @@ p {
           box-shadow: 0 0;
 }
 
+#gotoWallet {
+  display: block;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  padding: 20px;
+  border-radius: 5px;
+  border: 6px solid #00f;
+  background-color: #ddddff;
+  color: #00f;
+}
+
+#gotoWallet:hover {
+  background-color: #ffdd00;
+}
+
 
 
 @-webkit-keyframes Checkout {
@@ -231,12 +251,13 @@ p {
 
   83% {
     color: #0000ff;
-    /*background: linear-gradient(300deg, #ff00ff, #00ffff);*/
+    background: linear-gradient(300deg, #ff00ff, #00ffff);
   }
 
   100% {
     color: #ff00ff;
-    /*background: linear-gradient(360deg, #ff0000, #0000ff);*/
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
+    background: linear-gradient(360deg, #ff0000, #0000ff);
   }
 }
 
@@ -272,12 +293,13 @@ p {
 
   83% {
     color: #0000ff;
-    /*background: linear-gradient(300deg, #ff00ff, #00ffff);*/
+    background: linear-gradient(300deg, #ff00ff, #00ffff);
   }
 
   100% {
     color: #ff00ff;
-    /*background: linear-gradient(360deg, #ff0000, #0000ff);*/
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff0000), to(#0000ff));
+    background: linear-gradient(360deg, #ff0000, #0000ff);
   }
 }
 

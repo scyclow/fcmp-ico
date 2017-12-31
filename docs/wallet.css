@@ -118,7 +118,9 @@ hr {
 .flashyButton {
   padding: 25px;
   font-size: 35px;
-  animation: EasyButton 12s ease infinite;
+  -webkit-animation: EasyButton 12s ease infinite;
+          animation: EasyButton 12s ease infinite;
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -130,6 +132,44 @@ hr {
 .flashyButton:active {
   border-radius: 0;
   border: 0;
+}
+
+
+@-webkit-keyframes EasyButton {
+  0% {
+    color: #ff0000;
+    background-color: #00ffff;
+  }
+
+  17% {
+    color: #ffff00;
+    background-color: #0000ff;
+  }
+
+  33% {
+    color: #00ff00;
+    background-color: #ff00ff;
+  }
+
+  50% {
+    color: #00ffff;
+    background-color: #ff0000;
+  }
+
+  66% {
+    color: #0000ff;
+    background-color: #ffff00;
+  }
+
+  83% {
+    color: #ff00ff;
+    background-color: #00ff00;
+  }
+
+  100% {
+    color: #ff0000;
+    background-color: #00ffff;
+  }
 }
 
 

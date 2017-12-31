@@ -167,8 +167,10 @@ contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
         referalFee = balanceOf[centralBanker];
       }
       address reference = routingCodeMap[_referal];
-      balanceOf[reference] += referalFee;
-      balanceOf[centralBanker] -= referalFee;
+      if (reference != address(0)) {
+        balanceOf[reference] += referalFee;
+        balanceOf[centralBanker] -= referalFee;
+      }
     }
   }
 
