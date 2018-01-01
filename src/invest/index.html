@@ -58,12 +58,16 @@
     <br>
 
     <h3>This table displays the current conversion rate:</h3>
-    <div id="tableContainer"></div>
+
+    <div id="tableContainer">
+      <!--  -->
+    </div>
+
     <p class="tinyFont">
       The conversion rate of fastcash to usd is determined by a deterministic formula, in which the price of fastcash (denominated in eth), increases at a rate of 20% for 71 weeks after the initial launch (January of 2018). The conversion rate of usd to eth is determined by a trusted third party, and refreshed once at the begining of every week. The smallest denomination of fastcash is the MONEYBUCK, which is equivalent to 1 10e-18 fastcash. To determine the price of MONEYBUCKS relative to WEI, simply apply the following formula: ((4 * (10 ** (week + 18 - (10 + MAX(0, week - 15))))) / ( USDWEI / 10 ** 10 ) * ((12 ** week) / (10 ** MAX(0, week - 15)))) where all values of [week] are between 0 and 71 (inclusive).
     </p>
     <div id="fastcashChooser">
-      <h1 class="highlight">CHOOSE YOUR FASTCASH HERE:</h1>
+      <h1 class="highlight">HOW MUCH FASTCASH DO YOU WANT?</h1>
       <div id="fastcashChooserErr" style="color: red"></div>
       <input id="purchaseAmountSlider" type="range" min="0" max="10000" value="0">
       <br>
@@ -91,9 +95,9 @@
       <a href="https://www.coinbase.com/" target="_blank">CLICK HERE TO GO TO COINBASE TO BUY ETHEREUM</a>
     </h3>
 
-    <label class="confirmBox">--><input type="checkbox"><--Click this once you've bought your etherem</label>
-
     <p>After you've bought your ethereum, (or if you already have ethereum) please continue to the next step:</p>
+
+    <div class="continueBox"><label class="confirmBox">--> <input type="checkbox"> <--CLICK THIS once you've bought your etherem</label></div>
 
     <hr>
     <div class="highlight sectionHeader">
@@ -110,7 +114,10 @@
       <li>Go to <a href="https://www.myetherwallet.com/">www.myetherwallet.com/</a> and create an ethereum wallet there. Then, tranfer your ether to this wallet. If you buy fastcash from this wallet, it will be more difficult to </li>
       <li>You can also use any other third party wallet. However, these instructions will walk you through MyEtherWallet</li>
     </ol>
-    <label class="confirmBox">--><input type="checkbox"><--Click this once you've transfered your etherem to your new wallet</label>
+
+    <div class="continueBox">
+      <label class="confirmBox">--> <input type="checkbox"> <--CLICK THIS once you've transfered your etherem to your new wallet</label>
+    </div>
 
     <hr>
     <div class="highlight sectionHeader">
@@ -151,13 +158,8 @@
     </div>
 
     <div id="metaMaskPurchase" class="highlight">
-      <h3 class="highlight">If you are using MetaMask or an Ethereum browser (like Mist), proceed to <span class="highlight">EASY CHECKOUT</span>:</h3>
+      <h3 class="highlight">If you are using MetaMask or an Ethereum browser (like Mist), proceed to <button id="easyCheckout">EASY CHECKOUT</button></h3>
       <p></p>
-
-      <div class="highlight" id="easyCheckoutContainer">
-        <h1 id="easyCheckoutError"></h1>
-        <button id="easyCheckout">EASY CHECKOUT</button>
-      </div>
     </div>
 
     <h2 style="text-align: center">YOU ARE NOW A PROUD INVESTOR IN FASTCASH! Pat yourself on the back! You are going to be very rich soon enough, and you deserve it! But it's only fair that you take your friends and loved ones along for the ride! And to make it easier, you will receive a FASTCASH BONUS! You can do all these things and more (such as transfering fastcash, and buying MORE fastcash) in the official FastCashMoneyPlus.biz FastCash wallet! To go to your wallet, click the link below:</h2>

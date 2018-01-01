@@ -1,9 +1,10 @@
 // @flow
 
 import $ from 'utils/$';
+import { getQueryParams} from 'utils/getRef'
 
 window.IMPORTANT = {
-  pause: false
+  pause: getQueryParams.pause || false
 };
 
 $.onKeyPress(['p', 'P']) (() =>
@@ -11,4 +12,4 @@ $.onKeyPress(['p', 'P']) (() =>
 );
 
 
-// setTimeout(() => window.IMPORTANT.pause = true, 1000)
+setTimeout(() => window.IMPORTANT.pause = true, 1000)

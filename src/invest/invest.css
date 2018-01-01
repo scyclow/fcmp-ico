@@ -156,23 +156,14 @@ p {
   margin-bottom: 10px;
 }
 
-#easyCheckoutContainer {
-  margin-top: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  height: 130px
-}
-
 #easyCheckout {
-  font-size: 40px;
-  padding: 20px;
+  font-size: 20px;
+  padding: 8px;
   cursor: pointer;
   background: linear-gradient(0deg, #ff0000, #0000ff);
-  animation: Checkout 12s ease infinite;
+  animation: Checkout 48s ease infinite;
   transition: 200ms;
-  border: 0;
+  border: 2px;
   box-sizing: border-box;
   box-shadow: 0 0 50px black;
 }
@@ -186,6 +177,44 @@ p {
   border: 0;
   box-shadow: 0 0;
 }
+
+@keyframes Checkout {
+  0% {
+    color: #ffff00;
+    background: linear-gradient(0deg, #ff0000, #0000ff);
+  }
+
+  17% {
+    color: #00ff00;
+    background: linear-gradient(60deg, #ffff00, #ff00ff);
+  }
+
+  33% {
+    color: #00ffff;
+    background: linear-gradient(120deg, #00ff00, #ff0000);
+  }
+
+  50% {
+    color: #0000ff;
+    background: linear-gradient(180deg, #00ffff, #ffff00);
+  }
+
+  66% {
+    color: #ff00ff;
+    background: linear-gradient(240deg, #0000ff, #00ff00);
+  }
+
+  83% {
+    color: #ff0000;
+    background: linear-gradient(300deg, #ff00ff, #00ffff);
+  }
+
+  100% {
+    color: #ffff00;
+    background: linear-gradient(360deg, #ff0000, #0000ff);
+  }
+}
+
 
 #gotoWallet {
   display: block;
@@ -205,44 +234,14 @@ p {
   background-color: #ffdd00;
 }
 
-
-
-@keyframes Checkout {
-  0% {
-    color: #ff0000;
-    background: linear-gradient(0deg, #ff0000, #0000ff);
-  }
-
-  17% {
-    color: #ff0000;
-    background: linear-gradient(60deg, #ffff00, #ff00ff);
-  }
-
-  33% {
-    color: #ffff00;
-    background: linear-gradient(120deg, #00ff00, #ff0000);
-  }
-
-  50% {
-    color: #00ff00;
-    background: linear-gradient(180deg, #00ffff, #ffff00);
-  }
-
-  66% {
-    color: #00ffff;
-    background: linear-gradient(240deg, #0000ff, #00ff00);
-  }
-
-  83% {
-    color: #0000ff;
-    background: linear-gradient(300deg, #ff00ff, #00ffff);
-  }
-
-  100% {
-    color: #ff00ff;
-    background: linear-gradient(360deg, #ff0000, #0000ff);
-  }
+.continueBox {
+  margin-top: 20px;
+  color: #220000;
 }
-
-
-
+.continueBox label {
+  font-size: 32px;
+}
+.continueBox input {
+  transform: scale(2.2);
+  cursor: pointer;
+}

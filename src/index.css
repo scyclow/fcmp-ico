@@ -10,7 +10,7 @@ nav {
   width: 100%;
   min-height: 50px;
   top: 0;
-  border: 5px solid;
+  border: 7px solid;
   border-bottom: 0;
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@ nav .nav-header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 5px solid;
+  border-bottom: 7px solid;
 }
 
 #secondHeader {
@@ -43,12 +43,13 @@ nav .nav-menu .nav-menu-item {
 }
 
 #content {
-  border: 5px solid;
+  border: 7px solid;
   border-top: 0;
 }
 
 #hero {
   padding-top: 20px;
+  padding-bottom: 40px;
   min-height: 80vh;
 }
 
@@ -244,11 +245,15 @@ nav .nav-menu .nav-menu-item {
 
 .marketing-1 {
   background-color: #00ffff;
-  color: #880000;
+  color: #660000;
 }
 
 .marketing-3 {
   background-color: #0000ff;
-  color: #ffff00;
+  color: #ffff55;
+}
+
+.marketing-3 a {
+  color: #ffbb00;
 }
 

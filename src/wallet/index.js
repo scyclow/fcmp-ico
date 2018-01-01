@@ -49,12 +49,14 @@ $refShortCopy.onclick = () => {
 }
 
 const emailBody = encodeURI(`
-  Hello! I just came accross this INCREDIBLE investment opportunity,
-  and wanted to share it with you before anyone else! If you're looking
-  to get RICH QUICK, then it has your name written all over it!
-  Simply visit this link:
+  Hello! I just came accross an INCREDIBLE investment opportunity,
+  and wanted to share it with you before it really took off! If you're
+  looking to get RICH QUICK, then this has your name written all over it!
+  Simply visit this cryptographically SECURE link:
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  |    https://fastcashmoneyplus.biz/?ref=${routingCode}    |
+  |
+  |    https://fastcashmoneyplus.biz/?ref=${routingCode}
+  |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   and follow the instructions!
 `)
@@ -62,8 +64,11 @@ const emailBody = encodeURI(`
 const emailSubject = encodeURI('CHECK OUT THIS AMAZING INVESTMENT OPPORTUNITY!')
 $emailShare.href = `mailto:?Subject=${emailSubject}&Body=${emailBody}`
 
-const twitterStatus = encodeURI(`Check out this website to make fast cash now! https://fast.plus?r=${routingCode} #FASTCASH #cryptocurrency #btc #eth`).replace('#', '%23')
-const twitterHashtags = ''
+const twitterStatus = _.sample([
+  encodeURI(`Are you #CRAVING MASSIVE #CRYPTO RETURNS? Then check THIS one out: https://fast.plus?r=${routingCode} $fastcash #FASTCASH $crypto #CRYPTOBULL $eth $btc $xrp`).replace(/\#/g, '%23'),
+  encodeURI(`Check out this website to make fast cash now! https://fast.plus?r=${routingCode} #FASTCASH $fastcash #CRYPTOCRACK #btc #eth`).replace('#', '%23')
+])
+
 $twitterShare.href = `https://twitter.com/home?status=${twitterStatus}`
 
 function populateTransferData(address, amount) {

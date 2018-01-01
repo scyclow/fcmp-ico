@@ -4,7 +4,7 @@ pragma solidity ^0.4.17;
 
   This is highly propriatary software. Under no circumstances is anyone, except for employees of
   FastCashMoneyPlus.biz, authorized to modify, distribute, use, or otherwise profit from these
-  contracts. Anyone attempting to do so will be persecuted under the full extent of the law.
+  contracts. Anyone attempting to do so will be prosecuted under the full extent of the law.
 */
 
 contract FastCashMoneyPlusPermissions {

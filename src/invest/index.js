@@ -156,7 +156,7 @@ $($investmentContainer, 'visibility', 'hidden');
 
 function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks, newRoutingCode }) {
   console.log('rendering page')
-  $fastcashLeft.innerHTML = `THERE IS CURRENTLY ${fcSerifLarge}${fastcashLeft} LEFT! (week ${weeksSinceStart})`
+  $fastcashLeft.innerHTML = `THERE IS CURRENTLY ${fcSerifLarge}${fastcashLeft} LEFT IN THE FASTCASH BANK! (week ${weeksSinceStart})`
   $($investmentContainer, 'visibility', 'visible');
   const fc2usd = 1/usd2fc;
   const eth2usd = 1/usd2eth;
