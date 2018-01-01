@@ -8,11 +8,6 @@ body {
 
 nav {
   width: 100%;
-  min-height: 50px;
-  top: 0;
-  border: 7px solid;
-  border-bottom: 0;
-  box-sizing: border-box;
 }
 
 nav .nav-header {
@@ -29,14 +24,15 @@ nav .nav-header {
   font-size: 21px;
 }
 
-nav .nav-menu {
+nav #nav-menu {
   display: flex;
+  border-top: 7px solid;
 }
 
-nav .nav-menu .nav-menu-item {
+nav #nav-menu .nav-menu-item {
   flex: 1;
   min-height: 30px;
-
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +205,7 @@ nav .nav-menu .nav-menu-item {
   transition-timing-function: ease-in-out;
   cursor: pointer;
   position: absolute;
-  z-index: 300;
+  z-index: 600;
   height: 100px;
   width: 100px;
   font-size: 32px;
@@ -243,17 +239,22 @@ nav .nav-menu .nav-menu-item {
   margin-top: 15px;
 }
 
-.marketing-1 {
+.faqQuestion {
   background-color: #00ffff;
   color: #660000;
+  border-top: 7px solid;
+  border-bottom: 7px solid;
 }
 
-.marketing-3 {
+.faqAnswer {
   background-color: #0000ff;
   color: #ffff55;
 }
 
-.marketing-3 a {
+.faqAnswer a {
   color: #ffbb00;
 }
 
+.faqQuestion, .faqAnswer {
+  cursor: help;
+}

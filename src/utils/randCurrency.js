@@ -29,14 +29,14 @@ export const currencySymbols = [{
   char: '₱',
   prob: 2
 }, {
-  code: '&#3647',
-  char: '฿',
-  prob: 2
-}, {
-  code: '&#8377',
-  char: '₹',
-  prob: 1
-}, {
+//   code: '&#3647',
+//   char: '฿',
+//   prob: 2
+// }, {
+//   code: '&#8377',
+//   char: '₹',
+//   prob: 1
+// }, {
   code: '&#8363',
   char: '₫',
   prob: 1
@@ -70,7 +70,7 @@ export function * tickerGenerator() {
 
   const allChars = {
     fast: '>',
-    cash: '$',
+    cash: randCurrency(),
     plus: '+'
   };
 

@@ -8,7 +8,6 @@ import {getRef} from 'utils/getRef'
 import _ from 'utils/_'
 import $ from 'utils/$'
 import { polarize, applyToHex } from 'utils/colors';
-import {tickerGenerator} from 'utils/randCurrency'
 import { serif, sansSerif } from 'components/symbol'
 import {modal} from 'components/signupModal'
 
@@ -21,7 +20,8 @@ const { changeColors } = require('./utils/updateColor');
 
 const referral = getRef()
 
-const $currencyTicker = $.id('currencyTicker');
+const $faqQuestions = $.cls('faqQuestion')
+const $navMenu = $.id('nav-menu');
 const $content = $.id('content');
 const $hero = $.id('hero');
 const $warning = $.id('warning');
@@ -33,6 +33,7 @@ $content.appendChild(modal($callToAction))
 
 const ctaPrompts = [
  'START NOW',
+ 'GET IT NOW',
  '100% ONLINE',
  'MAKE CASH FAST',
  'MAKE FAST CASH',
@@ -43,29 +44,21 @@ const ctaPrompts = [
 $callToAction.innerHTML = _.sample(ctaPrompts)
 setInterval(() => $callToAction.innerHTML = _.sample(ctaPrompts), 2000)
 
-let contentBorderH = 1
+
+let borderH = 1
 setInterval(
-  () => changeColors($content, '#ff0000', {primary: ['border-color'], secondary: []})(contentBorderH++),
+  () => {
+    changeColors($content, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+    changeColors($navMenu, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+    _.each($faqQuestions, q => changeColors(q, '#ff0000', {primary: ['border-color'], secondary: []})(borderH))
+    borderH++
+  },
   20
 );
 
-let heroH = 1;
-$($hero, 'background-color', '#000033')
 
+let heroH = 1;
 setInterval(
   () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color', 'fill']})(heroH++),
   250
 );
-
-
-
-// const ticker = tickerGenerator()
-// setInterval(() => {
-//   $currencyTicker.innerHTML = ticker.next().value
-// }, 50)
-
-
-// const tickerGen = getTicker()
-// setInterval(() => {
-//   console.log(tickerGen.next().value)
-// }, 300)

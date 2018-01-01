@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#navTitle {
+  position: fixed;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #000;
+  color: #fff;
+}
+
+#navTitle, #navSpace {
+  height: 39px;
+}
+
+nav {
+  font-size: 21px;
+  background-color: #000;
+  color: #fff;
+}
+
+/*#currencyTicker {
+  font-size: 18px;
+  padding-bottom: 3px;
+  height: 25px;
+  width: 100%;
+  text-align: center;
+}*/
+
+#legalCopy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: no-drop;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#legalCopy section {
+  padding: 10px;
+  width: 250px;
+}
+
+#legalCopy p {
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1.4;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  text-align: justify;
+}
+
+#legalCopy strong {
+  font-size: 17px;
+  text-decoration: underline;
+  background-color: #ddd
+}
+
+.sectionHeader {
+  width: 250px;
+  font-size: 25px;
+  padding: 5px;
+}

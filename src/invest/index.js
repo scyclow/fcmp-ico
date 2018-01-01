@@ -152,8 +152,6 @@ const $easyCheckoutError = $.id('easyCheckoutError')
 
 
 
-$($investmentContainer, 'visibility', 'hidden');
-
 function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks, newRoutingCode }) {
   console.log('rendering page')
   $fastcashLeft.innerHTML = `THERE IS CURRENTLY ${fcSerifLarge}${fastcashLeft} LEFT IN THE FASTCASH BANK! (week ${weeksSinceStart})`

@@ -46,7 +46,8 @@ export const modal = (trigger) => {
   })
 
   trigger.addEventListener('click', () => {
-    window.IMPORTANT.pause = true
+    console.log('bleh')
+    // window.IMPORTANT.pause = true
     setTimeout(() => {
       component.className = '';
     }, 300)

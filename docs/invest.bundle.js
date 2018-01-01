@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 616);
+/******/ 	return __webpack_require__(__webpack_require__.s = 615);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -62216,14 +62216,13 @@ module.exports = IpcProvider;
 /* 612 */,
 /* 613 */,
 /* 614 */,
-/* 615 */,
-/* 616 */
+/* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(617);
+__webpack_require__(616);
 
 __webpack_require__(188);
 
@@ -62239,11 +62238,11 @@ var _2 = __webpack_require__(65);
 
 var _3 = _interopRequireDefault(_2);
 
-var _warning = __webpack_require__(618);
+var _warning = __webpack_require__(617);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _routingCodeGenerator = __webpack_require__(619);
+var _routingCodeGenerator = __webpack_require__(618);
 
 var _getRef = __webpack_require__(186);
 
@@ -62439,8 +62438,6 @@ var $dataData = _$2.default.id('dataData');
 var $easyCheckout = _$2.default.id('easyCheckout');
 var $easyCheckoutError = _$2.default.id('easyCheckoutError');
 
-(0, _$2.default)($investmentContainer, 'visibility', 'hidden');
-
 function renderPage(_ref2) {
   var fastcashLeft = _ref2.fastcashLeft,
       referal = _ref2.referal,
@@ -62627,24 +62624,24 @@ Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
 });
 
 /***/ }),
-/* 617 */
+/* 616 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 618 */
+/* 617 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = function (scope) {
-  return "<div id=\"warning\">\n  <style>\n    #warning {\n      position: fixed;\n      width: 100vw;\n      height: 100vh;\n      background-color: gray;\n      top: 0;\n      overflow: scroll;\n      font-family: Gadget, sans-serif;\n    }\n\n    .closeWarning-x {\n      padding: 10px;\n      cursor: pointer;\n      color: white;\n      font-family: sans-serif;\n    }\n\n    #warningHeader {\n      width: 100%;\n      display: flex;\n      justify-content: flex-end;\n    }\n\n    #warningContainer {\n      color: white;\n      font-size: 30px;\n      padding: 20px;\n      padding-top: 0;\n    }\n\n    .warningIcon {\n      display: flex;\n      justify-content: center;\n      margin-bottom: 10px;\n    }\n\n    #warningButtonContainer {\n      margin-top: 20px;\n      display: flex;\n      justify-content: space-around;\n    }\n\n    .warning-btn {\n      font-size: 25px;\n      padding: 10px;\n      background-color: dodgerblue;\n      color: white;\n      border-radius: 8px;\n      text-decoration: none;\n      cursor: pointer\n    }\n\n  </style>\n  <div id=\"warningHeader\">\n    <div class=\"closeWarning closeWarning-x\">X</div>\n  </div>\n  <div id=\"warningContainer\">\n    <div class=\"warningIcon\"></div>\n    WARNING: This page has been flagged as fraudulent and potentially misleading. Please proceed with caution, and beware of of deceptive content ahead.\n    <div id=\"warningButtonContainer\">\n      <a class=\"warning-btn\" href=\"http://steviep.xyz/sounds\">Back to Safety</a>\n      <div class=\"closeWarning warning-btn\">Continue</div>\n    </div>\n  </div>\n</div>\n";
+  return "<div id=\"warning\">\n  <style>\n    #warning {\n      position: fixed;\n      width: 100vw;\n      height: 100vh;\n      background-color: gray;\n      top: 0;\n      overflow: scroll;\n      font-family: Gadget, sans-serif;\n    }\n\n    .closeWarning-x {\n      padding: 10px;\n      cursor: pointer;\n      color: white;\n      font-family: sans-serif;\n    }\n\n    #warningHeader {\n      width: 100%;\n      display: flex;\n      justify-content: flex-end;\n    }\n\n    #warningContainer {\n      color: white;\n      font-size: 30px;\n      padding: 20px;\n      padding-top: 0;\n    }\n\n    .warningIcon {\n      display: flex;\n      justify-content: center;\n      margin-bottom: 10px;\n    }\n\n    #warningButtonContainer {\n      margin-top: 20px;\n      display: flex;\n      justify-content: space-around;\n    }\n\n    .warning-btn {\n      font-size: 25px;\n      padding: 10px;\n      background-color: dodgerblue;\n      color: white;\n      border-radius: 8px;\n      text-decoration: none;\n      cursor: pointer\n    }\n\n  </style>\n  <div id=\"warningHeader\">\n    <div class=\"closeWarning closeWarning-x\">X</div>\n  </div>\n  <div id=\"warningContainer\">\n    <div class=\"warningIcon\"></div>\n    WARNING: This page has been flagged as a gateway to DANGEROUSLY high returns. Please proceed with CAUTION, and BEWARE of a DECEPTIVELY fast accumulation of wealth.\n    <div id=\"warningButtonContainer\">\n      <a class=\"warning-btn\" href=\"http://steviep.xyz/sounds\">Back to Safety</a>\n      <div class=\"closeWarning warning-btn\">Continue</div>\n    </div>\n  </div>\n</div>\n";
 };
 
 /***/ }),
-/* 619 */
+/* 618 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

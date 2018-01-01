@@ -3,8 +3,9 @@
 import $ from 'utils/$';
 import { getQueryParams} from 'utils/getRef'
 
+console.log(getQueryParams())
 window.IMPORTANT = {
-  pause: getQueryParams.pause || false
+  pause: false
 };
 
 $.onKeyPress(['p', 'P']) (() =>
@@ -12,4 +13,6 @@ $.onKeyPress(['p', 'P']) (() =>
 );
 
 
-setTimeout(() => window.IMPORTANT.pause = true, 1000)
+if (getQueryParams().pause) {
+  setTimeout(() => window.IMPORTANT.pause = true, 1000)
+}

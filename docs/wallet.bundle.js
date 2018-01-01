@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 622);
+/******/ 	return __webpack_require__(__webpack_require__.s = 621);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -62222,14 +62222,13 @@ module.exports = IpcProvider;
 /* 618 */,
 /* 619 */,
 /* 620 */,
-/* 621 */,
-/* 622 */
+/* 621 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(623);
+__webpack_require__(622);
 
 __webpack_require__(188);
 
@@ -62352,7 +62351,7 @@ $executeBuy.onclick = function () {
 };
 
 /***/ }),
-/* 623 */
+/* 622 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

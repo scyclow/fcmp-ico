@@ -10514,16 +10514,13 @@ var _$2 = _interopRequireDefault(_$);
 
 var _colors = __webpack_require__(413);
 
-var _randCurrency = __webpack_require__(607);
-
 var _symbol = __webpack_require__(187);
 
-var _signupModal = __webpack_require__(608);
+var _signupModal = __webpack_require__(607);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var fcSans = (0, _symbol.sansSerif)({ size: 70 }).outerHTML;
-
 var fcSerif = (0, _symbol.serif)({ size: 90 }).outerHTML;
 
 var _require = __webpack_require__(600),
@@ -10531,7 +10528,8 @@ var _require = __webpack_require__(600),
 
 var referral = (0, _getRef.getRef)();
 
-var $currencyTicker = _$2.default.id('currencyTicker');
+var $faqQuestions = _$2.default.cls('faqQuestion');
+var $navMenu = _$2.default.id('nav-menu');
 var $content = _$2.default.id('content');
 var $hero = _$2.default.id('hero');
 var $warning = _$2.default.id('warning');
@@ -10545,35 +10543,27 @@ _3.default.each(_$2.default.cls('fc-s'), function (elem) {
 
 $content.appendChild((0, _signupModal.modal)($callToAction));
 
-var ctaPrompts = ['START NOW', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
+var ctaPrompts = ['START NOW', 'GET IT NOW', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
 
 $callToAction.innerHTML = _3.default.sample(ctaPrompts);
 setInterval(function () {
   return $callToAction.innerHTML = _3.default.sample(ctaPrompts);
 }, 2000);
 
-var contentBorderH = 1;
+var borderH = 1;
 setInterval(function () {
-  return changeColors($content, '#ff0000', { primary: ['border-color'], secondary: [] })(contentBorderH++);
+  changeColors($content, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
+  changeColors($navMenu, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
+  _3.default.each($faqQuestions, function (q) {
+    return changeColors(q, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
+  });
+  borderH++;
 }, 20);
 
 var heroH = 1;
-(0, _$2.default)($hero, 'background-color', '#000033');
-
 setInterval(function () {
   return changeColors($hero, '#0000ff', { primary: [], secondary: ['color', 'fill'] })(heroH++);
 }, 250);
-
-// const ticker = tickerGenerator()
-// setInterval(() => {
-//   $currencyTicker.innerHTML = ticker.next().value
-// }, 50)
-
-
-// const tickerGen = getTicker()
-// setInterval(() => {
-//   console.log(tickerGen.next().value)
-// }, 300)
 
 /***/ }),
 /* 602 */
@@ -10596,17 +10586,20 @@ var _getRef = __webpack_require__(186);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+console.log((0, _getRef.getQueryParams)());
 window.IMPORTANT = {
-  pause: _getRef.getQueryParams.pause || false
+  pause: false
 };
 
 _$2.default.onKeyPress(['p', 'P'])(function () {
   return window.IMPORTANT.pause = !window.IMPORTANT.pause;
 });
 
-setTimeout(function () {
-  return window.IMPORTANT.pause = true;
-}, 1000);
+if ((0, _getRef.getQueryParams)().pause) {
+  setTimeout(function () {
+    return window.IMPORTANT.pause = true;
+  }, 1000);
+}
 
 /***/ }),
 /* 604 */
@@ -10719,12 +10712,14 @@ _$2.default.onMouseMove()(function (event) {
 });
 
 // continuously rotate element color
-colorTimeChangers.forEach(function (elem) {
-  var h = 1;
-  setInterval(function () {
-    return changeColors(elem, '#00ffff')(h++);
-  }, 20);
-});
+
+var h = 1;
+setInterval(function () {
+  colorTimeChangers.forEach(function (elem) {
+    changeColors(elem, '#00ffff')(h);
+  });
+  h++;
+}, 20);
 
 var baseButtonColor = c.polarize('#ff0000');
 
@@ -10871,155 +10866,6 @@ module.exports = dynamicInterval;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.randCurrency = exports.currencySymbols = undefined;
-exports.tickerGenerator = tickerGenerator;
-
-var _2 = __webpack_require__(65);
-
-var _3 = _interopRequireDefault(_2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _marked = /*#__PURE__*/regeneratorRuntime.mark(tickerGenerator);
-
-var currencySymbols = exports.currencySymbols = [{
-  code: '$',
-  char: '$',
-  prob: 13
-}, {
-  code: '&#165',
-  char: '¥',
-  prob: 6
-}, {
-  code: '&#8364',
-  char: '€',
-  prob: 5
-}, {
-  code: '&#163',
-  char: '£',
-  prob: 5
-}, {
-  code: '&#8361',
-  char: '₩',
-  prob: 2
-}, {
-  code: '&#8373',
-  char: '₵',
-  prob: 2
-}, {
-  code: '&#8369',
-  char: '₱',
-  prob: 2
-}, {
-  code: '&#3647',
-  char: '฿',
-  prob: 2
-}, {
-  code: '&#8377',
-  char: '₹',
-  prob: 1
-}, {
-  code: '&#8363',
-  char: '₫',
-  prob: 1
-}, {
-  code: '&#8353',
-  char: '₡',
-  prob: 1
-}, {
-  code: '&#8366',
-  char: '₮',
-  prob: 1
-}, {
-  code: '&#8367',
-  char: '₯',
-  prob: 1
-}];
-
-var currencyHat = currencySymbols.reduce(function (hat, currency) {
-  _3.default.times(currency.prob, function () {
-    hat.push(currency.char);
-  });
-  return hat;
-}, []);
-
-var randCurrency = exports.randCurrency = function randCurrency() {
-  return _3.default.sample(currencyHat);
-};
-
-function tickerGenerator() {
-  var quantity, maxIx, cashIx, allChars, getStaticTicker, incIndex, generateTicker;
-  return regeneratorRuntime.wrap(function tickerGenerator$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          quantity = 30;
-          maxIx = quantity * 3;
-          cashIx = 0;
-          allChars = {
-            fast: '>',
-            cash: '$',
-            plus: '+'
-          };
-
-          getStaticTicker = function getStaticTicker() {
-            var output = [];
-            _3.default.times(quantity, function () {
-              return output.push(allChars.fast);
-            });
-            _3.default.times(quantity, function () {
-              return output.push(randCurrency());
-            });
-            _3.default.times(quantity, function () {
-              return output.push(allChars.plus);
-            });
-            return output;
-          };
-
-          incIndex = function incIndex(ix) {
-            return ix + 1 < maxIx ? ix + 1 : 0;
-          };
-
-          generateTicker = function generateTicker() {
-            cashIx = incIndex(cashIx);
-            var staticTicker = getStaticTicker();
-            var left = _3.default.takeRight(staticTicker, cashIx);
-            var right = _3.default.take(staticTicker, maxIx - cashIx);
-
-            return left.concat(right).join('');
-          };
-
-        case 7:
-          if (false) {
-            _context.next = 12;
-            break;
-          }
-
-          _context.next = 10;
-          return generateTicker();
-
-        case 10:
-          _context.next = 7;
-          break;
-
-        case 12:
-        case 'end':
-          return _context.stop();
-      }
-    }
-  }, _marked, this);
-}
-
-/***/ }),
-/* 608 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.modal = undefined;
 
 var _$ = __webpack_require__(126);
@@ -11030,29 +10876,29 @@ var _2 = __webpack_require__(65);
 
 var _3 = _interopRequireDefault(_2);
 
-__webpack_require__(609);
+__webpack_require__(608);
 
-var _index = __webpack_require__(610);
+var _index = __webpack_require__(609);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _step = __webpack_require__(611);
+var _step = __webpack_require__(610);
 
 var _step2 = _interopRequireDefault(_step);
 
-var _step3 = __webpack_require__(612);
+var _step3 = __webpack_require__(611);
 
 var _step4 = _interopRequireDefault(_step3);
 
-var _step5 = __webpack_require__(613);
+var _step5 = __webpack_require__(612);
 
 var _step6 = _interopRequireDefault(_step5);
 
-var _step7 = __webpack_require__(614);
+var _step7 = __webpack_require__(613);
 
 var _step8 = _interopRequireDefault(_step7);
 
-var _loading = __webpack_require__(615);
+var _loading = __webpack_require__(614);
 
 var _loading2 = _interopRequireDefault(_loading);
 
@@ -11121,7 +10967,8 @@ var modal = exports.modal = function modal(trigger) {
   });
 
   trigger.addEventListener('click', function () {
-    window.IMPORTANT.pause = true;
+    console.log('bleh');
+    // window.IMPORTANT.pause = true
     setTimeout(function () {
       component.className = '';
     }, 300);
@@ -11166,13 +11013,13 @@ var modal = exports.modal = function modal(trigger) {
 };
 
 /***/ }),
-/* 609 */
+/* 608 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 610 */
+/* 609 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11183,7 +11030,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 611 */
+/* 610 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11194,7 +11041,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 612 */
+/* 611 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11205,18 +11052,18 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 613 */
+/* 612 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-3\">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id=\"confirmationList\">\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read, and agree to, the <a href=\"#\">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"https://github.com/scyclow/fcmp-ico/blob/master/contracts/FastCashMoneyPlus.sol\" target=\"_blank\">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I'm ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n";
+  return "<div id=\"signupModal-3\">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id=\"confirmationList\">\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read, and agree to, the <a target=\"_blank\" href=\"./terms.html\">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"https://github.com/scyclow/fcmp-ico/blob/master/contracts/FastCashMoneyPlus.sol\" target=\"_blank\">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I'm ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n";
 };
 
 /***/ }),
-/* 614 */
+/* 613 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11227,7 +11074,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 615 */
+/* 614 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
