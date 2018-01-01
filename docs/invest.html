@@ -76,6 +76,7 @@ p {
 
 .label {
   font-family: sans-serif;
+  margin-top: 35px;
 }
 
 .sansSerif {
@@ -102,18 +103,35 @@ p {
 
 #routingCode {
   width: 100%;
-  min-width: 510px;
-  font-size: 20px;
-  padding: 4px;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #888;
+  background-color: #eee;
+  font-size: 28px;
+  font-family: "Courier New", Courier, monospace;
+  word-break: break-word;
+
+}
+
+#sliderContainer {
+  border: 2px solid #000;
+  background-color: #eee
 }
 
 #purchaseAmountSlider {
-  width: 100%;
+  width: 90%;
+  margin: 20px 5%;
 }
 
 #amountOfFastcash {
   font-size: 23px;
   padding: 4px;
+}
+
+#amountOfMoneybucks {
+  margin-top: 15px;
+  font-size: 23px;
+  font-family: sans-serif;
 }
 
 #fastcashLeft {
@@ -326,143 +344,159 @@ p {
     <p><h4 class="highlight" style="border: 0">PAY ATTENTION </h4> and read these directions VERY CAREFULLY. Failing to read the directions may result in you losing your fastcash.</p>
     <p>Even though the whole investment process may appear to be intimidating, rest assured that THIS IS THE <span class="hl-inline">ONLY</span> <span class="hl-inline">SURE-FIRE</span> <span class="hl-inline">WAY</span> TO MAKE BOAT-LOADS OF CASH. While certain terms, such as "crypto", "investment", "private key", and so forth, migh sound confusing now, everything will make sense once you are a certified fastcash investor.</p>
 
-    <hr>
-    <div class="highlight sectionHeader">
-      <h2>STEP 1.</h2>
-      <h3>GENERATE A FASTCASH ADDRESS</h3>
-    </div>
-    <p>
-      This is a very important step on your journey to fastcash wealth. Your fastcash address will be used for all fastcash transfers AND referal bonuses[1]. Please click the button to generate your address now.
-    </p>
-    <p class="tinyFont">
-      1. by refering your friends and family to this incredible investment opportunity, you will receive immediately receive BONUS FASTCASH equal to 10% of the amount of fastcash that they invest in)
-    </p>
-    <h1 class="highlight">GENERATE FASTCASH ADDRESS HERE: <button id="generateRoutingCode">GENERATE</button></h1>
+    <div id="step1">
+      <hr>
+      <div class="highlight sectionHeader">
+        <h2>STEP 1.</h2>
+        <h3>GENERATE A FASTCASH ADDRESS</h3>
+      </div>
+      <p>
+        This is a very important step on your journey to fastcash wealth. Your fastcash address will be used for all fastcash transfers AND referal bonuses[1]. Please click the button to generate your address now.
+      </p>
+      <p class="tinyFont">
+        1. by refering your friends and family to this incredible investment opportunity, you will receive immediately receive BONUS FASTCASH equal to 10% of the amount of fastcash that they invest in)
+      </p>
+      <h1 class="highlight" style="margin-top: 20px">GENERATE FASTCASH ADDRESS HERE: <button id="generateRoutingCode">GENERATE</button></h1>
 
-    <div>
-      <h2 class="label">YOUR FASTCASH ADDRESS IS:</h2>
-      <input id="routingCode" value="please click the button to generate a fastcash address" disabled />
-    </div>
-
-    <hr>
-    <div class="highlight">
-      <a name="chooser"></a>
-      <h2>STEP 2.</h2>
-      <h3>CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN</h3>
-    </div>
-    <p>
-      Please choose how much fastcash you'd wish to purchase at this time. If you're unsure of an amount, err on the side of more, rather than less. You don't want to regret buying too little later on! Buy as much as you can now, before it's too late!
-    </p>
-    <h2 id="fastcashLeft"></h2>
-    <br>
-
-    <h3>This table displays the current conversion rate:</h3>
-
-    <div id="tableContainer">
-      <!--  -->
+      <div>
+        <h2 class="label">YOUR FASTCASH ADDRESS IS:</h2>
+        <div id="routingCode">
+          please click the button to generate a fastcash address
+        </div>
+      </div>
     </div>
 
-    <p class="tinyFont">
-      The conversion rate of fastcash to usd is determined by a deterministic formula, in which the price of fastcash (denominated in eth), increases at a rate of 20% for 71 weeks after the initial launch (January of 2018). The conversion rate of usd to eth is determined by a trusted third party, and refreshed once at the begining of every week. The smallest denomination of fastcash is the MONEYBUCK, which is equivalent to 1 10e-18 fastcash. To determine the price of MONEYBUCKS relative to WEI, simply apply the following formula: ((4 * (10 ** (week + 18 - (10 + MAX(0, week - 15))))) / ( USDWEI / 10 ** 10 ) * ((12 ** week) / (10 ** MAX(0, week - 15)))) where all values of [week] are between 0 and 71 (inclusive).
-    </p>
-    <div id="fastcashChooser">
-      <h1 class="highlight">HOW MUCH FASTCASH DO YOU WANT?</h1>
-      <div id="fastcashChooserErr" style="color: red"></div>
-      <input id="purchaseAmountSlider" type="range" min="0" max="10000" value="0">
+    <div id="step2" style="visibility: hidden">
+      <hr>
+      <div class="highlight">
+        <a name="chooser"></a>
+        <h2>STEP 2.</h2>
+        <h3>CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN</h3>
+      </div>
+      <p>
+        Please choose how much fastcash you'd wish to purchase at this time. If you're unsure of an amount, err on the side of more, rather than less. You don't want to regret buying too little later on! Buy as much as you can now, before it's too late!
+      </p>
+      <h2 id="fastcashLeft"></h2>
       <br>
-      <span class="fc-ss"></span><input id="amountOfFastcash" type="number">
-      <div id="amountOfMoneybucks"></div>
-      <div id="pleaseContact"></div>
+
+      <h3>This table displays the current conversion rate:</h3>
+
+      <div id="tableContainer">
+        <!--  -->
+      </div>
+
+      <p class="tinyFont">
+        The conversion rate of fastcash to usd is determined by a deterministic formula, in which the price of fastcash (denominated in eth), increases at a rate of 20% for 71 weeks after the initial launch (January of 2018). The conversion rate of usd to eth is determined by a trusted third party, and refreshed once at the begining of every week. The smallest denomination of fastcash is the MONEYBUCK, which is equivalent to 1 10e-18 fastcash. To determine the price of MONEYBUCKS relative to WEI, simply apply the following formula: ((4 * (10 ** (week + 18 - (10 + MAX(0, week - 15))))) / ( USDWEI / 10 ** 10 ) * ((12 ** week) / (10 ** MAX(0, week - 15)))) where all values of [week] are between 0 and 71 (inclusive).
+      </p>
+      <div id="fastcashChooser">
+        <h1 class="highlight">HOW MUCH FASTCASH DO YOU WANT?</h1>
+        <div id="fastcashChooserErr" style="color: red"></div>
+        <div id="sliderContainer">
+          <input id="purchaseAmountSlider" type="range" min="0" max="10000" value="0">
+        </div>
+        <br>
+        <span class="fc-ss"></span><input id="amountOfFastcash" type="number">
+        <div id="amountOfMoneybucks"></div>
+        <div id="pleaseContact"></div>
+      </div>
     </div>
 
-    <hr>
-    <div class="highlight sectionHeader">
-      <h2>STEP 3.</h2>
-      <h3>ACQUIRE ETHEREUM SO YOU CAN BUY YOUR FASTCASH</h3>
-    </div>
+    <div id="step3" style="visibility: hidden">
+      <hr>
+      <div class="highlight sectionHeader">
+        <h2>STEP 3.</h2>
+        <h3>ACQUIRE ETHEREUM SO YOU CAN BUY YOUR FASTCASH</h3>
+      </div>
 
-    <p>To make things easier on our investors, we chose to accept transactions in Ethereum. This means that you NEED ETHEREUM to buy your fastcash.</p>
-    <ul style="margin-left: 30px">
-      <li>
-        You can acquire Ethereum (ETH) on any number of exchanges. We reccomend <a href="https://www.coinbase.com/" target="_blank">coinbase</a>.
-      </li>
-      <li>
-        If you're unsure how much ethereum to buy, <a href="#chooser"> CLICK HERE TO GO TO THE FASTCASH SELECTION TOOL</a> to get an estimate on how much you need.
-      </li>
-    </ul>
-    <h3 class="highlight">
-      <a href="https://www.coinbase.com/" target="_blank">CLICK HERE TO GO TO COINBASE TO BUY ETHEREUM</a>
-    </h3>
-
-    <p>After you've bought your ethereum, (or if you already have ethereum) please continue to the next step:</p>
-
-    <div class="continueBox"><label class="confirmBox">--> <input type="checkbox"> <--CLICK THIS once you've bought your etherem</label></div>
-
-    <hr>
-    <div class="highlight sectionHeader">
-      <h2>STEP 4.</h2>
-      <h3>TRANSFER ETHEREUM TO A WALLET</h3>
-    </div>
-    <p>To purchase fastcash, you need to send your ethereum to the FastCashMoneyPlus Contract from a dedicated wallet. The FastCashMoneyPlus Contract will identify your ethereum wallet as the true holder of your fastcash balance. HOWEVER, if you send the Contract ethereum from your coinbase account, then coinbase will own your fastcash instead of you. DON'T DO THIS</p>
-    <h3 class="highlight" style="margin-top: 15px; margin-bottom: 21px">DO NOT MAKE A FASTCASH TRANSACTION FROM COINBASE OR ELSE YOU WILL LOSE YOUR ETHEREUM AND YOUR FASTCASH!!!</h3>
-
-    <p>There are a few different ways you can set up a wallet.</p>
-    <ol style="margin-left: 35px">
-      <li >[RECOMENDED] Download the <a href="https://metamask.io/" target="_blank">MetaMask Browser Extension</a>, set up a wallet with it, transfer your ethereum to that wallet, and RELOAD THIS PAGE WITH THE BROWSER EXTENSION ENABLED.</li>
-      <li class="highlight">[RECOMENDED] Download the <a href="https://metamask.io/" target="_blank">MetaMask Browser Extension</a>, set up a wallet with it, transfer your ethereum to that wallet, and RELOAD THIS PAGE WITH THE BROWSER EXTENSION ENABLED.</li>
-      <li>Go to <a href="https://www.myetherwallet.com/">www.myetherwallet.com/</a> and create an ethereum wallet there. Then, tranfer your ether to this wallet. If you buy fastcash from this wallet, it will be more difficult to </li>
-      <li>You can also use any other third party wallet. However, these instructions will walk you through MyEtherWallet</li>
-    </ol>
-
-    <div class="continueBox">
-      <label class="confirmBox">--> <input type="checkbox"> <--CLICK THIS once you've transfered your etherem to your new wallet</label>
-    </div>
-
-    <hr>
-    <div class="highlight sectionHeader">
-      <h1>STEP 5.</h1>
-      <h1>BUY FASTCASH</h1>
-    </div>
-    <p class="pLarge">CONGRATULATIONS TO YOU! You've reached the final step in your fastcash journey! You're one step away from embarking on the greatest wealth-creation adventure of your life! Before you continue PLEASE GO BACK AND CONFIRM THAT YOU've COMPLETED ALL OF THE PREVIOUS STEPS.</p>
-
-    <div id="stepsToComplete" class="highlight"></div>
-
-    <div id="myEtherPurchase" class="highlight">
-      <h3 class="highlight">If you are using MyEtherWallet (or a similar third party wallet):</h3>
-      <ul style="margin-left: 30px; margin-bottom: 20px">
-        <li class="highlight">Go to "<span class="formData-name">Send Ether & Tokens</span>" (and unlock your wallet)</li>
-        <li class="highlight">CLICK "<span class="formData-name">+Advanced: Add Data</span>"</li>
-        <li class="highlight">Enter the following values for each field:<br>
-          <table>
-            <tr>
-              <td class="formData-name">To Address</td>
-              <td id="toAddressData" class="formData"></td>
-            </tr>
-            <tr>
-              <td class="formData-name">Amount to Send</td>
-              <td id="amountToSendData" class="formData"></td>
-            </tr>
-            <tr>
-              <td class="formData-name">Gas Limit</td>
-              <td class="formData">150000</td>
-            </tr>
-            <tr>
-              <td class="formData-name">Data</td>
-              <td id="dataData" class="formData"></td>
-            </tr>
-          </table>
+      <p>To make things easier on our investors, we chose to accept transactions in Ethereum. This means that you NEED ETHEREUM to buy your fastcash.</p>
+      <ul style="margin-left: 30px">
+        <li>
+          You can acquire Ethereum (ETH) on any number of exchanges. We reccomend <a href="https://www.coinbase.com/" target="_blank">coinbase</a>.
         </li>
-        <li class="highlight">GENERATE YOUR TRANSACTION!!!</li>
+        <li>
+          If you're unsure how much ethereum to buy, <a href="#chooser"> CLICK HERE TO GO TO THE FASTCASH SELECTION TOOL</a> to get an estimate on how much you need.
+        </li>
       </ul>
+      <h3 class="highlight">
+        <a href="https://www.coinbase.com/" target="_blank">CLICK HERE TO GO TO COINBASE TO BUY ETHEREUM</a>
+      </h3>
+
+      <p>After you've bought your ethereum, (or if you already have ethereum) please continue to the next step:</p>
+
+      <div class="continueBox"><label class="confirmBox"><span class="highlight">--> <input id="ethBought" type="checkbox"> <--</span>CLICK THIS once you've bought your etherem</label></div>
     </div>
 
-    <div id="metaMaskPurchase" class="highlight">
-      <h3 class="highlight">If you are using MetaMask or an Ethereum browser (like Mist), proceed to <button id="easyCheckout">EASY CHECKOUT</button></h3>
-      <p></p>
+    <div id="step4" style="visibility: hidden">
+      <hr>
+      <div class="highlight sectionHeader">
+        <h2>STEP 4.</h2>
+        <h3>TRANSFER ETHEREUM TO A WALLET</h3>
+      </div>
+      <p>To purchase fastcash, you need to send your ethereum to the FastCashMoneyPlus Contract from a dedicated wallet. The FastCashMoneyPlus Contract will identify your ethereum wallet as the true holder of your fastcash balance. HOWEVER, if you send the Contract ethereum from your coinbase account, then coinbase will own your fastcash instead of you. DON'T DO THIS</p>
+      <h3 class="highlight" style="margin-top: 15px; margin-bottom: 21px">DO NOT MAKE A FASTCASH TRANSACTION FROM COINBASE OR ELSE YOU WILL LOSE YOUR ETHEREUM AND YOUR FASTCASH!!!</h3>
+
+      <p>There are a few different ways you can set up a wallet.</p>
+      <ol style="margin-left: 35px">
+        <li >[RECOMENDED] Download the <a href="https://metamask.io/" target="_blank">MetaMask Browser Extension</a>, set up a wallet with it, transfer your ethereum to that wallet, and RELOAD THIS PAGE WITH THE BROWSER EXTENSION ENABLED.</li>
+        <li class="highlight">[RECOMENDED] Download the <a href="https://metamask.io/" target="_blank">MetaMask Browser Extension</a>, set up a wallet with it, transfer your ethereum to that wallet, and RELOAD THIS PAGE WITH THE BROWSER EXTENSION ENABLED.</li>
+        <li>Go to <a href="https://www.myetherwallet.com/">www.myetherwallet.com/</a> and create an ethereum wallet there. Then, tranfer your ether to this wallet. If you buy fastcash from this wallet, it will be more difficult to </li>
+        <li>You can also use any other third party wallet. However, these instructions will walk you through MyEtherWallet</li>
+      </ol>
+
+      <div class="continueBox">
+        <label class="confirmBox"><span class="highlight">--> <input id="ethInWallet" type="checkbox"> <--</span>CLICK THIS once you've transfered your etherem to your new wallet</label>
+      </div>
     </div>
 
-    <h2 style="text-align: center">YOU ARE NOW A PROUD INVESTOR IN FASTCASH! Pat yourself on the back! You are going to be very rich soon enough, and you deserve it! But it's only fair that you take your friends and loved ones along for the ride! And to make it easier, you will receive a FASTCASH BONUS! You can do all these things and more (such as transfering fastcash, and buying MORE fastcash) in the official FastCashMoneyPlus.biz FastCash wallet! To go to your wallet, click the link below:</h2>
-    <a id="gotoWallet" target="_blank" href="./wallet.html">Click here to GO TO YOUR FASTCASH WALLET NOW!</a>
+    <div id="step5" style="visibility: hidden">
+      <hr>
+      <div class="highlight sectionHeader">
+        <h1>STEP 5.</h1>
+        <h1>BUY FASTCASH</h1>
+      </div>
+      <p class="pLarge">CONGRATULATIONS TO YOU! You've reached the final step in your fastcash journey! You're one step away from embarking on the greatest wealth-creation adventure of your life! Before you continue PLEASE GO BACK AND CONFIRM THAT YOU've COMPLETED ALL OF THE PREVIOUS STEPS.</p>
+
+      <div id="stepsToComplete" class="highlight"></div>
+
+      <div id="myEtherPurchase" class="highlight">
+        <h3 class="highlight">If you are using MyEtherWallet (or a similar third party wallet):</h3>
+        <ul style="margin-left: 30px; margin-bottom: 20px">
+          <li class="highlight">Go to "<span class="formData-name">Send Ether & Tokens</span>" (and unlock your wallet)</li>
+          <li class="highlight">CLICK "<span class="formData-name">+Advanced: Add Data</span>"</li>
+          <li class="highlight">Enter the following values for each field:<br>
+            <table>
+              <tr>
+                <td class="formData-name">To Address</td>
+                <td id="toAddressData" class="formData"></td>
+              </tr>
+              <tr>
+                <td class="formData-name">Amount to Send</td>
+                <td id="amountToSendData" class="formData"></td>
+              </tr>
+              <tr>
+                <td class="formData-name">Gas Limit</td>
+                <td class="formData">150000</td>
+              </tr>
+              <tr>
+                <td class="formData-name">Data</td>
+                <td id="dataData" class="formData"></td>
+              </tr>
+            </table>
+          </li>
+          <li class="highlight">GENERATE YOUR TRANSACTION!!!</li>
+        </ul>
+      </div>
+
+      <div id="metaMaskPurchase" class="highlight">
+        <h3 class="highlight">If you are using MetaMask or an Ethereum browser (like Mist), proceed to <button id="easyCheckout">EASY CHECKOUT</button></h3>
+        <p></p>
+      </div>
+    </div>
+
+    <div id="complete" style="visibility: hidden">
+      <h2 style="text-align: center">YOU ARE NOW A PROUD INVESTOR IN FASTCASH! Pat yourself on the back! You are going to be very rich soon enough, and you deserve it! But it's only fair that you take your friends and loved ones along for the ride! And to make it easier, you will receive a FASTCASH BONUS! You can do all these things and more (such as transfering fastcash, and buying MORE fastcash) in the official FastCashMoneyPlus.biz FastCash wallet! To go to your wallet, click the link below:</h2>
+      <a id="gotoWallet" target="_blank" href="./wallet.html">Click here to GO TO YOUR FASTCASH WALLET NOW!</a>
+    </div>
   </div>
 </div>
 
@@ -62850,13 +62884,16 @@ var generateCode = function () {
             STATE.newRoutingCode = proposedCode;
             $gotoWallet.href = './wallet.html?routingCode=' + proposedCode;
             interval = setInterval(function () {
-              $routingCode.value = (0, _routingCodeGenerator.createAddress)();
+              $routingCode.innerHTML = (0, _routingCodeGenerator.createAddress)();
             }, 30);
 
 
             setTimeout(function () {
               clearInterval(interval);
-              $routingCode.value = proposedCode;
+              $routingCode.innerHTML = proposedCode;
+              setTimeout(function () {
+                return (0, _$2.default)($step2, 'visibility', 'inherit');
+              }, 200);
             }, _3.default.random(1500, 300, true));
 
             renderFromTransactionData(STATE);
@@ -62906,6 +62943,33 @@ var $dataData = _$2.default.id('dataData');
 var $easyCheckout = _$2.default.id('easyCheckout');
 var $easyCheckoutError = _$2.default.id('easyCheckoutError');
 
+var $step1 = _$2.default.id('step1');
+var $step2 = _$2.default.id('step2');
+var $step3 = _$2.default.id('step3');
+var $step4 = _$2.default.id('step4');
+var $step5 = _$2.default.id('step5');
+var $complete = _$2.default.id('complete');
+var $ethBought = _$2.default.id('ethBought');
+var $ethInWallet = _$2.default.id('ethInWallet');
+
+$ethBought.onchange = function (event) {
+  if (event.target.checked) {
+    (0, _$2.default)($step4, 'visibility', 'inherit');
+  } else {
+    (0, _$2.default)($step4, 'visibility', 'hidden');
+  }
+};
+
+$ethInWallet.onchange = function (event) {
+  if (event.target.checked) {
+    (0, _$2.default)($step5, 'visibility', 'inherit');
+    (0, _$2.default)($complete, 'visibility', 'inherit');
+  } else {
+    (0, _$2.default)($step5, 'visibility', 'hidden');
+    (0, _$2.default)($complete, 'visibility', 'hidden');
+  }
+};
+
 function renderPage(_ref2) {
   var fastcashLeft = _ref2.fastcashLeft,
       referal = _ref2.referal,
@@ -62942,13 +63006,16 @@ function renderPage(_ref2) {
     STATE.amountInMoneyBucks = amountInMoneyBucks;
     $pleaseContact.innerHTML = amt === fastcashLeft ? 'Please contact a FastCashMoneyPlus.biz representative' : '';
     renderFromTransactionData(STATE);
+
+    (0, _$2.default)($step3, 'visibility', 'inherit');
+
     if (!amt) {
       chooserErr();
     } else {
       (0, _$2.default)($fastcashChooser, 'border', '0');
       $fastcashChooserErr.innerHTML = '';
     }
-    $amountOfMoneybucks.innerHTML = '(' + amountInMoneyBucks + ' MoneyBucks, <br>$' + (amt * fc2usd).toFixed(2) + ' (USD), <br>&#x39E;' + amt * fc2eth + ' (ETHEREUM) )';
+    $amountOfMoneybucks.innerHTML = '\n      <table>\n        <tr>\n          <td>USD</td><td>$' + (amt * fc2usd).toFixed(2) + '</td>\n        </tr>\n        <tr>\n          <td>Ethereum</td><td>&#x39E;' + amt * fc2eth + '</td>\n        </tr>\n        <tr>\n          <td>MoneyBucks</td><td>' + amountInMoneyBucks + '</td>\n        </tr>\n        <tr>\n          <td>WEI</td><td>' + amt * fc2eth * Math.pow(10, 18) + '</td>\n        </tr>\n      </table>\n    ';
     // do stuff with sound
   };
 

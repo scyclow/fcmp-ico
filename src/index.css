@@ -17,7 +17,7 @@ nav .nav-header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 7px solid;
+  border: 7px solid;
 }
 
 #secondHeader {

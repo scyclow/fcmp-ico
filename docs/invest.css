@@ -59,6 +59,7 @@ p {
 
 .label {
   font-family: sans-serif;
+  margin-top: 35px;
 }
 
 .sansSerif {
@@ -85,18 +86,35 @@ p {
 
 #routingCode {
   width: 100%;
-  min-width: 510px;
-  font-size: 20px;
-  padding: 4px;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #888;
+  background-color: #eee;
+  font-size: 28px;
+  font-family: "Courier New", Courier, monospace;
+  word-break: break-word;
+
+}
+
+#sliderContainer {
+  border: 2px solid #000;
+  background-color: #eee
 }
 
 #purchaseAmountSlider {
-  width: 100%;
+  width: 90%;
+  margin: 20px 5%;
 }
 
 #amountOfFastcash {
   font-size: 23px;
   padding: 4px;
+}
+
+#amountOfMoneybucks {
+  margin-top: 15px;
+  font-size: 23px;
+  font-family: sans-serif;
 }
 
 #fastcashLeft {

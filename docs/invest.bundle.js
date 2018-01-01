@@ -62382,13 +62382,16 @@ var generateCode = function () {
             STATE.newRoutingCode = proposedCode;
             $gotoWallet.href = './wallet.html?routingCode=' + proposedCode;
             interval = setInterval(function () {
-              $routingCode.value = (0, _routingCodeGenerator.createAddress)();
+              $routingCode.innerHTML = (0, _routingCodeGenerator.createAddress)();
             }, 30);
 
 
             setTimeout(function () {
               clearInterval(interval);
-              $routingCode.value = proposedCode;
+              $routingCode.innerHTML = proposedCode;
+              setTimeout(function () {
+                return (0, _$2.default)($step2, 'visibility', 'inherit');
+              }, 200);
             }, _3.default.random(1500, 300, true));
 
             renderFromTransactionData(STATE);
@@ -62438,6 +62441,33 @@ var $dataData = _$2.default.id('dataData');
 var $easyCheckout = _$2.default.id('easyCheckout');
 var $easyCheckoutError = _$2.default.id('easyCheckoutError');
 
+var $step1 = _$2.default.id('step1');
+var $step2 = _$2.default.id('step2');
+var $step3 = _$2.default.id('step3');
+var $step4 = _$2.default.id('step4');
+var $step5 = _$2.default.id('step5');
+var $complete = _$2.default.id('complete');
+var $ethBought = _$2.default.id('ethBought');
+var $ethInWallet = _$2.default.id('ethInWallet');
+
+$ethBought.onchange = function (event) {
+  if (event.target.checked) {
+    (0, _$2.default)($step4, 'visibility', 'inherit');
+  } else {
+    (0, _$2.default)($step4, 'visibility', 'hidden');
+  }
+};
+
+$ethInWallet.onchange = function (event) {
+  if (event.target.checked) {
+    (0, _$2.default)($step5, 'visibility', 'inherit');
+    (0, _$2.default)($complete, 'visibility', 'inherit');
+  } else {
+    (0, _$2.default)($step5, 'visibility', 'hidden');
+    (0, _$2.default)($complete, 'visibility', 'hidden');
+  }
+};
+
 function renderPage(_ref2) {
   var fastcashLeft = _ref2.fastcashLeft,
       referal = _ref2.referal,
@@ -62474,13 +62504,16 @@ function renderPage(_ref2) {
     STATE.amountInMoneyBucks = amountInMoneyBucks;
     $pleaseContact.innerHTML = amt === fastcashLeft ? 'Please contact a FastCashMoneyPlus.biz representative' : '';
     renderFromTransactionData(STATE);
+
+    (0, _$2.default)($step3, 'visibility', 'inherit');
+
     if (!amt) {
       chooserErr();
     } else {
       (0, _$2.default)($fastcashChooser, 'border', '0');
       $fastcashChooserErr.innerHTML = '';
     }
-    $amountOfMoneybucks.innerHTML = '(' + amountInMoneyBucks + ' MoneyBucks, <br>$' + (amt * fc2usd).toFixed(2) + ' (USD), <br>&#x39E;' + amt * fc2eth + ' (ETHEREUM) )';
+    $amountOfMoneybucks.innerHTML = '\n      <table>\n        <tr>\n          <td>USD</td><td>$' + (amt * fc2usd).toFixed(2) + '</td>\n        </tr>\n        <tr>\n          <td>Ethereum</td><td>&#x39E;' + amt * fc2eth + '</td>\n        </tr>\n        <tr>\n          <td>MoneyBucks</td><td>' + amountInMoneyBucks + '</td>\n        </tr>\n        <tr>\n          <td>WEI</td><td>' + amt * fc2eth * Math.pow(10, 18) + '</td>\n        </tr>\n      </table>\n    ';
     // do stuff with sound
   };
 

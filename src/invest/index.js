@@ -111,17 +111,19 @@ const generateCode = async () => {
     existingCode = await INSTANCE.routingCodeMap.call(proposedCode)
   }
 
+
   let tries = 0
   if (!existingCode || existingCode === emptyAddress) {
     STATE.newRoutingCode = proposedCode;
     $gotoWallet.href = `./wallet.html?routingCode=${proposedCode}`
     const interval = setInterval(() => {
-      $routingCode.value = createAddress()
+      $routingCode.innerHTML = createAddress()
     }, 30)
 
     setTimeout(() => {
       clearInterval(interval)
-      $routingCode.value = proposedCode
+      $routingCode.innerHTML = proposedCode
+      setTimeout(() => $($step2, 'visibility', 'inherit'), 200)
     }, _.random(1500, 300, true))
 
     renderFromTransactionData(STATE)
@@ -150,6 +152,32 @@ const $dataData = $.id('dataData')
 const $easyCheckout = $.id('easyCheckout')
 const $easyCheckoutError = $.id('easyCheckoutError')
 
+const $step1 = $.id('step1')
+const $step2 = $.id('step2')
+const $step3 = $.id('step3')
+const $step4 = $.id('step4')
+const $step5 = $.id('step5')
+const $complete = $.id('complete')
+const $ethBought = $.id('ethBought')
+const $ethInWallet = $.id('ethInWallet')
+
+$ethBought.onchange = event => {
+  if (event.target.checked) {
+    $($step4, 'visibility', 'inherit')
+  } else {
+    $($step4, 'visibility', 'hidden')
+  }
+}
+
+$ethInWallet.onchange = event => {
+  if (event.target.checked) {
+    $($step5, 'visibility', 'inherit')
+    $($complete, 'visibility', 'inherit')
+  } else {
+    $($step5, 'visibility', 'hidden')
+    $($complete, 'visibility', 'hidden')
+  }
+}
 
 
 function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks, newRoutingCode }) {
@@ -216,13 +244,31 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
       ? 'Please contact a FastCashMoneyPlus.biz representative'
       : ''
     renderFromTransactionData(STATE)
+
+    $($step3, 'visibility', 'inherit')
+
     if (!amt) {
       chooserErr()
     } else {
       $($fastcashChooser, 'border', '0')
       $fastcashChooserErr.innerHTML = ''
     }
-    $amountOfMoneybucks.innerHTML = `(${amountInMoneyBucks} MoneyBucks, <br>$${(amt * fc2usd).toFixed(2)} (USD), <br>&#x39E;${amt * fc2eth} (ETHEREUM) )`
+    $amountOfMoneybucks.innerHTML = `
+      <table>
+        <tr>
+          <td>USD</td><td>$${(amt * fc2usd).toFixed(2)}</td>
+        </tr>
+        <tr>
+          <td>Ethereum</td><td>&#x39E;${amt * fc2eth}</td>
+        </tr>
+        <tr>
+          <td>MoneyBucks</td><td>${amountInMoneyBucks}</td>
+        </tr>
+        <tr>
+          <td>WEI</td><td>${amt * fc2eth * (10 ** 18)}</td>
+        </tr>
+      </table>
+    `
     // do stuff with sound
   }
 
