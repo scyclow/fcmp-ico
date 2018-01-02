@@ -62513,7 +62513,7 @@ function renderPage(_ref2) {
       (0, _$2.default)($fastcashChooser, 'border', '0');
       $fastcashChooserErr.innerHTML = '';
     }
-    $amountOfMoneybucks.innerHTML = '\n      <table>\n        <tr>\n          <td>USD</td><td>$' + (amt * fc2usd).toFixed(2) + '</td>\n        </tr>\n        <tr>\n          <td>Ethereum</td><td>&#x39E;' + amt * fc2eth + '</td>\n        </tr>\n        <tr>\n          <td>MoneyBucks</td><td>' + amountInMoneyBucks + '</td>\n        </tr>\n        <tr>\n          <td>WEI</td><td>' + amt * fc2eth * Math.pow(10, 18) + '</td>\n        </tr>\n      </table>\n    ';
+    $amountOfMoneybucks.innerHTML = '\n      <table>\n        <tr>\n          <td>USD</td><td>$' + (amt * fc2usd).toFixed(2) + '</td>\n        </tr>\n        <tr>\n          <td>Ethereum</td><td>&#x39E;' + amt * fc2eth + '</td>\n        </tr>\n        <tr>\n          <td>MoneyBucks</td><td>' + amountInMoneyBucks + '</td>\n        </tr>\n        <tr>\n          <td>WEI</td><td>' + Math.round(amt * fc2eth * Math.pow(10, 18)) + '</td>\n        </tr>\n      </table>\n    ';
     // do stuff with sound
   };
 

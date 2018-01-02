@@ -265,7 +265,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
           <td>MoneyBucks</td><td>${amountInMoneyBucks}</td>
         </tr>
         <tr>
-          <td>WEI</td><td>${amt * fc2eth * (10 ** 18)}</td>
+          <td>WEI</td><td>${Math.round(amt * fc2eth * (10 ** 18))}</td>
         </tr>
       </table>
     `
