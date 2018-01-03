@@ -74,9 +74,6 @@ nav #nav-menu .nav-menu-item {
   /*margin-top: 20px;*/
 }
 
-#call-to-action-container h3 {
-  margin-bottom: 40px;
-}
 
 #call-to-action {
   width: 90vw;
@@ -92,6 +89,8 @@ nav #nav-menu .nav-menu-item {
 
   transition: margin 100ms, box-shadow 90ms;
   font-size: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 900px) {

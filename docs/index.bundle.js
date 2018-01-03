@@ -10543,7 +10543,7 @@ _3.default.each(_$2.default.cls('fc-s'), function (elem) {
 
 $content.appendChild((0, _signupModal.modal)($callToAction));
 
-var ctaPrompts = ['START NOW', 'GET IT NOW', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
+var ctaPrompts = ['START NOW', 'GET IT NOW', 'CLICK HERE', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
 
 $callToAction.innerHTML = _3.default.sample(ctaPrompts);
 setInterval(function () {

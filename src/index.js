@@ -32,13 +32,14 @@ _.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
 $content.appendChild(modal($callToAction))
 
 const ctaPrompts = [
- 'START NOW',
- 'GET IT NOW',
- '100% ONLINE',
- 'MAKE CASH FAST',
- 'MAKE FAST CASH',
- 'SAFE AND SECURE',
- 'FUEL YOUR DREAMS',
+  'START NOW',
+  'GET IT NOW',
+  'CLICK HERE',
+  '100% ONLINE',
+  'MAKE CASH FAST',
+  'MAKE FAST CASH',
+  'SAFE AND SECURE',
+  'FUEL YOUR DREAMS',
 ]
 
 $callToAction.innerHTML = _.sample(ctaPrompts)
