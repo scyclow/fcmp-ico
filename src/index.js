@@ -35,6 +35,7 @@ const ctaPrompts = [
   'START NOW',
   'GET IT NOW',
   'CLICK HERE',
+  'CLICK HERE',
   '100% ONLINE',
   'MAKE CASH FAST',
   'MAKE FAST CASH',

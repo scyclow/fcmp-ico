@@ -81,7 +81,7 @@ nav #nav-menu .nav-menu-item {
 
   display: inline-block;
   border: 8px solid;
-  border-radius: 5px;
+  border-radius: 60px;
 
   font-size: 8vw;
 
@@ -95,19 +95,22 @@ nav #nav-menu .nav-menu-item {
 
 @media (max-width: 900px) {
   #call-to-action {
-    font-size: 80px
+    font-size: 80px;
+    border-radius: 45px;
   }
 }
 
 @media (max-width: 600px) {
   #call-to-action {
-    font-size: 60px
+    font-size: 60px;
+    border-radius: 30px;
   }
 }
 
 @media (max-width: 480px) {
   #call-to-action {
-    font-size: 40px
+    font-size: 40px;
+    border-radius: 15px;
   }
 }
 
