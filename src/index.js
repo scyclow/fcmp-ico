@@ -26,6 +26,7 @@ const $content = $.id('content');
 const $hero = $.id('hero');
 const $warning = $.id('warning');
 const $callToAction = $.id('call-to-action');
+const $ctaContent = $.id('cta-content');
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSerif)
 _.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
 
@@ -36,6 +37,7 @@ const ctaPrompts = [
   'GET IT NOW',
   'CLICK HERE',
   'CLICK HERE',
+  'CLICK HERE',
   '100% ONLINE',
   'MAKE CASH FAST',
   'MAKE FAST CASH',
@@ -43,8 +45,8 @@ const ctaPrompts = [
   'FUEL YOUR DREAMS',
 ]
 
-$callToAction.innerHTML = _.sample(ctaPrompts)
-setInterval(() => $callToAction.innerHTML = _.sample(ctaPrompts), 2000)
+$ctaContent.innerHTML = _.sample(ctaPrompts)
+setInterval(() => $ctaContent.innerHTML = _.sample(ctaPrompts), 2000)
 
 
 let borderH = 1

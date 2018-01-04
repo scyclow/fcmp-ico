@@ -108,12 +108,17 @@ p {
 #amountOfFastcash {
   font-size: 23px;
   padding: 4px;
+  margin-left: 5px;
 }
 
 #amountOfMoneybucks {
   margin-top: 15px;
   font-size: 23px;
   font-family: sans-serif;
+}
+
+#amountOfMoneybucks td {
+  padding-left: 15px;
 }
 
 #fastcashLeft {

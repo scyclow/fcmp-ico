@@ -75,16 +75,18 @@ nav #nav-menu .nav-menu-item {
 }
 
 
-#call-to-action {
-  width: 90vw;
-  height: 30vw;
+#cta-overlay {
+  background: linear-gradient(0deg, #000, #fff);
+  position: absolute;
+  opacity: 0.4;
+  margin-left: -8px;
+  margin-top: -8px;
+}
 
+#call-to-action {
   display: inline-block;
   border: 8px solid;
-  border-radius: 60px;
-
   font-size: 8vw;
-
   cursor: pointer;
 
   transition: margin 100ms, box-shadow 90ms;
@@ -93,22 +95,37 @@ nav #nav-menu .nav-menu-item {
   margin-bottom: 30px;
 }
 
+#cta-content {
+  height: 100%;
+  width: 100%;
+}
+
+#call-to-action,
+#cta-overlay {
+  width: 90vw;
+  height: 30vw;
+  border-radius: 60px;
+}
+
 @media (max-width: 900px) {
-  #call-to-action {
+  #call-to-action,
+  #cta-overlay  {
     font-size: 80px;
     border-radius: 45px;
   }
 }
 
 @media (max-width: 600px) {
-  #call-to-action {
+  #call-to-action,
+  #cta-overlay  {
     font-size: 60px;
     border-radius: 30px;
   }
 }
 
 @media (max-width: 480px) {
-  #call-to-action {
+  #call-to-action,
+  #cta-overlay  {
     font-size: 40px;
     border-radius: 15px;
   }
@@ -123,8 +140,6 @@ nav #nav-menu .nav-menu-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
 }
 
 .shadow-change {

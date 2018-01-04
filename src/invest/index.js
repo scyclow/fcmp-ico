@@ -122,9 +122,11 @@ const generateCode = async () => {
 
     setTimeout(() => {
       clearInterval(interval)
-      $routingCode.innerHTML = proposedCode
+      $routingCode.innerHTML = '<strong>' + proposedCode + '</strong>';
+      $($routingCode, 'border', '3px solid #ff8800')
+      $($routingCode, 'background-color', '#ffddaa')
       setTimeout(() => $($step2, 'visibility', 'inherit'), 200)
-    }, _.random(1500, 300, true))
+    }, _.random(1800, 600, true))
 
     renderFromTransactionData(STATE)
   } else {
@@ -356,6 +358,10 @@ function renderFromTransactionData({ usd2fc, usd2eth, amountInMoneyBucks, newRou
   }
 }
 
+warningDisplayed.then(() => {
+  renderPage(STATE)
+})
+
 Promise.all([
   web3Setup(),
   warningDisplayed
@@ -365,7 +371,7 @@ Promise.all([
     STATE.fastcashLeft = (await INSTANCE.balanceOf(await INSTANCE.centralBanker())).toNumber() / (10 ** 18)
     STATE.usd2fc = (await INSTANCE.getCurrentExchangeRate.call()).toNumber() / (10 ** 18)
     STATE.usd2eth = (await INSTANCE.USDWEI.call()).toNumber() / (10 ** 18);
-
+    console.log('rendering')
     renderPage(STATE)
   })
   .catch(e => {
@@ -373,5 +379,6 @@ Promise.all([
     return warningDisplayed;
   })
   .then(() => {
+    console.log('rendering anyhow')
     renderPage(STATE)
   })

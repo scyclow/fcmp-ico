@@ -8,15 +8,16 @@ window.__fcmp = FastCashMoneyPlus;
 
 export default async function web3Setup() {
   if (!!window.web3) {
-    console.log(window.web3.currentProvider)
+    console.log('current provider:', window.web3.currentProvider)
     window.web3 = new Web3(window.web3.currentProvider)
   } else {
     throw new Error('No web3 context found :\'(')
   }
 
   FastCashMoneyPlus.setProvider(window.web3.currentProvider);
-
+console.log('.')
   const instance = await FastCashMoneyPlus.deployed();
+console.log('..')
   FastCashMoneyPlus.web3.eth.defaultAccount = FastCashMoneyPlus.web3.eth.coinbase;
 
   window.__i = instance;

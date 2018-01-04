@@ -57,7 +57,18 @@
   height: 120px;
   cursor: pointer;
   margin-top: 40px;
+  border-radius: 15px;
+  background: linear-gradient(180deg, #f9d5d5, #b5b793);
+  border: 1px solid #8a8123;
+  box-shadow: 3px 2px 11px;
+  transition: 80ms;
 }
+
+.signupContinue:active {
+  box-shadow: 0 0 0;
+}
+
+
 
 .gotoConsole {
   font-size: 25px;

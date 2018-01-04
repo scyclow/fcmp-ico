@@ -10534,6 +10534,7 @@ var $content = _$2.default.id('content');
 var $hero = _$2.default.id('hero');
 var $warning = _$2.default.id('warning');
 var $callToAction = _$2.default.id('call-to-action');
+var $ctaContent = _$2.default.id('cta-content');
 _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
   return elem.innerHTML = fcSerif;
 });
@@ -10543,11 +10544,11 @@ _3.default.each(_$2.default.cls('fc-s'), function (elem) {
 
 $content.appendChild((0, _signupModal.modal)($callToAction));
 
-var ctaPrompts = ['START NOW', 'GET IT NOW', 'CLICK HERE', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
+var ctaPrompts = ['START NOW', 'GET IT NOW', 'CLICK HERE', 'CLICK HERE', 'CLICK HERE', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
 
-$callToAction.innerHTML = _3.default.sample(ctaPrompts);
+$ctaContent.innerHTML = _3.default.sample(ctaPrompts);
 setInterval(function () {
-  return $callToAction.innerHTML = _3.default.sample(ctaPrompts);
+  return $ctaContent.innerHTML = _3.default.sample(ctaPrompts);
 }, 2000);
 
 var borderH = 1;

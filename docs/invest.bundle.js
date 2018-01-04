@@ -33628,7 +33628,7 @@ exports.default = function () {
               break;
             }
 
-            console.log(window.web3.currentProvider);
+            console.log('current provider:', window.web3.currentProvider);
             window.web3 = new _web2.default(window.web3.currentProvider);
             _context.next = 6;
             break;
@@ -33639,20 +33639,21 @@ exports.default = function () {
           case 6:
 
             FastCashMoneyPlus.setProvider(window.web3.currentProvider);
-
-            _context.next = 9;
+            console.log('.');
+            _context.next = 10;
             return FastCashMoneyPlus.deployed();
 
-          case 9:
+          case 10:
             instance = _context.sent;
 
+            console.log('..');
             FastCashMoneyPlus.web3.eth.defaultAccount = FastCashMoneyPlus.web3.eth.coinbase;
 
             window.__i = instance;
 
             return _context.abrupt('return', instance);
 
-          case 13:
+          case 15:
           case 'end':
             return _context.stop();
         }
@@ -62388,11 +62389,13 @@ var generateCode = function () {
 
             setTimeout(function () {
               clearInterval(interval);
-              $routingCode.innerHTML = proposedCode;
+              $routingCode.innerHTML = '<strong>' + proposedCode + '</strong>';
+              (0, _$2.default)($routingCode, 'border', '3px solid #ff8800');
+              (0, _$2.default)($routingCode, 'background-color', '#ffddaa');
               setTimeout(function () {
                 return (0, _$2.default)($step2, 'visibility', 'inherit');
               }, 200);
-            }, _3.default.random(1500, 300, true));
+            }, _3.default.random(1800, 600, true));
 
             renderFromTransactionData(STATE);
             _context.next = 18;
@@ -62600,6 +62603,10 @@ function renderFromTransactionData(_ref3) {
   }
 }
 
+warningDisplayed.then(function () {
+  renderPage(STATE);
+});
+
 Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
   var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(_instance) {
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -62635,10 +62642,10 @@ Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
             _context2.t7 = Math.pow(10, 18);
             STATE.usd2eth = _context2.t6 / _context2.t7;
 
-
+            console.log('rendering');
             renderPage(STATE);
 
-          case 21:
+          case 22:
           case 'end':
             return _context2.stop();
         }
@@ -62653,6 +62660,7 @@ Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
   console.error(e);
   return warningDisplayed;
 }).then(function () {
+  console.log('rendering anyhow');
   renderPage(STATE);
 });
 

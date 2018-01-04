@@ -33949,7 +33949,7 @@ exports.default = function () {
               break;
             }
 
-            console.log(window.web3.currentProvider);
+            console.log('current provider:', window.web3.currentProvider);
             window.web3 = new _web2.default(window.web3.currentProvider);
             _context.next = 6;
             break;
@@ -33960,20 +33960,21 @@ exports.default = function () {
           case 6:
 
             FastCashMoneyPlus.setProvider(window.web3.currentProvider);
-
-            _context.next = 9;
+            console.log('.');
+            _context.next = 10;
             return FastCashMoneyPlus.deployed();
 
-          case 9:
+          case 10:
             instance = _context.sent;
 
+            console.log('..');
             FastCashMoneyPlus.web3.eth.defaultAccount = FastCashMoneyPlus.web3.eth.coinbase;
 
             window.__i = instance;
 
             return _context.abrupt('return', instance);
 
-          case 13:
+          case 15:
           case 'end':
             return _context.stop();
         }

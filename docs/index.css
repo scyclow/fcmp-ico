@@ -101,16 +101,19 @@ nav #nav-menu .nav-menu-item {
 }
 
 
-#call-to-action {
-  width: 90vw;
-  height: 30vw;
+#cta-overlay {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#fff));
+  background: linear-gradient(0deg, #000, #fff);
+  position: absolute;
+  opacity: 0.4;
+  margin-left: -8px;
+  margin-top: -8px;
+}
 
+#call-to-action {
   display: inline-block;
   border: 8px solid;
-  border-radius: 5px;
-
   font-size: 8vw;
-
   cursor: pointer;
 
   -webkit-transition: margin 100ms, -webkit-box-shadow 90ms;
@@ -125,21 +128,39 @@ nav #nav-menu .nav-menu-item {
   margin-bottom: 30px;
 }
 
+#cta-content {
+  height: 100%;
+  width: 100%;
+}
+
+#call-to-action,
+#cta-overlay {
+  width: 90vw;
+  height: 30vw;
+  border-radius: 60px;
+}
+
 @media (max-width: 900px) {
-  #call-to-action {
-    font-size: 80px
+  #call-to-action,
+  #cta-overlay  {
+    font-size: 80px;
+    border-radius: 45px;
   }
 }
 
 @media (max-width: 600px) {
-  #call-to-action {
-    font-size: 60px
+  #call-to-action,
+  #cta-overlay  {
+    font-size: 60px;
+    border-radius: 30px;
   }
 }
 
 @media (max-width: 480px) {
-  #call-to-action {
-    font-size: 40px
+  #call-to-action,
+  #cta-overlay  {
+    font-size: 40px;
+    border-radius: 15px;
   }
 }
 
@@ -158,8 +179,6 @@ nav #nav-menu .nav-menu-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  width: 100%;
 }
 
 .shadow-change {
@@ -382,7 +401,22 @@ nav #nav-menu .nav-menu-item {
   height: 120px;
   cursor: pointer;
   margin-top: 40px;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9d5d5), to(#b5b793));
+  background: linear-gradient(180deg, #f9d5d5, #b5b793);
+  border: 1px solid #8a8123;
+  -webkit-box-shadow: 3px 2px 11px;
+          box-shadow: 3px 2px 11px;
+  -webkit-transition: 80ms;
+  transition: 80ms;
 }
+
+.signupContinue:active {
+  -webkit-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+}
+
+
 
 .gotoConsole {
   font-size: 25px;
