@@ -200,7 +200,8 @@ nav #nav-menu .nav-menu-item {
     font-size: 14px;
   }
 
-  #call-to-action {
+  #call-to-action,
+  #cta-overlay {
     width: 300px;
     height: 150px;
   }
