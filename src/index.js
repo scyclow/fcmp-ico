@@ -27,10 +27,13 @@ const $hero = $.id('hero');
 const $warning = $.id('warning');
 const $callToAction = $.id('call-to-action');
 const $ctaContent = $.id('cta-content');
+const $menuStart = $.id('menuStart');
+const $faqCTA = $.id('faqCTA');
+const $popup = document.createElement('div')
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSerif)
 _.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
 
-$content.appendChild(modal($callToAction))
+$content.appendChild(modal($callToAction, $menuStart, $faqCTA, $popup))
 
 const ctaPrompts = [
   'START NOW',
@@ -66,3 +69,15 @@ setInterval(
   () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color', 'fill']})(heroH++),
   250
 );
+
+$popup.setAttribute('id', 'popup')
+$popup.innerHTML = `
+  <div>X</div>
+  <div class="popupContent">CLICK HERE TO GET STARTED WITH FASTCASHMONEYPLUS NOW!! DON'T WAIT THIS WON'T LAST!</div>
+`
+$popup.onclick = () => setTimeout(() => $popup.remove(), 150)
+
+setTimeout(() => {
+  document.body.appendChild($popup)
+// })
+}, _.random(2000, 30000, true))

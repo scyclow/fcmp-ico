@@ -62,6 +62,7 @@
   border: 1px solid #8a8123;
   box-shadow: 3px 2px 11px;
   transition: 80ms;
+  max-width: 500px;
 }
 
 .signupContinue:active {

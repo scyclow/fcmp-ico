@@ -152,7 +152,6 @@ const $toAddressData = $.id('toAddressData')
 const $amountToSendData = $.id('amountToSendData')
 const $dataData = $.id('dataData')
 const $easyCheckout = $.id('easyCheckout')
-const $easyCheckoutError = $.id('easyCheckoutError')
 
 const $step1 = $.id('step1')
 const $step2 = $.id('step2')
@@ -298,17 +297,17 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
   $easyCheckout.addEventListener('click', event => {
     console.log('click')
     if (!INSTANCE) {
-      $easyCheckoutError.innerHTML = 'PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE';
+      alert('PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE')
       return
     }
 
     if (!STATE.newRoutingCode) {
-      $easyCheckoutError.innerHTML = 'PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN';
+      alert('PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN')
       return
     }
 
     if (!STATE.amountInMoneyBucks) {
-      $easyCheckoutError.innerHTML = 'PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN';
+      alert('PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN')
       return
     }
 

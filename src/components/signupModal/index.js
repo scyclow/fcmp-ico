@@ -24,7 +24,7 @@ function *nextLoadingChar(str) {
   while (true) yield str[i++ % str.length];
 }
 
-export const modal = (trigger) => {
+export const modal = (...triggers) => {
   const loading = parse(loadingTemplate).querySelector('#signupModal-loading')
   const step1 = parse(step1Template).querySelector('#signupModal-1')
   const step2 = parse(step2Template).querySelector('#signupModal-2')
@@ -45,12 +45,14 @@ export const modal = (trigger) => {
     }, 50)
   })
 
-  trigger.addEventListener('click', () => {
-    console.log('bleh')
-    // window.IMPORTANT.pause = true
-    setTimeout(() => {
-      component.className = '';
-    }, 300)
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      console.log('bleh')
+      // window.IMPORTANT.pause = true
+      setTimeout(() => {
+        component.className = '';
+      }, 300)
+    })
   })
 
   mount(content, step1)
