@@ -107,7 +107,7 @@ Handle all the logic for selling FastCash to the public
 */
 contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
   uint256 public totalSupply;
-  uint public USDWEI = 1500000000000000;
+  uint public USDWEI = 1000000000000000;
   uint public creationDate;
   uint private constant oneWeek = 60 * 60 * 24 * 7;
   uint public referalBonus = 10;

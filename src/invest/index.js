@@ -47,13 +47,16 @@ const STATE = {
   amountInMoneyBucks: 0,
   fastcashLeft: 1000000,
   usd2fc: 4 / (1.2 ** weeksSinceStart),
-  usd2eth: 1500000000000000 / (10 ** 18)
+  usd2eth: 1000000000000000 / (10 ** 18)
 }
 
 let INSTANCE;
 const LOADING_TIME = 2500
 
 const { noWarning } = getQueryParams()
+if (noWarning) {
+  setTimeout(() => $($step2, 'visibility', 'inherit'), 1000)
+}
 if (!noWarning) {
 // LOADING
   const $loadingContainer = $.id('loadingContainer')
@@ -152,6 +155,7 @@ const $toAddressData = $.id('toAddressData')
 const $amountToSendData = $.id('amountToSendData')
 const $dataData = $.id('dataData')
 const $easyCheckout = $.id('easyCheckout')
+const $easyCheckoutMsg = $.id('easyCheckoutMsg')
 
 const $step1 = $.id('step1')
 const $step2 = $.id('step2')
@@ -294,7 +298,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
     $purchaseAmountSlider.value = convertFromFc(value)
   })
 
-  $easyCheckout.addEventListener('click', event => {
+  $easyCheckout.onclick = event => {
     console.log('click')
     if (!INSTANCE) {
       alert('PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE')
@@ -311,23 +315,23 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
       return
     }
 
-    $easyCheckoutError.innerHTML = '';
-
     const amountInWei = STATE.amountInMoneyBucks * fc2eth;
-
+    $easyCheckoutMsg.innerHTML = 'YOUR TRANSACTION IS PENDING. PLEASE WAIT FOR THE TRANSACTION TO FINISH PROCESSING. THANK YOU'
     INSTANCE.buy(
       STATE.newRoutingCode,
       STATE.referal,
-      { from: web3.eth.coinbase, value: amountInWei, gas: 150000 }
+      { from: web3.eth.coinbase, value: amountInWei, gas: 150000, gasPrice: 40 }
     )
     .then((r) => {
       window.alert('SUCCESS! Here is your receipt: '+ JSON.stringify(r))
+      $easyCheckoutMsg.innerHTML = 'SUCCESS'
     })
     .catch(e => {
       console.error(e)
+      $easyCheckoutMsg.innerHTML = 'SOMETHING WENT WRONG: e'
       window.alert('ERROR:'+e.message)
     })
-  })
+  }
 
   renderFromTransactionData(STATE)
 }
@@ -346,7 +350,7 @@ function renderFromTransactionData({ usd2fc, usd2eth, amountInMoneyBucks, newRou
 
   const amountInWei = amountInMoneyBucks * fc2eth;
   if (amountInWei) {
-    $amountToSendData.innerHTML = amountInWei
+    $amountToSendData.innerHTML = amountInWei / (10 ** 18);
   }
 
   if (newRoutingCode && amountInWei) {

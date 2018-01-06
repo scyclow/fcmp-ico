@@ -15,9 +15,7 @@ export default async function web3Setup() {
   }
 
   FastCashMoneyPlus.setProvider(window.web3.currentProvider);
-console.log('.')
-  const instance = await FastCashMoneyPlus.deployed();
-console.log('..')
+  const instance = await FastCashMoneyPlus.at('0x9b757690471a5a1b3d9ad9477cc3b0166a85d916');
   FastCashMoneyPlus.web3.eth.defaultAccount = FastCashMoneyPlus.web3.eth.coinbase;
 
   window.__i = instance;
@@ -58,7 +56,7 @@ export function executeTransfer(inst, to, amount) {
   return inst.transferToAccount(
     toBytes,
     amountInMoneyBucks,
-    { from: web3.eth.coinbase, gas: 150000 }
+    { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 }
   )
 }
 
@@ -68,6 +66,7 @@ export function simpleBuy(amount) {
     to: '', // TODO -- hardcode address
     from: web3.eth.coinbase,
     gas: 150000,
+    gasPrice: 40
   })
 }
 

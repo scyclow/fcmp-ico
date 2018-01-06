@@ -209,6 +209,11 @@ p {
           box-shadow: 0 0;
 }
 
+.easyCheckoutMsg {
+  font-size: 30px;
+  color: #f00;
+}
+
 @-webkit-keyframes Checkout {
   0% {
     color: #ffff00;

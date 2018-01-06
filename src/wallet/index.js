@@ -17,8 +17,8 @@ localStorage.setItem('routingCode', routingCode)
 let INSTANCE;
 web3Setup()
   .then(i => INSTANCE = i)
+  .then(renderFromInstance)
   .catch(console.error)
-
 
 const $refLinkLong  = $.id('refLinkLong')
 const $refLinkShort  = $.id('refLinkShort')
@@ -33,6 +33,7 @@ const $executeTransfer = $.id('executeTransfer')
 const $executeBuy = $.id('executeBuy')
 const $weiAmount = $.id('weiAmount')
 const $amountToSendData = $.id('amountToSendData')
+const $accountBalance = $.id('accountBalance')
 
 $refLinkLong.innerHTML = `https://fastcashmoneyplus.biz/?ref=${routingCode}`
 $refLinkShort.innerHTML = `https://fast.plus?r=${routingCode}`
@@ -124,4 +125,11 @@ $executeBuy.onclick = () => {
   }
 
   simpleBuy(buyAmount)
+}
+
+async function renderFromInstance(i) {
+  if (window.web3) {
+    const balance = (await i.balanceOfRoutingCode.call(window.web3.fromUtf8(routingCode))).toNumber()
+    $accountBalance.innerHTML = `<h1>YOU HAVE ${balance/(10**18)} FastCash! (${balance} MoneyBucks)</h1>`
+  }
 }

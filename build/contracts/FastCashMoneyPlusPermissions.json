@@ -36,11 +36,11 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061020a8061005e6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632adc7da314610051578063506b56da1461008a575b600080fd5b341561005c57600080fd5b610088600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506100df565b005b341561009557600080fd5b61009d6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561013a57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561017657600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820602b95933a0aeccfc706cb2dc2501e151f9108554f63996707b404663da59a1f0029",
-  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632adc7da314610051578063506b56da1461008a575b600080fd5b341561005c57600080fd5b610088600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506100df565b005b341561009557600080fd5b61009d6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561013a57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561017657600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820602b95933a0aeccfc706cb2dc2501e151f9108554f63996707b404663da59a1f0029",
+  "bytecode": "0x6060604052341561000f57600080fd5b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061020a8061005e6000396000f30060606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632adc7da314610051578063506b56da1461008a575b600080fd5b341561005c57600080fd5b610088600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506100df565b005b341561009557600080fd5b61009d6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561013a57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561017657600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058204cb4ae14f184569997091a530f2bf45f5cb4dc758e5f5bf52d7300be7bc728ef0029",
+  "deployedBytecode": "0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632adc7da314610051578063506b56da1461008a575b600080fd5b341561005c57600080fd5b610088600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506100df565b005b341561009557600080fd5b61009d6101b9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561013a57600080fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415151561017657600080fd5b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058204cb4ae14f184569997091a530f2bf45f5cb4dc758e5f5bf52d7300be7bc728ef0029",
   "sourceMap": "401:419:0:-;;;476:84;;;;;;;;545:10;529:13;;:26;;;;;;;;;;;;;;;;;;401:419;;;;;;",
   "deployedSourceMap": "401:419:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;651:167;;;;;;;;;;;;;;;;;;;;;;;;;;;;443:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;651:167;621:13;;;;;;;;;;;607:27;;:10;:27;;;599:36;;;;;;;;772:1;744:30;;:16;:30;;;;736:39;;;;;;;;797:16;781:13;;:32;;;;;;;;;;;;;;;;;;651:167;:::o;443:28::-;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.4.17;\n\n/*\n  Copyright 2017, FastCashMoneyPlus.biz\n\n  This is highly propriatary software. Under no circumstances is anyone, except for employees of\n  FastCashMoneyPlus.biz, authorized to modify, distribute, use, or otherwise profit from these\n  contracts. Anyone attempting to do so will be prosecuted under the full extent of the law.\n*/\n\n\n// Set executive permissions of contract\ncontract FastCashMoneyPlusPermissions {\n  address public centralBanker;\n\n  function FastCashMoneyPlusPermissions() public {\n    centralBanker = msg.sender;\n  }\n\n  modifier onlyCentralBanker() {\n    require(msg.sender == centralBanker);\n    _;\n  }\n\n  function setCentralBanker(address newCentralBanker) external onlyCentralBanker {\n    require(newCentralBanker != address(0));\n    centralBanker = newCentralBanker;\n  }\n}\n\n// Set identifying information\ncontract FastCashMoneyPlusBase is FastCashMoneyPlusPermissions {\n  string public name = \"FastCashMoneyPlus\";\n  string public symbol = \"FASTCASH\";\n  uint8 public decimals = 18;\n\n  function updateSymbol(string _newSymbol) external onlyCentralBanker returns (bool success) {\n    symbol = _newSymbol;\n    return true;\n  }\n}\n\n// Describe the storage mechanism of the contract\n// balanceOf refers to the standard mapping of eth address => balance\n// routingCodes refer to a shorter, human-readable string (but stored as bytes)\n// routingCodes are used primerally for referal fees, but can also be used to transfer FastCash\ncontract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {\n  mapping (bytes32 => address) public routingCodeMap;\n  mapping (address => uint) public balanceOf;\n  bytes32[] public routingCodes;\n\n  function balanceOfRoutingCode(bytes32 routingCode) external returns (uint) {\n    address _address = routingCodeMap[routingCode];\n    return balanceOf[_address];\n  }\n\n  function totalInvestors() external returns (uint) {\n    return routingCodes.length;\n  }\n\n  function createRoutingCode(bytes32 _routingCode) public returns (bool success) {\n    require(routingCodeMap[_routingCode] == address(0));\n    require(balanceOf[msg.sender] > 0);\n\n    routingCodeMap[_routingCode] = msg.sender;\n    routingCodes.push(_routingCode);\n    return true;\n  }\n}\n\n// Maintain ERC20 compliance -- allow other contracts to access accounts\ncontract FastCashMoneyPlusAccessControl is FastCashMoneyPlusStorage {\n  mapping (address => mapping (address => uint)) internal allowed;\n\n  event Approval(address indexed _owner, address indexed _spender, uint _value);\n\n  function approve(address _spender, uint _value) external returns (bool success) {\n    allowed[msg.sender][_spender] = _value;\n    Approval(msg.sender, _spender, _value);\n    return true;\n  }\n  function allowance(address _owner, address _spender) external constant returns (uint remaining) {\n    return allowed[_owner][_spender];\n  }\n}\n\n/*\nHandle all the logic for selling FastCash to the public\n  The total supply is 1000000 FastCash.\n  But, because solidity does not support floating point numbers, we create a \"smallest denomination\", equal to 10e-18 FastCash\n  This smallest denomination is called the \"MoneyBuck\"\n  Additionally, contracts do not support numbers larger than 2^256 (~1.15e77)\n\n  The price of FastCash in WEI increases by 20% every week, up to week 71.\n  In order to keep the price consistent with USD, the ETH price is adjusted by the USDWEI rate (which the central banker may change).\n\n  The USD/FASTCASH rate is then $0.25 * (1.2 ** weeksSinceStart)\n  Whereas, the ETH/FASTCASH rate is USD/FASTCASH * ETH/USD\n\n  But, due to the decimal place restriction, we must multiply single decimal places by 10, and crypto amounts by 10^18, and only divide big numbers.\n  So, WEI/FASTCASH = WEI/USD * ( 4 / ((12 ** weeksSinceStart) / 10) )\n  (To maintain consistency with other currency exchange symbols, WEI/USD is referred to as USDWEI)\n  getExchangeRate uses algebra to adjust these numbers further, such that no point of the calculation refers to a number greater than 2^256.\n\n\n  Additionally, all purchases of FASTCASH going through the `buy` channel (which may have a routingCode as referal), credit the referrer with a FastCash bonus equal to 10% of the sale amount.\n*/\ncontract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {\n  uint256 public totalSupply;\n  uint public USDWEI = 1500000000000000;\n  uint public creationDate;\n  uint private constant oneWeek = 60 * 60 * 24 * 7;\n  uint public referalBonus = 10;\n\n  event Sale(address _address, uint _amount);\n\n  function FastCashMoneyPlusSales() public {\n    // need to adjust total supply by decimals\n    totalSupply = 1000000 * 10 ** uint256(decimals);\n\n    bytes32 centralBankerRoutingCode = \"electricGOD_POWERvyS4xY69R\";\n    routingCodes.push(centralBankerRoutingCode);\n    routingCodeMap[centralBankerRoutingCode] = msg.sender;\n\n    balanceOf[msg.sender] = totalSupply;\n    creationDate = now;\n  }\n\n  function updateUSDWEI(uint _wei) external onlyCentralBanker returns (bool success) {\n    USDWEI = _wei;\n    return true;\n  }\n\n  function updateReferalBonus(uint _newBonus) external onlyCentralBanker returns (bool success) {\n    referalBonus = _newBonus;\n    return true;\n  }\n\n  function weeksFromCreation() returns (uint) {\n    return (now - creationDate) / oneWeek;\n  }\n\n  function getExchangeRate(uint _week, uint _value, uint _usdwei) public returns (uint) {\n    uint __week;\n    if (_week > 71) {\n      __week = 71;\n    } else {\n      __week = _week;\n    }\n\n    uint extraAdj = 0;\n    if (__week > 50) {\n      extraAdj = __week - 50;\n    }\n\n    uint minAdj = 10;\n    uint x = __week + decimals - (minAdj + extraAdj);\n\n    uint n = _value * 4 * uint(10 ** x);\n    uint d = ( _usdwei / uint(10 ** minAdj) ) * (uint(12 ** __week) / uint(10 ** extraAdj));\n\n    return n / d;\n  }\n\n  function getCurrentExchangeRate() public returns (uint) {\n    uint _week = weeksFromCreation();\n    return getExchangeRate(_week, USDWEI, USDWEI);\n  }\n\n  function _makeSale() private returns (uint) {\n    uint _week = weeksFromCreation();\n    uint _value = msg.value;\n\n    uint moneyBucks = getExchangeRate(_week, _value, USDWEI);\n\n    require(moneyBucks > 0);\n    require(balanceOf[centralBanker] >= moneyBucks);\n\n    balanceOf[msg.sender] += moneyBucks;\n    balanceOf[centralBanker] -= moneyBucks;\n\n    centralBanker.transfer(msg.value);\n    Sale(msg.sender, moneyBucks);\n    return moneyBucks;\n  }\n\n  function buy(bytes32 _routingCode, bytes32 _referal) payable {\n    uint moneyBucks = _makeSale();\n\n    if (routingCodeMap[_routingCode] == address(0)) {\n      createRoutingCode(_routingCode);\n    }\n\n    if (_referal[0] != 0) {\n      uint referalFee;\n      if (balanceOf[centralBanker] > (moneyBucks / referalBonus)) {\n        referalFee = moneyBucks / referalBonus;\n      } else {\n        referalFee = balanceOf[centralBanker];\n      }\n      address reference = routingCodeMap[_referal];\n      if (reference != address(0)) {\n        balanceOf[reference] += referalFee;\n        balanceOf[centralBanker] -= referalFee;\n      }\n    }\n  }\n\n  function () payable {\n    _makeSale();\n  }\n}\n\n// Transfer FastCash between accounts by either ETH address or FastCash routingCode\ncontract FastCashMoneyPlusTransfer is FastCashMoneyPlusSales {\n  event Transfer(address indexed _from, address indexed _to, uint _value);\n\n  function _transfer(\n    address _from,\n    address _to,\n    uint _amount\n  ) internal returns (bool success) {\n    require(_to != address(0));\n    require(_to != address(this));\n    require(_amount > 0);\n    require(balanceOf[_from] >= _amount);\n    require(balanceOf[_to] + _amount > balanceOf[_to]);\n\n    balanceOf[_from] -= _amount;\n    balanceOf[_to] += _amount;\n\n    Transfer(msg.sender, _to, _amount);\n\n    return true;\n  }\n\n  function transfer(address _to, uint _amount) external returns (bool success) {\n    return _transfer(msg.sender, _to, _amount);\n  }\n\n  function transferFrom(address _from, address _to, uint _amount) external returns (bool success) {\n    require(allowed[_from][msg.sender] >= _amount);\n\n    bool tranferSuccess = _transfer(_from, _to, _amount);\n    if (tranferSuccess) {\n      allowed[_from][msg.sender] -= _amount;\n    } else {\n      return false;\n    }\n  }\n\n  function transferToAccount(bytes32 _toRoutingCode, uint _amount) external returns (bool success) {\n    return _transfer(msg.sender, routingCodeMap[_toRoutingCode], _amount);\n  }\n\n  // need to play around with this to figure out some of the specifics\n  function transferRoutingCode(bytes32 _routingCode, address _to) external returns (bool success) {\n    address owner = routingCodeMap[_routingCode];\n    require(msg.sender == owner);\n\n    routingCodeMap[_routingCode] = _to;\n    return true;\n  }\n}\n\ncontract FastCashMoneyPlus is FastCashMoneyPlusTransfer {\n\n}\n",
+  "source": "pragma solidity ^0.4.17;\n\n/*\n  Copyright 2017, FastCashMoneyPlus.biz\n\n  This is highly propriatary software. Under no circumstances is anyone, except for employees of\n  FastCashMoneyPlus.biz, authorized to modify, distribute, use, or otherwise profit from these\n  contracts. Anyone attempting to do so will be prosecuted under the full extent of the law.\n*/\n\n\n// Set executive permissions of contract\ncontract FastCashMoneyPlusPermissions {\n  address public centralBanker;\n\n  function FastCashMoneyPlusPermissions() public {\n    centralBanker = msg.sender;\n  }\n\n  modifier onlyCentralBanker() {\n    require(msg.sender == centralBanker);\n    _;\n  }\n\n  function setCentralBanker(address newCentralBanker) external onlyCentralBanker {\n    require(newCentralBanker != address(0));\n    centralBanker = newCentralBanker;\n  }\n}\n\n// Set identifying information\ncontract FastCashMoneyPlusBase is FastCashMoneyPlusPermissions {\n  string public name = \"FastCashMoneyPlus\";\n  string public symbol = \"FASTCASH\";\n  uint8 public decimals = 18;\n\n  function updateSymbol(string _newSymbol) external onlyCentralBanker returns (bool success) {\n    symbol = _newSymbol;\n    return true;\n  }\n}\n\n// Describe the storage mechanism of the contract\n// balanceOf refers to the standard mapping of eth address => balance\n// routingCodes refer to a shorter, human-readable string (but stored as bytes)\n// routingCodes are used primerally for referal fees, but can also be used to transfer FastCash\ncontract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {\n  mapping (bytes32 => address) public routingCodeMap;\n  mapping (address => uint) public balanceOf;\n  bytes32[] public routingCodes;\n\n  function balanceOfRoutingCode(bytes32 routingCode) external returns (uint) {\n    address _address = routingCodeMap[routingCode];\n    return balanceOf[_address];\n  }\n\n  function totalInvestors() external returns (uint) {\n    return routingCodes.length;\n  }\n\n  function createRoutingCode(bytes32 _routingCode) public returns (bool success) {\n    require(routingCodeMap[_routingCode] == address(0));\n    require(balanceOf[msg.sender] > 0);\n\n    routingCodeMap[_routingCode] = msg.sender;\n    routingCodes.push(_routingCode);\n    return true;\n  }\n}\n\n// Maintain ERC20 compliance -- allow other contracts to access accounts\ncontract FastCashMoneyPlusAccessControl is FastCashMoneyPlusStorage {\n  mapping (address => mapping (address => uint)) internal allowed;\n\n  event Approval(address indexed _owner, address indexed _spender, uint _value);\n\n  function approve(address _spender, uint _value) external returns (bool success) {\n    allowed[msg.sender][_spender] = _value;\n    Approval(msg.sender, _spender, _value);\n    return true;\n  }\n  function allowance(address _owner, address _spender) external constant returns (uint remaining) {\n    return allowed[_owner][_spender];\n  }\n}\n\n/*\nHandle all the logic for selling FastCash to the public\n  The total supply is 1000000 FastCash.\n  But, because solidity does not support floating point numbers, we create a \"smallest denomination\", equal to 10e-18 FastCash\n  This smallest denomination is called the \"MoneyBuck\"\n  Additionally, contracts do not support numbers larger than 2^256 (~1.15e77)\n\n  The price of FastCash in WEI increases by 20% every week, up to week 71.\n  In order to keep the price consistent with USD, the ETH price is adjusted by the USDWEI rate (which the central banker may change).\n\n  The USD/FASTCASH rate is then $0.25 * (1.2 ** weeksSinceStart)\n  Whereas, the ETH/FASTCASH rate is USD/FASTCASH * ETH/USD\n\n  But, due to the decimal place restriction, we must multiply single decimal places by 10, and crypto amounts by 10^18, and only divide big numbers.\n  So, WEI/FASTCASH = WEI/USD * ( 4 / ((12 ** weeksSinceStart) / 10) )\n  (To maintain consistency with other currency exchange symbols, WEI/USD is referred to as USDWEI)\n  getExchangeRate uses algebra to adjust these numbers further, such that no point of the calculation refers to a number greater than 2^256.\n\n\n  Additionally, all purchases of FASTCASH going through the `buy` channel (which may have a routingCode as referal), credit the referrer with a FastCash bonus equal to 10% of the sale amount.\n*/\ncontract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {\n  uint256 public totalSupply;\n  uint public USDWEI = 1000000000000000;\n  uint public creationDate;\n  uint private constant oneWeek = 60 * 60 * 24 * 7;\n  uint public referalBonus = 10;\n\n  event Sale(address _address, uint _amount);\n\n  function FastCashMoneyPlusSales() public {\n    // need to adjust total supply by decimals\n    totalSupply = 1000000 * 10 ** uint256(decimals);\n\n    bytes32 centralBankerRoutingCode = \"electricGOD_POWERvyS4xY69R\";\n    routingCodes.push(centralBankerRoutingCode);\n    routingCodeMap[centralBankerRoutingCode] = msg.sender;\n\n    balanceOf[msg.sender] = totalSupply;\n    creationDate = now;\n  }\n\n  function updateUSDWEI(uint _wei) external onlyCentralBanker returns (bool success) {\n    USDWEI = _wei;\n    return true;\n  }\n\n  function updateReferalBonus(uint _newBonus) external onlyCentralBanker returns (bool success) {\n    referalBonus = _newBonus;\n    return true;\n  }\n\n  function weeksFromCreation() returns (uint) {\n    return (now - creationDate) / oneWeek;\n  }\n\n  function getExchangeRate(uint _week, uint _value, uint _usdwei) public returns (uint) {\n    uint __week;\n    if (_week > 71) {\n      __week = 71;\n    } else {\n      __week = _week;\n    }\n\n    uint extraAdj = 0;\n    if (__week > 50) {\n      extraAdj = __week - 50;\n    }\n\n    uint minAdj = 10;\n    uint x = __week + decimals - (minAdj + extraAdj);\n\n    uint n = _value * 4 * uint(10 ** x);\n    uint d = ( _usdwei / uint(10 ** minAdj) ) * (uint(12 ** __week) / uint(10 ** extraAdj));\n\n    return n / d;\n  }\n\n  function getCurrentExchangeRate() public returns (uint) {\n    uint _week = weeksFromCreation();\n    return getExchangeRate(_week, USDWEI, USDWEI);\n  }\n\n  function _makeSale() private returns (uint) {\n    uint _week = weeksFromCreation();\n    uint _value = msg.value;\n\n    uint moneyBucks = getExchangeRate(_week, _value, USDWEI);\n\n    require(moneyBucks > 0);\n    require(balanceOf[centralBanker] >= moneyBucks);\n\n    balanceOf[msg.sender] += moneyBucks;\n    balanceOf[centralBanker] -= moneyBucks;\n\n    centralBanker.transfer(msg.value);\n    Sale(msg.sender, moneyBucks);\n    return moneyBucks;\n  }\n\n  function buy(bytes32 _routingCode, bytes32 _referal) payable {\n    uint moneyBucks = _makeSale();\n\n    if (routingCodeMap[_routingCode] == address(0)) {\n      createRoutingCode(_routingCode);\n    }\n\n    if (_referal[0] != 0) {\n      uint referalFee;\n      if (balanceOf[centralBanker] > (moneyBucks / referalBonus)) {\n        referalFee = moneyBucks / referalBonus;\n      } else {\n        referalFee = balanceOf[centralBanker];\n      }\n      address reference = routingCodeMap[_referal];\n      if (reference != address(0)) {\n        balanceOf[reference] += referalFee;\n        balanceOf[centralBanker] -= referalFee;\n      }\n    }\n  }\n\n  function () payable {\n    _makeSale();\n  }\n}\n\n// Transfer FastCash between accounts by either ETH address or FastCash routingCode\ncontract FastCashMoneyPlusTransfer is FastCashMoneyPlusSales {\n  event Transfer(address indexed _from, address indexed _to, uint _value);\n\n  function _transfer(\n    address _from,\n    address _to,\n    uint _amount\n  ) internal returns (bool success) {\n    require(_to != address(0));\n    require(_to != address(this));\n    require(_amount > 0);\n    require(balanceOf[_from] >= _amount);\n    require(balanceOf[_to] + _amount > balanceOf[_to]);\n\n    balanceOf[_from] -= _amount;\n    balanceOf[_to] += _amount;\n\n    Transfer(msg.sender, _to, _amount);\n\n    return true;\n  }\n\n  function transfer(address _to, uint _amount) external returns (bool success) {\n    return _transfer(msg.sender, _to, _amount);\n  }\n\n  function transferFrom(address _from, address _to, uint _amount) external returns (bool success) {\n    require(allowed[_from][msg.sender] >= _amount);\n\n    bool tranferSuccess = _transfer(_from, _to, _amount);\n    if (tranferSuccess) {\n      allowed[_from][msg.sender] -= _amount;\n    } else {\n      return false;\n    }\n  }\n\n  function transferToAccount(bytes32 _toRoutingCode, uint _amount) external returns (bool success) {\n    return _transfer(msg.sender, routingCodeMap[_toRoutingCode], _amount);\n  }\n\n  // need to play around with this to figure out some of the specifics\n  function transferRoutingCode(bytes32 _routingCode, address _to) external returns (bool success) {\n    address owner = routingCodeMap[_routingCode];\n    require(msg.sender == owner);\n\n    routingCodeMap[_routingCode] = _to;\n    return true;\n  }\n}\n\ncontract FastCashMoneyPlus is FastCashMoneyPlusTransfer {\n\n}\n",
   "sourcePath": "/Users/spikelny/Desktop/projects/fastcash-ico/contracts/FastCashMoneyPlus.sol",
   "ast": {
     "attributes": {
@@ -212,7 +212,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -292,7 +292,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -333,7 +333,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 818,
+                                      "referencedDeclaration": 875,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -503,7 +503,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1663,7 +1663,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1828,7 +1828,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1893,7 +1893,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 818,
+                                          "referencedDeclaration": 875,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -2017,7 +2017,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -2540,7 +2540,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 818,
+                                          "referencedDeclaration": 875,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -2663,7 +2663,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -3052,15 +3052,15 @@
               {
                 "attributes": {
                   "argumentTypes": null,
-                  "hexvalue": "31353030303030303030303030303030",
+                  "hexvalue": "31303030303030303030303030303030",
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "lValueRequested": false,
                   "subdenomination": null,
                   "token": "number",
-                  "type": "int_const 1500000000000000",
-                  "value": "1500000000000000"
+                  "type": "int_const 1000000000000000",
+                  "value": "1000000000000000"
                 },
                 "id": 222,
                 "name": "Literal",
@@ -3774,7 +3774,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -3852,7 +3852,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 818,
+                                      "referencedDeclaration": 875,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -3927,7 +3927,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 820,
+                              "referencedDeclaration": 877,
                               "type": "uint256",
                               "value": "now"
                             },
@@ -4459,7 +4459,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 820,
+                                      "referencedDeclaration": 877,
                                       "type": "uint256",
                                       "value": "now"
                                     },
@@ -6432,7 +6432,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 818,
+                              "referencedDeclaration": 875,
                               "type": "msg",
                               "value": "msg"
                             },
@@ -6605,7 +6605,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -6702,7 +6702,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -6852,7 +6852,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 818,
+                                      "referencedDeclaration": 875,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -7045,7 +7045,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -7126,7 +7126,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -8082,66 +8082,35 @@
                             "src": "6818:44:0"
                           },
                           {
+                            "attributes": {
+                              "falseBody": null
+                            },
                             "children": [
                               {
                                 "attributes": {
                                   "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  },
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "operator": "!=",
-                                  "type": "bool",
-                                  "commonType": {
-                                    "typeIdentifier": "t_address",
-                                    "typeString": "address"
-                                  }
+                                  "type": "bool"
                                 },
                                 "children": [
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "isConstant": false,
-                                      "isLValue": true,
-                                      "isPure": false,
-                                      "lValueRequested": true,
-                                      "type": "address",
                                       "overloadedDeclarations": [
                                         null
                                       ],
                                       "referencedDeclaration": 569,
+                                      "type": "address",
                                       "value": "reference"
                                     },
-                                    "children": [
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
-                                          "referencedDeclaration": 66,
-                                          "type": "mapping(address => uint256)",
-                                          "value": "balanceOf"
-                                        },
-                                        "id": 558,
-                                        "name": "Identifier",
-                                        "src": "5064:9:0"
-                                      },
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
-                                          "referencedDeclaration": 553,
-                                          "type": "address",
-                                          "value": "reference"
-                                        },
-                                        "id": 559,
-                                        "name": "Identifier",
-                                        "src": "5074:9:0"
-                                      }
-                                    ],
                                     "id": 574,
                                     "name": "Identifier",
                                     "src": "6874:9:0"
@@ -8149,12 +8118,6 @@
                                   {
                                     "attributes": {
                                       "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 527,
-                                      "type": "address",
-                                      "value": "referalFee",
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": true,
@@ -8163,11 +8126,9 @@
                                       "names": [
                                         null
                                       ],
+                                      "type": "address",
                                       "type_conversion": true
                                     },
-                                    "id": 577,
-                                    "name": "FunctionCall",
-                                    "src": "6887:10:0",
                                     "children": [
                                       {
                                         "attributes": {
@@ -8205,7 +8166,10 @@
                                         "name": "Literal",
                                         "src": "6895:1:0"
                                       }
-                                    ]
+                                    ],
+                                    "id": 577,
+                                    "name": "FunctionCall",
+                                    "src": "6887:10:0"
                                   }
                                 ],
                                 "id": 578,
@@ -8382,90 +8346,7 @@
                             ],
                             "id": 592,
                             "name": "IfStatement",
-                            "src": "6870:130:0",
-                            "attributes": {
-                              "falseBody": null
-                            }
-                          },
-                          {
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "operator": "-=",
-                                  "type": "uint256"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "isConstant": false,
-                                      "isLValue": true,
-                                      "isPure": false,
-                                      "lValueRequested": true,
-                                      "type": "uint256"
-                                    },
-                                    "children": [
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
-                                          "referencedDeclaration": 66,
-                                          "type": "mapping(address => uint256)",
-                                          "value": "balanceOf"
-                                        },
-                                        "id": 564,
-                                        "name": "Identifier",
-                                        "src": "5106:9:0"
-                                      },
-                                      {
-                                        "attributes": {
-                                          "argumentTypes": null,
-                                          "overloadedDeclarations": [
-                                            null
-                                          ],
-                                          "referencedDeclaration": 3,
-                                          "type": "address",
-                                          "value": "centralBanker"
-                                        },
-                                        "id": 565,
-                                        "name": "Identifier",
-                                        "src": "5116:13:0"
-                                      }
-                                    ],
-                                    "id": 566,
-                                    "name": "IndexAccess",
-                                    "src": "5106:24:0"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 527,
-                                      "type": "uint256",
-                                      "value": "referalFee"
-                                    },
-                                    "id": 567,
-                                    "name": "Identifier",
-                                    "src": "5134:10:0"
-                                  }
-                                ],
-                                "id": 568,
-                                "name": "Assignment",
-                                "src": "5106:38:0"
-                              }
-                            ],
-                            "id": 569,
-                            "name": "ExpressionStatement",
-                            "src": "5106:38:0"
+                            "src": "6870:130:0"
                           }
                         ],
                         "id": 593,
@@ -8898,7 +8779,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9034,7 +8915,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9111,7 +8992,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 839,
+                                      "referencedDeclaration": 896,
                                       "type": "contract FastCashMoneyPlusTransfer",
                                       "value": "this"
                                     },
@@ -9167,7 +9048,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9264,7 +9145,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9387,7 +9268,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -9767,7 +9648,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -10030,7 +9911,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -10255,7 +10136,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -10349,7 +10230,7 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 818,
+                                          "referencedDeclaration": 875,
                                           "type": "msg",
                                           "value": "msg"
                                         },
@@ -10625,7 +10506,7 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 818,
+                                              "referencedDeclaration": 875,
                                               "type": "msg",
                                               "value": "msg"
                                             },
@@ -10896,7 +10777,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 818,
+                                  "referencedDeclaration": 875,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -11205,7 +11086,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 821,
+                              "referencedDeclaration": 878,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -11246,7 +11127,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 818,
+                                      "referencedDeclaration": 875,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -11478,5 +11359,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-01-06T16:59:44.910Z"
+  "updatedAt": "2018-01-06T17:55:20.549Z"
 }

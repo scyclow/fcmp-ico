@@ -202,6 +202,11 @@ p {
   box-shadow: 0 0;
 }
 
+.easyCheckoutMsg {
+  font-size: 30px;
+  color: #f00;
+}
+
 @keyframes Checkout {
   0% {
     color: #ffff00;

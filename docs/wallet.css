@@ -119,6 +119,11 @@ hr {
   margin-right: auto;
 }
 
+#accountBalance {
+  background-color: #ffff00;
+  font-size: 23px;
+}
+
 #weiAmount {
   width: 300px;
 }
