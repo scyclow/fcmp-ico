@@ -33685,7 +33685,7 @@ function getTransferData(to, amount) {
 function executeTransfer(inst, to, amount) {
   var toBytes = web3.fromUtf8(to);
   var amountInMoneyBucks = amount * Math.pow(10, 18);
-  return inst.transferToAccount(toBytes, amountInMoneyBucks, { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 });
+  return inst.transferToAccount(toBytes, amountInMoneyBucks, { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 * Math.pow(10, 9) });
 }
 
 function simpleBuy(amount) {
@@ -33694,7 +33694,7 @@ function simpleBuy(amount) {
     to: '', // TODO -- hardcode address
     from: web3.eth.coinbase,
     gas: 150000,
-    gasPrice: 40
+    gasPrice: 40 * Math.pow(10, 9)
   });
 }
 
@@ -62338,7 +62338,6 @@ setTimeout(function () {
   if (!noWarning) {
     document.body.appendChild(warningElem);
     displayWarning();
-    console.log('ok');
     _3.default.each(_$2.default.cls('warningIcon'), function (elem) {
       return elem.innerHTML = warningIcon;
     });
@@ -62483,7 +62482,6 @@ function renderPage(_ref2) {
       amountInMoneyBucks = _ref2.amountInMoneyBucks,
       newRoutingCode = _ref2.newRoutingCode;
 
-  console.log('rendering page');
   $fastcashLeft.innerHTML = 'THERE IS CURRENTLY ' + fcSerifLarge + fastcashLeft + ' LEFT IN THE FASTCASH BANK! (week ' + weeksSinceStart + ')';
   (0, _$2.default)($investmentContainer, 'visibility', 'visible');
   var fc2usd = 1 / usd2fc;
@@ -62494,7 +62492,7 @@ function renderPage(_ref2) {
   var conversionTable = '\n    <table>\n      <thead>\n        <tr><th>BASE CURRENCY</th><th>EQUALS</th></tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>$1 (USD)</td><td>' + fcSymbol + usd2fc + ' (FASTCASH)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td>$' + fc2usd + ' (USD)</td>\n        </tr>\n        <tr>\n          <td>$1 (USD)</td><td>&#x39E;' + usd2eth + ' (ETH)</td>\n        </tr>\n        <tr>\n          <td>&#x39E;1 (ETH)</td><td>$' + eth2usd + ' (USD)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td>&#x39E;' + fc2eth + ' (ETH)</td>\n        </tr>\n        <tr>\n          <td>&#x39E;1 (ETH)</td><td>' + fcSymbol + eth2fc + ' (FASTCASH)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td> 1000000000000000000 MONEYBUCKS</td>\n        </tr>\n      </tbody>\n    </table>\n  ';
   $tableContainer.innerHTML = conversionTable;
 
-  _$2.default.onClick($generateRoutingCode)(generateCode);
+  $generateRoutingCode.onclick = generateCode;
 
   // CHOOSE FASTCASH
 
@@ -62532,17 +62530,17 @@ function renderPage(_ref2) {
     return Math.pow(amt * Math.pow(10, expFactor + 9), 1 / expFactor);
   };
 
-  $purchaseAmountSlider.addEventListener('input', function (event) {
+  $purchaseAmountSlider.oninput = function (event) {
     var value = convertToFc(event.target.valueAsNumber);
     changeAmount(value);
     $amountOfFastcash.value = value;
-  });
+  };
 
-  $amountOfFastcash.addEventListener('change', function (event) {
+  $amountOfFastcash.onchange = function (event) {
     var value = Number(event.target.value);
     changeAmount(value);
     $purchaseAmountSlider.value = convertFromFc(value);
-  });
+  };
 
   $easyCheckout.onclick = function (event) {
     console.log('click');
@@ -62563,7 +62561,7 @@ function renderPage(_ref2) {
 
     var amountInWei = STATE.amountInMoneyBucks * fc2eth;
     $easyCheckoutMsg.innerHTML = 'YOUR TRANSACTION IS PENDING. PLEASE WAIT FOR THE TRANSACTION TO FINISH PROCESSING. THANK YOU';
-    INSTANCE.buy(STATE.newRoutingCode, STATE.referal, { from: web3.eth.coinbase, value: amountInWei, gas: 150000, gasPrice: 40 }).then(function (r) {
+    INSTANCE.buy(STATE.newRoutingCode, STATE.referal, { from: web3.eth.coinbase, value: amountInWei, gas: 150000, gasPrice: 40 * Math.pow(10, 9) }).then(function (r) {
       window.alert('SUCCESS! Here is your receipt: ' + JSON.stringify(r));
       $easyCheckoutMsg.innerHTML = 'SUCCESS';
     }).catch(function (e) {
@@ -62646,10 +62644,9 @@ Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
             _context2.t7 = Math.pow(10, 18);
             STATE.usd2eth = _context2.t6 / _context2.t7;
 
-            console.log('rendering');
             renderPage(STATE);
 
-          case 22:
+          case 21:
           case 'end':
             return _context2.stop();
         }
@@ -62664,9 +62661,15 @@ Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
   console.error(e);
   return warningDisplayed;
 }).then(function () {
-  console.log('rendering anyhow');
   renderPage(STATE);
 });
+
+setTimeout(function () {
+  console.log('%cSTOP! This is a private web browser feature intended for developers!', 'font-size: 25px; color: #f00');
+  console.log('%cIf someone told you to paste something in here to "HACK" FastCashMoneyPlus, they are LYING to you, and just want to STEAL YOUR FASTCASH.', 'font-size: 20px;');
+
+  console.log('%cPlease close this tab and report the incident to a FastCashMoneyPlus representative! https://github.com/scyclow/fcmp-ico/issues', 'font-size: 19px;');
+}, 2000);
 
 /***/ }),
 /* 616 */

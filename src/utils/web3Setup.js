@@ -56,7 +56,7 @@ export function executeTransfer(inst, to, amount) {
   return inst.transferToAccount(
     toBytes,
     amountInMoneyBucks,
-    { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 }
+    { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 * (10 ** 9) }
   )
 }
 
@@ -66,7 +66,7 @@ export function simpleBuy(amount) {
     to: '', // TODO -- hardcode address
     from: web3.eth.coinbase,
     gas: 150000,
-    gasPrice: 40
+    gasPrice: 40 * (10 ** 9)
   })
 }
 

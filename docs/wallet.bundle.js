@@ -33685,7 +33685,7 @@ function getTransferData(to, amount) {
 function executeTransfer(inst, to, amount) {
   var toBytes = web3.fromUtf8(to);
   var amountInMoneyBucks = amount * Math.pow(10, 18);
-  return inst.transferToAccount(toBytes, amountInMoneyBucks, { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 });
+  return inst.transferToAccount(toBytes, amountInMoneyBucks, { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 * Math.pow(10, 9) });
 }
 
 function simpleBuy(amount) {
@@ -33694,7 +33694,7 @@ function simpleBuy(amount) {
     to: '', // TODO -- hardcode address
     from: web3.eth.coinbase,
     gas: 150000,
-    gasPrice: 40
+    gasPrice: 40 * Math.pow(10, 9)
   });
 }
 
@@ -62388,6 +62388,13 @@ $executeBuy.onclick = function () {
 
   (0, _web3Setup.simpleBuy)(buyAmount);
 };
+
+setTimeout(function () {
+  console.log('%cSTOP! This is a private web browser feature intended for developers!', 'font-size: 25px; color: #f00');
+  console.log('%cIf someone told you to paste something in here to "HACK" FastCashMoneyPlus, they are LYING to you, and just want to STEAL YOUR FASTCASH.', 'font-size: 20px;');
+
+  console.log('%cPlease close this tab and report the incident to a FastCashMoneyPlus representative! https://github.com/scyclow/fcmp-ico/issues', 'font-size: 19px;');
+}, 2000);
 
 /***/ }),
 /* 622 */

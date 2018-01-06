@@ -92,7 +92,6 @@ setTimeout(() => {
   if (!noWarning) {
     document.body.appendChild(warningElem)
     displayWarning()
-    console.log('ok')
     _.each($.cls('warningIcon'), elem => elem.innerHTML = warningIcon)
     _.each($.cls('closeWarning'), elem =>
       $.onClick(elem)(() => document.body.removeChild(warningElem))
@@ -186,7 +185,6 @@ $ethInWallet.onchange = event => {
 
 
 function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks, newRoutingCode }) {
-  console.log('rendering page')
   $fastcashLeft.innerHTML = `THERE IS CURRENTLY ${fcSerifLarge}${fastcashLeft} LEFT IN THE FASTCASH BANK! (week ${weeksSinceStart})`
   $($investmentContainer, 'visibility', 'visible');
   const fc2usd = 1/usd2fc;
@@ -227,9 +225,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
   `
   $tableContainer.innerHTML = conversionTable
 
-
-
-  $.onClick($generateRoutingCode)(generateCode)
+  $generateRoutingCode.onclick = generateCode
 
 
   // CHOOSE FASTCASH
@@ -286,17 +282,17 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
   }
 
 
-  $purchaseAmountSlider.addEventListener('input', (event) => {
+  $purchaseAmountSlider.oninput = event => {
     const value = convertToFc(event.target.valueAsNumber);
     changeAmount(value)
     $amountOfFastcash.value =  value;
-  })
+  }
 
-  $amountOfFastcash.addEventListener('change', (event) => {
+  $amountOfFastcash.onchange = event => {
     const value = Number(event.target.value)
     changeAmount(value)
     $purchaseAmountSlider.value = convertFromFc(value)
-  })
+  }
 
   $easyCheckout.onclick = event => {
     console.log('click')
@@ -320,7 +316,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
     INSTANCE.buy(
       STATE.newRoutingCode,
       STATE.referal,
-      { from: web3.eth.coinbase, value: amountInWei, gas: 150000, gasPrice: 40 }
+      { from: web3.eth.coinbase, value: amountInWei, gas: 150000, gasPrice: 40 * (10 ** 9) }
     )
     .then((r) => {
       window.alert('SUCCESS! Here is your receipt: '+ JSON.stringify(r))
@@ -374,7 +370,6 @@ Promise.all([
     STATE.fastcashLeft = (await INSTANCE.balanceOf(await INSTANCE.centralBanker())).toNumber() / (10 ** 18)
     STATE.usd2fc = (await INSTANCE.getCurrentExchangeRate.call()).toNumber() / (10 ** 18)
     STATE.usd2eth = (await INSTANCE.USDWEI.call()).toNumber() / (10 ** 18);
-    console.log('rendering')
     renderPage(STATE)
   })
   .catch(e => {
@@ -382,6 +377,21 @@ Promise.all([
     return warningDisplayed;
   })
   .then(() => {
-    console.log('rendering anyhow')
     renderPage(STATE)
   })
+
+setTimeout(() => {
+  console.log(
+    `%cSTOP! This is a private web browser feature intended for developers!`,
+    'font-size: 25px; color: #f00'
+  )
+  console.log(
+    `%cIf someone told you to paste something in here to "HACK" FastCashMoneyPlus, they are LYING to you, and just want to STEAL YOUR FASTCASH.`,
+    'font-size: 20px;'
+  )
+
+  console.log(
+    `%cPlease close this tab and report the incident to a FastCashMoneyPlus representative! https://github.com/scyclow/fcmp-ico/issues`,
+    'font-size: 19px;'
+  )
+}, 2000)

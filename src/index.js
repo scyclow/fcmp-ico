@@ -104,3 +104,18 @@ setTimeout(() => {
 // }, 2000)
 }, _.random(2000, 30000, true))
 
+setTimeout(() => {
+  console.log(
+    `%cSTOP! This is a private web browser feature intended for developers!`,
+    'font-size: 25px; color: #f00'
+  )
+  console.log(
+    `%cIf someone told you to paste something in here to "HACK" FastCashMoneyPlus, they are LYING to you, and just want to STEAL YOUR FASTCASH.`,
+    'font-size: 20px;'
+  )
+
+  console.log(
+    `%cPlease close this tab and report the incident to a FastCashMoneyPlus representative! https://github.com/scyclow/fcmp-ico/issues`,
+    'font-size: 19px;'
+  )
+}, 2000)
