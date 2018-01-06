@@ -33944,6 +33944,7 @@ exports.getBuyData = getBuyData;
 exports.getTransferData = getTransferData;
 exports.executeTransfer = executeTransfer;
 exports.simpleBuy = simpleBuy;
+exports.fromUtf8 = fromUtf8;
 
 var _FastCashMoneyPlus = __webpack_require__(415);
 
@@ -34044,6 +34045,10 @@ function simpleBuy(amount) {
     gas: 150000,
     gasPrice: 40 * Math.pow(10, 9)
   });
+}
+
+function fromUtf8(str) {
+  return web3.fromUtf8(str);
 }
 
 // FastCashMoneyPlus.deployed().then(async i => {
@@ -62576,39 +62581,6 @@ module.exports = IpcProvider;
 "use strict";
 
 
-var renderFromInstance = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(i) {
-    var balance;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            if (!window.web3) {
-              _context.next = 5;
-              break;
-            }
-
-            _context.next = 3;
-            return i.balanceOfRoutingCode.call(window.web3.fromUtf8(routingCode));
-
-          case 3:
-            balance = _context.sent.toNumber();
-
-            $accountBalance.innerHTML = '<h1>YOU HAVE ' + balance / Math.pow(10, 18) + ' FastCash! (' + balance + ' MoneyBucks)</h1>';
-
-          case 5:
-          case 'end':
-            return _context.stop();
-        }
-      }
-    }, _callee, this);
-  }));
-
-  return function renderFromInstance(_x) {
-    return _ref.apply(this, arguments);
-  };
-}();
-
 __webpack_require__(622);
 
 __webpack_require__(188);
@@ -62631,9 +62603,8 @@ var _symbol = __webpack_require__(187);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 var fcSymbol = (0, _symbol.sansSerif)({ size: 10 }).outerHTML;
+
 _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
   return elem.innerHTML = fcSymbol;
 });
@@ -62736,6 +62707,14 @@ $executeBuy.onclick = function () {
 
   (0, _web3Setup.simpleBuy)(buyAmount);
 };
+
+function renderFromInstance(i) {
+  i.balanceOfRoutingCode.call((0, _web3Setup.fromUtf8)(routingCode)).then(function (n) {
+    return n.toNumber();
+  }).then(function (balance) {
+    $accountBalance.innerHTML = '<h1>YOU HAVE ' + balance / Math.pow(10, 18) + ' FastCash! (' + balance + ' MoneyBucks)</h1>';
+  });
+}
 
 setTimeout(function () {
   console.log('%cSTOP! This is a private web browser feature intended for developers!', 'font-size: 25px; color: #f00');

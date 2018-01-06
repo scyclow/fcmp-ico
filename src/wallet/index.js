@@ -2,7 +2,7 @@
 
 import './index.css';
 import 'babel-polyfill'
-import web3Setup, { getBuyData, getTransferData, executeTransfer, simpleBuy } from 'utils/web3Setup';
+import web3Setup, { getBuyData, getTransferData, executeTransfer, simpleBuy, fromUtf8 } from 'utils/web3Setup';
 import $ from 'utils/$';
 import _ from 'utils/_';
 import {getQueryParams} from 'utils/getRef'
@@ -127,11 +127,12 @@ $executeBuy.onclick = () => {
   simpleBuy(buyAmount)
 }
 
-async function renderFromInstance(i) {
-  if (window.web3) {
-    const balance = (await i.balanceOfRoutingCode.call(window.web3.fromUtf8(routingCode))).toNumber()
-    $accountBalance.innerHTML = `<h1>YOU HAVE ${balance/(10**18)} FastCash! (${balance} MoneyBucks)</h1>`
-  }
+function renderFromInstance(i) {
+  i.balanceOfRoutingCode.call(fromUtf8(routingCode))
+    .then(n => n.toNumber())
+    .then(balance => {
+      $accountBalance.innerHTML = `<h1>YOU HAVE ${balance/(10**18)} FastCash! (${balance} MoneyBucks)</h1>`
+    })
 }
 
 setTimeout(() => {

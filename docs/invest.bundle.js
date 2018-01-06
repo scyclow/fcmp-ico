@@ -33596,6 +33596,7 @@ exports.getBuyData = getBuyData;
 exports.getTransferData = getTransferData;
 exports.executeTransfer = executeTransfer;
 exports.simpleBuy = simpleBuy;
+exports.fromUtf8 = fromUtf8;
 
 var _FastCashMoneyPlus = __webpack_require__(415);
 
@@ -33696,6 +33697,10 @@ function simpleBuy(amount) {
     gas: 150000,
     gasPrice: 40 * Math.pow(10, 9)
   });
+}
+
+function fromUtf8(str) {
+  return web3.fromUtf8(str);
 }
 
 // FastCashMoneyPlus.deployed().then(async i => {
@@ -62611,42 +62616,41 @@ warningDisplayed.then(function () {
 
 Promise.all([(0, _web3Setup2.default)(), warningDisplayed]).then(function () {
   var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(_instance) {
+    var centralBanker, fcLeft, currentExchangeRate, usdweiRate;
     return regeneratorRuntime.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
             INSTANCE = _instance[0];
-            _context2.t0 = INSTANCE;
-            _context2.next = 4;
+            _context2.next = 3;
             return INSTANCE.centralBanker();
 
-          case 4:
-            _context2.t1 = _context2.sent;
-            _context2.next = 7;
-            return _context2.t0.balanceOf.call(_context2.t0, _context2.t1);
+          case 3:
+            centralBanker = _context2.sent;
+            _context2.next = 6;
+            return INSTANCE.balanceOf(centralBanker);
 
-          case 7:
-            _context2.t2 = _context2.sent.toNumber();
-            _context2.t3 = Math.pow(10, 18);
-            STATE.fastcashLeft = _context2.t2 / _context2.t3;
-            _context2.next = 12;
+          case 6:
+            fcLeft = _context2.sent;
+
+            STATE.fastcashLeft = fcLeft.toNumber() / Math.pow(10, 18);
+            _context2.next = 10;
             return INSTANCE.getCurrentExchangeRate.call();
 
-          case 12:
-            _context2.t4 = _context2.sent.toNumber();
-            _context2.t5 = Math.pow(10, 18);
-            STATE.usd2fc = _context2.t4 / _context2.t5;
-            _context2.next = 17;
+          case 10:
+            currentExchangeRate = _context2.sent;
+
+            STATE.usd2fc = currentExchangeRate.toNumber() / Math.pow(10, 18);
+            _context2.next = 14;
             return INSTANCE.USDWEI.call();
 
-          case 17:
-            _context2.t6 = _context2.sent.toNumber();
-            _context2.t7 = Math.pow(10, 18);
-            STATE.usd2eth = _context2.t6 / _context2.t7;
+          case 14:
+            usdweiRate = _context2.sent;
 
+            STATE.usd2eth = usdweiRate.toNumber() / Math.pow(10, 18);
             renderPage(STATE);
 
-          case 21:
+          case 17:
           case 'end':
             return _context2.stop();
         }

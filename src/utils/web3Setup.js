@@ -70,6 +70,10 @@ export function simpleBuy(amount) {
   })
 }
 
+export function fromUtf8(str) {
+  return web3.fromUtf8(str)
+}
+
 // FastCashMoneyPlus.deployed().then(async i => {
   // window.buy = () => i.buy(
   //   'easy_fuck_click124',

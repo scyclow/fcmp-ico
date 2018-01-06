@@ -367,9 +367,13 @@ Promise.all([
 ])
   .then(async _instance => {
     INSTANCE = _instance[0];
-    STATE.fastcashLeft = (await INSTANCE.balanceOf(await INSTANCE.centralBanker())).toNumber() / (10 ** 18)
-    STATE.usd2fc = (await INSTANCE.getCurrentExchangeRate.call()).toNumber() / (10 ** 18)
-    STATE.usd2eth = (await INSTANCE.USDWEI.call()).toNumber() / (10 ** 18);
+    const centralBanker = await INSTANCE.centralBanker()
+    const fcLeft = await INSTANCE.balanceOf(centralBanker)
+    STATE.fastcashLeft = fcLeft.toNumber() / (10 ** 18)
+    const currentExchangeRate = await INSTANCE.getCurrentExchangeRate.call()
+    STATE.usd2fc = currentExchangeRate.toNumber() / (10 ** 18)
+    const usdweiRate = await INSTANCE.USDWEI.call()
+    STATE.usd2eth = usdweiRate.toNumber() / (10 ** 18);
     renderPage(STATE)
   })
   .catch(e => {
