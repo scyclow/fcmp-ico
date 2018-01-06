@@ -1,4 +1,5 @@
 pragma solidity ^0.4.17;
+
 /*
   Copyright 2017, FastCashMoneyPlus.biz
 
@@ -7,6 +8,8 @@ pragma solidity ^0.4.17;
   contracts. Anyone attempting to do so will be prosecuted under the full extent of the law.
 */
 
+
+// Set executive permissions of contract
 contract FastCashMoneyPlusPermissions {
   address public centralBanker;
 
@@ -25,12 +28,22 @@ contract FastCashMoneyPlusPermissions {
   }
 }
 
+// Set identifying information
 contract FastCashMoneyPlusBase is FastCashMoneyPlusPermissions {
-  string public name = "Fast Cash Money Plus";
+  string public name = "FastCashMoneyPlus";
   string public symbol = "FASTCASH";
   uint8 public decimals = 18;
+
+  function updateSymbol(string _newSymbol) external onlyCentralBanker returns (bool success) {
+    symbol = _newSymbol;
+    return true;
+  }
 }
 
+// Describe the storage mechanism of the contract
+// balanceOf refers to the standard mapping of eth address => balance
+// routingCodes refer to a shorter, human-readable string (but stored as bytes)
+// routingCodes are used primerally for referal fees, but can also be used to transfer FastCash
 contract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {
   mapping (bytes32 => address) public routingCodeMap;
   mapping (address => uint) public balanceOf;
@@ -53,8 +66,6 @@ contract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {
     routingCodes.push(_routingCode);
     return true;
   }
-
-  // add a function that checks if an account exists
 }
 
 // Maintain ERC20 compliance -- allow other contracts to access accounts
@@ -73,6 +84,27 @@ contract FastCashMoneyPlusAccessControl is FastCashMoneyPlusStorage {
   }
 }
 
+/*
+Handle all the logic for selling FastCash to the public
+  The total supply is 1000000 FastCash.
+  But, because solidity does not support floating point numbers, we create a "smallest denomination", equal to 10e-18 FastCash
+  This smallest denomination is called the "MoneyBuck"
+  Additionally, contracts do not support numbers larger than 2^256 (~1.15e77)
+
+  The price of FastCash in WEI increases by 20% every week, up to week 71.
+  In order to keep the price consistent with USD, the ETH price is adjusted by the USDWEI rate (which the central banker may change).
+
+  The USD/FASTCASH rate is then $0.25 * (1.2 ** weeksSinceStart)
+  Whereas, the ETH/FASTCASH rate is USD/FASTCASH * ETH/USD
+
+  But, due to the decimal place restriction, we must multiply single decimal places by 10, and crypto amounts by 10^18, and only divide big numbers.
+  So, WEI/FASTCASH = WEI/USD * ( 4 / ((12 ** weeksSinceStart) / 10) )
+  (To maintain consistency with other currency exchange symbols, WEI/USD is referred to as USDWEI)
+  getExchangeRate uses algebra to adjust these numbers further, such that no point of the calculation refers to a number greater than 2^256.
+
+
+  Additionally, all purchases of FASTCASH going through the `buy` channel (which may have a routingCode as referal), credit the referrer with a FastCash bonus equal to 10% of the sale amount.
+*/
 contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
   uint256 public totalSupply;
   uint public USDWEI = 1500000000000000;
@@ -179,6 +211,7 @@ contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
   }
 }
 
+// Transfer FastCash between accounts by either ETH address or FastCash routingCode
 contract FastCashMoneyPlusTransfer is FastCashMoneyPlusSales {
   event Transfer(address indexed _from, address indexed _to, uint _value);
 
