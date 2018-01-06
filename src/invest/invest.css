@@ -73,6 +73,7 @@ p {
 
 #tableContainer {
   font-family: sans-serif;
+  background-color: #eee;
 }
 
 #generateRoutingCode {
@@ -267,4 +268,24 @@ p {
 .continueBox input {
   transform: scale(2.2);
   cursor: pointer;
+}
+
+.columnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.inputBox {
+  font-size: 20px;
+  background-color: #fed;
+  background-color: #feb;
+  border: 2px solid #888;
+  padding: 5px;
+}
+
+.inputBox:active,
+.inputBox:focus {
+  background-color: #def;
 }

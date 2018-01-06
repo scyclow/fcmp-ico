@@ -48,6 +48,15 @@ hr {
   padding: 5px;
   min-width: 80%;
   resize: none;
+  display: inline-block;
+  font-family: sans-serif;
+  border: 1px solid black;
+  word-break: break-all;
+}
+
+.refLink:hover {
+  color: #f00;
+
 }
 
 .refCopy {
@@ -58,6 +67,14 @@ hr {
 
 #share {
   margin-top: 10px;
+}
+
+.socialLink {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  display: block;
+  padding-top: 10px;
 }
 
 #transferSection {
@@ -113,6 +130,8 @@ hr {
   border: 2px solid;
   cursor: pointer;
   background-color: #cbb;
+  display: inherit;
+  margin: auto;
 }
 
 .flashyButton {

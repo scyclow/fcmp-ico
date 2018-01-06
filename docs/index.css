@@ -335,6 +335,119 @@ nav #nav-menu .nav-menu-item {
 .faqQuestion, .faqAnswer {
   cursor: help;
 }
+
+.popup {
+  position: fixed;
+  top: 70px;
+  left: 27vw;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-size: 27px;
+  font-family: sans-serif;
+  padding: 9px;
+  border: 5px solid;
+  z-index: 505;
+  -webkit-animation: ColorRotate 12s ease infinite;
+          animation: ColorRotate 12s ease infinite;
+}
+
+#popup .popupContent {
+  text-decoration: underline;
+  text-align: center;
+}
+
+
+@-webkit-keyframes ColorRotate {
+  0% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+
+  17% {
+    color: #ffff00;
+    fill: #ffff00;
+    background-color: #0000ff;
+  }
+
+  33% {
+    color: #00ff00;
+    fill: #00ff00;
+    background-color: #ff00ff;
+  }
+
+  50% {
+    color: #00ffff;
+    fill: #00ffff;
+    background-color: #ff0000;
+  }
+
+  66% {
+    color: #0000ff;
+    fill: #0000ff;
+    background-color: #ffff00;
+  }
+
+  83% {
+    color: #ff00ff;
+    fill: #ff00ff;
+    background-color: #00ff00;
+  }
+
+  100% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+}
+
+
+@keyframes ColorRotate {
+  0% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+
+  17% {
+    color: #ffff00;
+    fill: #ffff00;
+    background-color: #0000ff;
+  }
+
+  33% {
+    color: #00ff00;
+    fill: #00ff00;
+    background-color: #ff00ff;
+  }
+
+  50% {
+    color: #00ffff;
+    fill: #00ffff;
+    background-color: #ff0000;
+  }
+
+  66% {
+    color: #0000ff;
+    fill: #0000ff;
+    background-color: #ffff00;
+  }
+
+  83% {
+    color: #ff00ff;
+    fill: #ff00ff;
+    background-color: #00ff00;
+  }
+
+  100% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+}
 .modalHidden {
   margin-top: 150vh;
 }
@@ -410,6 +523,7 @@ nav #nav-menu .nav-menu-item {
           box-shadow: 3px 2px 11px;
   -webkit-transition: 80ms;
   transition: 80ms;
+  max-width: 500px;
 }
 
 .signupContinue:active {

@@ -13,7 +13,7 @@
   >
   <META
     name="keywords"
-    content="god, hell, satan, fuck, shit, sex, power, the, love, wealth, happiness"
+    content="god, hell, satan, fuck, shit, sex, power, the, a, love, wealth, happiness, crypto, money, bitcoin, best, ico, eth, btc, ethereum, smart contract, opportunity, investment"
   >
 <style type="text/css">* {
   padding: 0;
@@ -90,6 +90,7 @@ p {
 
 #tableContainer {
   font-family: sans-serif;
+  background-color: #eee;
 }
 
 #generateRoutingCode {
@@ -337,6 +338,33 @@ p {
           transform: scale(2.2);
   cursor: pointer;
 }
+
+.columnCenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+
+.inputBox {
+  font-size: 20px;
+  background-color: #fed;
+  background-color: #feb;
+  border: 2px solid #888;
+  padding: 5px;
+}
+
+.inputBox:active,
+.inputBox:focus {
+  background-color: #def;
+}
 </style></head>
 
 <body>
@@ -346,8 +374,9 @@ p {
   <div id="investmentContainer" style="visibility: hidden">
     <h1 id="hero">ARE YOU READY TO MAKE FAST CASH NOW?</h1>
 
-    <p><h4 class="highlight" style="border: 0">PAY ATTENTION </h4> and read these directions VERY CAREFULLY. Failing to read the directions may result in you losing your fastcash.</p>
-    <p>Even though the whole investment process may appear to be intimidating, rest assured that THIS IS THE <span class="hl-inline">ONLY</span> <span class="hl-inline">SURE-FIRE</span> <span class="hl-inline">WAY</span> TO MAKE BOAT-LOADS OF CASH. While certain terms, such as "crypto", "investment", "private key", and so forth, migh sound confusing now, everything will make sense once you are a certified fastcash investor.</p>
+    <p>This form will walk you through all the steps you need to complete to be a certified FastCash investor. If you do everything it tells you, you'll be up to your eyeballs in MoneyBucks in no time! It will cover: FastCash Address Generation, Investment Selection, Ethereum Purchase, Wallet Transfer, and finally: FastCash Investment. Then you will be given acces to a brand new FastCash Wallet!</p>
+
+    <p>Please <h4 class="highlight" style="border: 0">PAY ATTENTION </h4> and read every word of these directions very THOUROUGHLY. If you do something wrong, you could miss out on your investment opportunity, and PERMANENTLY lose your FastCash.</p>
 
     <div id="step1">
       <hr>
@@ -366,7 +395,7 @@ p {
       </h1>
 
       <div>
-        <h2 class="label">YOUR FASTCASH ADDRESS IS:</h2>
+        <!-- <h2 class="label">YOUR FASTCASH ADDRESS IS:</h2> -->
         <div id="routingCode">
           please click the button to generate a fastcash address
         </div>
@@ -386,10 +415,12 @@ p {
       <h2 id="fastcashLeft"></h2>
       <br>
 
-      <h3>This table displays the current conversion rate:</h3>
+      <div class="columnCenter">
+        <h3>This table displays the current conversion rate:</h3>
 
-      <div id="tableContainer">
-        <!--  -->
+        <div id="tableContainer">
+          <!--  -->
+        </div>
       </div>
 
       <p class="tinyFont">
@@ -401,11 +432,12 @@ p {
         <div id="sliderContainer">
           <input id="purchaseAmountSlider" type="range" min="0" max="10000" value="0">
         </div>
-        <br>
-        <span class="fc-ss"></span><input id="amountOfFastcash" type="number" placeholder="ex. 517.25379013">
-        <h3>(equivalent to:)</h3>
-        <div id="amountOfMoneybucks"></div>
-        <div id="pleaseContact"></div>
+        <div class="columnCenter" style="margin-top: 30px">
+          <div><span class="fc-ss"></span><input id="amountOfFastcash" class="inputBox" type="number" placeholder="ex. 517.25379013"></div>
+          <h3>(equivalent to:)</h3>
+          <div id="amountOfMoneybucks"></div>
+          <div id="pleaseContact"></div>
+        </div>
       </div>
     </div>
 
@@ -502,7 +534,7 @@ p {
     </div>
 
     <div id="complete" style="visibility: hidden">
-      <h2 style="text-align: center">YOU ARE NOW A PROUD INVESTOR IN FASTCASH! Pat yourself on the back! You are going to be very rich soon enough, and you deserve it! But it's only fair that you take your friends and loved ones along for the ride! And to make it easier, you will receive a FASTCASH BONUS! You can do all these things and more (such as transfering fastcash, and buying MORE fastcash) in the official FastCashMoneyPlus.biz FastCash wallet! To go to your wallet, click the link below:</h2>
+      <h2 style="text-align: center">YOU ARE NOW A PROUD INVESTOR IN FASTCASH! Pat yourself on the back! You are going to be very rich soon enough, and you deserve it! But it's only fair that you take your friends and loved ones along for the ride! And to make it easier, you will receive a FASTCASH BONUS! You can do all these things and more (such as transfering fastcash, and buying MORE fastcash) in the official FastCashMoneyPlus.biz FastCash wallet! To go to your new wallet, click the link below:</h2>
       <a id="gotoWallet" target="_blank" href="./wallet.html">Click here to GO TO YOUR FASTCASH WALLET NOW!</a>
     </div>
   </div>
@@ -62952,7 +62984,6 @@ var $toAddressData = _$2.default.id('toAddressData');
 var $amountToSendData = _$2.default.id('amountToSendData');
 var $dataData = _$2.default.id('dataData');
 var $easyCheckout = _$2.default.id('easyCheckout');
-var $easyCheckoutError = _$2.default.id('easyCheckoutError');
 
 var $step1 = _$2.default.id('step1');
 var $step2 = _$2.default.id('step2');
@@ -63053,17 +63084,17 @@ function renderPage(_ref2) {
   $easyCheckout.addEventListener('click', function (event) {
     console.log('click');
     if (!INSTANCE) {
-      $easyCheckoutError.innerHTML = 'PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE';
+      alert('PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE');
       return;
     }
 
     if (!STATE.newRoutingCode) {
-      $easyCheckoutError.innerHTML = 'PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN';
+      alert('PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN');
       return;
     }
 
     if (!STATE.amountInMoneyBucks) {
-      $easyCheckoutError.innerHTML = 'PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN';
+      alert('PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN');
       return;
     }
 

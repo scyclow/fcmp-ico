@@ -277,7 +277,7 @@ nav #nav-menu .nav-menu-item {
   cursor: help;
 }
 
-#popup {
+.popup {
   position: fixed;
   top: 70px;
   left: 27vw;

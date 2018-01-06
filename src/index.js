@@ -30,10 +30,11 @@ const $ctaContent = $.id('cta-content');
 const $menuStart = $.id('menuStart');
 const $faqCTA = $.id('faqCTA');
 const $popup = document.createElement('div')
+const $popup2 = document.createElement('div')
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSerif)
 _.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
 
-$content.appendChild(modal($callToAction, $menuStart, $faqCTA, $popup))
+$content.appendChild(modal($callToAction, $menuStart, $faqCTA, $popup, $popup2))
 
 const ctaPrompts = [
   'START NOW',
@@ -70,14 +71,36 @@ setInterval(
   250
 );
 
-$popup.setAttribute('id', 'popup')
+$popup.setAttribute('class', 'popup')
+$popup2.setAttribute('class', 'popup')
 $popup.innerHTML = `
   <div>X</div>
-  <div class="popupContent">CLICK HERE TO GET STARTED WITH FASTCASHMONEYPLUS NOW!! DON'T WAIT THIS WON'T LAST!</div>
+  <div class="popupContent">
+    CLICK HERE TO GET STARTED WITH FASTCASHMONEYPLUS
+    NOW!! DON'T WAIT THIS WON'T LAST!
+  </div>
+`
+
+$popup2.innerHTML = `
+  <div>X</div>
+  <div class="popupContent">
+    STOP WAITING FOR WEALTH TO FIND YOU! FIND YOUR WEALTH TODAY!
+  </div>
 `
 $popup.onclick = () => setTimeout(() => $popup.remove(), 150)
+$popup2.onclick = () => setTimeout(() => $popup2.remove(), 150)
+$($popup2, 'margin-top', '130px')
+$($popup2, 'margin-left', '50px')
+$($popup2, 'width', '220px')
+$($popup2, 'height', '190px')
 
 setTimeout(() => {
   document.body.appendChild($popup)
-// })
+  console.log('bl')
+  setTimeout(() => {
+    console.log('blewlwkel')
+    document.body.appendChild($popup2)
+  }, _.random(300, 5000, true))
+// }, 2000)
 }, _.random(2000, 30000, true))
+

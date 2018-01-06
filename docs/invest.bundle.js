@@ -62442,7 +62442,6 @@ var $toAddressData = _$2.default.id('toAddressData');
 var $amountToSendData = _$2.default.id('amountToSendData');
 var $dataData = _$2.default.id('dataData');
 var $easyCheckout = _$2.default.id('easyCheckout');
-var $easyCheckoutError = _$2.default.id('easyCheckoutError');
 
 var $step1 = _$2.default.id('step1');
 var $step2 = _$2.default.id('step2');
@@ -62543,17 +62542,17 @@ function renderPage(_ref2) {
   $easyCheckout.addEventListener('click', function (event) {
     console.log('click');
     if (!INSTANCE) {
-      $easyCheckoutError.innerHTML = 'PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE';
+      alert('PLEASE VISIT THIS PAGE USING METAMASK OR AN ETHEREUM-BASED BROWSER. OR, CHECKOUT USING MYETHERWALLET, OUTLINED IN THE STEPS ABOVE');
       return;
     }
 
     if (!STATE.newRoutingCode) {
-      $easyCheckoutError.innerHTML = 'PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN';
+      alert('PLEASE GENERATE A FASTCASH ADDRESS AND TRY AGAIN');
       return;
     }
 
     if (!STATE.amountInMoneyBucks) {
-      $easyCheckoutError.innerHTML = 'PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN';
+      alert('PLEASE CHOOSE THE AMOUNT OF FASTCASH YOU WOULD LIKE TO INVEST IN AND TRY AGAIN');
       return;
     }
 

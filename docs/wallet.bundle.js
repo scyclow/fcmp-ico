@@ -62283,12 +62283,16 @@ $refLinkLong.innerHTML = 'https://fastcashmoneyplus.biz/?ref=' + routingCode;
 $refLinkShort.innerHTML = 'https://fast.plus?r=' + routingCode;
 
 $refLongCopy.onclick = function () {
-  $refLinkLong.select();
+  var x = document.createElement('input');
+  x.value = $refLinkLong.innerHTML;
+  x.select();
   document.execCommand('Copy');
   alert('Copied to clipboard!');
 };
 $refShortCopy.onclick = function () {
-  $refLinkShort.select();
+  var x = document.createElement('input');
+  x.value = $refLinkShort.innerHTML;
+  x.select();
   document.execCommand('Copy');
   alert('Copied to clipboard!');
 };

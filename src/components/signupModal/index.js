@@ -38,12 +38,16 @@ export const modal = (...triggers) => {
   const bg = component.querySelector('#signupModalBG')
   const content = component.querySelector('#signupModalContent')
 
-  bg.addEventListener('click', () => {
+  const closeModal = () => {
     setTimeout(() => {
       window.IMPORTANT.pause = false
       component.className = 'modalHidden'
     }, 50)
-  })
+  }
+  bg.addEventListener('click', closeModal)
+
+  // esc
+  // window.onkeydown = e => e.keyCode === 27 && closeModal()
 
   triggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
@@ -60,12 +64,12 @@ export const modal = (...triggers) => {
   step1.querySelector('#signupContinue-1').onclick = () => {
     mount(content, loading)
     setInterval(() => loading.innerHTML += loadingChars.next().value, 50)
-    setTimeout(() => mount(content, step2), 7000)
+    setTimeout(() => mount(content, step3), 4000)
   }
 
   step2.querySelector('#signupContinue-2').onclick = () => {
     mount(content, loading)
-    setTimeout(() => mount(content, step3), 4000)
+    setTimeout(() => mount(content, step4), 11000)
   }
 
   const continueIfInputsClicked = () => {
@@ -73,7 +77,7 @@ export const modal = (...triggers) => {
 
     if (allClicked) {
       mount(content, loading)
-      setTimeout(() => mount(content, step4), 2000)
+      setTimeout(() => mount(content, step2), 8000)
     }
 
   }

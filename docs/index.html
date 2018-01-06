@@ -13,7 +13,7 @@
   >
   <META
     name="keywords"
-    content="god, hell, satan, fuck, shit, sex, power, the, love, wealth, happiness"
+    content="god, hell, satan, fuck, shit, sex, power, the, a, love, wealth, happiness, crypto, money, bitcoin, best, ico, eth, btc, ethereum, smart contract, opportunity, investment"
   >
 <style type="text/css">* { padding: 0; margin:0; }
 
@@ -352,6 +352,119 @@ nav #nav-menu .nav-menu-item {
 .faqQuestion, .faqAnswer {
   cursor: help;
 }
+
+.popup {
+  position: fixed;
+  top: 70px;
+  left: 27vw;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-size: 27px;
+  font-family: sans-serif;
+  padding: 9px;
+  border: 5px solid;
+  z-index: 505;
+  -webkit-animation: ColorRotate 12s ease infinite;
+          animation: ColorRotate 12s ease infinite;
+}
+
+#popup .popupContent {
+  text-decoration: underline;
+  text-align: center;
+}
+
+
+@-webkit-keyframes ColorRotate {
+  0% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+
+  17% {
+    color: #ffff00;
+    fill: #ffff00;
+    background-color: #0000ff;
+  }
+
+  33% {
+    color: #00ff00;
+    fill: #00ff00;
+    background-color: #ff00ff;
+  }
+
+  50% {
+    color: #00ffff;
+    fill: #00ffff;
+    background-color: #ff0000;
+  }
+
+  66% {
+    color: #0000ff;
+    fill: #0000ff;
+    background-color: #ffff00;
+  }
+
+  83% {
+    color: #ff00ff;
+    fill: #ff00ff;
+    background-color: #00ff00;
+  }
+
+  100% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+}
+
+
+@keyframes ColorRotate {
+  0% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+
+  17% {
+    color: #ffff00;
+    fill: #ffff00;
+    background-color: #0000ff;
+  }
+
+  33% {
+    color: #00ff00;
+    fill: #00ff00;
+    background-color: #ff00ff;
+  }
+
+  50% {
+    color: #00ffff;
+    fill: #00ffff;
+    background-color: #ff0000;
+  }
+
+  66% {
+    color: #0000ff;
+    fill: #0000ff;
+    background-color: #ffff00;
+  }
+
+  83% {
+    color: #ff00ff;
+    fill: #ff00ff;
+    background-color: #00ff00;
+  }
+
+  100% {
+    color: #ff0000;
+    fill: #ff0000;
+    background-color: #00ffff;
+  }
+}
 .modalHidden {
   margin-top: 150vh;
 }
@@ -427,6 +540,7 @@ nav #nav-menu .nav-menu-item {
           box-shadow: 3px 2px 11px;
   -webkit-transition: 80ms;
   transition: 80ms;
+  max-width: 500px;
 }
 
 .signupContinue:active {
@@ -459,12 +573,13 @@ nav #nav-menu .nav-menu-item {
     </div>
   </nav>
 
-  <div class="floater color-speed-distance"></div>
-  <div class="floater color-speed-distance"></div>
-  <div class="floater color-speed-distance"></div>
-  <div class="floater color-speed-distance"></div>
-  <div class="floater color-speed-distance"></div>
-  <div class="floater color-speed-distance"></div>
+  <div class="floater"></div>
+  <div class="floater"></div>
+  <div class="floater"></div>
+  <div class="floater"></div>
+  <div class="floater"></div>
+  <div class="floater"></div>
+  <div class="floater"></div>
 
   <div id="content">
     <div id="hero" class="section">
@@ -524,7 +639,7 @@ nav #nav-menu .nav-menu-item {
     </div>
 
     <div class="marketing faqAnswer">
-      <p>Getting fastcash is easy! Simply scroll to the top of this page, and click the button that says GET FASTCASH NOW!</p>
+      <p>Getting fastcash is easy! Simply scroll to the top of this page, and click the button that says GET FASTCASH NOW! <a id="faqCTA" href="#callToAction">Or, CLICK HERE NOW to <em>fast track</em> your signup flow</a></p>
     </div>
 
     <div class="marketing faqQuestion">
@@ -570,9 +685,7 @@ nav #nav-menu .nav-menu-item {
 
       <p>There's only one direction for FastCash to go... AND THAT'S UP!</p>
 
-      <p>Fastcashmoneyplus utilizes the worlds most Advanced wealth accumulation technology deleted on the block chain today, to ensure that you're always making money!</p>
-
-      <p>The NAYSAYERS will say that it's crazy, but don't listen to them.They just want more fastcash for themselves. They understand that in the new digital economy, fastcash is the HOT TICKET!</p>
+      <p>The NAYSAYERS will say that it's crazy, but don't listen to them.They understand that in the new digital economy, fastcash is the HOT TICKET! They just want more fastcash for themselves. </p>
 
       <p>You simply can't lose! FastCash is the investment opportunity of a lifetime.</p>
     </div>
@@ -580,7 +693,7 @@ nav #nav-menu .nav-menu-item {
   </div>
   <nav>
     <div id="nav-menu">
-      <a href="#callToAction" class="nav-menu-item color-speed-distance">GET STARTED</a>
+      <a href="#callToAction" id="menuStart" class="nav-menu-item color-speed-distance">GET STARTED</a>
       <span class="nav-menu-item color-speed-distance">ABOUT</span>
       <a href="https://github.com/scyclow/fcmp-ico" class="nav-menu-item color-speed-distance">JOBS</a>
       <a href="./terms.html" target="_blank" class="nav-menu-item color-speed-distance">TERMS OF SERVICE</a>
@@ -11124,6 +11237,10 @@ var $hero = _$2.default.id('hero');
 var $warning = _$2.default.id('warning');
 var $callToAction = _$2.default.id('call-to-action');
 var $ctaContent = _$2.default.id('cta-content');
+var $menuStart = _$2.default.id('menuStart');
+var $faqCTA = _$2.default.id('faqCTA');
+var $popup = document.createElement('div');
+var $popup2 = document.createElement('div');
 _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
   return elem.innerHTML = fcSerif;
 });
@@ -11131,7 +11248,7 @@ _3.default.each(_$2.default.cls('fc-s'), function (elem) {
   return elem.innerHTML = fcSans;
 });
 
-$content.appendChild((0, _signupModal.modal)($callToAction));
+$content.appendChild((0, _signupModal.modal)($callToAction, $menuStart, $faqCTA, $popup, $popup2));
 
 var ctaPrompts = ['START NOW', 'GET IT NOW', 'CLICK HERE', 'CLICK HERE', 'CLICK HERE', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
 
@@ -11154,6 +11271,36 @@ var heroH = 1;
 setInterval(function () {
   return changeColors($hero, '#0000ff', { primary: [], secondary: ['color', 'fill'] })(heroH++);
 }, 250);
+
+$popup.setAttribute('class', 'popup');
+$popup2.setAttribute('class', 'popup');
+$popup.innerHTML = '\n  <div>X</div>\n  <div class="popupContent">\n    CLICK HERE TO GET STARTED WITH FASTCASHMONEYPLUS\n    NOW!! DON\'T WAIT THIS WON\'T LAST!\n  </div>\n';
+
+$popup2.innerHTML = '\n  <div>X</div>\n  <div class="popupContent">\n    STOP WAITING FOR WEALTH TO FIND YOU! FIND YOUR WEALTH TODAY!\n  </div>\n';
+$popup.onclick = function () {
+  return setTimeout(function () {
+    return $popup.remove();
+  }, 150);
+};
+$popup2.onclick = function () {
+  return setTimeout(function () {
+    return $popup2.remove();
+  }, 150);
+};
+(0, _$2.default)($popup2, 'margin-top', '130px');
+(0, _$2.default)($popup2, 'margin-left', '50px');
+(0, _$2.default)($popup2, 'width', '220px');
+(0, _$2.default)($popup2, 'height', '190px');
+
+setTimeout(function () {
+  document.body.appendChild($popup);
+  console.log('bl');
+  setTimeout(function () {
+    console.log('blewlwkel');
+    document.body.appendChild($popup2);
+  }, _3.default.random(300, 5000, true));
+  // }, 2000)
+}, _3.default.random(2000, 30000, true));
 
 /***/ }),
 /* 602 */
@@ -11359,6 +11506,7 @@ var floaters = _$2.default.cls('floater');
 
 _3.default.each(floaters, function (floater, i) {
   (0, _$2.default)(floater, 'font-size', 45);
+  (0, _$2.default)(floater, 'animation', 'ColorRotate ' + _3.default.random(3, 8) + 's ease infinite');
   floater.innerHTML = Math.random() < 0.5 ? fcSymbol : '$';
 
   var moveFloater = function moveFloater() {
@@ -11535,7 +11683,11 @@ function nextLoadingChar(str) {
   }, _marked, this);
 }
 
-var modal = exports.modal = function modal(trigger) {
+var modal = exports.modal = function modal() {
+  for (var _len = arguments.length, triggers = Array(_len), _key = 0; _key < _len; _key++) {
+    triggers[_key] = arguments[_key];
+  }
+
   var loading = parse(_loading2.default).querySelector('#signupModal-loading');
   var step1 = parse(_step2.default).querySelector('#signupModal-1');
   var step2 = parse(_step4.default).querySelector('#signupModal-2');
@@ -11549,19 +11701,25 @@ var modal = exports.modal = function modal(trigger) {
   var bg = component.querySelector('#signupModalBG');
   var content = component.querySelector('#signupModalContent');
 
-  bg.addEventListener('click', function () {
+  var closeModal = function closeModal() {
     setTimeout(function () {
       window.IMPORTANT.pause = false;
       component.className = 'modalHidden';
     }, 50);
-  });
+  };
+  bg.addEventListener('click', closeModal);
 
-  trigger.addEventListener('click', function () {
-    console.log('bleh');
-    // window.IMPORTANT.pause = true
-    setTimeout(function () {
-      component.className = '';
-    }, 300);
+  // esc
+  // window.onkeydown = e => e.keyCode === 27 && closeModal()
+
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      console.log('bleh');
+      // window.IMPORTANT.pause = true
+      setTimeout(function () {
+        component.className = '';
+      }, 300);
+    });
   });
 
   mount(content, step1);
@@ -11572,15 +11730,15 @@ var modal = exports.modal = function modal(trigger) {
       return loading.innerHTML += loadingChars.next().value;
     }, 50);
     setTimeout(function () {
-      return mount(content, step2);
-    }, 7000);
+      return mount(content, step3);
+    }, 4000);
   };
 
   step2.querySelector('#signupContinue-2').onclick = function () {
     mount(content, loading);
     setTimeout(function () {
-      return mount(content, step3);
-    }, 4000);
+      return mount(content, step4);
+    }, 11000);
   };
 
   var continueIfInputsClicked = function continueIfInputsClicked() {
@@ -11591,8 +11749,8 @@ var modal = exports.modal = function modal(trigger) {
     if (allClicked) {
       mount(content, loading);
       setTimeout(function () {
-        return mount(content, step4);
-      }, 2000);
+        return mount(content, step2);
+      }, 8000);
     }
   };
   _3.default.each(step3.getElementsByTagName('input'), function (input) {
@@ -11627,7 +11785,7 @@ module.exports = function (scope) {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-1\">\n  <h1>DON'T WAIT! JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n  <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>\n\n  <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about \"What Could Have Been\" if you had bought FashCash early on. \"I remember discovering FastCash early on,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!\". Don't let that happen to you!</h3>\n\n  <button id=\"signupContinue-1\" class=\"signupContinue\">GET STARTED NOW</button>\n</div>\n";
+  return "<div id=\"signupModal-1\">\n  <h1>DON'T WAIT! JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n  <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>\n\n  <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about \"What Could Have Been\" if you had bought FashCash early on. \"I remember discovering FastCash early on,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!\". Don't let that happen to you!</h3>\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-1\" class=\"signupContinue\">GET STARTED NOW</button>\n  </div>\n</div>\n";
 };
 
 /***/ }),
@@ -11638,7 +11796,7 @@ module.exports = function (scope) {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-2\">\n  <style>\n    .modal-input {\n      font-size: 22px;\n      background-color: #feb;\n      border: 3px solid #888;\n    }\n\n    .modal-input:active,\n    .modal-input:focus {\n      background-color: #def;\n    }\n\n    .modal-input-section {\n      margin-top: 5px;\n    }\n    .modal-input-section label {\n      font-size: 20px;\n      font-family: sans-serif;\n    }\n  </style>\n  <h2>CREATE ACCOUNT</h2>\n\n  <div class=\"modal-input-section\">\n    <label>\n      EMAIL ADDRESS:\n      <input id=\"signupEmail\" class=\"modal-input\" placeholder=\"EMAIL ADDRESS\">\n      <br>\n      <label style=\"user-select: none; pointer-events: none\"><input type=\"checkbox\" checked>signup for fastcashmoneyplus.biz updates and promotions</label>\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:\n      <input class=\"modal-input\" placeholder=\"SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      FULL LEGAL NAME:\n      <input class=\"modal-input\" placeholder=\"FULL LEGAL NAME\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      DATE OF BIRTH dd/mm/yyyy:\n      <input class=\"modal-input\" placeholder=\"DATE OF BIRTH dd/mm/yyyy\">\n    </label>\n  </div>\n\n\n  <div>\n    <button id=\"signupContinue-2\" class=\"signupContinue\">INVEST NOW</button>\n  </div>\n</div>\n";
+  return "<div id=\"signupModal-2\">\n  <style>\n    .modal-input {\n      font-size: 22px;\n      background-color: #feb;\n      border: 3px solid #888;\n    }\n\n    .modal-input:active,\n    .modal-input:focus {\n      background-color: #def;\n    }\n\n    .modal-input-section {\n      margin-top: 5px;\n    }\n    .modal-input-section label {\n      font-size: 20px;\n      font-family: sans-serif;\n    }\n  </style>\n  <h2>CREATE ACCOUNT</h2>\n\n  <div class=\"modal-input-section\">\n    <label>\n      EMAIL ADDRESS:\n      <input id=\"signupEmail\" class=\"modal-input\" placeholder=\"EMAIL ADDRESS\">\n      <br>\n      <label style=\"user-select: none; pointer-events: none\"><input type=\"checkbox\" checked>signup for fastcashmoneyplus.biz updates and promotions</label>\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:\n      <input class=\"modal-input\" placeholder=\"SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      FULL LEGAL NAME:\n      <input class=\"modal-input\" placeholder=\"FULL LEGAL NAME\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      DATE OF BIRTH dd/mm/yyyy:\n      <input class=\"modal-input\" placeholder=\"DATE OF BIRTH dd/mm/yyyy\">\n    </label>\n  </div>\n\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-2\" class=\"signupContinue\">INVEST NOW</button>\n  </div>\n</div>\n";
 };
 
 /***/ }),
@@ -11660,7 +11818,7 @@ module.exports = function (scope) {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-4\">\n  <style>\n    #signupModal-4 h2 {\n      margin-top: 30px;\n    }\n  </style>\n  <h1>You're all set to invest in FastCashMoneyPlus!</h1>\n\n  <h2>The FastCashMoneyPlus.biz investment console will walk you through the remaining steps to invest in the highly-sought-after FastCashMoneyPlus ICO!</h2>\n\n  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>\n\n  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>\n\n  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>\n  <a href=\"./invest.html\" target=\"_blank\" class=\"gotoConsole\">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>\n</div>\n";
+  return "<div id=\"signupModal-4\">\n  <style>\n    #signupModal-4 h2 {\n      margin-top: 30px;\n    }\n  </style>\n  <h1>You've Been Approved!</h1>\n\n  <h2>Congratulations! You are all set to start investing in FastCash!</h2>\n\n  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>\n\n  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>\n\n  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>\n  <a href=\"./invest.html\" target=\"_blank\" class=\"gotoConsole\">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>\n</div>\n";
 };
 
 /***/ }),
