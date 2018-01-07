@@ -1,4 +1,35 @@
-/******/ (function(modules) { // webpackBootstrap
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>404 | FA$TCA$HMONEYPLU$.biz</title>
+  <META charset="UTF-8">
+  <META name="theme-color" content="#000000">
+  <META name="viewport" content="width=device-width, initial-scale=1.0">
+  <META http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <META
+    name="description"
+    content="_________"
+  >
+  <META
+    name="keywords"
+    content="god, hell, satan, fuck, shit, sex, power, the, a, love, wealth, happiness, crypto, money, bitcoin, best, ico, eth, btc, ethereum, smart contract, opportunity, investment"
+  >
+<link rel="shortcut icon" href="favicon-business.ico"><style type="text/css"></style></head>
+
+<body>
+  <h1 id="currencyTicker"></h1>
+  <h1>404 THIS PAGE DOES NOT EXIST</h1>
+  <h1><a href="./">BACK TO FASTCASHMONEYPLUS.biz</a></h1>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112030344-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112030344-1');
+</script>
+<script type="text/javascript">/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -60,7 +91,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 604);
+/******/ 	return __webpack_require__(__webpack_require__.s = 601);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9870,135 +9901,11 @@ module.exports = function (regExp, replace) {
 /* 385 */,
 /* 386 */,
 /* 387 */,
-/* 388 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-exports.getQueryParams = getQueryParams;
-exports.getRef = getRef;
-function getQueryParams() {
-  return location.search.slice(1).split('&').reduce(function (params, param) {
-    var _param$split = param.split('='),
-        _param$split2 = _slicedToArray(_param$split, 2),
-        key = _param$split2[0],
-        value = _param$split2[1];
-
-    params[key] = value;
-    return params;
-  }, {});
-}
-
-function getRef() {
-  var params = getQueryParams();
-  var ref = params.r || params.ref || params.referral || localStorage.getItem('ref');
-
-  if (ref) localStorage.setItem('ref', ref);
-
-  return ref || '';
-}
-
-/***/ }),
-/* 389 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.warning = exports.serif = exports.sansSerif = undefined;
-
-var _FCSansSerif = __webpack_require__(390);
-
-var _FCSansSerif2 = _interopRequireDefault(_FCSansSerif);
-
-var _FCSerif = __webpack_require__(391);
-
-var _FCSerif2 = _interopRequireDefault(_FCSerif);
-
-var _warningTriangle = __webpack_require__(392);
-
-var _warningTriangle2 = _interopRequireDefault(_warningTriangle);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var parser = new DOMParser();
-
-var sansSerif = exports.sansSerif = function sansSerif() {
-  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref$size = _ref.size,
-      size = _ref$size === undefined ? 18 : _ref$size;
-
-  var ss = parser.parseFromString((0, _FCSansSerif2.default)(), 'image/svg+xml').childNodes[0];
-  ss.style.width = size + 'px';
-  return ss;
-};
-
-var serif = exports.serif = function serif() {
-  var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref2$size = _ref2.size,
-      size = _ref2$size === undefined ? 18 : _ref2$size,
-      adjusted = _ref2.adjusted;
-
-  var s = parser.parseFromString((0, _FCSerif2.default)(), 'image/svg+xml').childNodes[0];
-  s.style.width = size + 'px';
-  if (adjusted) s.style['margin-bottom'] = '-4px';
-  return s;
-};
-
-var warning = exports.warning = function warning() {
-  var _ref3 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref3$size = _ref3.size,
-      size = _ref3$size === undefined ? 150 : _ref3$size;
-
-  var ss = parser.parseFromString((0, _warningTriangle2.default)(), 'image/svg+xml').childNodes[0];
-  ss.style.width = size + 'px';
-  return ss;
-};
-
-/***/ }),
-/* 390 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 300 400\" xml:space=\"preserve\">\n<path d=\"M150.2,133c19.5-18.4,46.2-28.5,72.5-28.5c22.5,0,40.5,4.9,49.9,10.5l10.1-25.2c-6.8-5.3-26.7-12.4-54.8-12.4\n  c-37.2,0-69.4,12-95.4,34.2c-7.8,6.5-14.9,13.8-21.1,21.8L127,53.3h143.2l7.2-39.3H88.3L17.5,386.6h45.9l21.3-111.9\n  c13.3,40,47.4,63.5,96.3,63.5c28.5,0,51.4-5.6,65.7-12l-4.1-25.5c-13.9,7.1-34.9,10.9-54.1,10.9c-56.3,0-77-37.2-77-82.6\n  c0-3.7,0.1-7.4,0.4-11H227l7.7-39.3H120.5C127.2,160.7,137.4,144.9,150.2,133z\"/>\n</svg>\n";
-};
-
-/***/ }),
-/* 391 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 300 400\" xml:space=\"preserve\">\n<g>\n  <path d=\"M151.9,82l-31.4,105.5h35c15.7,0,27.5-2.4,35.3-7.3c7.8-4.8,15.8-15.2,24.1-31h7.5l-27.7,97.1h-7.9\n    c2-7.9,2.9-14.3,2.9-19.5c0-8-2.7-14.2-8-18.6c-5.3-4.4-15.2-6.6-29.8-6.6h-35.4l-23.2,80.4c-4.2,14.3-6.3,23.8-6.3,28.5\n    c0,4.8,1.8,8.6,5.4,11.2c3.6,2.6,12.4,4.4,26.4,5.3l-2.4,7.3H11.2l2.6-7.3c10.2-0.3,17-1.2,20.4-2.8c5.2-2.2,9.1-5.2,11.6-9\n    c3.5-5.4,7.7-16.4,12.6-33.2l47-160.5c3.8-13,5.7-23.1,5.7-30.5c0-3.4-0.9-6.3-2.6-8.7c-1.7-2.4-4.2-4.2-7.6-5.4\n    c-3.3-1.2-10-1.8-19.9-1.8l2.4-7.3H290l-19.6,67.4h-7.5c1.4-8.1,2.2-14.8,2.2-20c0-8.6-2.4-15.5-7.2-20.5\n    c-4.8-5-10.9-8.6-18.4-10.7c-5.2-1.3-17-2-35.2-2H151.9z\"/>\n</g>\n<g>\n  <path d=\"M245.7,116.4l-11.9,51.9h-4.3l-0.5-13c-0.4-4.7-1.3-8.9-2.7-12.6c-1.4-3.7-3.5-6.9-6.4-9.6c-2.8-2.7-6.4-4.8-10.8-6.4\n    c-4.3-1.5-9.1-2.3-14.4-2.3c-14.1,0-26.4,3.9-37,11.6c-13.5,9.8-24,23.7-31.7,41.7c-6.3,14.8-9.5,29.8-9.5,45\n    c0,15.5,4.5,27.9,13.6,37.2c9.1,9.3,20.8,13.9,35.3,13.9c10.9,0,20.7-2.4,29.2-7.3c8.5-4.9,16.5-12.4,23.8-22.6h5.6\n    c-8.7,13.8-18.3,23.9-28.8,30.4c-10.6,6.5-23.2,9.7-37.9,9.7c-13.1,0-24.7-2.7-34.7-8.2c-10.1-5.5-17.8-13.2-23-23.1\n    c-5.3-9.9-7.9-20.6-7.9-32c0-17.5,4.7-34.5,14.1-51c9.4-16.5,22.2-29.5,38.6-39c16.3-9.5,32.8-14.2,49.4-14.2\n    c7.8,0,16.5,1.9,26.2,5.6c4.3,1.6,7.3,2.4,9.2,2.4c1.9,0,3.5-0.4,5-1.2c1.4-0.8,3.8-3,7.1-6.7H245.7z\"/>\n</g>\n</svg>\n";
-};
-
-/***/ }),
-/* 392 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<svg version=\"1.1\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:sketch=\"http://www.bohemiancoding.com/sketch/ns\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n  <g fill=\"none\" fill-rule=\"evenodd\" id=\"Icons new Arranged Names Color\" stroke=\"none\" stroke-width=\"1\">\n    <g fill=\"#FF0000\" id=\"101 Warning\">\n      <path d=\"M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 \" fill=\"#FFFFFF\"></path>\n      <path d=\"M14.4242327,6.14839275 C15.2942987,4.74072976 16.707028,4.74408442 17.5750205,6.14839275 L28.3601099,23.59738 C29.5216388,25.4765951 28.6755462,27 26.4714068,27 L5.5278464,27 C3.32321557,27 2.47386317,25.4826642 3.63914331,23.59738 Z M16,20 C16.5522847,20 17,19.5469637 17,19.0029699 L17,12.9970301 C17,12.4463856 16.5561352,12 16,12 C15.4477153,12 15,12.4530363 15,12.9970301 L15,19.0029699 C15,19.5536144 15.4438648,20 16,20 Z M16,24 C16.5522848,24 17,23.5522848 17,23 C17,22.4477152 16.5522848,22 16,22 C15.4477152,22 15,22.4477152 15,23 C15,23.5522848 15.4477152,24 16,24 Z M16,24\" id=\"Triangle 29\" />\n    </g>\n  </g>\n</svg>\n";
-};
-
-/***/ }),
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
 /* 393 */,
 /* 394 */,
 /* 395 */,
@@ -10019,192 +9926,7 @@ module.exports = function (scope) {
 /* 410 */,
 /* 411 */,
 /* 412 */,
-/* 413 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-//  weak
-
-var _require = __webpack_require__(76),
-    between = _require.between,
-    wrap = _require.wrap;
-
-function numToHex(num) {
-  var hex = Math.round(Math.min(num, 255)).toString(16);
-  return (hex.length === 1 ? '0' + hex : hex).toUpperCase();
-}
-
-var hexToNum = function hexToNum(hex) {
-  return parseInt(hex, 16);
-};
-
-var rgbToHex = function rgbToHex(_ref) {
-  var r = _ref.r,
-      g = _ref.g,
-      b = _ref.b;
-  return '#' + numToHex(r) + numToHex(g) + numToHex(b);
-};
-
-var hexToRgb = function hexToRgb(hex) {
-  return hex.length === 7 ? {
-    r: hexToNum(hex.slice(1, 3)),
-    g: hexToNum(hex.slice(3, 5)),
-    b: hexToNum(hex.slice(5, 7))
-  } : {
-    r: hexToNum(hex.slice(1, 2).repeat(2)),
-    g: hexToNum(hex.slice(2, 3).repeat(2)),
-    b: hexToNum(hex.slice(3, 4).repeat(2))
-  };
-};
-
-var round = function round(n) {
-  var decimals = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  return +n.toFixed(decimals);
-};
-
-// http://www.rapidtables.com/convert/color/rgb-to-hsv.htm
-function rgbToHsv(_ref2) {
-  var r = _ref2.r,
-      g = _ref2.g,
-      b = _ref2.b;
-
-  r /= 255;
-  g /= 255;
-  b /= 255;
-
-  var max = Math.max(r, g, b);
-  var min = Math.min(r, g, b);
-  var diff = max - min;
-  var value = max;
-  var saturation = max ? diff / max : 0;
-
-  var hue = 0;
-  if (!diff) {}
-  // For some reason website says "mod 6". This returns wonky
-  // values, while + 6 appears to return the correct values.
-  else if (r === max) {
-      hue = (g - b) / diff + 6;
-    } else if (g === max) {
-      hue = (b - r) / diff + 2;
-    } else if (b === max) {
-      hue = (r - g) / diff + 4;
-    }
-
-  hue *= 60;
-
-  return {
-    h: hue === 360 ? 0 : hue,
-    s: round(saturation, 2),
-    v: round(value, 2)
-  };
-}
-
-function hsvToRgb(_ref3) {
-  var h = _ref3.h,
-      s = _ref3.s,
-      v = _ref3.v;
-
-  h /= 60;
-  var c = v * s;
-  var x = c * (1 - Math.abs(h % 2 - 1));
-  var m = v - c;
-
-  var r = void 0,
-      g = void 0,
-      b = void 0;
-  switch (Math.floor(h)) {
-    case 0:
-    case 6:
-      r = c;g = x;b = 0;break;
-    case 1:
-      r = x;g = c;b = 0;break;
-    case 2:
-      r = 0;g = c;b = x;break;
-    case 3:
-      r = 0;g = x;b = c;break;
-    case 4:
-      r = x;g = 0;b = c;break;
-    case 5:
-      r = c;g = 0;b = x;break;
-  }
-
-  return {
-    r: round((r + m) * 255),
-    g: round((g + m) * 255),
-    b: round((b + m) * 255)
-  };
-}
-
-var hexToHsv = function hexToHsv(hex) {
-  return rgbToHsv(hexToRgb(hex));
-};
-var hsvToHex = function hsvToHex(hsv) {
-  return rgbToHex(hsvToRgb(hsv));
-};
-
-function applyToHex(hex, _ref4) {
-  var _ref4$h = _ref4.h,
-      h = _ref4$h === undefined ? 0 : _ref4$h,
-      _ref4$s = _ref4.s,
-      s = _ref4$s === undefined ? 0 : _ref4$s,
-      _ref4$v = _ref4.v,
-      v = _ref4$v === undefined ? 0 : _ref4$v;
-  var mod = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
-
-  var hsv = hexToHsv(hex);
-  return hsvToHex({
-    h: wrap(hsv.h + h / mod, 360),
-    s: between(hsv.s + s / mod, 1, 0),
-    v: between(hsv.v + v / mod, 1, 0)
-  });
-}
-
-// experimental
-function setHsvOnHex(hex, _ref5) {
-  var h = _ref5.h,
-      s = _ref5.s,
-      v = _ref5.v;
-
-  var hsv = hexToHsv(hex);
-  return hsvToHex({
-    h: !isNaN(h) ? wrap(h, 360) : hsv.h,
-    s: !isNaN(s) ? between(s, 1, 0) : hsv.s,
-    v: !isNaN(v) ? between(v, 1, 0) : hsv.v
-  });
-}
-
-var randMax = function randMax(ceil) {
-  return Math.floor(Math.random() * ceil);
-};
-
-function randHex() {
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += randMax(16).toString(16);
-  }
-  return color.toUpperCase();
-}
-
-function polarize(hex) {
-  return applyToHex(hex, { h: 180 });
-}
-
-module.exports = {
-  applyToHex: applyToHex,
-  __experimental__: { setHsvOnHex: setHsvOnHex },
-  hexToNum: hexToNum,
-  hexToRgb: hexToRgb,
-  hsvToRgb: hsvToRgb,
-  numToHex: numToHex,
-  rgbToHex: rgbToHex,
-  rgbToHsv: rgbToHsv,
-  randHex: randHex,
-  polarize: polarize
-};
-
-/***/ }),
+/* 413 */,
 /* 414 */,
 /* 415 */,
 /* 416 */,
@@ -10391,523 +10113,40 @@ module.exports = {
 /* 597 */,
 /* 598 */,
 /* 599 */,
-/* 600 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-//  weak
-
-
-
-var _ = __webpack_require__(76);
-var $ = __webpack_require__(121);
-var c = __webpack_require__(413);
-var dynamicInterval = __webpack_require__(609);
-var atLeast1 = _.atLeast(1);
-
-var changeColors = function changeColors(elem, baseColor) {
-  var properties = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  var primaryColor = baseColor;
-  var secondaryColor = c.polarize(primaryColor);
-
-  properties.primary = properties.primary || ['background-color'];
-  properties.secondary = properties.secondary || ['color', 'fill'];
-
-  return function (input) {
-    var hsv = {
-      h: typeof input === 'number' ? input : input.h,
-      s: typeof input === 'number' ? undefined : input.s,
-      v: typeof input === 'number' ? undefined : input.v
-    };
-
-    if (!window.IMPORTANT.pause) {
-      primaryColor = c.applyToHex(primaryColor, hsv);
-      secondaryColor = c.polarize(primaryColor);
-
-      properties.primary.forEach(function (p) {
-        return $(elem, p, primaryColor);
-      });
-      properties.secondary.forEach(function (s) {
-        return $(elem, s, secondaryColor);
-      });
-    }
-  };
-};
-
-var maxChange = 10;
-var baseDistance = 700;
-var baseTime = 15;
-
-var defaultOptions = { factor: 1.5, primary: undefined, secondary: undefined };
-
-function createSpeedSetter(elem, baseColor) {
-  var _ref = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : defaultOptions,
-      primary = _ref.primary,
-      secondary = _ref.secondary,
-      _ref$factor = _ref.factor,
-      factor = _ref$factor === undefined ? 1.5 : _ref$factor;
-
-  var _dynamicInterval = dynamicInterval(changeColors(elem, baseColor, { primary: primary, secondary: secondary })),
-      set = _dynamicInterval.set,
-      clear = _dynamicInterval.clear;
-
-  return function (rawDistance) {
-    var distance = atLeast1(rawDistance);
-    var distProportion = distance / baseDistance;
-
-    var time = _.atLeast(baseTime)(_.round(baseTime * distProportion * factor));
-
-    var colorChange = _.round(atLeast1(-maxChange * (1 - Math.pow(distProportion, -0.1))));
-    // set(100,100) //<- interesting behavior
-    set(time, colorChange, [time, colorChange]);
-  };
-}
-
-// create interface to update color speed and element center
-
-
-function updateColorSpeedDistance(elem, baseColor, baseSpeed) {
-  var elemCenter = $.center(elem);
-  var setSpeed = createSpeedSetter(elem, baseColor);
-  setSpeed(baseSpeed.distance, baseSpeed.time);
-
-  return {
-    updateColorSpeed: function updateColorSpeed(_ref2) {
-      var coords = _ref2.coords;
-
-      var distance = _.distance(coords, elemCenter);
-      setSpeed(distance);
-    },
-    updateCenter: function updateCenter() {
-      elemCenter = $.center(elem);
-    }
-  };
-}
-
-module.exports = { updateColorSpeedDistance: updateColorSpeedDistance, changeColors: changeColors };
-
-/***/ }),
-/* 601 */,
-/* 602 */,
-/* 603 */,
-/* 604 */
+/* 600 */,
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(605);
+__webpack_require__(602);
 
 __webpack_require__(175);
-
-__webpack_require__(606);
-
-__webpack_require__(607);
-
-var _getRef = __webpack_require__(388);
-
-var _2 = __webpack_require__(76);
-
-var _3 = _interopRequireDefault(_2);
 
 var _$ = __webpack_require__(121);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _colors = __webpack_require__(413);
-
-var _symbol = __webpack_require__(389);
-
-var _signupModal = __webpack_require__(610);
+var _randCurrency = __webpack_require__(603);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var fcSans = (0, _symbol.sansSerif)({ size: 70 }).outerHTML;
-var fcSerif = (0, _symbol.serif)({ size: 90 }).outerHTML;
+var $currencyTicker = _$2.default.id('currencyTicker');
 
-var _require = __webpack_require__(600),
-    changeColors = _require.changeColors;
-
-var referral = (0, _getRef.getRef)();
-
-var $faqQuestions = _$2.default.cls('faqQuestion');
-var $navMenu = _$2.default.id('nav-menu');
-var $content = _$2.default.id('content');
-var $hero = _$2.default.id('hero');
-var $warning = _$2.default.id('warning');
-var $callToAction = _$2.default.id('call-to-action');
-var $ctaContent = _$2.default.id('cta-content');
-var $menuStart = _$2.default.id('menuStart');
-var $faqCTA = _$2.default.id('faqCTA');
-var $popup = document.createElement('div');
-var $popup2 = document.createElement('div');
-_3.default.each(_$2.default.cls('fc-ss'), function (elem) {
-  return elem.innerHTML = fcSerif;
-});
-_3.default.each(_$2.default.cls('fc-s'), function (elem) {
-  return elem.innerHTML = fcSans;
-});
-
-$content.appendChild((0, _signupModal.modal)($callToAction, $menuStart, $faqCTA, $popup, $popup2));
-
-var ctaPrompts = ['START NOW', 'GET IT NOW', 'CLICK HERE', 'CLICK HERE', 'CLICK HERE', '100% ONLINE', 'MAKE CASH FAST', 'MAKE FAST CASH', 'SAFE AND SECURE', 'FUEL YOUR DREAMS'];
-
-$ctaContent.innerHTML = _3.default.sample(ctaPrompts);
+var ticker = (0, _randCurrency.tickerGenerator)();
 setInterval(function () {
-  return $ctaContent.innerHTML = _3.default.sample(ctaPrompts);
-}, 2000);
-
-var borderH = 1;
-setInterval(function () {
-  changeColors($content, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  changeColors($navMenu, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  _3.default.each($faqQuestions, function (q) {
-    return changeColors(q, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  });
-  borderH++;
-}, 20);
-
-var heroH = 1;
-setInterval(function () {
-  return changeColors($hero, '#0000ff', { primary: [], secondary: ['color', 'fill'] })(heroH++);
-}, 250);
-
-$popup.setAttribute('class', 'popup');
-$popup2.setAttribute('class', 'popup');
-$popup.innerHTML = '\n  <div>X</div>\n  <div class="popupContent">\n    CLICK HERE TO GET STARTED WITH FASTCASHMONEYPLUS\n    NOW!! DON\'T WAIT THIS WON\'T LAST!\n  </div>\n';
-
-$popup2.innerHTML = '\n  <div>X</div>\n  <div class="popupContent">\n    STOP WAITING FOR WEALTH TO FIND YOU! FIND YOUR WEALTH TODAY!\n  </div>\n';
-$popup.onclick = function () {
-  return setTimeout(function () {
-    return $popup.remove();
-  }, 150);
-};
-$popup2.onclick = function () {
-  return setTimeout(function () {
-    return $popup2.remove();
-  }, 150);
-};
-(0, _$2.default)($popup2, 'width', '220px');
-(0, _$2.default)($popup2, 'height', '190px');
-
-(0, _$2.default)($popup, 'top', _3.default.random(0, window.innerHeight - 180) + 'px');
-(0, _$2.default)($popup, 'left', _3.default.random(0, window.innerWidth - 200) + 'px');
-
-(0, _$2.default)($popup2, 'top', _3.default.random(0, window.innerHeight - 180) + 'px');
-(0, _$2.default)($popup2, 'left', _3.default.random(0, window.innerWidth - 200) + 'px');
-
-setTimeout(function () {
-  document.body.appendChild($popup);
-  console.log('1');
-}, _3.default.random(5000, 45000, true));
-
-setTimeout(function () {
-  document.body.appendChild($popup2);
-  console.log('2');
-}, _3.default.random(5000, 45000, true));
-
-setTimeout(function () {
-  console.log('%cSTOP! This is a private web browser feature intended for developers!', 'font-size: 25px; color: #f00');
-  console.log('%cIf someone told you to paste something in here to "HACK" FastCashMoneyPlus, they are LYING to you, and just want to STEAL YOUR FASTCASH.', 'font-size: 20px;');
-
-  console.log('%cPlease close this tab and report the incident to a FastCashMoneyPlus representative!: fastcashmoneyplus.biz@gmail.com', 'font-size: 19px;');
-}, 2000);
+  $currencyTicker.innerHTML = ticker.next().value;
+}, 50);
 
 /***/ }),
-/* 605 */
+/* 602 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 606 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _$ = __webpack_require__(121);
-
-var _$2 = _interopRequireDefault(_$);
-
-var _getRef = __webpack_require__(388);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log((0, _getRef.getQueryParams)());
-window.IMPORTANT = {
-  pause: false
-};
-
-_$2.default.onKeyPress(['p', 'P'])(function () {
-  return window.IMPORTANT.pause = !window.IMPORTANT.pause;
-});
-
-if ((0, _getRef.getQueryParams)().pause) {
-  setTimeout(function () {
-    return window.IMPORTANT.pause = true;
-  }, 1000);
-}
-
-/***/ }),
-/* 607 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _$ = __webpack_require__(121);
-
-var _$2 = _interopRequireDefault(_$);
-
-var _2 = __webpack_require__(76);
-
-var _3 = _interopRequireDefault(_2);
-
-__webpack_require__(608);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var c = __webpack_require__(413);
-// import 'components/signup';
-
-var _require = __webpack_require__(600),
-    updateColorSpeedDistance = _require.updateColorSpeedDistance,
-    changeColors = _require.changeColors;
-
-var colorSwitchers = _$2.default.cls('color-speed-distance');
-var colorMouses = _$2.default.cls('color-distance');
-var shadowChanges = _$2.default.cls('shadow-change');
-var colorTimeChangers = _$2.default.cls('color-time-change');
-
-var baseSpeed = { distance: 600, time: 1 };
-
-var baseShadowRadius = 20;
-var orientAdjust = 10;
-
-var updateBoxShadow = function updateBoxShadow(box) {
-  return function (_ref) {
-    var coords = _ref.coords;
-
-    var center = _$2.default.center(box);
-    var distance = _3.default.distance(coords, center);
-    var degree = _3.default.degreeAroundCenter(coords, center);
-
-    var shadowColor = c.applyToHex('#500', {
-      h: _3.default.round(degree),
-      v: _3.default.atMost(0.5)(distance / 800)
-    });
-
-    var shadowRadius = baseShadowRadius * (distance / 350) + baseShadowRadius;
-    var x = _3.default.round(shadowRadius * _3.default.sin(degree));
-    var y = _3.default.round(shadowRadius * _3.default.cos(degree));
-
-    var boxShadowStyle = y + 'px ' + x + 'px ' + baseShadowRadius + 'px ' + shadowColor;
-
-    (0, _$2.default)(box, 'box-shadow', boxShadowStyle);
-  };
-};
-
-// change box shadow when device orientation changes
-// beta -- forward backward tilt. 0 when flat on back, negative when backwards, converges at +/- 180 when flat upside down
-// alpha -- direction. roughly 360/0 when facing north
-// gamma -- side to side tilt. 0 when flat on either side. negative when left, postive when right (facing both sides), converges at 90
-var clearOrients = shadowChanges.map(function (box) {
-  var update = updateBoxShadow(box);
-
-  return _$2.default.onOrient(function (_ref2) {
-    var beta = _ref2.beta,
-        gamma = _ref2.gamma,
-        absolute = _ref2.absolute,
-        alpha = _ref2.alpha;
-
-    var coords = {
-      x: (gamma < 0 ? 90 + gamma : 90 - gamma) * orientAdjust,
-      y: (90 - beta) * orientAdjust
-    };
-
-    update({ coords: coords });
-  });
-});
-
-// remove orientation effects when there is a mouse event
-_$2.default.onMouseMove()(function () {
-  return clearOrients.forEach(_3.default.runFn);
-});
-
-var updaters = colorSwitchers.map(function (box) {
-  return updateColorSpeedDistance(box, c.applyToHex('#ff0000', { h: _3.default.random(360) }), baseSpeed, {
-    primary: ['background-color'],
-    secondary: ['color', 'fill']
-  });
-});
-
-// update color speed of element based on distace from mouse
-_$2.default.onMouseMove()(function (event) {
-  updaters.map(function (updater) {
-    return updater.updateColorSpeed(event);
-  });
-});
-
-// FIXME (onResize) -- update center of element on window resize
-// $.onResize()(() => updaters.forEach(({ updateCenter }) => updateCenter()));
-
-// change shadow angle and color depending mouse position relative to center of element
-_$2.default.onMouseMove()(function (event) {
-  return shadowChanges.map(function (box) {
-    return updateBoxShadow(box)(event);
-  });
-});
-
-// continuously rotate element color
-
-var h = 1;
-setInterval(function () {
-  colorTimeChangers.forEach(function (elem) {
-    changeColors(elem, '#00ffff')(h);
-  });
-  h++;
-}, 20);
-
-var baseButtonColor = c.polarize('#ff0000');
-
-// Color changes as mouse gets closer to center of element; polarizes on hover
-colorMouses.forEach(function (elem) {
-  // random color when there is no initial mouse
-  changeColors(elem, baseButtonColor)(_3.default.random(360));
-
-  var isHovering = void 0;
-
-  _$2.default.onHover(elem)(function (enterEvent) {
-    return isHovering = true;
-  }, function (leaveEvent) {
-    return isHovering = false;
-  });
-
-  _$2.default.onMouseMove()(function (event) {
-    var dist = _$2.default.distanceFromCenter(elem, event);
-    var hue = _3.default.round(dist / 3);
-    var adj = isHovering ? 180 : 0;
-    changeColors(elem, baseButtonColor)(hue + adj);
-  });
-});
-
-/***/ }),
-/* 608 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _$ = __webpack_require__(121);
-
-var _$2 = _interopRequireDefault(_$);
-
-var _2 = __webpack_require__(76);
-
-var _3 = _interopRequireDefault(_2);
-
-var _symbol = __webpack_require__(389);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var fcSymbol = (0, _symbol.serif)({ size: 45 }).outerHTML;
-
-var floaters = _$2.default.cls('floater');
-
-_3.default.each(floaters, function (floater, i) {
-  (0, _$2.default)(floater, 'font-size', 45);
-  (0, _$2.default)(floater, 'animation', 'ColorRotate ' + _3.default.random(3, 8) + 's ease infinite');
-  floater.innerHTML = Math.random() < 0.5 ? fcSymbol : '$';
-
-  var moveFloater = function moveFloater() {
-    if (window.IMPORTANT.pause) return;
-    var moveX = _3.default.random(0, _$2.default.window.width) + 'px';
-    var moveY = _3.default.random(0, _$2.default.window.height) + 'px';
-    (0, _$2.default)(floater, 'margin-left', moveX);
-    (0, _$2.default)(floater, 'margin-top', moveY);
-  };
-
-  moveFloater();
-  var floating = setInterval(moveFloater, _3.default.random(1000, 3000, true));
-
-  _$2.default.onClick(floater)(function () {
-    console.log('clicked floater', i);
-    (0, _$2.default)(floater, 'display', 'none');
-    clearInterval(floating);
-  });
-});
-
-/***/ }),
-/* 609 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _ = __webpack_require__(76);
-
-/*
-  @fn : (setArgs) => void
-
-  // => {
-    set: (time, setArgs) => sets new interval for fn, calling it each time with setArgs
-    clear: () => clears interval
-  }
-*/
-
-
-function dynamicInterval(fn) {
-  var now = Date.now();
-  var intervals = 0;
-  var interval = void 0,
-      timeout = void 0;
-
-  // clear old interval, create a new interval
-  var newInterval = function newInterval(execute, time) {
-    clearInterval(interval);
-    interval = setInterval(execute, time);
-  };
-
-  var set = function set(time) {
-    for (var _len = arguments.length, setArgs = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      setArgs[_key - 1] = arguments[_key];
-    }
-
-    time = _.round(time);
-
-    // execute fn with setArgs,
-    var execute = function execute() {
-      now = Date.now();
-      fn.apply(undefined, setArgs);
-    };
-
-    // find the amount of time already elapsed, deduct that from the new interval,
-    // and set the new interval in the-amount-of-time-left
-    var timeElapsed = _.round(Date.now() - now);
-    var timeLeft = time - timeElapsed;
-    var timeLeftInInterval = _.atLeast(timeLeft)(0);
-
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
-      execute();
-      newInterval(execute, time);
-    }, timeLeftInInterval);
-  };
-
-  var clear = function clear() {
-    clearInterval(interval);
-    clearTimeout(timeout);
-  };
-
-  return { set: set, clear: clear };
-}
-
-module.exports = dynamicInterval;
-
-/***/ }),
-/* 610 */
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10916,78 +10155,138 @@ module.exports = dynamicInterval;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.modal = undefined;
-
-var _$ = __webpack_require__(121);
-
-var _$2 = _interopRequireDefault(_$);
+exports.randCurrency = exports.currencySymbols = undefined;
+exports.tickerGenerator = tickerGenerator;
 
 var _2 = __webpack_require__(76);
 
 var _3 = _interopRequireDefault(_2);
 
-__webpack_require__(611);
-
-var _index = __webpack_require__(612);
-
-var _index2 = _interopRequireDefault(_index);
-
-var _step = __webpack_require__(613);
-
-var _step2 = _interopRequireDefault(_step);
-
-var _step3 = __webpack_require__(614);
-
-var _step4 = _interopRequireDefault(_step3);
-
-var _step5 = __webpack_require__(615);
-
-var _step6 = _interopRequireDefault(_step5);
-
-var _step7 = __webpack_require__(616);
-
-var _step8 = _interopRequireDefault(_step7);
-
-var _loading = __webpack_require__(617);
-
-var _loading2 = _interopRequireDefault(_loading);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _marked = /*#__PURE__*/regeneratorRuntime.mark(nextLoadingChar);
+var _marked = /*#__PURE__*/regeneratorRuntime.mark(tickerGenerator);
 
-var parser = new DOMParser();
-var parse = function parse(template, id) {
-  return parser.parseFromString(template(), 'text/html').childNodes[0];
+var currencySymbols = exports.currencySymbols = [{
+  code: '$',
+  char: '$',
+  prob: 13
+}, {
+  code: '&#165',
+  char: '¥',
+  prob: 6
+}, {
+  code: '&#8364',
+  char: '€',
+  prob: 5
+}, {
+  code: '&#163',
+  char: '£',
+  prob: 5
+}, {
+  code: '&#8361',
+  char: '₩',
+  prob: 2
+}, {
+  code: '&#8373',
+  char: '₵',
+  prob: 2
+}, {
+  code: '&#8369',
+  char: '₱',
+  prob: 2
+}, {
+  //   code: '&#3647',
+  //   char: '฿',
+  //   prob: 2
+  // }, {
+  //   code: '&#8377',
+  //   char: '₹',
+  //   prob: 1
+  // }, {
+  code: '&#8363',
+  char: '₫',
+  prob: 1
+}, {
+  code: '&#8353',
+  char: '₡',
+  prob: 1
+}, {
+  code: '&#8366',
+  char: '₮',
+  prob: 1
+}, {
+  code: '&#8367',
+  char: '₯',
+  prob: 1
+}];
+
+var currencyHat = currencySymbols.reduce(function (hat, currency) {
+  _3.default.times(currency.prob, function () {
+    hat.push(currency.char);
+  });
+  return hat;
+}, []);
+
+var randCurrency = exports.randCurrency = function randCurrency() {
+  return _3.default.sample(currencyHat);
 };
 
-var mount = function mount(elem, child) {
-  elem.innerHTML = '';
-  elem.appendChild(child);
-};
-
-function nextLoadingChar(str) {
-  var i;
-  return regeneratorRuntime.wrap(function nextLoadingChar$(_context) {
+function tickerGenerator() {
+  var quantity, maxIx, cashIx, allChars, getStaticTicker, incIndex, generateTicker;
+  return regeneratorRuntime.wrap(function tickerGenerator$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
-          i = 0;
+          quantity = 30;
+          maxIx = quantity * 3;
+          cashIx = 0;
+          allChars = {
+            fast: '>',
+            cash: randCurrency(),
+            plus: '+'
+          };
 
-        case 1:
+          getStaticTicker = function getStaticTicker() {
+            var output = [];
+            _3.default.times(quantity, function () {
+              return output.push(allChars.fast);
+            });
+            _3.default.times(quantity, function () {
+              return output.push(randCurrency());
+            });
+            _3.default.times(quantity, function () {
+              return output.push(allChars.plus);
+            });
+            return output;
+          };
+
+          incIndex = function incIndex(ix) {
+            return ix + 1 < maxIx ? ix + 1 : 0;
+          };
+
+          generateTicker = function generateTicker() {
+            cashIx = incIndex(cashIx);
+            var staticTicker = getStaticTicker();
+            var left = _3.default.takeRight(staticTicker, cashIx);
+            var right = _3.default.take(staticTicker, maxIx - cashIx);
+
+            return left.concat(right).join('');
+          };
+
+        case 7:
           if (false) {
-            _context.next = 6;
+            _context.next = 12;
             break;
           }
 
-          _context.next = 4;
-          return str[i++ % str.length];
+          _context.next = 10;
+          return generateTicker();
 
-        case 4:
-          _context.next = 1;
+        case 10:
+          _context.next = 7;
           break;
 
-        case 6:
+        case 12:
         case 'end':
           return _context.stop();
       }
@@ -10995,154 +10294,5 @@ function nextLoadingChar(str) {
   }, _marked, this);
 }
 
-var modal = exports.modal = function modal() {
-  for (var _len = arguments.length, triggers = Array(_len), _key = 0; _key < _len; _key++) {
-    triggers[_key] = arguments[_key];
-  }
-
-  var loading = parse(_loading2.default).querySelector('#signupModal-loading');
-  var step1 = parse(_step2.default).querySelector('#signupModal-1');
-  var step2 = parse(_step4.default).querySelector('#signupModal-2');
-  var step3 = parse(_step6.default).querySelector('#signupModal-3');
-  var step4 = parse(_step8.default).querySelector('#signupModal-4');
-  var loadingChars = nextLoadingChar('>>>>>>>$$$$$$$$+++++++');
-
-  var component = parse(_index2.default).querySelector('#signupModal');
-  component.className = 'modalHidden';
-
-  var bg = component.querySelector('#signupModalBG');
-  var content = component.querySelector('#signupModalContent');
-
-  var closeModal = function closeModal() {
-    setTimeout(function () {
-      window.IMPORTANT.pause = false;
-      component.className = 'modalHidden';
-    }, 50);
-  };
-  bg.addEventListener('click', closeModal);
-
-  // esc
-  // window.onkeydown = e => e.keyCode === 27 && closeModal()
-
-  triggers.forEach(function (trigger) {
-    trigger.addEventListener('click', function () {
-      console.log('bleh');
-      // window.IMPORTANT.pause = true
-      setTimeout(function () {
-        component.className = '';
-      }, 300);
-    });
-  });
-
-  mount(content, step1);
-
-  step1.querySelector('#signupContinue-1').onclick = function () {
-    mount(content, loading);
-    setInterval(function () {
-      return loading.innerHTML += loadingChars.next().value;
-    }, 50);
-    setTimeout(function () {
-      return mount(content, step3);
-    }, 4000);
-  };
-
-  step2.querySelector('#signupContinue-2').onclick = function () {
-    mount(content, loading);
-    setTimeout(function () {
-      return mount(content, step4);
-    }, 11000);
-  };
-
-  var continueIfInputsClicked = function continueIfInputsClicked() {
-    var allClicked = [].every.call(step3.getElementsByTagName('input'), function (input) {
-      return input.checked;
-    });
-
-    if (allClicked) {
-      mount(content, loading);
-      setTimeout(function () {
-        return mount(content, step2);
-      }, 8000);
-    }
-  };
-  _3.default.each(step3.getElementsByTagName('input'), function (input) {
-    input.onclick = continueIfInputsClicked;
-  });
-
-  return component;
-};
-
-/***/ }),
-/* 611 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 612 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n  <div id=\"signupModalContent\">\n  </div>\n</div>\n";
-};
-
-/***/ }),
-/* 613 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"signupModal-1\">\n  <h1>JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n<!--   <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3> -->\n\n  <h3 style=\"margin-top: 15px\">\n    Don't sit out on the investment opportunity of a LIFETIME! Otherwise, you will regret it for the REST OF YOU'RE LIFE. You will always wonder about \"What Could Have Been\" if you had bought FashCash back in the early days. \"I remember discovering FastCash in the early days,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it all away!\". Don't let that happen to you!\n  </h3>\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-1\" class=\"signupContinue\">GET STARTED NOW</button>\n  </div>\n</div>\n";
-};
-
-/***/ }),
-/* 614 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"signupModal-2\">\n  <style>\n    .modal-input {\n      font-size: 22px;\n      background-color: #feb;\n      border: 3px solid #888;\n    }\n\n    .modal-input:active,\n    .modal-input:focus {\n      background-color: #def;\n    }\n\n    .modal-input-section {\n      margin-top: 5px;\n    }\n    .modal-input-section label {\n      font-size: 20px;\n      font-family: sans-serif;\n    }\n  </style>\n  <h2>CREATE ACCOUNT</h2>\n\n  <div class=\"modal-input-section\">\n    <label>\n      EMAIL ADDRESS:\n      <input id=\"signupEmail\" class=\"modal-input\" placeholder=\"EMAIL ADDRESS\">\n      <br>\n      <label style=\"user-select: none; pointer-events: none\"><input type=\"checkbox\" checked>signup for fastcashmoneyplus.biz updates and promotions</label>\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:\n      <input class=\"modal-input\" placeholder=\"SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      FULL LEGAL NAME:\n      <input class=\"modal-input\" placeholder=\"FULL LEGAL NAME\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      DATE OF BIRTH dd/mm/yyyy:\n      <input class=\"modal-input\" placeholder=\"DATE OF BIRTH dd/mm/yyyy\">\n    </label>\n  </div>\n\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-2\" class=\"signupContinue\">INVEST NOW</button>\n  </div>\n</div>\n";
-};
-
-/***/ }),
-/* 615 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"signupModal-3\">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id=\"confirmationList\">\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read, and agree to, the <a target=\"_blank\" href=\"./terms.html\">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"https://github.com/scyclow/fcmp-ico/blob/master/contracts/FastCashMoneyPlus.sol\" target=\"_blank\">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I'm ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n";
-};
-
-/***/ }),
-/* 616 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"signupModal-4\">\n  <style>\n    #signupModal-4 h2 {\n      margin-top: 30px;\n    }\n  </style>\n  <h1>You've Been Approved!</h1>\n\n  <h2>Congratulations! You are all set to start investing in FastCash!</h2>\n\n  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>\n\n  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>\n\n  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>\n  <a href=\"./invest.html\" target=\"_blank\" class=\"gotoConsole\">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>\n</div>\n";
-};
-
-/***/ }),
-/* 617 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"signupModal-loading\" style=\"overflow-wrap: break-word; width: 35em;font-size: 22px;\">\n  LOADING\n</div>\n";
-};
-
 /***/ })
-/******/ ]);
+/******/ ]);</script></body>

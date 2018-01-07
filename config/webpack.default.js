@@ -15,6 +15,7 @@ module.exports = {
     flasher: './flasher/index.js',
     wallet: './wallet/index.js',
     terms: './terms/index.js',
+    '404': './404/index.js',
   },
   output: {
     path: rootDir('docs'),
@@ -70,6 +71,14 @@ module.exports = {
       filename: 'terms.html',
       inject: 'body',
       chunks: ['terms'],
+      inlineSource: '.(js|css)$',
+      favicon: rootDir(`src/assets/favicon-business.ico`)
+    }),
+    html({
+      template: rootDir(`src/404/index.html`),
+      filename: '404.html',
+      inject: 'body',
+      chunks: ['404'],
       inlineSource: '.(js|css)$',
       favicon: rootDir(`src/assets/favicon-business.ico`)
     }),
