@@ -279,8 +279,8 @@ nav #nav-menu .nav-menu-item {
 
 .popup {
   position: fixed;
-  top: 70px;
-  left: 27vw;
+/*  top: 70px;
+  left: 27vw;*/
   width: 250px;
   height: 250px;
   cursor: pointer;

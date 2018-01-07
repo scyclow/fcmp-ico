@@ -62,7 +62,7 @@
       </h2>
       <h2>
         AMOUNT (in FastCash, up to 18 decimals of precision):
-        <input id="transferAmountInput" class="fnInput" type="number" placeholder="ex. 20">
+        <input id="transferAmountInput" class="fnInput" type="number" placeholder="ex. 20.000000000000000001">
       </h2>
       <h3>To execute the transfer with an external wallet (ex. MyEtherWallet), please generate your transaction with these fields:</h3>
       <table class="inputTable">
@@ -70,10 +70,6 @@
           <!-- TODO hardcode address -->
           <td class="formData-name">To Address</td>
           <td id="toAddressData" class="formData"></td>
-        </tr>
-        <tr>
-          <td class="formData-name">Gas Limit</td>
-          <td class="formData">150000</td>
         </tr>
         <tr>
           <td class="formData-name">Data</td>
@@ -88,8 +84,8 @@
 
     <div id="buySection">
       <h1>BUY MORE FASTCASH</h1>
-      <h3>Sometimes, the amount of fastcash you have is jsut not enough. That's why we let you acquire EVEN MORE with no hassle! Please use <a target="_blank" href="./invest.html?noWarning=true#chooser">the FASTCASH CALCULATOR tool</a> to find out how much WEI you need to complete your transaction.</h3>
-      <h2>WEI required for transaction: <input id="weiAmount" class="fnInput" type="number" placeholder="ex. 150000000000000000"></h2>
+      <h3>Sometimes, the amount of fastcash you have is jsut not enough. That's why we let you acquire EVEN MORE with no hassle! Please use <a target="_blank" href="./invest.html?noWarning=true#chooser">the FASTCASH CALCULATOR tool</a> to find out how much Ethereum you need to complete your transaction.</h3>
+      <h2>ETH required for transaction: <input id="weiAmount" class="fnInput" type="number" placeholder="ex. 2.75"></h2>
 
       <h3>To execute the transfer with an external wallet (ex. MyEtherWallet), please generate your transaction with these fields:</h3>
       <table class="inputTable">
@@ -102,13 +98,22 @@
           <td class="formData-name">Amount to Send</td>
           <td id="amountToSendData" class="formData"></td>
         </tr>
-        <tr>
-          <td class="formData-name">Gas Limit</td>
-          <td class="formData">150000</td>
-        </tr>
       </table>
       <h3>And for Ethereum browsers & extensions: </h3>
       <button id="executeBuy" class="easyButton flashyButton">BUY MORE FASTCASH</button>
     </div>
+
+    <hr>
+    <div>
+      <p>FASTCASH is an ERC20 coin, and as such, supports FastCash transfers to and by Ethereum address, account balance lookup, and account authorization.</p>
+    </div>
   </div>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112030344-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112030344-1');
+</script>
 </body>

@@ -38,35 +38,40 @@ module.exports = {
       filename: 'index.html',
       inject: 'body',
       chunks: ['index'],
-      inlineSource: '.(js|css)$' // inline all css and js in prod
+      inlineSource: '.(js|css)$',
+      favicon: rootDir(`src/assets/favicon.ico`)
     }),
     html({
       template: rootDir(`src/invest/index.html`),
       filename: 'invest.html',
       inject: 'body',
       chunks: ['invest'],
-      inlineSource: '.(js|css)$'
+      inlineSource: '.(js|css)$',
+      favicon: rootDir(`src/assets/favicon.ico`)
     }),
     html({
       template: rootDir(`src/flasher/index.html`),
       filename: 'flasher.html',
       inject: 'body',
       chunks: ['flasher'],
-      inlineSource: '.(js|css)$'
+      inlineSource: '.(js|css)$',
+      favicon: rootDir(`src/assets/favicon.ico`)
     }),
     html({
       template: rootDir(`src/wallet/index.html`),
       filename: 'wallet.html',
       inject: 'body',
       chunks: ['wallet'],
-      inlineSource: '.(js|css)$'
+      inlineSource: '.(js|css)$',
+      favicon: rootDir(`src/assets/favicon.ico`)
     }),
     html({
       template: rootDir(`src/terms/index.html`),
       filename: 'terms.html',
       inject: 'body',
       chunks: ['terms'],
-      inlineSource: '.(js|css)$'
+      inlineSource: '.(js|css)$',
+      favicon: rootDir(`src/assets/favicon-business.ico`)
     }),
   ],
   module: {

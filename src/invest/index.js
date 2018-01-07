@@ -395,7 +395,7 @@ setTimeout(() => {
   )
 
   console.log(
-    `%cPlease close this tab and report the incident to a FastCashMoneyPlus representative! https://github.com/scyclow/fcmp-ico/issues`,
+    `%cPlease close this tab and report the incident to a FastCashMoneyPlus representative!: fastcashmoneyplus.biz@gmail.com`,
     'font-size: 19px;'
   )
 }, 2000)

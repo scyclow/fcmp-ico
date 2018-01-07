@@ -34,7 +34,15 @@ const $popup2 = document.createElement('div')
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSerif)
 _.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
 
-$content.appendChild(modal($callToAction, $menuStart, $faqCTA, $popup, $popup2))
+$content.appendChild(
+  modal(
+    $callToAction,
+    $menuStart,
+    $faqCTA,
+    $popup,
+    $popup2
+  )
+)
 
 const ctaPrompts = [
   'START NOW',
@@ -89,20 +97,24 @@ $popup2.innerHTML = `
 `
 $popup.onclick = () => setTimeout(() => $popup.remove(), 150)
 $popup2.onclick = () => setTimeout(() => $popup2.remove(), 150)
-$($popup2, 'margin-top', '130px')
-$($popup2, 'margin-left', '50px')
 $($popup2, 'width', '220px')
 $($popup2, 'height', '190px')
 
+$($popup, 'top', _.random(0, window.innerHeight - 180) + 'px')
+$($popup, 'left', _.random(0, window.innerWidth - 200) + 'px')
+
+$($popup2, 'top', _.random(0, window.innerHeight - 180) + 'px')
+$($popup2, 'left', _.random(0, window.innerWidth - 200) + 'px')
+
 setTimeout(() => {
   document.body.appendChild($popup)
-  console.log('bl')
-  setTimeout(() => {
-    console.log('blewlwkel')
-    document.body.appendChild($popup2)
-  }, _.random(300, 5000, true))
-// }, 2000)
-}, _.random(2000, 30000, true))
+  console.log('1')
+}, _.random(5000, 45000, true))
+
+setTimeout(() => {
+  document.body.appendChild($popup2)
+  console.log('2')
+}, _.random(5000, 45000, true))
 
 setTimeout(() => {
   console.log(
@@ -115,7 +127,7 @@ setTimeout(() => {
   )
 
   console.log(
-    `%cPlease close this tab and report the incident to a FastCashMoneyPlus representative! https://github.com/scyclow/fcmp-ico/issues`,
+    `%cPlease close this tab and report the incident to a FastCashMoneyPlus representative!: fastcashmoneyplus.biz@gmail.com`,
     'font-size: 19px;'
   )
 }, 2000)

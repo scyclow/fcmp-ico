@@ -10585,20 +10585,24 @@ $popup2.onclick = function () {
     return $popup2.remove();
   }, 150);
 };
-(0, _$2.default)($popup2, 'margin-top', '130px');
-(0, _$2.default)($popup2, 'margin-left', '50px');
 (0, _$2.default)($popup2, 'width', '220px');
 (0, _$2.default)($popup2, 'height', '190px');
 
+(0, _$2.default)($popup, 'top', _3.default.random(0, window.innerHeight - 180) + 'px');
+(0, _$2.default)($popup, 'left', _3.default.random(0, window.innerWidth - 200) + 'px');
+
+(0, _$2.default)($popup2, 'top', _3.default.random(0, window.innerHeight - 180) + 'px');
+(0, _$2.default)($popup2, 'left', _3.default.random(0, window.innerWidth - 200) + 'px');
+
 setTimeout(function () {
   document.body.appendChild($popup);
-  console.log('bl');
-  setTimeout(function () {
-    console.log('blewlwkel');
-    document.body.appendChild($popup2);
-  }, _3.default.random(300, 5000, true));
-  // }, 2000)
-}, _3.default.random(2000, 30000, true));
+  console.log('1');
+}, _3.default.random(5000, 45000, true));
+
+setTimeout(function () {
+  document.body.appendChild($popup2);
+  console.log('2');
+}, _3.default.random(5000, 45000, true));
 
 setTimeout(function () {
   console.log('%cSTOP! This is a private web browser feature intended for developers!', 'font-size: 25px; color: #f00');
@@ -11079,7 +11083,7 @@ var modal = exports.modal = function modal() {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n  <div id=\"signupModalContent\">\n    <h1>DON'T WAIT! JOIN FASTCASHMONEYPLUS TODAY, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n    <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>\n\n    <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about \"What Could Have Been\" if you had bought FashCash early on. \"I remember discovering FastCash early on,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!\".</h3>\n\n    <button id=\"signupGetStarted\">GET STARTED NOW</button>\n  </div>\n</div>\n";
+  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n  <div id=\"signupModalContent\">\n  </div>\n</div>\n";
 };
 
 /***/ }),
@@ -11090,7 +11094,7 @@ module.exports = function (scope) {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-1\">\n  <h1>DON'T WAIT! JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n  <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3>\n\n  <h3>Don't miss out on the investment opportunity of a LIFETIME! If you don't invest now, you will regret it for the REST OF YOU'RE LIFE. You'll always wonder about \"What Could Have Been\" if you had bought FashCash early on. \"I remember discovering FastCash early on,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it away!\". Don't let that happen to you!</h3>\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-1\" class=\"signupContinue\">GET STARTED NOW</button>\n  </div>\n</div>\n";
+  return "<div id=\"signupModal-1\">\n  <h1>JOIN THE FASTCASHMONEYPLUS REVOLUTION, AND INVEST IN THE CRYPTOCURRENCY EVERYONE IS TALKING ABOUT!</h1>\n\n<!--   <h3>FASTCASH is going fast, and it surely won't last! Get in on the ground floor TODAY!</h3> -->\n\n  <h3 style=\"margin-top: 15px\">\n    Don't sit out on the investment opportunity of a LIFETIME! Otherwise, you will regret it for the REST OF YOU'RE LIFE. You will always wonder about \"What Could Have Been\" if you had bought FashCash back in the early days. \"I remember discovering FastCash in the early days,\" you'll tell your children at the dinner table, \"and I chickened out! I had the opportunity to be a FASTCASH MILLIONAIRE, and I threw it all away!\". Don't let that happen to you!\n  </h3>\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-1\" class=\"signupContinue\">GET STARTED NOW</button>\n  </div>\n</div>\n";
 };
 
 /***/ }),

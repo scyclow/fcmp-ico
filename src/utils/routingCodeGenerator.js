@@ -53,6 +53,7 @@ const keyWords = [
   'glorious',
   'corruption',
   'viral',
+  'revolution',
 ];
 
 function randInsert (original: string, content: string): string {

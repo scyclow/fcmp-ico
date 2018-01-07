@@ -1,5 +1,6 @@
-# WELCOME TO THE FASTCASHMONEYPLUS SOURCE CODE
+# HELLO AND WELCOME TO THE FASTCASHMONEYPLUS SOURCE CODE
 
-## To view the FastCashMoneyPlus contract, go to /contracts/FastCashMoneyPlus.sol
+## To view the FastCashMoneyPlus genesis contract, go to /contracts/FastCashMoneyPlus.sol
 
 ### For development, please install `geth`, `npm i -g truffle`, and start running npm scripts until it works.
+

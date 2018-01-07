@@ -62711,7 +62711,7 @@ var _3 = _interopRequireDefault(_2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var keyWords = ['god', 'sex', 'power', 'love', 'wealth', 'fast', 'cash', 'now', 'money', 'click', 'fuck', 'opportunity', 'digital', 'dream', 'energy', 'spirit', 'pure', 'clean', 'plus', 'advanced', 'electric', 'freedom', 'life', 'death', 'accumulation', 'easy', 'fear', 'destiny', 'believe', 'seared', 'immediate', 'pump', 'bang', 'cool', 'fat', 'secure', 'mint', 'fresh', 'transparent', 'sweet', 'crypto', 'growth', 'vibrant', 'buzz', 'gold', 'dynamic', 'ace', 'glorious', 'corruption', 'viral'];
+var keyWords = ['god', 'sex', 'power', 'love', 'wealth', 'fast', 'cash', 'now', 'money', 'click', 'fuck', 'opportunity', 'digital', 'dream', 'energy', 'spirit', 'pure', 'clean', 'plus', 'advanced', 'electric', 'freedom', 'life', 'death', 'accumulation', 'easy', 'fear', 'destiny', 'believe', 'seared', 'immediate', 'pump', 'bang', 'cool', 'fat', 'secure', 'mint', 'fresh', 'transparent', 'sweet', 'crypto', 'growth', 'vibrant', 'buzz', 'gold', 'dynamic', 'ace', 'glorious', 'corruption', 'viral', 'revolution'];
 
 function randInsert(original, content) {
   var randIx = _3.default.random(2, original.length - 1, true);
