@@ -1872,10 +1872,7 @@ module.exports = function (COLLECTION) {
 
 
 /***/ }),
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2498,6 +2495,9 @@ module.exports = exp;
 window._ = exp;
 
 /***/ }),
+/* 74 */,
+/* 75 */,
+/* 76 */,
 /* 77 */,
 /* 78 */,
 /* 79 */,
@@ -3432,7 +3432,7 @@ module.exports = navigator && navigator.userAgent || '';
 
 //  weak
 
-var _ = __webpack_require__(76);
+var _ = __webpack_require__(73);
 
 var keyDict = {
   enter: 13,
@@ -10027,7 +10027,7 @@ module.exports = function (scope) {
 
 //  weak
 
-var _require = __webpack_require__(76),
+var _require = __webpack_require__(73),
     between = _require.between,
     wrap = _require.wrap;
 
@@ -10399,7 +10399,7 @@ module.exports = {
 
 
 
-var _ = __webpack_require__(76);
+var _ = __webpack_require__(73);
 var $ = __webpack_require__(121);
 var c = __webpack_require__(413);
 var dynamicInterval = __webpack_require__(609);
@@ -10507,7 +10507,7 @@ __webpack_require__(607);
 
 var _getRef = __webpack_require__(388);
 
-var _2 = __webpack_require__(76);
+var _2 = __webpack_require__(73);
 
 var _3 = _interopRequireDefault(_2);
 
@@ -10661,7 +10661,7 @@ var _$ = __webpack_require__(121);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _2 = __webpack_require__(76);
+var _2 = __webpack_require__(73);
 
 var _3 = _interopRequireDefault(_2);
 
@@ -10804,7 +10804,7 @@ var _$ = __webpack_require__(121);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _2 = __webpack_require__(76);
+var _2 = __webpack_require__(73);
 
 var _3 = _interopRequireDefault(_2);
 
@@ -10846,7 +10846,7 @@ _3.default.each(floaters, function (floater, i) {
 "use strict";
 
 
-var _ = __webpack_require__(76);
+var _ = __webpack_require__(73);
 
 /*
   @fn : (setArgs) => void
@@ -10922,33 +10922,37 @@ var _$ = __webpack_require__(121);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _2 = __webpack_require__(76);
+var _2 = __webpack_require__(73);
 
 var _3 = _interopRequireDefault(_2);
 
-__webpack_require__(611);
+var _api = __webpack_require__(611);
 
-var _index = __webpack_require__(612);
+var _api2 = _interopRequireDefault(_api);
+
+__webpack_require__(612);
+
+var _index = __webpack_require__(613);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _step = __webpack_require__(613);
+var _step = __webpack_require__(614);
 
 var _step2 = _interopRequireDefault(_step);
 
-var _step3 = __webpack_require__(614);
+var _step3 = __webpack_require__(615);
 
 var _step4 = _interopRequireDefault(_step3);
 
-var _step5 = __webpack_require__(615);
+var _step5 = __webpack_require__(616);
 
 var _step6 = _interopRequireDefault(_step5);
 
-var _step7 = __webpack_require__(616);
+var _step7 = __webpack_require__(617);
 
 var _step8 = _interopRequireDefault(_step7);
 
-var _loading = __webpack_require__(617);
+var _loading = __webpack_require__(618);
 
 var _loading2 = _interopRequireDefault(_loading);
 
@@ -11005,6 +11009,7 @@ var modal = exports.modal = function modal() {
   var step2 = parse(_step4.default).querySelector('#signupModal-2');
   var step3 = parse(_step6.default).querySelector('#signupModal-3');
   var step4 = parse(_step8.default).querySelector('#signupModal-4');
+
   var loadingChars = nextLoadingChar('>>>>>>>$$$$$$$$+++++++');
 
   var component = parse(_index2.default).querySelector('#signupModal');
@@ -11026,7 +11031,6 @@ var modal = exports.modal = function modal() {
 
   triggers.forEach(function (trigger) {
     trigger.addEventListener('click', function () {
-      console.log('bleh');
       // window.IMPORTANT.pause = true
       setTimeout(function () {
         component.className = '';
@@ -11047,6 +11051,20 @@ var modal = exports.modal = function modal() {
   };
 
   step2.querySelector('#signupContinue-2').onclick = function () {
+    var signupEmail = _$2.default.id('signupEmail');
+    var givenEmail = signupEmail && signupEmail.value && signupEmail.value.match(/.+\@.+\..+/);
+    if (givenEmail) {
+      _api2.default.post('users', {
+        email: givenEmail,
+        pin: 'SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:'
+      }).then(function (response) {
+        console.log(givenEmail + ' registered!', response);
+      }).catch(function (error) {
+        console.log(error);
+      });
+    } else {
+      console.log('oops, no signupEmail');
+    }
     mount(content, loading);
     setTimeout(function () {
       return mount(content, step4);
@@ -11074,12 +11092,95 @@ var modal = exports.modal = function modal() {
 
 /***/ }),
 /* 611 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var get = function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var route = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var headers = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var response;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch(API_ROOT + route, { headers: headers });
+
+          case 2:
+            response = _context.sent;
+            return _context.abrupt('return', response.json());
+
+          case 4:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, this);
+  }));
+
+  return function get() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+var post = function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+    var route = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var withBody = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var withHeaders = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var method, headers, body, response;
+    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            method = 'POST';
+            headers = _3.default.assign({ 'Content-Type': 'application/json' }, withHeaders);
+            body = JSON.stringify(withBody);
+            _context2.next = 5;
+            return fetch('https://fastcashmoneyplus.herokuapp.com/api/' + route, { headers: headers, body: body, method: method });
+
+          case 5:
+            response = _context2.sent;
+            return _context2.abrupt('return', response.json());
+
+          case 7:
+          case 'end':
+            return _context2.stop();
+        }
+      }
+    }, _callee2, this);
+  }));
+
+  return function post() {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
+var _2 = __webpack_require__(73);
+
+var _3 = _interopRequireDefault(_2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+exports.default = { get: get, post: post };
+
+/***/ }),
+/* 612 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 612 */
+/* 613 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11090,7 +11191,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 613 */
+/* 614 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11101,17 +11202,6 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 614 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (scope) {
-  return "<div id=\"signupModal-2\">\n  <style>\n    .modal-input {\n      font-size: 22px;\n      background-color: #feb;\n      border: 3px solid #888;\n    }\n\n    .modal-input:active,\n    .modal-input:focus {\n      background-color: #def;\n    }\n\n    .modal-input-section {\n      margin-top: 5px;\n    }\n    .modal-input-section label {\n      font-size: 20px;\n      font-family: sans-serif;\n    }\n  </style>\n  <h2>CREATE ACCOUNT</h2>\n\n  <div class=\"modal-input-section\">\n    <label>\n      EMAIL ADDRESS:\n      <input id=\"signupEmail\" class=\"modal-input\" placeholder=\"EMAIL ADDRESS\">\n      <br>\n      <label style=\"user-select: none; pointer-events: none\"><input type=\"checkbox\" checked>signup for fastcashmoneyplus.biz updates and promotions</label>\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:\n      <input class=\"modal-input\" placeholder=\"SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      FULL LEGAL NAME:\n      <input class=\"modal-input\" placeholder=\"FULL LEGAL NAME\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      DATE OF BIRTH dd/mm/yyyy:\n      <input class=\"modal-input\" placeholder=\"DATE OF BIRTH dd/mm/yyyy\">\n    </label>\n  </div>\n\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-2\" class=\"signupContinue\">INVEST NOW</button>\n  </div>\n</div>\n";
-};
-
-/***/ }),
 /* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11119,7 +11209,7 @@ module.exports = function (scope) {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-3\">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id=\"confirmationList\">\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read, and agree to, the <a target=\"_blank\" href=\"./terms.html\">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"https://github.com/scyclow/fcmp-ico/blob/master/contracts/FastCashMoneyPlus.sol\" target=\"_blank\">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I'm ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n";
+  return "<div id=\"signupModal-2\">\n  <style>\n    .modal-input {\n      font-size: 22px;\n      background-color: #feb;\n      border: 3px solid #888;\n    }\n\n    .modal-input:active,\n    .modal-input:focus {\n      background-color: #def;\n    }\n\n    .modal-input-section {\n      margin-top: 5px;\n    }\n    .modal-input-section label {\n      font-size: 20px;\n      font-family: sans-serif;\n    }\n  </style>\n  <h2>CREATE ACCOUNT</h2>\n\n  <div class=\"modal-input-section\">\n    <label>\n      EMAIL ADDRESS:\n      <input id=\"signupEmail\" class=\"modal-input\" placeholder=\"EMAIL ADDRESS\">\n      <br>\n      <label style=\"user-select: none; pointer-events: none\"><input type=\"checkbox\" checked>signup for fastcashmoneyplus.biz updates and promotions</label>\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:\n      <input class=\"modal-input\" placeholder=\"SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      FULL LEGAL NAME:\n      <input class=\"modal-input\" placeholder=\"FULL LEGAL NAME\">\n    </label>\n  </div>\n\n  <div class=\"modal-input-section\">\n    <label>\n      DATE OF BIRTH dd/mm/yyyy:\n      <input class=\"modal-input\" placeholder=\"DATE OF BIRTH dd/mm/yyyy\">\n    </label>\n  </div>\n\n\n  <div style=\"display: flex; justify-content: center\">\n    <button id=\"signupContinue-2\" class=\"signupContinue\">INVEST NOW</button>\n  </div>\n</div>\n";
 };
 
 /***/ }),
@@ -11130,11 +11220,22 @@ module.exports = function (scope) {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-4\">\n  <style>\n    #signupModal-4 h2 {\n      margin-top: 30px;\n    }\n  </style>\n  <h1>You've Been Approved!</h1>\n\n  <h2>Congratulations! You are all set to start investing in FastCash!</h2>\n\n  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>\n\n  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>\n\n  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>\n  <a href=\"./invest.html\" target=\"_blank\" class=\"gotoConsole\">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>\n</div>\n";
+  return "<div id=\"signupModal-3\">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id=\"confirmationList\">\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read, and agree to, the <a target=\"_blank\" href=\"./terms.html\">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"https://github.com/scyclow/fcmp-ico/blob/master/contracts/FastCashMoneyPlus.sol\" target=\"_blank\">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I'm ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n";
 };
 
 /***/ }),
 /* 617 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (scope) {
+  return "<div id=\"signupModal-4\">\n  <style>\n    #signupModal-4 h2 {\n      margin-top: 30px;\n    }\n  </style>\n  <h1>You've Been Approved!</h1>\n\n  <h2>Congratulations! You are all set to start investing in FastCash!</h2>\n\n  <h2>While the process may seem intimidating at first, rest assured that there is nothing to worry about! Everything will make sense once you're sitting on a mountain of FastCash, and laughing at your misplaced hesitation. In fact, professional psychologists note that healthy individuals are able to overcome their FUD ((F)ear (U)ncertainty (D)oubt) and push through by not second-guessing themselves. </h2>\n\n  <h2>The longer you wait, the faster those FAT FastCash profits will slim down. With the math of compounded returns in your corner, the sooner you invest the better!</h2>\n\n  <h2>Please go to the FASTCASHMONEYPLUS investment console to continue -></h2>\n  <a href=\"./invest.html\" target=\"_blank\" class=\"gotoConsole\">GO TO THE FASTCASHMONEYPLUS.biz INVESTMENT CONSOLE</a>\n</div>\n";
+};
+
+/***/ }),
+/* 618 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

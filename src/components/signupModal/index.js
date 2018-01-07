@@ -2,6 +2,7 @@
 
 import $ from 'utils/$';
 import _ from 'utils/_';
+import api from 'utils/api';
 
 import './index.css'
 import modalTemplate from './index.html'
@@ -30,6 +31,7 @@ export const modal = (...triggers) => {
   const step2 = parse(step2Template).querySelector('#signupModal-2')
   const step3 = parse(step3Template).querySelector('#signupModal-3')
   const step4 = parse(step4Template).querySelector('#signupModal-4')
+
   const loadingChars = nextLoadingChar('>>>>>>>$$$$$$$$+++++++');
 
   const component = parse(modalTemplate).querySelector('#signupModal');
@@ -51,7 +53,6 @@ export const modal = (...triggers) => {
 
   triggers.forEach(trigger => {
     trigger.addEventListener('click', () => {
-      console.log('bleh')
       // window.IMPORTANT.pause = true
       setTimeout(() => {
         component.className = '';
@@ -68,6 +69,23 @@ export const modal = (...triggers) => {
   }
 
   step2.querySelector('#signupContinue-2').onclick = () => {
+    const signupEmail = $.id('signupEmail')
+    const givenEmail = signupEmail && signupEmail.value && signupEmail.value.match(/.+\@.+\..+/)
+    if (givenEmail) {
+      api
+        .post('users', {
+          email: givenEmail,
+          pin: 'SECRET PIN -- PLEASE KEEP THIS A SECRET AND DO NOT GIVE IT TO ANYONE WHO ASKS YOU FOR IT:'
+        })
+        .then(response => {
+          console.log(`${givenEmail} registered!`, response)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    } else {
+      console.log('oops, no signupEmail')
+    }
     mount(content, loading)
     setTimeout(() => mount(content, step4), 11000)
   }
