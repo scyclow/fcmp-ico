@@ -7,6 +7,7 @@ const fcSymbol = serif({ size: 45 }).outerHTML
 
 const floaters = $.cls('floater');
 
+
 _.each(floaters, (floater, i) => {
   $(floater, 'font-size', 45);
   $(floater, 'animation', `ColorRotate ${_.random(3, 8)}s ease infinite`);

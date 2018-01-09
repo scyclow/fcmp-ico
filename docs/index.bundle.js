@@ -10599,7 +10599,6 @@ $popup2.onclick = function () {
 
 setTimeout(function () {
   document.body.appendChild($popup);
-  console.log('1');
 }, _3.default.random(5000, 45000, true));
 
 setTimeout(function () {
@@ -10613,6 +10612,32 @@ setTimeout(function () {
 
   console.log('%cPlease close this tab and report the incident to a FastCashMoneyPlus representative!: fastcashmoneyplus.biz@gmail.com', 'font-size: 19px;');
 }, 2000);
+
+// try {
+//   const AudioContext = window.AudioContext || window.webkitAudioContext;
+//   const MAX_VOLUME = 0.04
+//   const ctx = new AudioContext();
+
+//   const source = ctx.createOscillator();
+//   const gain = ctx.createGain();
+
+//   source.connect(gain)
+//   gain.connect(ctx.destination)
+
+//   // window.gain = gain
+//   source.type = 'sine'
+//   source.start()
+
+//   document.onclick = () => {
+//     gain.gain.value = MAX_VOLUME
+//     source.frequency.value = _.random(50, 1500, true)
+//     setTimeout(() => {}, _.random(50))
+//   }
+
+// } catch (e) {
+//   console.log('could not create audio source')
+//   return {}
+// }
 
 /***/ }),
 /* 605 */
