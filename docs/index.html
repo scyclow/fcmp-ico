@@ -504,7 +504,7 @@ nav #nav-menu .nav-menu-item {
   left: 0;
 }
 
-#signupModalContent {
+#signupModalContainer {
   width: 80vw;
   height: 85vh;
   min-width: 300px;
@@ -520,10 +520,16 @@ nav #nav-menu .nav-menu-item {
   margin: auto;
 }
 
-#signupModalContent h1,
-#signupModalContent h2,
-#signupModalContent h3 {
+#signupModalContainer h1,
+#signupModalContainer h2,
+#signupModalContainer h3 {
   text-align: center;
+}
+
+#closeSignupModal {
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 20px;
 }
 
 .signupContinue {
@@ -681,7 +687,7 @@ nav #nav-menu .nav-menu-item {
       <p>"I used to be a struggling single mother in the Bronx before I discovered fastcashmoneyplus.biz. and then my life was turned around. Now I can afford to pay for college for my children." Wendy Pilsen</p>
       <p>"I use fast cash to to make cash fast." Wendy Pilsen</p>
       <p>"It seems like nowadays you can use fast cash for nearly anything! Just last week I refinanced my third mortgage with fastcash as collateral." Joe Smith</p>
-      <p>"Make $$$ from home couldn't be easier! I started using fastcashmoney.biz <a href="https://fastcashmoneyplus.biz/">click here</a> and have made more money in the past month than I made all of last year, and all from the comfort from my own home. Check out the site and the 5 easy steps to start making money hand over fist." -- Raul Jones</p>
+      <p>"Make $$$ from home couldn't be easier! I started using fastcashmoney.biz <a href="http://fastcashmoneyplus.biz/">click here</a> and have made more money in the past month than I made all of last year, and all from the comfort from my own home. Check out the site and the 5 easy steps to start making money hand over fist." -- Raul Jones</p>
       <p>"Finally, the investment opportunity I've been waiting for. At last, I can make cash fast." -- Frank Johnson</p>
       <p>"Achieving the American Dream has never been easier" -- Fred Frankson</p>
 
@@ -11314,12 +11320,12 @@ $popup2.onclick = function () {
 
 setTimeout(function () {
   document.body.appendChild($popup);
-}, _3.default.random(5000, 45000, true));
+}, _3.default.random(25000, 45000, true));
 
 setTimeout(function () {
   document.body.appendChild($popup2);
   console.log('2');
-}, _3.default.random(5000, 45000, true));
+}, _3.default.random(25000, 45000, true));
 
 setTimeout(function () {
   console.log('%cSTOP! This is a private web browser feature intended for developers!', 'font-size: 25px; color: #f00');
@@ -11757,6 +11763,7 @@ var modal = exports.modal = function modal() {
 
   var bg = component.querySelector('#signupModalBG');
   var content = component.querySelector('#signupModalContent');
+  var closeSignupModal = component.querySelector('#closeSignupModal');
 
   var closeModal = function closeModal() {
     setTimeout(function () {
@@ -11765,6 +11772,7 @@ var modal = exports.modal = function modal() {
     }, 50);
   };
   bg.addEventListener('click', closeModal);
+  closeSignupModal.addEventListener('click', closeModal);
 
   // esc
   // window.onkeydown = e => e.keyCode === 27 && closeModal()
@@ -11927,7 +11935,7 @@ exports.default = { get: get, post: post };
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n  <div id=\"signupModalContent\">\n  </div>\n</div>\n";
+  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n\n  <div id=\"signupModalContainer\">\n    <div id=\"closeSignupModal\">X</div>\n    <div id=\"signupModalContent\">\n    </div>\n  </div>\n</div>\n";
 };
 
 /***/ }),

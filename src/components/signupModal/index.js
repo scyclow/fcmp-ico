@@ -39,6 +39,7 @@ export const modal = (...triggers) => {
 
   const bg = component.querySelector('#signupModalBG')
   const content = component.querySelector('#signupModalContent')
+  const closeSignupModal = component.querySelector('#closeSignupModal')
 
   const closeModal = () => {
     setTimeout(() => {
@@ -47,6 +48,7 @@ export const modal = (...triggers) => {
     }, 50)
   }
   bg.addEventListener('click', closeModal)
+  closeSignupModal.addEventListener('click', closeModal)
 
   // esc
   // window.onkeydown = e => e.keyCode === 27 && closeModal()

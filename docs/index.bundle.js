@@ -10599,12 +10599,12 @@ $popup2.onclick = function () {
 
 setTimeout(function () {
   document.body.appendChild($popup);
-}, _3.default.random(5000, 45000, true));
+}, _3.default.random(25000, 45000, true));
 
 setTimeout(function () {
   document.body.appendChild($popup2);
   console.log('2');
-}, _3.default.random(5000, 45000, true));
+}, _3.default.random(25000, 45000, true));
 
 setTimeout(function () {
   console.log('%cSTOP! This is a private web browser feature intended for developers!', 'font-size: 25px; color: #f00');
@@ -11042,6 +11042,7 @@ var modal = exports.modal = function modal() {
 
   var bg = component.querySelector('#signupModalBG');
   var content = component.querySelector('#signupModalContent');
+  var closeSignupModal = component.querySelector('#closeSignupModal');
 
   var closeModal = function closeModal() {
     setTimeout(function () {
@@ -11050,6 +11051,7 @@ var modal = exports.modal = function modal() {
     }, 50);
   };
   bg.addEventListener('click', closeModal);
+  closeSignupModal.addEventListener('click', closeModal);
 
   // esc
   // window.onkeydown = e => e.keyCode === 27 && closeModal()
@@ -11212,7 +11214,7 @@ exports.default = { get: get, post: post };
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n  <div id=\"signupModalContent\">\n  </div>\n</div>\n";
+  return "<div id=\"signupModal\">\n  <div id=\"signupModalBG\"></div>\n\n  <div id=\"signupModalContainer\">\n    <div id=\"closeSignupModal\">X</div>\n    <div id=\"signupModalContent\">\n    </div>\n  </div>\n</div>\n";
 };
 
 /***/ }),

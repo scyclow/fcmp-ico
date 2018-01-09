@@ -62288,8 +62288,8 @@ var $weiAmount = _$2.default.id('weiAmount');
 var $amountToSendData = _$2.default.id('amountToSendData');
 var $accountBalance = _$2.default.id('accountBalance');
 
-$refLinkLong.innerHTML = 'https://fastcashmoneyplus.biz/?ref=' + routingCode;
-$refLinkShort.innerHTML = 'https://fast.plus?r=' + routingCode;
+$refLinkLong.innerHTML = 'http://fastcashmoneyplus.biz/?ref=' + routingCode;
+$refLinkShort.innerHTML = 'http://fast.plus?r=' + routingCode;
 
 $refLongCopy.onclick = function () {
   var x = document.createElement('input');
@@ -62306,12 +62306,12 @@ $refShortCopy.onclick = function () {
   alert('Copied to clipboard!');
 };
 
-var emailBody = encodeURI('\n  Hello! I just came accross an INCREDIBLE investment opportunity,\n  and wanted to share it with you before it really took off! If you\'re\n  looking to get RICH QUICK, then this has your name written all over it!\n  Simply visit this cryptographically SECURE link:\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  |\n  |    https://fastcashmoneyplus.biz/?ref=' + routingCode + '\n  |\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  and follow the instructions!\n');
+var emailBody = encodeURI('\n  Hello! I just came accross an INCREDIBLE investment opportunity,\n  and wanted to share it with you before it really took off! If you\'re\n  looking to get RICH QUICK, then this has your name written all over it!\n  Simply visit this cryptographically SECURE link:\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  |\n  |    http://fastcashmoneyplus.biz/?ref=' + routingCode + '\n  |\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  and follow the instructions!\n');
 
 var emailSubject = encodeURI('CHECK OUT THIS AMAZING INVESTMENT OPPORTUNITY!');
 $emailShare.href = 'mailto:?Subject=' + emailSubject + '&Body=' + emailBody;
 
-var twitterStatus = _3.default.sample([encodeURI('Are you #CRAVING MASSIVE #CRYPTO RETURNS? Then check THIS one out: https://fast.plus?r=' + routingCode + ' $fastcash #FASTCASH $crypto #CRYPTOBULL $eth $btc $xrp').replace(/\#/g, '%23'), encodeURI('Check out this website to make fast cash now! https://fast.plus?r=' + routingCode + ' #FASTCASH $fastcash #CRYPTOCRACK #btc #eth').replace('#', '%23')]);
+var twitterStatus = _3.default.sample([encodeURI('Are you #CRAVING MASSIVE #CRYPTO RETURNS? Then check THIS one out: http://fast.plus?r=' + routingCode + ' $fastcash #FASTCASH $crypto #CRYPTOBULL $eth $btc $xrp').replace(/\#/g, '%23'), encodeURI('Check out this website to make fast cash now! http://fast.plus?r=' + routingCode + ' #FASTCASH $fastcash #CRYPTOCRACK #btc #eth').replace('#', '%23')]);
 
 $twitterShare.href = 'https://twitter.com/home?status=' + twitterStatus;
 

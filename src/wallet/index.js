@@ -35,8 +35,8 @@ const $weiAmount = $.id('weiAmount')
 const $amountToSendData = $.id('amountToSendData')
 const $accountBalance = $.id('accountBalance')
 
-$refLinkLong.innerHTML = `https://fastcashmoneyplus.biz/?ref=${routingCode}`
-$refLinkShort.innerHTML = `https://fast.plus?r=${routingCode}`
+$refLinkLong.innerHTML = `http://fastcashmoneyplus.biz/?ref=${routingCode}`
+$refLinkShort.innerHTML = `http://fast.plus?r=${routingCode}`
 
 $refLongCopy.onclick = () => {
   const x = document.createElement('input')
@@ -60,7 +60,7 @@ const emailBody = encodeURI(`
   Simply visit this cryptographically SECURE link:
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   |
-  |    https://fastcashmoneyplus.biz/?ref=${routingCode}
+  |    http://fastcashmoneyplus.biz/?ref=${routingCode}
   |
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   and follow the instructions!
@@ -70,8 +70,8 @@ const emailSubject = encodeURI('CHECK OUT THIS AMAZING INVESTMENT OPPORTUNITY!')
 $emailShare.href = `mailto:?Subject=${emailSubject}&Body=${emailBody}`
 
 const twitterStatus = _.sample([
-  encodeURI(`Are you #CRAVING MASSIVE #CRYPTO RETURNS? Then check THIS one out: https://fast.plus?r=${routingCode} $fastcash #FASTCASH $crypto #CRYPTOBULL $eth $btc $xrp`).replace(/\#/g, '%23'),
-  encodeURI(`Check out this website to make fast cash now! https://fast.plus?r=${routingCode} #FASTCASH $fastcash #CRYPTOCRACK #btc #eth`).replace('#', '%23')
+  encodeURI(`Are you #CRAVING MASSIVE #CRYPTO RETURNS? Then check THIS one out: http://fast.plus?r=${routingCode} $fastcash #FASTCASH $crypto #CRYPTOBULL $eth $btc $xrp`).replace(/\#/g, '%23'),
+  encodeURI(`Check out this website to make fast cash now! http://fast.plus?r=${routingCode} #FASTCASH $fastcash #CRYPTOCRACK #btc #eth`).replace('#', '%23'),
 ])
 
 $twitterShare.href = `https://twitter.com/home?status=${twitterStatus}`

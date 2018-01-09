@@ -108,12 +108,12 @@ $($popup2, 'left', _.random(0, window.innerWidth - 200) + 'px')
 
 setTimeout(() => {
   document.body.appendChild($popup)
-}, _.random(5000, 45000, true))
+}, _.random(25000, 45000, true))
 
 setTimeout(() => {
   document.body.appendChild($popup2)
   console.log('2')
-}, _.random(5000, 45000, true))
+}, _.random(25000, 45000, true))
 
 setTimeout(() => {
   console.log(
