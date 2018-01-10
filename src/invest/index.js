@@ -324,7 +324,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
     })
     .catch(e => {
       console.error(e)
-      $easyCheckoutMsg.innerHTML = 'SOMETHING WENT WRONG: e'
+      $easyCheckoutMsg.innerHTML = 'SOMETHING WENT WRONG: e ' + e
       window.alert('ERROR:'+e.message)
     })
   }
@@ -338,8 +338,8 @@ function renderFromTransactionData({ usd2fc, usd2eth, amountInMoneyBucks, newRou
   const fc2eth = fc2usd * usd2eth;
 
   let leftToDo = 'Please do the following things before continuing: '
-  if (!amountInMoneyBucks) leftToDo += '<br>1. Choose the amount of fastcash you\'d like to buy'
-  if (!newRoutingCode) leftToDo += '<br>2. Generate a fastcash address'
+  if (!amountInMoneyBucks) leftToDo += '<br>1. Choose the amount of FastCash you\'d like to buy'
+  if (!newRoutingCode) leftToDo += '<br>2. Generate a FastCash address'
   if (amountInMoneyBucks && newRoutingCode) leftToDo = `ALMOST THERE! <h3 class="sansSerif">PLEASE NOTE THAT ALL TRANSACTIONS ARE NON-REFUNDABLE, AND THAT BY PURCHASING FASTCASH, YOU WAIVE ALL FUTURE LIABILITIES RELATING TO FASTCASHMONEYPLUS.biz</h3>`
 
   $stepsToComplete.innerHTML = leftToDo;

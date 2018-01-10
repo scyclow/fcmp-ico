@@ -62307,7 +62307,7 @@ $refShortCopy.onclick = function () {
   alert('Copied to clipboard!');
 };
 
-var emailBody = encodeURI('\n  Hello! I just came accross an INCREDIBLE investment opportunity,\n  and wanted to share it with you before it really took off! If you\'re\n  looking to get RICH QUICK, then this has your name written all over it!\n  Simply visit this cryptographically SECURE link:\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  |\n  |    http://fastcashmoneyplus.biz/?ref=' + routingCode + '\n  |\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  and follow the instructions!\n');
+var emailBody = encodeURI('\n  Hello! I jsut came accross an INCREDIBLE investment opportunity,\n  and wanted to share it with you before it really took off! If your\n  looking to get RICH QUICK, then this has your name written all over it!\n  Simply visit this cryptographicaly SECURE link:\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  |\n  |    http://fastcashmoneyplus.biz/?ref=' + routingCode + '\n  |\n  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n  and follow the instructions!\n');
 
 var emailSubject = encodeURI('CHECK OUT THIS AMAZING INVESTMENT OPPORTUNITY!');
 $emailShare.href = 'mailto:?Subject=' + emailSubject + '&Body=' + emailBody;

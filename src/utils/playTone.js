@@ -25,6 +25,7 @@ export default function playTone(baseFreq = 3000, timeout = 200) {
     gain.gain.value = MAX_VOLUME
     setTimeout(() => {
       gain.gain.value = 0
+      source.frequency.value = 0
     }, timeout)
   } catch (e) {
     console.log(e)

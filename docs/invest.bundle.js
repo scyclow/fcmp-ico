@@ -62576,7 +62576,7 @@ function renderPage(_ref2) {
       $easyCheckoutMsg.innerHTML = 'SUCCESS';
     }).catch(function (e) {
       console.error(e);
-      $easyCheckoutMsg.innerHTML = 'SOMETHING WENT WRONG: e';
+      $easyCheckoutMsg.innerHTML = 'SOMETHING WENT WRONG: e ' + e;
       window.alert('ERROR:' + e.message);
     });
   };
@@ -62596,8 +62596,8 @@ function renderFromTransactionData(_ref3) {
   var fc2eth = fc2usd * usd2eth;
 
   var leftToDo = 'Please do the following things before continuing: ';
-  if (!amountInMoneyBucks) leftToDo += '<br>1. Choose the amount of fastcash you\'d like to buy';
-  if (!newRoutingCode) leftToDo += '<br>2. Generate a fastcash address';
+  if (!amountInMoneyBucks) leftToDo += '<br>1. Choose the amount of FastCash you\'d like to buy';
+  if (!newRoutingCode) leftToDo += '<br>2. Generate a FastCash address';
   if (amountInMoneyBucks && newRoutingCode) leftToDo = 'ALMOST THERE! <h3 class="sansSerif">PLEASE NOTE THAT ALL TRANSACTIONS ARE NON-REFUNDABLE, AND THAT BY PURCHASING FASTCASH, YOU WAIVE ALL FUTURE LIABILITIES RELATING TO FASTCASHMONEYPLUS.biz</h3>';
 
   $stepsToComplete.innerHTML = leftToDo;
@@ -62716,7 +62716,7 @@ var _3 = _interopRequireDefault(_2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var keyWords = ['god', 'sex', 'power', 'love', 'wealth', 'fast', 'cash', 'now', 'money', 'click', 'fuck', 'opportunity', 'digital', 'dream', 'energy', 'spirit', 'pure', 'clean', 'plus', 'advanced', 'electric', 'freedom', 'life', 'death', 'accumulation', 'easy', 'fear', 'destiny', 'believe', 'seared', 'immediate', 'pump', 'bang', 'cool', 'fat', 'secure', 'mint', 'fresh', 'transparent', 'sweet', 'crypto', 'growth', 'vibrant', 'buzz', 'gold', 'dynamic', 'ace', 'glorious', 'corruption', 'viral', 'revolution'];
+var keyWords = ['god', 'sex', 'power', 'love', 'wealth', 'fast', 'cash', 'now', 'money', 'click', 'fuck', 'opportunity', 'digital', 'dream', 'energy', 'spirit', 'pure', 'clean', 'plus', 'advanced', 'electric', 'freedom', 'life', 'death', 'accumulation', 'easy', 'fear', 'destiny', 'believe', 'seared', 'immediate', 'pump', 'bang', 'cool', 'fat', 'secure', 'mint', 'fresh', 'transparent', 'sweet', 'crypto', 'growth', 'vibrant', 'buzz', 'gold', 'dynamic', 'ace', 'glorious', 'corruption', 'viral', 'revolution', 'toxic', 'octane'];
 
 function randInsert(original, content) {
   var randIx = _3.default.random(2, original.length - 1, true);

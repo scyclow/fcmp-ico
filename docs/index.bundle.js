@@ -10060,6 +10060,7 @@ function playTone() {
     gain.gain.value = MAX_VOLUME;
     setTimeout(function () {
       gain.gain.value = 0;
+      source.frequency.value = 0;
     }, timeout);
   } catch (e) {
     console.log(e);

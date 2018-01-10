@@ -54,10 +54,10 @@ $refShortCopy.onclick = () => {
 }
 
 const emailBody = encodeURI(`
-  Hello! I just came accross an INCREDIBLE investment opportunity,
-  and wanted to share it with you before it really took off! If you're
+  Hello! I jsut came accross an INCREDIBLE investment opportunity,
+  and wanted to share it with you before it really took off! If your
   looking to get RICH QUICK, then this has your name written all over it!
-  Simply visit this cryptographically SECURE link:
+  Simply visit this cryptographicaly SECURE link:
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   |
   |    http://fastcashmoneyplus.biz/?ref=${routingCode}
