@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 601);
+/******/ 	return __webpack_require__(__webpack_require__.s = 602);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10083,13 +10083,14 @@ module.exports = function (regExp, replace) {
 /* 598 */,
 /* 599 */,
 /* 600 */,
-/* 601 */
+/* 601 */,
+/* 602 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(602);
+__webpack_require__(603);
 
 __webpack_require__(175);
 
@@ -10097,25 +10098,61 @@ var _$ = __webpack_require__(121);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _randCurrency = __webpack_require__(603);
+var _randCurrency = __webpack_require__(604);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $currencyTicker = _$2.default.id('currencyTicker');
+var $currencyTickers = _$2.default.cls('currencyTicker');
 
-var ticker = (0, _randCurrency.tickerGenerator)();
-setInterval(function () {
-  $currencyTicker.innerHTML = ticker.next().value;
-}, 50);
+$currencyTickers.forEach(function (currencyTicker) {
+  var ticker = (0, _randCurrency.tickerGenerator)();
+  setInterval(function () {
+    currencyTicker.innerHTML = ticker.next().value;
+  }, 50);
+});
+
+// set tone to 20
+
+try {
+  var AudioContext = window.AudioContext || window.webkitAudioContext;
+  var ctx = new AudioContext();
+
+  var MAX_VOLUME = 0.02;
+
+  var source = ctx.createOscillator();
+  var gain = ctx.createGain();
+
+  source.connect(gain);
+  gain.connect(ctx.destination);
+  gain.gain.value = MAX_VOLUME;
+  source.type = 'sawtooth';
+  source.detune.value = 100;
+  source.frequency.value = 30;
+  source.start();
+
+  var ctx2 = new AudioContext();
+
+  var source2 = ctx2.createOscillator();
+  var gain2 = ctx2.createGain();
+
+  source2.connect(gain2);
+  source2.type = 'square';
+  gain2.connect(ctx2.destination);
+  gain2.gain.value = MAX_VOLUME;
+  source2.frequency.value = 4000;
+  source2.start();
+} catch (e) {
+  console.log(e);
+}
 
 /***/ }),
-/* 602 */
+/* 603 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 603 */
+/* 604 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

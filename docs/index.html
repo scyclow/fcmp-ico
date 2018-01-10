@@ -781,7 +781,7 @@ nav #nav-menu .nav-menu-item {
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 604);
+/******/ 	return __webpack_require__(__webpack_require__.s = 605);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10746,6 +10746,54 @@ module.exports = function (scope) {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = playTone;
+
+var MAX_VOLUME = 0.04;
+var source = void 0,
+    gain = void 0;
+try {
+  var AudioContext = window.AudioContext || window.webkitAudioContext;
+  var ctx = new AudioContext();
+
+  source = ctx.createOscillator();
+  gain = ctx.createGain();
+
+  source.connect(gain);
+  gain.connect(ctx.destination);
+  gain.gain.value = 0;
+  source.start();
+} catch (e) {
+  console.log(e);
+}
+
+function playTone() {
+  var baseFreq = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;
+  var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 200;
+
+  try {
+    var multiplier = _.sample([1, 1.25, 1.3333333, 2, 1.5, 1.125]);
+    var freq = baseFreq * multiplier;
+
+    source.frequency.value = freq;
+    gain.gain.value = MAX_VOLUME;
+    setTimeout(function () {
+      gain.gain.value = 0;
+    }, timeout);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+/***/ }),
+/* 414 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 //  weak
 
 var _require = __webpack_require__(73),
@@ -10926,7 +10974,6 @@ module.exports = {
 };
 
 /***/ }),
-/* 414 */,
 /* 415 */,
 /* 416 */,
 /* 417 */,
@@ -11112,7 +11159,8 @@ module.exports = {
 /* 597 */,
 /* 598 */,
 /* 599 */,
-/* 600 */
+/* 600 */,
+/* 601 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11122,8 +11170,8 @@ module.exports = {
 
 var _ = __webpack_require__(73);
 var $ = __webpack_require__(121);
-var c = __webpack_require__(413);
-var dynamicInterval = __webpack_require__(609);
+var c = __webpack_require__(414);
+var dynamicInterval = __webpack_require__(610);
 var atLeast1 = _.atLeast(1);
 
 var changeColors = function changeColors(elem, baseColor) {
@@ -11209,24 +11257,28 @@ function updateColorSpeedDistance(elem, baseColor, baseSpeed) {
 module.exports = { updateColorSpeedDistance: updateColorSpeedDistance, changeColors: changeColors };
 
 /***/ }),
-/* 601 */,
 /* 602 */,
 /* 603 */,
-/* 604 */
+/* 604 */,
+/* 605 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(605);
+__webpack_require__(606);
 
 __webpack_require__(175);
 
-__webpack_require__(606);
-
 __webpack_require__(607);
 
+__webpack_require__(608);
+
 var _getRef = __webpack_require__(388);
+
+var _playTone = __webpack_require__(413);
+
+var _playTone2 = _interopRequireDefault(_playTone);
 
 var _2 = __webpack_require__(73);
 
@@ -11236,18 +11288,19 @@ var _$ = __webpack_require__(121);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _colors = __webpack_require__(413);
+var _colors = __webpack_require__(414);
 
 var _symbol = __webpack_require__(389);
 
-var _signupModal = __webpack_require__(610);
+var _signupModal = __webpack_require__(611);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var fcSans = (0, _symbol.sansSerif)({ size: 70 }).outerHTML;
+
 var fcSerif = (0, _symbol.serif)({ size: 90 }).outerHTML;
 
-var _require = __webpack_require__(600),
+var _require = __webpack_require__(601),
     changeColors = _require.changeColors;
 
 var referral = (0, _getRef.getRef)();
@@ -11300,12 +11353,14 @@ $popup.innerHTML = '\n  <div>X</div>\n  <div class="popupContent">\n    CLICK HE
 
 $popup2.innerHTML = '\n  <div>X</div>\n  <div class="popupContent">\n    STOP WAITING FOR WEALTH TO FIND YOU! FIND YOUR WEALTH TODAY!\n  </div>\n';
 $popup.onclick = function () {
-  return setTimeout(function () {
+  (0, _playTone2.default)(1000);
+  setTimeout(function () {
     return $popup.remove();
   }, 150);
 };
 $popup2.onclick = function () {
-  return setTimeout(function () {
+  (0, _playTone2.default)(1000);
+  setTimeout(function () {
     return $popup2.remove();
   }, 150);
 };
@@ -11361,13 +11416,13 @@ setTimeout(function () {
 // }
 
 /***/ }),
-/* 605 */
+/* 606 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 606 */
+/* 607 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11397,7 +11452,7 @@ if ((0, _getRef.getQueryParams)().pause) {
 }
 
 /***/ }),
-/* 607 */
+/* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11411,14 +11466,14 @@ var _2 = __webpack_require__(73);
 
 var _3 = _interopRequireDefault(_2);
 
-__webpack_require__(608);
+__webpack_require__(609);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var c = __webpack_require__(413);
+var c = __webpack_require__(414);
 // import 'components/signup';
 
-var _require = __webpack_require__(600),
+var _require = __webpack_require__(601),
     updateColorSpeedDistance = _require.updateColorSpeedDistance,
     changeColors = _require.changeColors;
 
@@ -11540,7 +11595,7 @@ colorMouses.forEach(function (elem) {
 });
 
 /***/ }),
-/* 608 */
+/* 609 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11553,6 +11608,10 @@ var _$2 = _interopRequireDefault(_$);
 var _2 = __webpack_require__(73);
 
 var _3 = _interopRequireDefault(_2);
+
+var _playTone = __webpack_require__(413);
+
+var _playTone2 = _interopRequireDefault(_playTone);
 
 var _symbol = __webpack_require__(389);
 
@@ -11580,13 +11639,14 @@ _3.default.each(floaters, function (floater, i) {
 
   _$2.default.onClick(floater)(function () {
     console.log('clicked floater', i);
+    (0, _playTone2.default)();
     (0, _$2.default)(floater, 'display', 'none');
     clearInterval(floating);
   });
 });
 
 /***/ }),
-/* 609 */
+/* 610 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11653,7 +11713,7 @@ function dynamicInterval(fn) {
 module.exports = dynamicInterval;
 
 /***/ }),
-/* 610 */
+/* 611 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11672,33 +11732,37 @@ var _2 = __webpack_require__(73);
 
 var _3 = _interopRequireDefault(_2);
 
-var _api = __webpack_require__(611);
+var _api = __webpack_require__(612);
 
 var _api2 = _interopRequireDefault(_api);
 
-__webpack_require__(612);
+var _playTone = __webpack_require__(413);
 
-var _index = __webpack_require__(613);
+var _playTone2 = _interopRequireDefault(_playTone);
+
+__webpack_require__(613);
+
+var _index = __webpack_require__(614);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _step = __webpack_require__(614);
+var _step = __webpack_require__(615);
 
 var _step2 = _interopRequireDefault(_step);
 
-var _step3 = __webpack_require__(615);
+var _step3 = __webpack_require__(616);
 
 var _step4 = _interopRequireDefault(_step3);
 
-var _step5 = __webpack_require__(616);
+var _step5 = __webpack_require__(617);
 
 var _step6 = _interopRequireDefault(_step5);
 
-var _step7 = __webpack_require__(617);
+var _step7 = __webpack_require__(618);
 
 var _step8 = _interopRequireDefault(_step7);
 
-var _loading = __webpack_require__(618);
+var _loading = __webpack_require__(619);
 
 var _loading2 = _interopRequireDefault(_loading);
 
@@ -11782,6 +11846,9 @@ var modal = exports.modal = function modal() {
       // window.IMPORTANT.pause = true
       setTimeout(function () {
         component.className = '';
+        setTimeout(function () {
+          return (0, _playTone2.default)(1000, 200);
+        }, 300);
       }, 300);
     });
   });
@@ -11839,7 +11906,7 @@ var modal = exports.modal = function modal() {
 };
 
 /***/ }),
-/* 611 */
+/* 612 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11922,13 +11989,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 exports.default = { get: get, post: post };
 
 /***/ }),
-/* 612 */
+/* 613 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 613 */
+/* 614 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11939,7 +12006,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 614 */
+/* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11950,7 +12017,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 615 */
+/* 616 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11961,7 +12028,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 616 */
+/* 617 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11972,7 +12039,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 617 */
+/* 618 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11983,7 +12050,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 618 */
+/* 619 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -1,0 +1,25 @@
+* { margin: 0; padding: 0; }
+
+.container-404 {
+  text-align: center;
+  padding: 20px 20px;
+  display: inline-block;
+  margin: 40px auto;
+  border: 3px solid #000;
+}
+
+.currencyTicker {
+  /*background-color: #000;*/
+}
+
+.message-404 {
+  font-size: 48px;
+}
+
+.back-404 {
+  margin-top: 20px
+}
+
+.back-404 a {
+  padding: 20px;
+}

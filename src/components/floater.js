@@ -2,6 +2,7 @@
 
 import $  from 'utils/$';
 import _  from 'utils/_';
+import playTone  from 'utils/playTone';
 import { serif } from 'components/symbol'
 const fcSymbol = serif({ size: 45 }).outerHTML
 
@@ -29,6 +30,7 @@ _.each(floaters, (floater, i) => {
 
   $.onClick(floater)(() => {
     console.log('clicked floater', i);
+    playTone()
     $(floater, 'display', 'none');
     clearInterval(floating)
   });

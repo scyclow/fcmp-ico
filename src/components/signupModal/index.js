@@ -3,6 +3,8 @@
 import $ from 'utils/$';
 import _ from 'utils/_';
 import api from 'utils/api';
+import playTone from 'utils/playTone'
+
 
 import './index.css'
 import modalTemplate from './index.html'
@@ -58,6 +60,7 @@ export const modal = (...triggers) => {
       // window.IMPORTANT.pause = true
       setTimeout(() => {
         component.className = '';
+        setTimeout(() => playTone(1000, 200), 300)
       }, 300)
     })
   })

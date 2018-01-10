@@ -5,6 +5,7 @@ import 'babel-polyfill'
 import './utils/devConsole'
 import './legacy'
 import {getRef} from 'utils/getRef'
+import playTone from 'utils/playTone'
 import _ from 'utils/_'
 import $ from 'utils/$'
 import { polarize, applyToHex } from 'utils/colors';
@@ -33,6 +34,7 @@ const $popup = document.createElement('div')
 const $popup2 = document.createElement('div')
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSerif)
 _.each($.cls('fc-s'), elem => elem.innerHTML = fcSans)
+
 
 $content.appendChild(
   modal(
@@ -95,8 +97,14 @@ $popup2.innerHTML = `
     STOP WAITING FOR WEALTH TO FIND YOU! FIND YOUR WEALTH TODAY!
   </div>
 `
-$popup.onclick = () => setTimeout(() => $popup.remove(), 150)
-$popup2.onclick = () => setTimeout(() => $popup2.remove(), 150)
+$popup.onclick = () => {
+  playTone(1000)
+  setTimeout(() => $popup.remove(), 150)
+}
+$popup2.onclick = () => {
+  playTone(1000)
+  setTimeout(() => $popup2.remove(), 150)
+}
 $($popup2, 'width', '220px')
 $($popup2, 'height', '190px')
 
