@@ -9,6 +9,7 @@ import warning from './warning.html';
 import {createAddress} from 'utils/routingCodeGenerator'
 import {getRef, getQueryParams} from 'utils/getRef'
 import { serif, sansSerif, warning as _warningIcon } from 'components/symbol'
+import $chatModal from 'components/chatModal'
 const fcSymbol = sansSerif({ size: 10 }).outerHTML
 const fcSymbolLarge = sansSerif({ size: 18 }).outerHTML
 const fcSerifLarge = serif({ size: 18, adjusted: true }).outerHTML
@@ -186,6 +187,18 @@ $ethInWallet.onchange = event => {
   }
 }
 
+// chat modal
+document.body.appendChild($chatModal)
+$($chatModal, 'margin-bottom', '-500px')
+let chatDisplayed = false
+function displayChat() {
+  if (chatDisplayed) return;
+  setTimeout(() => {
+    if (window.innerWidth > 450) {
+    setTimeout(() => $($chatModal, 'margin-bottom', '0'), 1)
+    }
+  }, _.random(5000, 25000, true))
+}
 
 function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks, newRoutingCode }) {
   $fastcashLeft.innerHTML = `THERE IS CURRENTLY ${fcSerifLarge}${fastcashLeft} LEFT IN THE FASTCASH BANK! (week ${weeksSinceStart})`
@@ -250,6 +263,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
     renderFromTransactionData(STATE)
 
     $($step3, 'visibility', 'inherit')
+    displayChat()
 
     if (!amt) {
       chooserErr()
@@ -402,3 +416,5 @@ setTimeout(() => {
     'font-size: 19px;'
   )
 }, 2000)
+
+

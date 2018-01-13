@@ -360,3 +360,63 @@ p {
 .inputBox:focus {
   background-color: #def;
 }
+#chatModal {
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  width: 300px;
+  height: 400px;
+  border: 3px solid #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #eee;
+  -webkit-transition: 2000ms;
+  transition: 2000ms;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+#chatHeader {
+  font-family: sans-serif;
+  height: 25px;
+  border-bottom: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#chatModal-x {
+  cursor: pointer;
+  padding: 5px;
+}
+
+#chatHistory {
+  height: 300px;
+  background-color: #fff;
+  overflow: auto;
+}
+
+#chatInput {
+  width: 100%;
+  height: 75px;
+  font-size: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 2px solid #000;
+  resize: none;
+  padding: 3px;
+}
+
+.chatLine {
+  padding: 3px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.chatFrom {
+  text-decoration: underline;
+}
