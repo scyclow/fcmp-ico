@@ -16,27 +16,6 @@ const warningIcon = _warningIcon().outerHTML
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSymbolLarge)
 
 
-// audio stuff
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const MAX_VOLUME = 0.04
-
-function createSource(srcType?: string = 'sine') {
-  const ctx = new AudioContext();
-
-  const source = ctx.createOscillator();
-  const gain = ctx.createGain();
-
-  source.connect(gain)
-  gain.connect(ctx.destination)
-
-  // window.gain = gain
-  gain.gain.value = MAX_VOLUME
-  source.type = srcType
-  source.start()
-  return {source, gain};
-}
-
-
 
 // TODO update
 const weeksSinceStart = 0
@@ -101,12 +80,34 @@ setTimeout(() => {
 
 
 // ROUTING CODE BUTTON
+
+const MAX_VOLUME = 0.03
+let gain;
+try {
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const ctx = new AudioContext();
+
+  const source = ctx.createOscillator();
+  gain = ctx.createGain();
+
+  source.connect(gain)
+  gain.connect(ctx.destination)
+  gain.gain.value = 0
+  source.type = 'sawtooth'
+  source.detune.value = 100
+  source.frequency.value = 30
+  source.start()
+} catch (e) {
+  console.error(e)
+}
+
 const $gotoWallet = $.id('gotoWallet')
 const emptyAddress = "0x0000000000000000000000000000000000000000";
 let routingCodeTries = 0
 const generateCode = async () => {
   // there should be some
   const proposedCode = createAddress();
+  gain.gain.value = MAX_VOLUME;
 
   let existingCode
   if (INSTANCE) {
@@ -127,6 +128,8 @@ const generateCode = async () => {
       $routingCode.innerHTML = '<strong>' + proposedCode + '</strong>';
       $($routingCode, 'border', '3px solid #ff8800')
       $($routingCode, 'background-color', '#ffddaa')
+      if (gain) gain.gain.value = 0;
+      else console.log('no gain :(', gain)
       setTimeout(() => $($step2, 'visibility', 'inherit'), 200)
     }, _.random(1800, 600, true))
 

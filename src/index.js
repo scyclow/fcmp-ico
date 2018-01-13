@@ -119,8 +119,9 @@ setTimeout(() => {
 }, _.random(25000, 45000, true))
 
 setTimeout(() => {
-  document.body.appendChild($popup2)
-  console.log('2')
+  if (window.innerWidth > 570) {
+    document.body.appendChild($popup2)
+  }
 }, _.random(25000, 45000, true))
 
 setTimeout(() => {
