@@ -2,7 +2,7 @@
 
 import './index.css';
 import 'babel-polyfill'
-import web3Setup, { getBuyData, getTransferData, executeTransfer, simpleBuy, fromUtf8 } from 'utils/web3Setup';
+import web3Setup, { CONTRACT_ADDRESS, getBuyData, getTransferData, executeTransfer, simpleBuy, fromUtf8 } from 'utils/web3Setup';
 import $ from 'utils/$';
 import _ from 'utils/_';
 import {getQueryParams} from 'utils/getRef'
@@ -34,6 +34,11 @@ const $executeBuy = $.id('executeBuy')
 const $weiAmount = $.id('weiAmount')
 const $amountToSendData = $.id('amountToSendData')
 const $accountBalance = $.id('accountBalance')
+const $toAddressData1 = $.id('toAddressData1')
+const $toAddressData2 = $.id('toAddressData2')
+
+$toAddressData1.innerHTML = CONTRACT_ADDRESS;
+$toAddressData2.innerHTML = CONTRACT_ADDRESS;
 
 $refLinkLong.innerHTML = `http://fastcashmoneyplus.biz/?ref=${routingCode}`
 $refLinkShort.innerHTML = `http://fast.plus?r=${routingCode}`

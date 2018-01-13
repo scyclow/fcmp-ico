@@ -3,6 +3,9 @@ import FastCashMoneyPlusArtifact from 'contracts/FastCashMoneyPlus.json'
 import Web3 from 'web3';
 import contract from 'truffle-contract';
 
+// CURRENTLY THE TEST __ADDRESS__
+export const CONTRACT_ADDRESS = '0x27b8Eee5d59DbdC936Ae4ed0573033CDf3bB9102';
+
 const FastCashMoneyPlus = contract(FastCashMoneyPlusArtifact);
 window.__fcmp = FastCashMoneyPlus;
 
@@ -15,7 +18,7 @@ export default async function web3Setup() {
   }
 
   FastCashMoneyPlus.setProvider(window.web3.currentProvider);
-  const instance = await FastCashMoneyPlus.at('0x9b757690471a5a1b3d9ad9477cc3b0166a85d916');
+  const instance = await FastCashMoneyPlus.at(CONTRACT_ADDRESS);
   FastCashMoneyPlus.web3.eth.defaultAccount = FastCashMoneyPlus.web3.eth.coinbase;
 
   window.__i = instance;
@@ -56,17 +59,15 @@ export function executeTransfer(inst, to, amount) {
   return inst.transferToAccount(
     toBytes,
     amountInMoneyBucks,
-    { from: web3.eth.coinbase, gas: 150000, gasPrice: 40 * (10 ** 9) }
+    { from: web3.eth.coinbase }
   )
 }
 
 export function simpleBuy(amount) {
   return web3.eth.sendTransaction({
     amount,
-    to: '', // TODO -- hardcode address
-    from: web3.eth.coinbase,
-    gas: 150000,
-    gasPrice: 40 * (10 ** 9)
+    to: CONTRACT_ADDRESS,
+    from: web3.eth.coinbase
   })
 }
 

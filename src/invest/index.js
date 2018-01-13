@@ -2,7 +2,7 @@
 
 import './invest.css';
 import 'babel-polyfill'
-import web3Setup, { getBuyData } from 'utils/web3Setup';
+import web3Setup, { getBuyData, CONTRACT_ADDRESS } from 'utils/web3Setup';
 import $ from 'utils/$';
 import _ from 'utils/_';
 import warning from './warning.html';
@@ -316,15 +316,16 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
     INSTANCE.buy(
       STATE.newRoutingCode,
       STATE.referal,
-      { from: web3.eth.coinbase, value: amountInWei, gas: 150000, gasPrice: 40 * (10 ** 9) }
+      { from: web3.eth.coinbase, value: amountInWei }
     )
     .then((r) => {
-      window.alert('SUCCESS! Here is your receipt: '+ JSON.stringify(r))
+      window.alert('SUCCESS! Here is your receipt: '+ JSON.stringify(r).slice(0, 800)+'.....')
       $easyCheckoutMsg.innerHTML = 'SUCCESS'
+      console.log(r)
     })
     .catch(e => {
       console.error(e)
-      $easyCheckoutMsg.innerHTML = 'SOMETHING WENT WRONG: e ' + e
+      $easyCheckoutMsg.innerHTML = 'TRY AGAIN SOMETHING WENT WRONG: e ' + e
       window.alert('ERROR:'+e.message)
     })
   }
@@ -352,7 +353,7 @@ function renderFromTransactionData({ usd2fc, usd2eth, amountInMoneyBucks, newRou
   if (newRoutingCode && amountInWei) {
     const buyData = getBuyData(newRoutingCode, referal, amountInWei)
     // TODO -- hardcode as actual address
-    $toAddressData.innerHTML = ''
+    $toAddressData.innerHTML = CONTRACT_ADDRESS
     $dataData.innerHTML = buyData
   }
 }
@@ -367,8 +368,7 @@ Promise.all([
 ])
   .then(async _instance => {
     INSTANCE = _instance[0];
-    const centralBanker = await INSTANCE.centralBanker()
-    const fcLeft = await INSTANCE.balanceOf(centralBanker)
+    const fcLeft = await INSTANCE.fastCashBank()
     STATE.fastcashLeft = fcLeft.toNumber() / (10 ** 18)
     const currentExchangeRate = await INSTANCE.getCurrentExchangeRate.call()
     STATE.usd2fc = currentExchangeRate.toNumber() / (10 ** 18)

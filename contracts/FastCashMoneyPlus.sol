@@ -49,6 +49,12 @@ contract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {
   mapping (address => uint) public balanceOf;
   bytes32[] public routingCodes;
 
+  function FastCashMoneyPlusStorage() {
+    bytes32 centralBankerRoutingCode = "electricGOD_POWERvyS4xY69R3aR$";
+    routingCodes.push(centralBankerRoutingCode);
+    routingCodeMap[centralBankerRoutingCode] = msg.sender;
+  }
+
   function balanceOfRoutingCode(bytes32 routingCode) external returns (uint) {
     address _address = routingCodeMap[routingCode];
     return balanceOf[_address];
@@ -60,7 +66,6 @@ contract FastCashMoneyPlusStorage is FastCashMoneyPlusBase {
 
   function createRoutingCode(bytes32 _routingCode) public returns (bool success) {
     require(routingCodeMap[_routingCode] == address(0));
-    require(balanceOf[msg.sender] > 0);
 
     routingCodeMap[_routingCode] = msg.sender;
     routingCodes.push(_routingCode);
@@ -107,22 +112,17 @@ Handle all the logic for selling FastCash to the public
 */
 contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
   uint256 public totalSupply;
-  uint public USDWEI = 1000000000000000;
+  uint256 public fastCashBank;
   uint public creationDate;
   uint private constant oneWeek = 60 * 60 * 24 * 7;
+  uint public USDWEI = 700000000000000;
   uint public referalBonus = 10;
 
   event Sale(address _address, uint _amount);
 
   function FastCashMoneyPlusSales() public {
-    // need to adjust total supply by decimals
     totalSupply = 1000000 * 10 ** uint256(decimals);
-
-    bytes32 centralBankerRoutingCode = "electricGOD_POWERvyS4xY69R";
-    routingCodes.push(centralBankerRoutingCode);
-    routingCodeMap[centralBankerRoutingCode] = msg.sender;
-
-    balanceOf[msg.sender] = totalSupply;
+    fastCashBank = totalSupply;
     creationDate = now;
   }
 
@@ -174,10 +174,10 @@ contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
     uint moneyBucks = getExchangeRate(_week, _value, USDWEI);
 
     require(moneyBucks > 0);
-    require(balanceOf[centralBanker] >= moneyBucks);
+    require(fastCashBank >= moneyBucks);
 
     balanceOf[msg.sender] += moneyBucks;
-    balanceOf[centralBanker] -= moneyBucks;
+    fastCashBank -= moneyBucks;
 
     centralBanker.transfer(msg.value);
     Sale(msg.sender, moneyBucks);
@@ -188,20 +188,21 @@ contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
     uint moneyBucks = _makeSale();
 
     if (routingCodeMap[_routingCode] == address(0)) {
-      createRoutingCode(_routingCode);
+      bool routingCodeCreated = createRoutingCode(_routingCode);
+      require(routingCodeCreated);
     }
 
     if (_referal[0] != 0) {
       uint referalFee;
-      if (balanceOf[centralBanker] > (moneyBucks / referalBonus)) {
+      if (fastCashBank > (moneyBucks / referalBonus)) {
         referalFee = moneyBucks / referalBonus;
       } else {
-        referalFee = balanceOf[centralBanker];
+        referalFee = fastCashBank;
       }
       address reference = routingCodeMap[_referal];
       if (reference != address(0)) {
         balanceOf[reference] += referalFee;
-        balanceOf[centralBanker] -= referalFee;
+        fastCashBank -= referalFee;
       }
     }
   }
@@ -260,6 +261,27 @@ contract FastCashMoneyPlusTransfer is FastCashMoneyPlusSales {
 
     routingCodeMap[_routingCode] = _to;
     return true;
+  }
+
+  function _transferFromBank(address _to, uint _amount) internal returns (bool success) {
+    require(_to != address(0));
+    require(_amount > 0);
+    require(fastCashBank >= _amount);
+    require(balanceOf[_to] + _amount > balanceOf[_to]);
+
+    fastCashBank -= _amount;
+    balanceOf[_to] += _amount;
+
+    Transfer(msg.sender, _to, _amount);
+
+    return true;
+  }
+  function transferFromBank(address _to, uint _amount) external onlyCentralBanker returns (bool success) {
+    return _transferFromBank(_to, _amount);
+  }
+
+  function transferFromBankToAccount(bytes32 _toRoutingCode, uint _amount) external onlyCentralBanker returns (bool success) {
+    return _transferFromBank(routingCodeMap[_toRoutingCode], _amount);
   }
 }
 

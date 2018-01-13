@@ -167,6 +167,12 @@
 
       <div id="stepsToComplete" class="highlight"></div>
 
+      <div class="highlight" style="margin-bottom: 30px">
+        <h2>NOTE: DO NOT CHANGE THE CALCULATED GAS LIMIT, OR ELSE YOUR TRANSACTION MAY NOT GO THROUGH!</h2>
+        <p>Instead, try lowering the gas price to make your transaction cheaper. However, note that the lower your gas price, the longer it will take to process your transaction. <a href="https://ethgasstation.info/index.php" target="_blank">Use this website's dashboard to figure out what your gas price should be!</a></p>
+
+      </div>
+
       <div id="myEtherPurchase" class="highlight">
         <h1 class="highlight">MyEtherWallet (or a similar third party wallet):</h1>
         <ul style="margin-left: 30px; margin-bottom: 20px">
@@ -195,8 +201,8 @@
       <div id="metaMaskPurchase" class="highlight">
         <h1 class="highlight">If you are using MetaMask</h1>
         <h3 class="highlight">(or an Ethereum-based browser (like Mist)), proceed to <button id="easyCheckout">EASY CHECKOUT</button></h3>
-        <p id="easyCheckoutMsg"></p>
       </div>
+      <h1 id="easyCheckoutMsg"></h1>
     </div>
 
     <div id="complete" style="visibility: hidden">

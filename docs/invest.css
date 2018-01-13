@@ -104,7 +104,9 @@ p {
 
 #purchaseAmountSlider {
   width: 90%;
-  margin: 20px 5%;
+  margin: 0 5%;
+  padding: 20px 0;
+  cursor: pointer;
 }
 
 #amountOfFastcash {
@@ -213,9 +215,10 @@ p {
           box-shadow: 0 0;
 }
 
-.easyCheckoutMsg {
-  font-size: 30px;
+#easyCheckoutMsg {
+  font-size: 60px;
   color: #f00;
+  text-decoration: underline;
 }
 
 @-webkit-keyframes Checkout {

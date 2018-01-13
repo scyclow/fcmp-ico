@@ -56,6 +56,7 @@ const keyWords = [
   'revolution',
   'toxic',
   'octane',
+  'euphoric',
 ];
 
 function randInsert (original: string, content: string): string {
