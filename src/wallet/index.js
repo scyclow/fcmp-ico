@@ -10,7 +10,7 @@ import { serif, sansSerif, warning as _warningIcon } from 'components/symbol'
 const fcSymbol = sansSerif({ size: 10 }).outerHTML
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSymbol)
 
-const routingCode = getQueryParams().routingCode || localStorage.getItem('routingCode') || null
+const routingCode = localStorage.getItem('routingCode') || null
 localStorage.setItem('routingCode', routingCode)
 
 

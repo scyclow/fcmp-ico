@@ -121,7 +121,7 @@ const generateCode = async () => {
   let tries = 0
   if (!existingCode || existingCode === emptyAddress) {
     STATE.newRoutingCode = proposedCode;
-    $gotoWallet.href = `./wallet.html?routingCode=${proposedCode}`
+    localStorage.setItem('routingCode', proposedCode)
     const interval = setInterval(() => {
       $routingCode.innerHTML = createAddress()
     }, 30)
@@ -331,7 +331,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
     }
 
     const amountInWei = STATE.amountInMoneyBucks * fc2eth;
-    $easyCheckoutMsg.innerHTML = 'YOUR TRANSACTION IS PENDING. PLEASE WAIT FOR THE TRANSACTION TO FINISH PROCESSING. THANK YOU'
+    $easyCheckoutMsg.innerHTML = 'YOUR TRANSACTION IS PENDING THIS MIGHT TAKE SOME TIME PLEASE WAIT FOR THE TRANSACTION TO FINISH PROCESSING THANK YOU'
     INSTANCE.buy(
       STATE.newRoutingCode,
       STATE.referal,

@@ -1,10 +1,7 @@
 // @flow
 
-import $ from 'utils/$';
-import _ from 'utils/_';
-import createSource from 'utils/createSource';
-import { getQueryParams } from 'utils/getRef'
 import './index.css';
+import createSource from 'utils/createSource';
 
 const smoothTo = (obj, ctx) => (value, timeInSeconds) => {
   obj.exponentialRampToValueAtTime(value, ctx.currentTime + timeInSeconds)
