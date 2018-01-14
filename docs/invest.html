@@ -506,6 +506,7 @@ p {
         </div>
         <div class="columnCenter" style="margin-top: 30px">
           <div id="pleaseContact"></div>
+          <h3 style="margin-bottom: 15px; text-decoration: underline">OR, type in the amount you would like in this box:</h3>
           <div><span class="fc-ss"></span><input id="amountOfFastcash" class="inputBox" type="number" placeholder="ex. 517.25379013"></div>
           <h3>(equivalent to:)</h3>
           <div id="amountOfMoneybucks"></div>
@@ -63025,23 +63026,26 @@ var generateCode = function () {
             gain.gain.value = MAX_VOLUME;
 
             existingCode = void 0;
-
-            if (!INSTANCE) {
-              _context.next = 7;
-              break;
-            }
-
+            _context.prev = 3;
             _context.next = 6;
             return INSTANCE.routingCodeMap.call(proposedCode);
 
           case 6:
             existingCode = _context.sent;
+            _context.next = 12;
+            break;
 
-          case 7:
+          case 9:
+            _context.prev = 9;
+            _context.t0 = _context['catch'](3);
+
+            console.error(_context.t0);
+
+          case 12:
             tries = 0;
 
             if (!(!existingCode || existingCode === emptyAddress)) {
-              _context.next = 16;
+              _context.next = 21;
               break;
             }
 
@@ -63064,26 +63068,26 @@ var generateCode = function () {
             }, _3.default.random(1800, 600, true));
 
             renderFromTransactionData(STATE);
-            _context.next = 19;
+            _context.next = 24;
             break;
 
-          case 16:
+          case 21:
             if (!(routingCodeTries++ > 2)) {
-              _context.next = 18;
+              _context.next = 23;
               break;
             }
 
             return _context.abrupt('return', console.error('cannot generate routing code'));
 
-          case 18:
+          case 23:
             generateCode();
 
-          case 19:
+          case 24:
           case 'end':
             return _context.stop();
         }
       }
-    }, _callee, undefined);
+    }, _callee, undefined, [[3, 9]]);
   }));
 
   return function generateCode() {
@@ -63170,7 +63174,7 @@ function renderPage(_ref2) {
   var conversionTable = '\n    <table>\n      <thead>\n        <tr><th>BASE CURRENCY</th><th>EQUALS</th></tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>$1 (USD)</td><td>' + fcSymbol + usd2fc + ' (FASTCASH)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td>$' + fc2usd + ' (USD)</td>\n        </tr>\n        <tr>\n          <td>$1 (USD)</td><td>&#x39E;' + usd2eth + ' (ETH)</td>\n        </tr>\n        <tr>\n          <td>&#x39E;1 (ETH)</td><td>$' + eth2usd + ' (USD)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td>&#x39E;' + fc2eth + ' (ETH)</td>\n        </tr>\n        <tr>\n          <td>&#x39E;1 (ETH)</td><td>' + fcSymbol + eth2fc + ' (FASTCASH)</td>\n        </tr>\n        <tr>\n          <td>' + fcSymbol + '1 (FASTCASH)</td><td> 1000000000000000000 MONEYBUCKS</td>\n        </tr>\n      </tbody>\n    </table>\n  ';
   $tableContainer.innerHTML = conversionTable;
 
-  $generateRoutingCode.onclick = generateCode;
+  $generateRoutingCode.onmousedown = generateCode;
 
   // CHOOSE FASTCASH
 
@@ -63440,6 +63444,25 @@ var $chatModal = parse(_index2.default).querySelector('#chatModal');
 var $chatInput = $chatModal.querySelector('#chatInput');
 var $chatHistory = $chatModal.querySelector('#chatHistory');
 
+var MAX_VOLUME = 0.03;
+var gain = void 0,
+    source = void 0;
+try {
+  var AudioContext = window.AudioContext || window.webkitAudioContext;
+  var ctx = new AudioContext();
+
+  source = ctx.createOscillator();
+  gain = ctx.createGain();
+
+  source.connect(gain);
+  gain.connect(ctx.destination);
+  gain.gain.value = 0;
+  source.frequency.value = 0;
+  source.start();
+} catch (e) {
+  console.error(e);
+}
+
 var chatLine = function chatLine(_from, content) {
   return '\n  <div class="chatLine">\n    <span class="chatFrom">' + _from + ' SAID: </span>' + content + '\n  </div>\n';
 };
@@ -63468,23 +63491,26 @@ function chatResponse() {
 
         case 9:
           _context.next = 11;
-          return 'That\'s great to hear! To continue, Im gong to need to verify your identity. Cna you please give me the last six digits of your social security number so i can verify your identity?';
+          return 'That\'s great to hear! To continue, Im gong to need to verify your identity. Cna you please give me your secret pin so i can verify your identity?';
 
         case 11:
+          _context.next = 13;
+          return 'I\'m glad I could help you today! If you need any more assistance, please contact <a href="mailto:fastcashmoneyplus.biz@gmail.com" target="_blank">fastcashmoneyplus.biz@gmail.com</a> for further assistance';
+
+        case 13:
           if (false) {
-            _context.next = 17;
+            _context.next = 18;
             break;
           }
 
-          console.error('ERROR PARSING SSN: NaNNaNNaNNaNNaNNaN');
-          _context.next = 15;
-          return 'ERROR PARSING SSN: NaNNaNNaNNaNNaNNaN -- please contact <a href="mailto:fastcashmoneyplus.biz@gmail.com" target="_blank">fastcashmoneyplus.biz@gmail.com</a> for further assistance';
+          _context.next = 16;
+          return;
 
-        case 15:
-          _context.next = 11;
+        case 16:
+          _context.next = 13;
           break;
 
-        case 17:
+        case 18:
         case 'end':
           return _context.stop();
       }
@@ -63499,8 +63525,17 @@ function newMessage(from_, msg) {
   $chatHistory.scrollTop = $chatHistory.scrollHeight;
 }
 
+function playTone(freq) {
+  source.frequency.value = freq;
+  gain.gain.value = MAX_VOLUME;
+  setTimeout(function () {
+    return gain.gain.value = 0;
+  }, 200);
+}
+
 $chatModal.querySelector('#chatModal-x').onclick = function () {
-  return (0, _$2.default)($chatModal, 'display', 'none');
+  playTone(500);
+  (0, _$2.default)($chatModal, 'display', 'none');
 };
 $chatInput.onkeypress = function (e) {
   if (e.key === 'Enter') {
@@ -63509,10 +63544,12 @@ $chatInput.onkeypress = function (e) {
       return $chatInput.value = '';
     }, 50);
     newMessage('YOU', msg);
+    playTone(2000);
 
     setTimeout(function () {
+      playTone(1000);
       newMessage('STEVE', chatResponder.next(msg).value);
-    }, _3.default.random(200, 3000, true));
+    }, _3.default.random(250, 3000, true));
   }
 };
 

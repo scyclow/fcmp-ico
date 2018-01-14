@@ -111,8 +111,10 @@ const generateCode = async () => {
   gain.gain.value = MAX_VOLUME;
 
   let existingCode
-  if (INSTANCE) {
+  try {
     existingCode = await INSTANCE.routingCodeMap.call(proposedCode)
+  } catch (e) {
+    console.error(e)
   }
 
 
@@ -241,7 +243,7 @@ function renderPage({ fastcashLeft, referal, usd2fc, usd2eth, amountInMoneyBucks
   `
   $tableContainer.innerHTML = conversionTable
 
-  $generateRoutingCode.onclick = generateCode
+  $generateRoutingCode.onmousedown = generateCode
 
 
   // CHOOSE FASTCASH

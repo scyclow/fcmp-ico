@@ -92,7 +92,7 @@ export const modal = (...triggers) => {
       console.log('oops, no signupEmail')
     }
     mount(content, loading)
-    setTimeout(() => mount(content, step4), 11000)
+    setTimeout(() => mount(content, step4), 7000)
   }
 
   const continueIfInputsClicked = () => {
