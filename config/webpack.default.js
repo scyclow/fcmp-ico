@@ -16,6 +16,7 @@ module.exports = {
     wallet: './wallet/index.js',
     terms: './terms/index.js',
     '404': './404/index.js',
+    success: './success/index.js',
   },
   output: {
     path: rootDir('docs'),
@@ -81,6 +82,14 @@ module.exports = {
       chunks: ['404'],
       inlineSource: '.(js|css)$',
       favicon: rootDir(`src/assets/favicon-business.ico`)
+    }),
+    html({
+      template: rootDir(`src/success/index.html`),
+      filename: 'success.html',
+      inject: 'body',
+      chunks: ['success'],
+      inlineSource: '.(js|css)$',
+      favicon: rootDir(`src/assets/favicon.ico`)
     }),
   ],
   module: {
