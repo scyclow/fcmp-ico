@@ -7,12 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "compile": "truffle compile",
-    "migrate": "rm -rf ./build/contracts && truffle migrate --reset --compile-all",
     "testrpc": "testrpc -p 8545",
     "test": "truffle test",
-    "start": "truffle compile && NODE_ENV=development node ./scripts/start.js",
-    "build": "truffle compile && rimraf docs && NODE_ENV=production webpack --progress --config config/webpack.prod.js && echo \"fastcashmoneyplus.biz\" > docs/CNAME",
+    "start": "NODE_ENV=development node ./scripts/start.js",
+    "build": "rimraf docs && NODE_ENV=production webpack --progress --config config/webpack.prod.js && echo \"fastcashmoneyplus.biz\" > docs/CNAME",
     "geth": "geth --testnet --syncmode \"fast\" --rpc --rpcapi db,eth,net,web3,personal --cache=1024  --rpcport 8545 --rpcaddr 127.0.0.1 --rpccorsdomain \"*\" --bootnodes \"enode://20c9ad97c081d63397d7b685a412227a40e23c8bdc6688c6f37e97cfbc22d2b4d1db1510d8f61e6a8866ad7f0e17c02b14182d37ea7c3c8b9c2683aeb6b733a1@52.169.14.227:30303,enode://6ce05930c72abc632c58e2e4324f7c7ea478cec0ed4fa2528982cf34483094e9cbc9216e7aa349691242576d552a2a56aaeae426c5303ded677ce455ba1acd9d@13.84.180.240:30303\" --port \"30304\"",
     "flow": "flow"
   },

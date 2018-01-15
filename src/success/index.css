@@ -18,14 +18,15 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
+  padding: 20px;
   border: 30px solid;
   border-radius: 15px;
-  transition: 2500ms;
-  animation: BoxSize 5000ms ease infinite;
-  padding: 20px;
   font-family: sans-serif;
   font-size: 40px;
   text-shadow: 4px 4px #000;
+
+  transition: 2500ms;
+  animation: BoxSize 5000ms ease infinite;
 }
 
 #successBox2 {

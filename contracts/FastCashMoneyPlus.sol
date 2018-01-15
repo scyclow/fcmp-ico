@@ -115,7 +115,7 @@ contract FastCashMoneyPlusSales is FastCashMoneyPlusAccessControl {
   uint256 public fastCashBank;
   uint public creationDate;
   uint private constant oneWeek = 60 * 60 * 24 * 7;
-  uint public USDWEI = 700000000000000;
+  uint public USDWEI = 760000000000000;
   uint public referalBonus = 10;
 
   event Sale(address _address, uint _amount);

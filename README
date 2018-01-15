@@ -4,3 +4,11 @@
 
 ### For development, please install `geth`, `npm i -g truffle`, and start running npm scripts until it works.
 
+In development, use these scripts:
+```
+    "migrate": "rm -rf ./build/contracts && truffle migrate --reset --compile-all",
+    "build": "truffle compile && rimraf docs && NODE_ENV=production webpack --progress --config config/webpack.prod.js && echo \"fastcashmoneyplus.biz\" > docs/CNAME",
+    "start": "truffle compile && NODE_ENV=development node ./scripts/start.js",
+    "compile": "truffle compile",
+
+```
