@@ -44,6 +44,8 @@ body {
 
 nav {
   width: 100%;
+  -webkit-animation: FullColorRotate 8s ease infinite;
+          animation: FullColorRotate 8s ease infinite;
 }
 
 nav .nav-header {
@@ -73,7 +75,10 @@ nav #nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 7px solid;
+  border: 7px solid;
+  border-top: 0;
+  -webkit-animation: BorderColorRotate 8s ease infinite;
+          animation: BorderColorRotate 8s ease infinite;
 }
 
 nav #nav-menu .nav-menu-item {
@@ -96,12 +101,16 @@ nav #nav-menu .nav-menu-item {
 #content {
   border: 7px solid;
   border-top: 0;
+  -webkit-animation: ColorColorRotate 8s ease infinite;
+          animation: ColorColorRotate 8s ease infinite;
 }
 
 #hero {
   padding-top: 20px;
   padding-bottom: 40px;
   min-height: 80vh;
+  -webkit-animation: OffsetColorRotate 90s ease infinite;
+          animation: OffsetColorRotate 90s ease infinite;
 }
 
 #hero {
@@ -355,8 +364,11 @@ nav #nav-menu .nav-menu-item {
 .faqQuestion {
   background-color: #00ffff;
   color: #660000;
+  text-shadow: 1px 1px #ff0000;
   border-top: 7px solid;
   border-bottom: 7px solid;
+  -webkit-animation: BorderColorRotate 8s ease infinite;
+          animation: BorderColorRotate 8s ease infinite;
 }
 
 .faqAnswer {
@@ -364,8 +376,13 @@ nav #nav-menu .nav-menu-item {
   color: #ffff55;
 }
 
-.faqAnswer a {
+.faqAnswer a,
+.marketing-2 a {
   color: #ffbb00;
+}
+
+.marketing-2 {
+  color: #fff;
 }
 
 .faqQuestion, .faqAnswer {
@@ -386,8 +403,8 @@ nav #nav-menu .nav-menu-item {
   padding: 9px;
   border: 5px solid;
   z-index: 505;
-  -webkit-animation: ColorRotate 12s ease infinite;
-          animation: ColorRotate 12s ease infinite;
+  -webkit-animation: FullColorRotate 12s ease infinite;
+          animation: FullColorRotate 12s ease infinite;
 }
 
 #popup .popupContent {
@@ -395,8 +412,7 @@ nav #nav-menu .nav-menu-item {
   text-align: center;
 }
 
-
-@-webkit-keyframes ColorRotate {
+@-webkit-keyframes FullColorRotate {
   0% {
     color: #ff0000;
     fill: #ff0000;
@@ -440,8 +456,7 @@ nav #nav-menu .nav-menu-item {
   }
 }
 
-
-@keyframes ColorRotate {
+@keyframes FullColorRotate {
   0% {
     color: #ff0000;
     fill: #ff0000;
@@ -482,6 +497,214 @@ nav #nav-menu .nav-menu-item {
     color: #ff0000;
     fill: #ff0000;
     background-color: #00ffff;
+  }
+}
+
+@-webkit-keyframes ColorColorRotate {
+  0% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+
+  17% {
+    color: #ffff00;
+    fill: #ffff00;
+  }
+
+  33% {
+    color: #00ff00;
+    fill: #00ff00;
+  }
+
+  50% {
+    color: #00ffff;
+    fill: #00ffff;
+  }
+
+  66% {
+    color: #0000ff;
+    fill: #0000ff;
+  }
+
+  83% {
+    color: #ff00ff;
+    fill: #ff00ff;
+  }
+
+  100% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+}
+
+@keyframes ColorColorRotate {
+  0% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+
+  17% {
+    color: #ffff00;
+    fill: #ffff00;
+  }
+
+  33% {
+    color: #00ff00;
+    fill: #00ff00;
+  }
+
+  50% {
+    color: #00ffff;
+    fill: #00ffff;
+  }
+
+  66% {
+    color: #0000ff;
+    fill: #0000ff;
+  }
+
+  83% {
+    color: #ff00ff;
+    fill: #ff00ff;
+  }
+
+  100% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+}
+
+@-webkit-keyframes BorderColorRotate {
+  0% {
+    border-color: #ff0000;
+  }
+
+  17% {
+    border-color: #ffff00;
+  }
+
+  33% {
+    border-color: #00ff00;
+  }
+
+  50% {
+    border-color: #00ffff;
+  }
+
+  66% {
+    border-color: #0000ff;
+  }
+
+  83% {
+    border-color: #ff00ff;
+  }
+
+  100% {
+    border-color: #ff0000;
+  }
+}
+
+@keyframes BorderColorRotate {
+  0% {
+    border-color: #ff0000;
+  }
+
+  17% {
+    border-color: #ffff00;
+  }
+
+  33% {
+    border-color: #00ff00;
+  }
+
+  50% {
+    border-color: #00ffff;
+  }
+
+  66% {
+    border-color: #0000ff;
+  }
+
+  83% {
+    border-color: #ff00ff;
+  }
+
+  100% {
+    border-color: #ff0000;
+  }
+}
+
+@-webkit-keyframes OffsetColorRotate {
+  0% {
+    color: #ffff00;
+    fill: #ffff00;
+  }
+
+  17% {
+    color: #00ff00;
+    fill: #00ff00;
+  }
+
+  33% {
+    color: #00ffff;
+    fill: #00ffff;
+  }
+
+  50% {
+    color: #0000ff;
+    fill: #0000ff;
+  }
+
+  66% {
+    color: #ff00ff;
+    fill: #ff00ff;
+  }
+
+  83% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+
+  100% {
+    color: #ffff00;
+    fill: #ffff00;
+  }
+}
+
+@keyframes OffsetColorRotate {
+  0% {
+    color: #ffff00;
+    fill: #ffff00;
+  }
+
+  17% {
+    color: #00ff00;
+    fill: #00ff00;
+  }
+
+  33% {
+    color: #00ffff;
+    fill: #00ffff;
+  }
+
+  50% {
+    color: #0000ff;
+    fill: #0000ff;
+  }
+
+  66% {
+    color: #ff00ff;
+    fill: #ff00ff;
+  }
+
+  83% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+
+  100% {
+    color: #ffff00;
+    fill: #ffff00;
   }
 }
 .modalHidden {
@@ -591,8 +814,8 @@ nav #nav-menu .nav-menu-item {
 </style></head>
 
 <body>
-  <nav class="color-time-change">
-    <div class="nav-header color-time-change">
+  <nav>
+    <div class="nav-header">
       WELCOME TO FA$TCA$HMONEYPLU$.biz
       <span id="secondHeader">WELCOME TO FA$TCA$HMONEYPLU$.biz</span>
     </div>
@@ -700,7 +923,6 @@ nav #nav-menu .nav-menu-item {
     <iframe src="./flasher.html"  frameborder="0" style="width: 100%; height: 350px"></iframe>
 
     <div class="marketing marketing-2">
-    <div class="marketing marketing-2">
       <h2 style="text-decoration: underline">REVIEWS</h2>
 
       <p>"I used to be a struggling single mother in the Bronx before I discovered fastcashmoneyplus.biz. and then my life was turned around. Now I can afford to pay for college for my children." Wendy Pilsen</p>
@@ -709,6 +931,7 @@ nav #nav-menu .nav-menu-item {
       <p>"Make $$$ from home couldn't be easier! I started using fastcashmoney.biz <a href="http://fastcashmoneyplus.biz/">click here</a> and have made more money in the past month than I made all of last year, and all from the comfort from my own home. Check out the site and the 5 easy steps to start making money hand over fist." -- Raul Jones</p>
       <p>"Finally, the investment opportunity I've been waiting for. At last, I can make cash fast." -- Frank Johnson</p>
       <p>"Achieving the American Dream has never been easier" -- Fred Frankson</p>
+      <p>"FastCashMoneyPlus.biz is one of the rare online wealth-creation platforms that combines a world-class technical infrastructure with common sense and good business strategy. In fact, it's so simple that anyone can do it with minimal fuss and effort!" -- <a href="http://fakebullshit.news/articles/hot-new-crypto" target="_blank">Patrick Swanson from FakeBullshit.news</a></p>
 
       <h2 style="margin-top: 20px; text-align: center">YOU TOO CAN BECOME A FASTCASH MILLIONAIRE WITH FASTCASHMONEYPLUS</h2>
 
@@ -11352,20 +11575,23 @@ setInterval(function () {
   return $ctaContent.innerHTML = _3.default.sample(ctaPrompts);
 }, 2000);
 
-var borderH = 1;
-setInterval(function () {
-  changeColors($content, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  changeColors($navMenu, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  _3.default.each($faqQuestions, function (q) {
-    return changeColors(q, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  });
-  borderH++;
-}, 20);
+// let borderH = 1
+// setInterval(
+//   () => {
+//     changeColors($content, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+//     changeColors($navMenu, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+//     _.each($faqQuestions, q => changeColors(q, '#ff0000', {primary: ['border-color'], secondary: []})(borderH))
+//     borderH++
+//   },
+//   20
+// );
+
 
 var heroH = 1;
-setInterval(function () {
-  return changeColors($hero, '#0000ff', { primary: [], secondary: ['color', 'fill'] })(heroH++);
-}, 250);
+// setInterval(
+//   () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color', 'fill']})(heroH++),
+//   250
+// );
 
 $popup.setAttribute('class', 'popup');
 $popup2.setAttribute('class', 'popup');
@@ -11584,13 +11810,15 @@ _$2.default.onMouseMove()(function (event) {
 
 // continuously rotate element color
 
-var h = 1;
-setInterval(function () {
-  colorTimeChangers.forEach(function (elem) {
-    changeColors(elem, '#00ffff')(h);
-  });
-  h++;
-}, 20);
+// let h = 1
+// setInterval(
+//   () => {
+//     colorTimeChangers.forEach(elem => {
+//       changeColors(elem, '#00ffff')(h)
+//     });
+//     h++
+//   }
+// , 20);
 
 var baseButtonColor = c.polarize('#ff0000');
 
@@ -11647,7 +11875,7 @@ _3.default.each(floaters, function (floater, i) {
   if (window.innerWidth < 570 && i >= 4) return;
 
   (0, _$2.default)(floater, 'font-size', 45);
-  (0, _$2.default)(floater, 'animation', 'ColorRotate ' + _3.default.random(3, 8) + 's ease infinite');
+  (0, _$2.default)(floater, 'animation', 'FullColorRotate ' + _3.default.random(3, 8) + 's ease infinite');
   floater.innerHTML = Math.random() < 0.5 ? fcSymbol : '$';
 
   var moveFloater = function moveFloater() {

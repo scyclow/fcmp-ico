@@ -63,23 +63,23 @@ $ctaContent.innerHTML = _.sample(ctaPrompts)
 setInterval(() => $ctaContent.innerHTML = _.sample(ctaPrompts), 2000)
 
 
-let borderH = 1
-setInterval(
-  () => {
-    changeColors($content, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
-    changeColors($navMenu, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
-    _.each($faqQuestions, q => changeColors(q, '#ff0000', {primary: ['border-color'], secondary: []})(borderH))
-    borderH++
-  },
-  20
-);
+// let borderH = 1
+// setInterval(
+//   () => {
+//     changeColors($content, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+//     changeColors($navMenu, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+//     _.each($faqQuestions, q => changeColors(q, '#ff0000', {primary: ['border-color'], secondary: []})(borderH))
+//     borderH++
+//   },
+//   20
+// );
 
 
 let heroH = 1;
-setInterval(
-  () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color', 'fill']})(heroH++),
-  250
-);
+// setInterval(
+//   () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color', 'fill']})(heroH++),
+//   250
+// );
 
 $popup.setAttribute('class', 'popup')
 $popup2.setAttribute('class', 'popup')

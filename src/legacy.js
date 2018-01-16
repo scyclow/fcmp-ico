@@ -84,15 +84,15 @@ $.onMouseMove()(event => shadowChanges.map(box => updateBoxShadow(box)(event)));
 
 // continuously rotate element color
 
-let h = 1
-setInterval(
-  () => {
-    colorTimeChangers.forEach(elem => {
-      changeColors(elem, '#00ffff')(h)
-    });
-    h++
-  }
-, 20);
+// let h = 1
+// setInterval(
+//   () => {
+//     colorTimeChangers.forEach(elem => {
+//       changeColors(elem, '#00ffff')(h)
+//     });
+//     h++
+//   }
+// , 20);
 
 const baseButtonColor = c.polarize('#ff0000');
 

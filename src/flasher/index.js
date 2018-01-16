@@ -161,7 +161,7 @@ var COLOR_SWITCH = 100;
 var BUTTON_SWITCH = 2000;
 
 
-var $ = document.getElementById('cash');
+var cash = document.getElementById('cash');
 var body = document.getElementsByTagName('body')[0];
 var background = document.getElementById('background');
 var mainContainer = document.getElementById('main-container');
@@ -171,7 +171,7 @@ var len = currencySymbols.length;
 function changeSymbol() {
   if (!CHANGE_SYMBOL) return;
   var i = Math.floor(Math.random() * len);
-  $.innerHTML = currencySymbols[i];
+  cash.innerHTML = currencySymbols[i];
 };
 
 var textHSV = {h: 180, s: 1, v: 1};
@@ -179,17 +179,17 @@ var bodyHSV = {h: 0, s: 1, v: 1};
 var backgroundTextHSV = {h: 120, s:1, v: 1};
 
 function changeColor() { if (!CHANGE_COLOR) return;
-  increaseHue(textHSV);
-  increaseHue(bodyHSV);
-  increaseHue(backgroundTextHSV);
+  // increaseHue(textHSV);
+  // increaseHue(bodyHSV);
+  // increaseHue(backgroundTextHSV);
 
-  var textColor = hsvToHex(textHSV);
-  var baseColor = hsvToHex(bodyHSV);
+  // var textColor = hsvToHex(textHSV);
+  // var baseColor = hsvToHex(bodyHSV);
 
-  body.style['color'] = textColor;
-  body.style['background-color'] = baseColor;
+  // body.style['color'] = textColor;
+  // body.style['background-color'] = baseColor;
 
-  background.style['color'] = hsvToHex(backgroundTextHSV);
+  // background.style['color'] = hsvToHex(backgroundTextHSV);
 }
 
 function switchColor() { if (!SWITCH_ACTIVE) return;
@@ -198,7 +198,7 @@ function switchColor() { if (!SWITCH_ACTIVE) return;
   bodyHSV = tmp;
 };
 
-function fast() { if (!FAST_ACTIVE) return;
+function fast() {
   var symbol = currencySymbols[Math.floor(Math.random() * len)];
   var symbol2 = currencySymbols[Math.floor(Math.random() * len)];
   background.innerHTML += symbol + symbol2;
@@ -266,24 +266,25 @@ function makeNoise() {
 }
 
 
+let fastInterval
 mainContainer.onclick = function() {
-  // activateSwitchColor();
-  activateFast();
+  if (fastInterval) {
+    clearInterval(fastInterval)
+    fastInterval = null;
+  }
+  else fastInterval = setInterval(fast, COLOR_CHANGE);
   makeNoise();
 };
 
 document.addEventListener("DOMContentLoaded", function() {
   setInterval(changeSymbol, TEXT_CHANGE);
-  setInterval(fast, COLOR_CHANGE);
   setInterval(changeColor, COLOR_CHANGE);
-  setInterval(switchColor, COLOR_SWITCH);
 });
 
 window.onkeydown = function(e){
   if (e.keyCode === 32) { } // spacebar
   // if (e.keyCode === 67) { activateSwitchColor(); } // c
   if (e.keyCode === 86) { activateChangeColor(); } // v
-  if (e.keyCode === 66) { activateFast(); } // b
   if (e.keyCode === 78) { activateChangeSymbol(); } // n
   if (e.keyCode === 77) { endNoise(); } // m
 };

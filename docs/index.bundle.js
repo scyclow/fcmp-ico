@@ -10612,20 +10612,23 @@ setInterval(function () {
   return $ctaContent.innerHTML = _3.default.sample(ctaPrompts);
 }, 2000);
 
-var borderH = 1;
-setInterval(function () {
-  changeColors($content, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  changeColors($navMenu, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  _3.default.each($faqQuestions, function (q) {
-    return changeColors(q, '#ff0000', { primary: ['border-color'], secondary: [] })(borderH);
-  });
-  borderH++;
-}, 20);
+// let borderH = 1
+// setInterval(
+//   () => {
+//     changeColors($content, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+//     changeColors($navMenu, '#ff0000', {primary: ['border-color'], secondary: []})(borderH)
+//     _.each($faqQuestions, q => changeColors(q, '#ff0000', {primary: ['border-color'], secondary: []})(borderH))
+//     borderH++
+//   },
+//   20
+// );
+
 
 var heroH = 1;
-setInterval(function () {
-  return changeColors($hero, '#0000ff', { primary: [], secondary: ['color', 'fill'] })(heroH++);
-}, 250);
+// setInterval(
+//   () => changeColors($hero, '#0000ff', {primary: [], secondary: ['color', 'fill']})(heroH++),
+//   250
+// );
 
 $popup.setAttribute('class', 'popup');
 $popup2.setAttribute('class', 'popup');
@@ -10844,13 +10847,15 @@ _$2.default.onMouseMove()(function (event) {
 
 // continuously rotate element color
 
-var h = 1;
-setInterval(function () {
-  colorTimeChangers.forEach(function (elem) {
-    changeColors(elem, '#00ffff')(h);
-  });
-  h++;
-}, 20);
+// let h = 1
+// setInterval(
+//   () => {
+//     colorTimeChangers.forEach(elem => {
+//       changeColors(elem, '#00ffff')(h)
+//     });
+//     h++
+//   }
+// , 20);
 
 var baseButtonColor = c.polarize('#ff0000');
 
@@ -10907,7 +10912,7 @@ _3.default.each(floaters, function (floater, i) {
   if (window.innerWidth < 570 && i >= 4) return;
 
   (0, _$2.default)(floater, 'font-size', 45);
-  (0, _$2.default)(floater, 'animation', 'ColorRotate ' + _3.default.random(3, 8) + 's ease infinite');
+  (0, _$2.default)(floater, 'animation', 'FullColorRotate ' + _3.default.random(3, 8) + 's ease infinite');
   floater.innerHTML = Math.random() < 0.5 ? fcSymbol : '$';
 
   var moveFloater = function moveFloater() {

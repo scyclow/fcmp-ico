@@ -8,6 +8,7 @@ body {
 
 nav {
   width: 100%;
+  animation: FullColorRotate 8s ease infinite;
 }
 
 nav .nav-header {
@@ -26,7 +27,9 @@ nav .nav-header {
 
 nav #nav-menu {
   display: flex;
-  border-top: 7px solid;
+  border: 7px solid;
+  border-top: 0;
+  animation: BorderColorRotate 8s ease infinite;
 }
 
 nav #nav-menu .nav-menu-item {
@@ -41,12 +44,14 @@ nav #nav-menu .nav-menu-item {
 #content {
   border: 7px solid;
   border-top: 0;
+  animation: ColorColorRotate 8s ease infinite;
 }
 
 #hero {
   padding-top: 20px;
   padding-bottom: 40px;
   min-height: 80vh;
+  animation: OffsetColorRotate 90s ease infinite;
 }
 
 #hero {
@@ -260,8 +265,10 @@ nav #nav-menu .nav-menu-item {
 .faqQuestion {
   background-color: #00ffff;
   color: #660000;
+  text-shadow: 1px 1px #ff0000;
   border-top: 7px solid;
   border-bottom: 7px solid;
+  animation: BorderColorRotate 8s ease infinite;
 }
 
 .faqAnswer {
@@ -269,8 +276,13 @@ nav #nav-menu .nav-menu-item {
   color: #ffff55;
 }
 
-.faqAnswer a {
+.faqAnswer a,
+.marketing-2 a {
   color: #ffbb00;
+}
+
+.marketing-2 {
+  color: #fff;
 }
 
 .faqQuestion, .faqAnswer {
@@ -291,7 +303,7 @@ nav #nav-menu .nav-menu-item {
   padding: 9px;
   border: 5px solid;
   z-index: 505;
-  animation: ColorRotate 12s ease infinite;
+  animation: FullColorRotate 12s ease infinite;
 }
 
 #popup .popupContent {
@@ -299,8 +311,7 @@ nav #nav-menu .nav-menu-item {
   text-align: center;
 }
 
-
-@keyframes ColorRotate {
+@keyframes FullColorRotate {
   0% {
     color: #ff0000;
     fill: #ff0000;
@@ -341,5 +352,109 @@ nav #nav-menu .nav-menu-item {
     color: #ff0000;
     fill: #ff0000;
     background-color: #00ffff;
+  }
+}
+
+@keyframes ColorColorRotate {
+  0% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+
+  17% {
+    color: #ffff00;
+    fill: #ffff00;
+  }
+
+  33% {
+    color: #00ff00;
+    fill: #00ff00;
+  }
+
+  50% {
+    color: #00ffff;
+    fill: #00ffff;
+  }
+
+  66% {
+    color: #0000ff;
+    fill: #0000ff;
+  }
+
+  83% {
+    color: #ff00ff;
+    fill: #ff00ff;
+  }
+
+  100% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+}
+
+@keyframes BorderColorRotate {
+  0% {
+    border-color: #ff0000;
+  }
+
+  17% {
+    border-color: #ffff00;
+  }
+
+  33% {
+    border-color: #00ff00;
+  }
+
+  50% {
+    border-color: #00ffff;
+  }
+
+  66% {
+    border-color: #0000ff;
+  }
+
+  83% {
+    border-color: #ff00ff;
+  }
+
+  100% {
+    border-color: #ff0000;
+  }
+}
+
+@keyframes OffsetColorRotate {
+  0% {
+    color: #ffff00;
+    fill: #ffff00;
+  }
+
+  17% {
+    color: #00ff00;
+    fill: #00ff00;
+  }
+
+  33% {
+    color: #00ffff;
+    fill: #00ffff;
+  }
+
+  50% {
+    color: #0000ff;
+    fill: #0000ff;
+  }
+
+  66% {
+    color: #ff00ff;
+    fill: #ff00ff;
+  }
+
+  83% {
+    color: #ff0000;
+    fill: #ff0000;
+  }
+
+  100% {
+    color: #ffff00;
+    fill: #ffff00;
   }
 }

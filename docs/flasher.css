@@ -50,3 +50,82 @@
   word-wrap: break-word;
   font-size: 12px;
 }
+
+body {
+  -webkit-animation: ColorRotate 8s ease infinite;
+          animation: ColorRotate 8s ease infinite;
+}
+
+@-webkit-keyframes ColorRotate {
+  0% {
+    background-color: #ff0000;
+    color: #00ffff;
+  }
+
+  17% {
+    background-color: #ffff00;
+    color: #0000ff;
+  }
+
+  33% {
+    background-color: #00ff00;
+    color: #ff00ff;
+  }
+
+  50% {
+    background-color: #00ffff;
+    color: #ff0000;
+  }
+
+  66% {
+    background-color: #0000ff;
+    color: #ffff00;
+  }
+
+  83% {
+    background-color: #ff00ff;
+    color: #00ff00;
+  }
+
+  100% {
+    background-color: #ff0000;
+    color: #00ffff;
+  }
+}
+
+@keyframes ColorRotate {
+  0% {
+    background-color: #ff0000;
+    color: #00ffff;
+  }
+
+  17% {
+    background-color: #ffff00;
+    color: #0000ff;
+  }
+
+  33% {
+    background-color: #00ff00;
+    color: #ff00ff;
+  }
+
+  50% {
+    background-color: #00ffff;
+    color: #ff0000;
+  }
+
+  66% {
+    background-color: #0000ff;
+    color: #ffff00;
+  }
+
+  83% {
+    background-color: #ff00ff;
+    color: #00ff00;
+  }
+
+  100% {
+    background-color: #ff0000;
+    color: #00ffff;
+  }
+}
