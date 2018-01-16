@@ -4,7 +4,9 @@ import Web3 from 'web3';
 import contract from 'truffle-contract';
 
 // CURRENTLY THE TEST __ADDRESS__
-export const CONTRACT_ADDRESS = '0x27b8Eee5d59DbdC936Ae4ed0573033CDf3bB9102';
+export const CONTRACT_ADDRESS = '0xcA5228D1fe52D22db85E02CA305cddD9E573D752'
+// test address
+//'0x27b8Eee5d59DbdC936Ae4ed0573033CDf3bB9102';
 
 const FastCashMoneyPlus = contract(FastCashMoneyPlusArtifact);
 window.__fcmp = FastCashMoneyPlus;

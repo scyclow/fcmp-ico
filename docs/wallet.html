@@ -33965,7 +33965,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 // CURRENTLY THE TEST __ADDRESS__
-var CONTRACT_ADDRESS = exports.CONTRACT_ADDRESS = '0x27b8Eee5d59DbdC936Ae4ed0573033CDf3bB9102';
+var CONTRACT_ADDRESS = exports.CONTRACT_ADDRESS = '0xcA5228D1fe52D22db85E02CA305cddD9E573D752';
+// test address
+//'0x27b8Eee5d59DbdC936Ae4ed0573033CDf3bB9102';
 
 var FastCashMoneyPlus = (0, _truffleContract2.default)(_FastCashMoneyPlus2.default);
 window.__fcmp = FastCashMoneyPlus;
