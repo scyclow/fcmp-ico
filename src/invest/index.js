@@ -19,7 +19,8 @@ _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSymbolLarge)
 
 
 // TODO update
-const weeksSinceStart = 0
+const contractStart = 1516077280627
+const weeksSinceStart = Math.floor((Date.now() - contractStart) / (1000 * 60 * 60 * 24 * 7))
 
 const STATE = {
   referal: getRef() || '',
@@ -27,7 +28,7 @@ const STATE = {
   amountInMoneyBucks: 0,
   fastcashLeft: 1000000,
   usd2fc: 4 / (1.2 ** weeksSinceStart),
-  usd2eth: 1000000000000000 / (10 ** 18)
+  usd2eth: 906577000000000 / (10 ** 18)
 }
 
 let INSTANCE;

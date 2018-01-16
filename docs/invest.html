@@ -62924,7 +62924,8 @@ _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
 });
 
 // TODO update
-var weeksSinceStart = 0;
+var contractStart = 1516077280627;
+var weeksSinceStart = Math.floor((Date.now() - contractStart) / (1000 * 60 * 60 * 24 * 7));
 
 var STATE = {
   referal: (0, _getRef.getRef)() || '',
@@ -62932,7 +62933,7 @@ var STATE = {
   amountInMoneyBucks: 0,
   fastcashLeft: 1000000,
   usd2fc: 4 / Math.pow(1.2, weeksSinceStart),
-  usd2eth: 1000000000000000 / Math.pow(10, 18)
+  usd2eth: 906577000000000 / Math.pow(10, 18)
 };
 
 var INSTANCE = void 0;
