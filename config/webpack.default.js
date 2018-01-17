@@ -100,7 +100,7 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.(jpg|png)$/,
+        test: /\.(jpg|png|pdf)$/,
         loader: 'file-loader'
       },
       {

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 620);
+/******/ 	return __webpack_require__(__webpack_require__.s = 621);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -62230,13 +62230,14 @@ module.exports = IpcProvider;
 /* 617 */,
 /* 618 */,
 /* 619 */,
-/* 620 */
+/* 620 */,
+/* 621 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(621);
+__webpack_require__(622);
 
 __webpack_require__(175);
 
@@ -62252,17 +62253,17 @@ var _2 = __webpack_require__(59);
 
 var _3 = _interopRequireDefault(_2);
 
-var _warning = __webpack_require__(622);
+var _warning = __webpack_require__(623);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _routingCodeGenerator = __webpack_require__(623);
+var _routingCodeGenerator = __webpack_require__(624);
 
 var _getRef = __webpack_require__(388);
 
 var _symbol = __webpack_require__(389);
 
-var _chatModal = __webpack_require__(624);
+var _chatModal = __webpack_require__(625);
 
 var _chatModal2 = _interopRequireDefault(_chatModal);
 
@@ -62708,13 +62709,13 @@ setTimeout(function () {
 }, 2000);
 
 /***/ }),
-/* 621 */
+/* 622 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 622 */
+/* 623 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62725,7 +62726,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 623 */
+/* 624 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62765,7 +62766,7 @@ function createAddress() {
 }
 
 /***/ }),
-/* 624 */
+/* 625 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62783,9 +62784,9 @@ var _2 = __webpack_require__(59);
 
 var _3 = _interopRequireDefault(_2);
 
-__webpack_require__(625);
+__webpack_require__(626);
 
-var _index = __webpack_require__(626);
+var _index = __webpack_require__(627);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -62914,13 +62915,13 @@ $chatInput.onkeypress = function (e) {
 exports.default = $chatModal;
 
 /***/ }),
-/* 625 */
+/* 626 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 626 */
+/* 627 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

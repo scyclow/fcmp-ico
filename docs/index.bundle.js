@@ -11047,11 +11047,11 @@ var _step5 = __webpack_require__(617);
 
 var _step6 = _interopRequireDefault(_step5);
 
-var _step7 = __webpack_require__(618);
+var _step7 = __webpack_require__(619);
 
 var _step8 = _interopRequireDefault(_step7);
 
-var _loading = __webpack_require__(619);
+var _loading = __webpack_require__(620);
 
 var _loading2 = _interopRequireDefault(_loading);
 
@@ -11324,11 +11324,17 @@ module.exports = function (scope) {
 
 
 module.exports = function (scope) {
-  return "<div id=\"signupModal-3\">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id=\"confirmationList\">\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read, and agree to, the <a target=\"_blank\" href=\"./terms.html\">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"#\">FastCashMoneyPlus White Paper</a>, and comprehend it in it's entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I have read the <a href=\"https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code\" target=\"_blank\">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type=\"checkbox\"> I'm ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n";
+  return '<div id="signupModal-3">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id="confirmationList">\n    <li>\n      <label>\n        <input type="checkbox"> I have read, and agree to, the <a target="_blank" href="./terms.html">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I have read the <a target="_blank" href="' + __webpack_require__(618) + '">FastCashMoneyPlus White Paper</a>, and comprehend it in it\'s entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I have read the <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I\'m ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n';
 };
 
 /***/ }),
 /* 618 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "3c62f91ef45b5e26c6b0fd860b8521ec.pdf";
+
+/***/ }),
+/* 619 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11339,7 +11345,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 619 */
+/* 620 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
