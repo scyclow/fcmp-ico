@@ -8,7 +8,7 @@ body {
 
 nav {
   width: 100%;
-  animation: FullColorRotate 8s ease infinite;
+  animation: FullColorRotate 8s linear infinite;
 }
 
 nav .nav-header {
@@ -29,7 +29,7 @@ nav #nav-menu {
   display: flex;
   border: 7px solid;
   border-top: 0;
-  animation: BorderColorRotate 8s ease infinite;
+  animation: BorderColorRotate 8s linear infinite;
 }
 
 nav #nav-menu .nav-menu-item {
@@ -44,14 +44,14 @@ nav #nav-menu .nav-menu-item {
 #content {
   border: 7px solid;
   border-top: 0;
-  animation: ColorColorRotate 8s ease infinite;
+  animation: ColorColorRotate 8s linear infinite;
 }
 
 #hero {
   padding-top: 20px;
   padding-bottom: 40px;
   min-height: 80vh;
-  animation: OffsetColorRotate 90s ease infinite;
+  animation: OffsetColorRotate 90s linear infinite;
 }
 
 #hero {
@@ -268,7 +268,7 @@ nav #nav-menu .nav-menu-item {
   text-shadow: 1px 1px #ff0000;
   border-top: 7px solid;
   border-bottom: 7px solid;
-  animation: BorderColorRotate 8s ease infinite;
+  animation: BorderColorRotate 8s linear infinite;
 }
 
 .faqAnswer {

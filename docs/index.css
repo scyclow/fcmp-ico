@@ -8,8 +8,8 @@ body {
 
 nav {
   width: 100%;
-  -webkit-animation: FullColorRotate 8s ease infinite;
-          animation: FullColorRotate 8s ease infinite;
+  -webkit-animation: FullColorRotate 8s linear infinite;
+          animation: FullColorRotate 8s linear infinite;
 }
 
 nav .nav-header {
@@ -41,8 +41,8 @@ nav #nav-menu {
   display: flex;
   border: 7px solid;
   border-top: 0;
-  -webkit-animation: BorderColorRotate 8s ease infinite;
-          animation: BorderColorRotate 8s ease infinite;
+  -webkit-animation: BorderColorRotate 8s linear infinite;
+          animation: BorderColorRotate 8s linear infinite;
 }
 
 nav #nav-menu .nav-menu-item {
@@ -65,16 +65,16 @@ nav #nav-menu .nav-menu-item {
 #content {
   border: 7px solid;
   border-top: 0;
-  -webkit-animation: ColorColorRotate 8s ease infinite;
-          animation: ColorColorRotate 8s ease infinite;
+  -webkit-animation: ColorColorRotate 8s linear infinite;
+          animation: ColorColorRotate 8s linear infinite;
 }
 
 #hero {
   padding-top: 20px;
   padding-bottom: 40px;
   min-height: 80vh;
-  -webkit-animation: OffsetColorRotate 90s ease infinite;
-          animation: OffsetColorRotate 90s ease infinite;
+  -webkit-animation: OffsetColorRotate 90s linear infinite;
+          animation: OffsetColorRotate 90s linear infinite;
 }
 
 #hero {
@@ -331,8 +331,8 @@ nav #nav-menu .nav-menu-item {
   text-shadow: 1px 1px #ff0000;
   border-top: 7px solid;
   border-bottom: 7px solid;
-  -webkit-animation: BorderColorRotate 8s ease infinite;
-          animation: BorderColorRotate 8s ease infinite;
+  -webkit-animation: BorderColorRotate 8s linear infinite;
+          animation: BorderColorRotate 8s linear infinite;
 }
 
 .faqAnswer {

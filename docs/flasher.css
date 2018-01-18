@@ -52,8 +52,8 @@
 }
 
 body {
-  -webkit-animation: ColorRotate 8s ease infinite;
-          animation: ColorRotate 8s ease infinite;
+  -webkit-animation: ColorRotate 8s linear infinite;
+          animation: ColorRotate 8s linear infinite;
 }
 
 @-webkit-keyframes ColorRotate {

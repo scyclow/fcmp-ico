@@ -49,7 +49,7 @@
 }
 
 body {
-  animation: ColorRotate 8s ease infinite;
+  animation: ColorRotate 8s linear infinite;
 }
 
 @keyframes ColorRotate {
