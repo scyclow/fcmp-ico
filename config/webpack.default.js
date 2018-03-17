@@ -91,6 +91,24 @@ module.exports = {
       inlineSource: '.(js|css)$',
       favicon: rootDir(`src/assets/favicon.ico`)
     }),
+    html({
+      template: rootDir(`src/blog/index.html`),
+      filename: 'blog.html',
+      chunks: [],
+      favicon: rootDir(`src/assets/favicon.ico`)
+    }),
+    html({
+      template: rootDir(`src/blog/engineering/index.html`),
+      filename: 'blog/engineering.html',
+      chunks: [],
+      favicon: rootDir(`src/assets/favicon.ico`)
+    }),
+    html({
+      template: rootDir(`src/blog/engineering/solidity-for-fun-and-profit.html`),
+      filename: 'blog/engineering/solidity-for-fun-and-profit.html',
+      chunks: [],
+      favicon: rootDir(`src/assets/favicon.ico`)
+    }),
   ],
   module: {
     rules: [

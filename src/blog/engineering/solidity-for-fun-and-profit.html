@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BLOG | FA$TCA$HMONEYPLU$.biz</title>
+  <META charset="UTF-8">
+  <META name="theme-color" content="#ffffff">
+  <META name="viewport" content="width=device-width, initial-scale=1.0">
+  <META http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <META
+    name="description"
+    content="THIS IS THE FASTCASHMONEYPLUS BLOG"
+  >
+  <META
+    name="keywords"
+    content="blog, god, hell, satan, fuck, shit, sex, power, the, a, love, wealth, happiness, crypto, money, bitcoin, best, ico, eth, btc, ethereum, smart contract, opportunity, investment, metamask, truffle, solidity, erc20"
+  >
+
+  <style>
+    * { padding: 0; margin: 0; }
+
+    nav {
+      /*color: white;*/
+      /*background-color: blue;*/
+      height: 68px;
+    }
+
+    h1 {
+      font-size: 56px;
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 25px;
+    }
+
+    h1, h2, h3 {
+      font-family: sans-serif;
+    }
+
+    p {
+      padding: 0.7em 0;
+      font-size: 21px;
+      color: #222;
+    }
+
+    a { color: blue; }
+    a:visited { color: blue; }
+    a:hover { color: red; }
+
+    @media (max-width: 599px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    #content {
+      max-width: 86.5%;
+      width: 750px;
+      margin: auto;
+      padding: 1.25em;
+      line-height: 2;
+    }
+
+    .title {
+      padding-bottom: 0.75em;
+    }
+
+    .data {
+      background-color: #eee;
+      word-break: break-all;
+      font-size: 0.8em;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .footnote {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .footnote2 {
+      font-size: 12px;
+      line-height: 1.;
+      padding-left: 30px;
+      padding-top: 0px;
+    }
+
+    .code-container {
+      border: 5px solid #555;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav></nav>
+
+<div id="content">
+  <div class="title">
+    <h1>Solidity For Fun And Profit</h1>
+    <h2>A no-nonsense tutorial to learn Solidity now.</h2>
+  </div>
+
+  <p>Let's cut to the chase: You've seen the rise and fall of countless Initial Coin Offerings (ICOs) over the last year, and you want in on the action. There are so many amateurs getting rich off of this new fundraising model, that you'd make a killing if you knew how to write Ethereum smart contracts in Solidity. Now, you might think that you need to be some sort of genius to Ethereum smart contracts in Solidity -- <strong>nothing could be further from the truth</strong>. I knew nothing about Solidity before launching <a href="/" target="_blank">FastCashMoneyPluz.biz</a>, one of the hottest cryptocurrencies on the internet <a href=#1>[1]</a>, but I figured everything out in no time at all! And believe me, I'm no genius!</p>
+
+  <p>In this tutorial, we're going to cover everything you need to know to write your own ERC20 contract from scratch. Meanwhile, we'll use the FastCashMoneyPlus contract as a big-picture reference point. If you're impatient, you can <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7" target="_blank">view the final source code here</a>. As you follow along, you might want to modify the code and interact with your contract. For this, you might want to use a development tool like <a href="http://truffleframework.com/" target="_blank">Truffle</a> to compile your code.</p>
+
+  <p>This post will assume that you have a general understanding of what Ethereum is. If you don't, I highly recommend reading the <a href="https://github.com/ethereum/wiki/wiki/White-Paper">Ethereum Whitepaper</a>, which is fairly detailed, but not overly technical. </p>
+
+  <p>Let's get started!</p>
+
+  <a href="/" target="_blank" style="
+    border: 2px solid red;
+    font-size: 25px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: yellow;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  "> GO TO FASTCASHMONEYPLUS.BIZ TO START MAKING FAST CASH NOW!</a>
+
+  <h3>Solidity Basics</h3>
+  <p>Let's start with a Hello World contract, and go over some of its key features:</p>
+  <div class="code-container">
+    <script src="https://gist.github.com/scyclow/9ddbdf8d998d80989c187ca5ec1c6e98.js"></script>
+  </div>
+
+  <p>After the first few lines of the file (which specify the Solidity compiler version and provide a multi-line comment), this codes shouldn't look unfamiliar to developers with experience with JavaScript. Contracts are essentially classes, which contain their own internal state. As we'll see, contracts have public and private functions, contain instance variables, and can inherit from other contracts.</p>
+
+  <p>The other thing that jumps out is that everything in Solidity is statically typed, with the type coming before the variable definition. We have <span class="data">string</span>s, <span class="data">byte</span>s, <span class="data">bool</span>eans, and different sized <span class="data">int</span>s and <span class="data">uint</span>s, all with the basic operators available in JavaScript. Additionally, Solidity has a special type to denote Ethereum addresses (ex. <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>). </p>
+
+  <p>Solidity also has a native <span class="data">mapping</span> type, which stores key/value pairs of pretty much any type. Likewise, it has arrays and structs. </p>
+
+  <p><a href="https://solidity.readthedocs.io/en/v0.4.21/types.html" target="_blank">Read more in Solidity types in the docs.</a></p>
+
+  <p>In this example, we create a <span class="data">FastCashMoneyPlus</span> contract and set several public instance variables. <span class="data">totalSupply</span> and <span class="data">fastCashBank</span> (which represent the total outstanding balance of FastCash and the amount of unallocated FastCash, respectively) are left empty for now, while <span class="data">decimals</span> and <span class="data">name</span> are set to specific values. On line 13, we create a mapping of addresses to uint, representing the balance of each FastCash account. Finally on line 15, we define a constructor function (which always shares the name of the contract), and <span class="data">totalSupply</span> and <span class="data">fastCashBank</span> to 1 million FastCash.</p>
+
+  <p>You might notice that something funny is going on regarding decimal places: <strong>Solidity doesn't have floating point numbers!</strong> If this is the case, how can we transact fractions of FastCash?? While it may seem a bit rounsabout, the standard way to handle this is to specify a special <span class="data">decimals</span> instance variable that, as you might guess, indicates the number of "implicit" decimal places in your coin. This means that the smallest denomination of FastCash (which is called the MoneyBuck) is equal to 0.000000000000000001 FastCash, and that <span class="data">totalSupply</span> equals 1000000000000000000000000 MoneyBucks!</p>
+
+  <p>Okay, now that we have the foundation in place, let's build some functionality to let people buy FastCash!</p>
+
+
+  <h3>Buying Tokens</h3>
+    <!-- msg  -->
+    <!-- require -->
+    <!-- overflows -->
+  <h3>ERC</h3>
+    <!-- What is ERC?, ERC20 functions -->
+      <!-- totalSupply, name, symbol, decimals (moneybucks) -->
+      <!-- balanceOf, transfer -->
+      <!-- transferFrom, approve, allowance -->
+      <!-- Events: Transfer, Approval -->
+  <h3>Permission</h3>
+    <!-- modifiers, limiting functions -->
+    <!-- inheritence -->
+  <h3>Adding Features</h3>
+    <!-- Setting the exchange rate -->
+    <!-- Price goes up 20% every week -->
+    <!-- routingCodes, referals -->
+    <!-- example, giving central banker  -->
+  <h3>Gotchas</h3>
+    <!-- Numbers can't be too big (or too small) -->
+    <!-- No bug fixes! (transfer routing code) -->
+
+  <p>blah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvks blah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvksblah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvksblah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvksblah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvks</p>
+  <p>blah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvks blah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvksblah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvksblah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvksblah fkldj djsvk dsjv kdjfv kdsfjv kjsd vkjdfs vfjdvks</p>
+
+  <a name="1"></a>
+  <p class="footnote">
+    [1] The first two things people usually ask me when they visit fastcashmoneyplus.biz is "How do I buy FastCash?", and "Is FastCash a real cryptocurrency, or is it just a flashy website?"<a style="color:blue" href="#1b">[1b]</a>. The answer to this question is a resounding YES! FastCashMoneyPlus is a real ERC20 token living on the Ethereum blockchain at <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>. If you don't believe me, you can even read the contract source code <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">here</a>.
+    <a name="1b"></a>
+    <p class="footnote2">[1b] Actually, the first two questions they ask are usually "Is this site going to give me a virus?" and "Why is this site eating up all of my CPU?". But since the answers to these questions are both clearly "No", they wouldn't make for a very interesting blog post!</p>
+  </p>
+</div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112030344-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112030344-1');
+
+  var metas = document.getElementsByClassName('gist-meta');
+  while (metas[0]) metas[0].remove()
+</script>
+</body>
+</html>
