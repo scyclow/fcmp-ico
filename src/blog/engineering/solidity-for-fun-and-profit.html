@@ -9,11 +9,11 @@
   <META http-equiv="X-UA-Compatible" content="IE=Edge" />
   <META
     name="description"
-    content="THIS IS THE FASTCASHMONEYPLUS BLOG"
+    content="SOLIDITY FOR FUN AND PROFIT -- A NO-NONSENSE TUTORIAL TO LEARN SOLIDITY NOW | THE OFFICIAL FASTCASHMONEYPLUS BLOG"
   >
   <META
     name="keywords"
-    content="blog, god, hell, satan, fuck, shit, sex, power, the, a, love, wealth, happiness, crypto, money, bitcoin, best, ico, eth, btc, ethereum, smart contract, opportunity, investment, metamask, truffle, solidity, erc20"
+    content="ethereum, solidity, ico, smart contract, erc20, erc-20, tutorial, blog, crypto, money, bitcoin, best, eth, btc, opportunity, investment, metamask, truffle, god, hell, satan, fuck, shit, sex, power, the, a, love, wealth, happiness"
   >
 
   <style>
@@ -39,6 +39,10 @@
 
     h3 {
       font-size: 25px;
+    }
+
+    h4 {
+      font-size: 20px;
     }
 
     h1, h2, h3 {
@@ -68,6 +72,10 @@
         font-size: 20px;
       }
 
+      h4 {
+        font-size: 17px;
+      }
+
       p {
         font-size: 18px;
       }
@@ -75,18 +83,20 @@
       nav {
         font-size: 22px;
       }
-
-      #window {
-        padding-top: 30px;
-        border: 2px solid black;
-        border-top: 0;
-      }
     }
 
     #window {
       padding-top: 50px;
       border: 2px solid black;
       border-top: 0;
+    }
+
+    @media (max-width: 599px) {
+      #window {
+        padding-top: 30px;
+        border: 2px solid black;
+        border-top: 0;
+      }
     }
 
     #content {
@@ -98,7 +108,7 @@
     }
 
     .title {
-      padding-bottom: 0.75em;
+      padding-bottom: 2em;
     }
 
     .data {
@@ -151,14 +161,20 @@
   <div class="title">
     <h1>Solidity For Fun And Profit</h1>
     <h2>A no-nonsense tutorial to learn Solidity now.</h2>
+    <h4>3/21/18</h4>
   </div>
 
-  <p>Let's cut to the chase: You've seen the rise and fall of countless Initial Coin Offerings (ICOs), and you want in on the action. There are so many amateurs getting rich from this new fundraising model, that you'd make a killing if you just knew how to write Ethereum smart contracts in Solidity. You might think that you need to be some sort of genius to learn how to do that, but let's set the record straight: <strong>You don't need to be a genius to write Ethereum smart contracts in Solidity</strong>. I knew nothing about Solidity before launching <a href="/" target="_blank">FastCashMoneyPluz.biz</a>, one of the hottest cryptocurrencies on the internet <a href=#1>[1]</a>, but I figured everything out in no time at all! And believe me, I'm no genius!</p>
-
-  <p>In this tutorial, we're going to build a pretty standard Solidity ICO contract from scratch. It will let investors buy a token with Ethereum and transfer their tokens to other investors. It will also conform to the ERC-20 standard (more on this later), which will let it hook into the rest of the Ethereum token ecosystem. Finally, we'll look at a few ways to give your contract some extra flair. If you want to modify the code and interact with your contract as we go along, you can use a development tool like <a href="http://truffleframework.com/" target="_blank">Truffle</a> to compile your code.
+  <p>
+    Let's cut to the chase: You've seen the rise and fall of countless Initial Coin Offerings (ICOs), and you want in on the action. There are so many amateurs getting rich from this new fundraising model, that you'd make a killing if you just knew how to write Ethereum smart contracts in Solidity. You might think that you need to be some sort of genius to learn how to do that, but let's set the record straight: <strong>You don't need to be a genius to write Ethereum smart contracts in Solidity</strong>. I knew nothing about Solidity before launching <a href="/" target="_blank">FastCashMoneyPluz.biz</a>, one of the hottest cryptocurrencies on the internet<sup><a href="#1">[1]</a></sup>, but I figured everything out in no time at all! And believe me, I'm no genius!
   </p>
 
-  <p>This post will assume you have a general understanding of what Ethereum is. If you don't, I highly recommend reading the <a href="https://github.com/ethereum/wiki/wiki/White-Paper">Ethereum Whitepaper</a>, which is fairly detailed, but not overly technical. </p>
+  <p>
+    In this tutorial, we're going to build a pretty standard Solidity ICO contract from scratch. It will let investors buy a token with Ethereum and transfer their tokens to other investors. It will also conform to the ERC-20 standard (more on this later), allowing it to hook into the Ethereum token ecosystem. Finally, we'll look at a few ways to give your contract some extra flair. If you want to modify the code and interact with your contract as we go along, you can use a development tool like <a href="http://truffleframework.com/" target="_blank">Truffle</a> to compile your code.
+  </p>
+
+  <p>
+    This post will assume you have a general understanding of what Ethereum is. If you don't, the <a href="https://github.com/ethereum/wiki/wiki/White-Paper">Ethereum Whitepaper</a> is a great place to get your feet wet.
+  </p>
 
   <p>Let's get started!</p>
 
@@ -170,17 +186,27 @@
     <script src="https://gist.github.com/scyclow/9ddbdf8d998d80989c187ca5ec1c6e98.js"></script>
   </div>
 
-  <p>After the first few lines of the file (which specify the Solidity compiler version and provide a multi-line comment), this codes should look pretty familiar to developers with experience with JavaScript. Contracts are essentially classes, which contain their own internal state. As we'll see, contracts have public and private functions, contain state variables (which are essentially instance variables), and can inherit from other contracts.</p>
+  <p>
+    After the first few lines of the file (which specify the Solidity compiler version and provide a multi-line comment), this codes should look pretty familiar to developers with JavaScript experience. Contracts are essentially classes, and when you launch them their instances are accessible at Ethereum addresses. As we'll see, contracts have public and private functions, maintain their state with state variables, and can inherit from other contracts.
+  </p>
 
-  <p>The other thing that jumps out is that everything in Solidity is statically typed, with the type coming before the variable definition. We have <span class="data">string</span>s, <span class="data">byte</span>s, <span class="data">bool</span>eans, and different sized <span class="data">int</span>s and <span class="data">uint</span>s, all with the basic operators available in JavaScript. Additionally, Solidity has a special type to denote Ethereum addresses (ex. <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>). </p>
+  <p>
+    The other thing that jumps out is that everything in Solidity is statically typed, with the type coming before the variable definition. We have <span class="data">string</span>s, <span class="data">byte</span>s, <span class="data">bool</span>eans, and different sized <span class="data">int</span>s and <span class="data">uint</span>s, all with the basic operators available in JavaScript. Additionally, Solidity has a special type to denote Ethereum addresses (ex. <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>).
+  </p>
 
-  <p>Solidity also has a native <span class="data">mapping</span> type, which stores key/value pairs of pretty much any type. Likewise, it has arrays and structs. </p>
+  <p>
+    Solidity also has a native <span class="data">mapping</span> type, which stores key/value pairs of pretty much any type. Plus, it has arrays and structs to cover the rest of your data-modeling needs.
+  </p>
 
   <p><a href="https://solidity.readthedocs.io/en/v0.4.21/types.html" target="_blank">Read more about Solidity types in the docs.</a></p>
 
-  <p>In this example, we create a <span class="data">FastCashMoneyPlus</span> contract and set several public state variables. <span class="data">totalSupply</span> and <span class="data">fastCashBank</span> (which represent the total outstanding balance of FastCash and the amount of unallocated FastCash, respectively) are left empty for now, while <span class="data">decimals</span> and <span class="data">name</span> are set to specific values. On line 14, we create a mapping of <span class="data">address</span>es to <span class="data">uint</span>s, representing the balance of each FastCash account. Finally on line 16, we define a constructor function (which always shares the name of the contract), and <span class="data">totalSupply</span> and <span class="data">fastCashBank</span> to 1 million FastCash.</p>
+  <p>
+    In this example, we create a <span class="data">FastCashMoneyPlus</span> contract and set several public state variables. <span class="data">totalSupply</span> and <span class="data">fastCashBank</span> (which represent the total outstanding balance of FastCash and the amount of unallocated FastCash, respectively) are left empty for now, while <span class="data">decimals</span> and <span class="data">name</span> are set to specific values. On line 14, we create a mapping of <span class="data">address</span>es to <span class="data">uint</span>s, representing the balance of each FastCash account. Finally on line 16, we define a constructor function (which always shares the name of the contract), and set <span class="data">totalSupply</span> and <span class="data">fastCashBank</span> to 1 million FastCash.
+  </p>
 
-  <p>You might notice that something funny is going on regarding decimal places: <strong>Solidity doesn't have floating point numbers!</strong> If this is the case, how can we transact fractions of FastCash?? While it may seem a bit rounsabout, the standard way to handle this is to specify a special <span class="data">decimals</span> state variable that, as you might guess, indicates the number of "implicit" decimal places in your coin. This means that the smallest denomination of FastCash (which is called the MoneyBuck) is equal to 0.000000000000000001 FastCash, and that <span class="data">totalSupply</span> equals 1000000000000000000000000 MoneyBucks!</p>
+  <p>
+    You might notice that something funny is going on regarding decimal places: <strong>Solidity doesn't have floating point numbers!</strong> If this is the case, how can we transact fractions of FastCash?? While it may seem a bit roundabout, the standard way to handle this is to specify a special <span class="data">decimals</span> state variable that, as you might guess, indicates the number of "implicit" decimal places for your coin. This means that the smallest denomination of FastCash (which is called the MoneyBuck) is equal to 0.000000000000000001 FastCash, and that <span class="data">totalSupply</span> equals 1000000000000000000000000 MoneyBucks!
+  </p>
 
   <p>Okay, now that we have the foundation in place, let's build some functionality to let people buy and transfer FastCash!</p>
 
@@ -189,37 +215,39 @@
 
   <h3>Buying Tokens</h3>
 
-  <p>To keep things simple, let's say that the FastCash ICO will continue until there is no FastCash left in the bank, and that the FASTCASH/ETH exchange rate will be fixed at 2/1.</p>
+  <p>
+    Next, we're going to write some functions to update the accounts being stored in the <span class="data">balanceOf</span> mapping. Let's keep things simple for now by fixing the FASTCASH/ETH exchange rate at 2/1, and allowing the ICO to continue until there is no more FastCash left in the bank.
+  </p>
 
   <div class="code-container">
     <script src="https://gist.github.com/scyclow/736bea1c45bb0dc14a1f51dde75b98f5.js"></script>
   </div>
 
   <p>
-    First, we add a new state variable, <span class="data">centralBanker</span>, and then set it to <span class="data">msg.sender</span> in our constructor function. <span class="data">msg</span> is a reserved word in Solidity, and refers to the person executing the contract. Among other things, <span class="data">msg</span> had a <span class="data">sender</span> property that gives you the address that is invoking the function. In this case, <span class="data">msg.sender</span> refers to the address that launched the contract. (We're going to need to hold onto this for later so we know where to send the ICO funds).
+    First we add a new state variable, <span class="data">centralBanker</span>, and set it to <span class="data">msg.sender</span> in our constructor function. <span class="data">msg</span> is a reserved word in Solidity, and gives you information about the function invokation. Among other things, <span class="data">msg</span> has a <span class="data">sender</span> property that gives you the address that is invoking the function. In this case, <span class="data">msg.sender</span> refers to the address that launched the contract. (We're going to need to hold onto this for later so we know where to send the ICO funds).
   </p>
 
   <p>
-    Next, we define a <span class="data">buy</span> function on line 27. Since this function will be accepting Ethereum, we need to add special "modifier" called <span class="data">payable</span> to it. <a href="#2">[2]</a> Now when someone sends Ethereum to this specific function, that amount will be stored in the contract's balance. <a href="#3">[3]</a> We can get a <span class="data">uint</span> representation of this amount (denominated in WEI <a href="#4">[4]</a>) from <span class="data">msg.value</span>, and plug it into a utility function (<span class="data">weiToMoneyBucks</span>) to get the amount of MoneyBucks that we will credit our new investor.
+    Next, we define a <span class="data">buy</span> function on line 27. Since this function will be accepting Ethereum, we need to add special "modifier" called <span class="data">payable</span> to it.<sup><a href="#2">[2]</a></sup> Now when someone sends Ethereum to this specific function, that amount will be stored in the contract's balance.<sup><a href="#3">[3]</a></sup> We can get a <span class="data">uint</span> representation of this amount (denominated in WEI<sup><a href="#4">[4]</a></sup>) from <span class="data">msg.value</span>, and plug it into a utility function (<span class="data">weiToMoneyBucks</span>) to get the amount of MoneyBucks to credit our new investor.
   </p>
 
   <p>
-    Then we use a special built-in Solidity function, <span class="data">require</span>, to check that the investor is trying to buy a positive amount of FastCash, and that there is enough FastCash left in the FastCash central bank to accomidate them. If either of these conditions are false, <span class="data">require</span> will prevent the function from having any side effects.
+    Then we use a special built-in Solidity function, <span class="data">require</span>, to check that the investor is trying to buy a positive amount of FastCash, and that there is enough FastCash left in the FastCash central bank to accommodate them. If either of these conditions evaluate to false, <span class="data">require</span> will stop the function dead in its tracks.
   </p>
 
   <p>
-    After these checks, we can get down to business: we add some FastCash (or, more precisely, MoneyBucks) to the investor's account, and subtract it from the central bank. And then the most important part, we transfer the amount of Ethereum that we just received to the central banker with <span class="data">centralBanker.transfer(msg.value)</span>. <a href="#5">[5]</a>
+    After these checks, we can get down to business: we add some FastCash (or, more precisely, MoneyBucks) to the investor's account, and subtract it from the central bank. And then the most important part: We transfer the amount of Ethereum that we just received to the central banker with <span class="data">centralBanker.transfer(msg.value)</span>.<sup><a href="#5">[5]</a></sup>
   </p>
 
-  <p>Finally, we define a <span class="data">transfer</span> function so our investors can sell FastCash to other investors. This looks pretty similar to the <span class="data">buy</span> function: We check to make sure that funds aren't being transfered to an empty address, check that the transfer amount is positive, check that the sender has enough FastCash in their account, check that the result of the transfer won't cause any overflows <a href="#6">[6]</a>, and adjust the account balances.</p>
+  <p>Finally, we define a <span class="data">transfer</span> function so our investors can purchase goods and services with FastCash and sell it to other investors. This looks pretty similar to the <span class="data">buy</span> function: We check to make sure that funds aren't being transferred to an empty address, check that the transfer amount is positive, check that the sender has enough FastCash in their account, check that the result of the transfer won't cause any overflows<sup><a href="#6">[6]</a></sup>, and adjust the account balances.</p>
 
   <a href="/" target="_blank" class="ad"> ARE YOU SICK AND TIRED OF SITTING ON THE SIDELINES AND WATCHING OTHER PEOPLE GET RICH? THEN CLICK HERE TO GET FAST CASH TODAY!</a>
 
-  <p>It looks like we're in pretty good shape! Now, investors can buy and transfer FastCash, and all if the proceeds go straight into our bank accounts! But hold your horses, we're not done yet! If we want to seamlessly hook into the rest of the Ethereum ecosystem, we need to make sure that it conforms to the ERC-20 standard.</p>
+  <p>It looks like we're in pretty good shape! Investors can buy and transfer FastCash, and all of the proceeds go straight into our bank account! But hold your horses, we're not done yet! If we want to seamlessly hook into the rest of the Ethereum ecosystem, we need to make sure that it conforms to the ERC-20 standard.</p>
 
   <h3>ERC-20 Standard</h3>
 
-  <p>"What the heck is the ERC-20 Standard?", you might ask. ERC-20 is a specific "<strong>E</strong>thereum <strong>R</strong>equest for <strong>C</strong>omment", and describes a standardized interface<a href="#7">[7]</a> that all Ethereum tokens should conform to. We're already most of the way there with our <span class="data">totalSupply</span>, <span class="data">balanceOf</span>, <span class="data">transfer</span>, <span class="data">name</span>, and <span class="data">decimals</span> functions<a href="#8">[8]</a> and variables, but we need to add a couple more things.</p>
+  <p>"What the heck is the ERC-20 Standard?", you might ask. ERC-20 is a specific "<strong>E</strong>thereum <strong>R</strong>equest for <strong>C</strong>omment", and describes a standardized interfac<sup><a href="#7">[7]</a></sup> that all Ethereum tokens should conform to. We're already most of the way there with our <span class="data">totalSupply</span>, <span class="data">balanceOf</span>, <span class="data">transfer</span>, <span class="data">name</span>, and <span class="data">decimals</span> functions<sup><a href="#8">[8]</a></sup>, but we need to add a couple more things.</p>
 
   <div class="code-container">
     <script src="https://gist.github.com/scyclow/a2459a61b6c40e2448c93a42f0b72fb5.js"></script>
@@ -230,19 +258,27 @@
   </p>
 
   <p>
-    ERC-20 contracts also give token holders the ability to approve transfers from other parties. For example, let's say that I own 100 FastCash, and want to give my lawyer the ability to transfer up to 50 FastCash on my behalf. With an ERC-20 token, I would call <span class="data">approve</span>, and give it my lawyer's Ethereum address and an amount denominated in MoneyBucks. Later, my lawyer would call <span class="data">transferFrom</span> with my address, the recipient's address, and the amount. If someone wants to see how much my lawyer is allowed to transfer on my behalf, they could call <span class="data">transferFrom</span> with my address and my lawyer's address.
+    ERC-20 contracts also give token holders the ability to approve transfers from other parties. For example, let's say that I own 100 FastCash, and want to give my lawyer the ability to transfer up to 50 FastCash on my behalf. With an ERC-20 token, I would call <span class="data">approve</span>, and give it my lawyer's Ethereum address and an amount (denominated in MoneyBucks). Later, my lawyer can call <span class="data">transferFrom</span> with my address, the recipient's address, and the amount. If someone wants to see how much my lawyer is allowed to transfer on my behalf, they can call <span class="data">allowance</span> with my address and my lawyer's address.
   </p>
 
   <p>
-    So if, for example, I get arrested at the Canadian border for securities fraud and don't have access to my FastCash or Ethereum wallets, my lawyer could bail me out with 25 of my own FastCash. But, if never increase my lawyer's allowance and I get arrested at the German border for securities fraud (which has a bail is 30 FastCash), then I'd be 5 FastCash short of freedom.
+    So if, for example, I get arrested at the Canadian border for securities fraud and don't have access to my FastCash or Ethereum wallets, my lawyer could bail me out with 25 of my own FastCash. But, if I never increase my lawyer's allowance and I get arrested at the German border for securities fraud (which has a bail of 30 FastCash), then I'd be 5 FastCash short of freedom.
   </p>
 
   <p>
-    Implimenting these functions isn't much harder than everything else we've done so far. But first, let's extract all of our transfer logic into a private function, <span class="data">_transfer</span>, on line 49, and give it the <span class="data">internal</span> modifier. Now we can use <span class="data">_transfer</span> in our external <span class="data">transfer</span> function, and our now <span class="data">transferFrom</span> function (line 72) without duplicating any logic.
+    Implementing these functions isn't much harder than everything else we've done so far. But first, let's extract all of our transfer logic into a private function, <span class="data">_transfer</span>, on line 49, and give it the <span class="data">internal</span> modifier. Now we can use <span class="data">_transfer</span> in our external <span class="data">transfer</span> function, and our new <span class="data">transferFrom</span> function (line 72) without duplicating any logic.
   </p>
 
   <p>
-    The crux of approvals is creating a mapping called <span class="data">allowed</span>, which links addresses to a nested mapping of allowances. To visualize things, the mapping might look something like this: <span class="data">{ myAddress => { lawyer1Address => 50, lawyer2Address => 50} }</span>. The <span class="data">allowance</span> function (line 90) is pretty straightforward, returning <span class="data">allowed[_owner][_spender]</span>. Likewise, the <span class="data">approve</span> function (line 84) just sets <span class="data">allowed[_owner][_spender] = _value</span>. Finally, the <span class="data">transferFrom</span> function (line 72) makes sure that the sender is authorized to send that amount, transfers the coins with <span class="data">_transfer</span>, and decreases their allowance.
+    The crux of approvals is creating a mapping called <span class="data">allowed</span>, which links addresses to a nested mapping of allowances. To visualize things, the mapping might look something like this:
+  </p>
+
+  <p>
+    <span class="data">{ myAddress => { lawyersAddress => 50, secondLawyersAddress => 50 } }</span>
+  </p>
+
+  <p>
+    The <span class="data">allowance</span> function (line 90) is pretty straightforward, returning <span class="data">allowed[_owner][_spender]</span>. Likewise, the <span class="data">approve</span> function (line 84) just sets <span class="data">allowed[_owner][_spender] = _value</span>. Finally, the <span class="data">transferFrom</span> function (line 72) makes sure that the sender is authorized to send that amount, transfers the coins with <span class="data">_transfer</span>, and decreases their allowance.
   </p>
 
   <p>
@@ -257,7 +293,7 @@
 
   <h3>Inheriting Permission</h3>
 
-  <p>As the FastCash central banker, you don't currently have much wiggle room. The exchange rate is fixed, and you have no way of cutting under-the-table deals with institutional clients. Let's give you, the central banker, some special permissions. But our contract is already getting a little unruly, so let's see if we can split up the logic.</p>
+  <p>As the FastCash central banker, you don't currently have much wiggle room. The exchange rate is fixed, and you have no way of cutting under-the-table deals with institutional clients. Let's give you, the central banker, some special permissions. But our contract is already getting a little unruly, so let's see if we can split up the logic first.</p>
 
   <div class="code-container">
     <script src="https://gist.github.com/scyclow/d509f4b00d484067339f9b2bd54c803a.js"></script>
@@ -268,14 +304,14 @@
   </p>
 
   <p>
-    The other big change is that now we define a <span class="data">onlyCentralBanker</span> modifier on line 15. Modifiers have the ability to augment other functions. In this case, we're requiring the msg.sender to be the central banker. If this is true, then the underscore runs the function we're modifying. For example, we also define a new <span class="data">setCentralBanker</span> that uses the new <span class="data">onlyCentralBanker</span> modifier. This will set a new central banker (provided the function is given a valid address), but the modifier ensures the <em>only the acting central banker can call it</em>.
+    The other big change is that now we define a <span class="data">onlyCentralBanker</span> modifier on line 15. Modifiers have the ability to augment other functions. In this case, we're requiring the <span class="data">msg.sender</span> to be the central banker. If this is true, then the underscore runs the function we're modifying. We can use this for our new function, <span class="data">setCentralBanker</span>, which sets a new central banker if it's given a valid address. We don't want just anybody to be able to do this, however, so our <span class="data">onlyCentralBanker</span> modifier ensures the <em>only the acting central banker can call it</em>.
 
   <p>
-    Similarly, we can extract an <span class="data">exchangeRate</span> state variable from <span class="data">weiToMoneyBucks</span>, and write an update function, <span class="data">updateExchangeRate</span>, that only the central banker can call. And if we want to allow the central banker to distribute funds from the central bank at their discretion for market stability purposes, we can define a <span class="data">transferFromBank</span> function (line 106) to do just that!
+    Similarly, if we want a way to update the exchange rate we can extract an <span class="data">exchangeRate</span> state variable from <span class="data">weiToMoneyBucks</span>, and write an update function, <span class="data">updateExchangeRate</span>, that only the central banker can call. And if we want to allow the central banker to distribute funds from the central bank at their discretion for market stability purposes, we can define a <span class="data">transferFromBank</span> function (line 106) to do just that!
   </p>
 
   <p>
-    The interesting thing about using permissions is that it lets you structure your contract like an organization where different addresses have different "roles". If you want to get fancy with it, you could conceivably implement a voting system where shareholders could vote on who has what role.
+    The interesting thing about using permissions is that it lets you structure your contract like an organization, where different addresses have different "roles". If you want to get fancy with it, you could conceivably implement a voting system where shareholders could vote on who has what role.
   </p>
 
   <p>
@@ -283,7 +319,7 @@
   </p>
 
   <p>
-    One way to do this is to write a coore contract that effectively acts as a controller, which defers to other contracts to implement core chunks of business logic. This way, if one of your features has a bug, you could deploy a new feature contract and point the core contract at the new contract. Here's an example of what that could look like:
+    One way to do this is to write a core contract that effectively acts as a controller, and defers to other contracts to implement core chunks of business logic. This way, if one of your features has a bug, you could deploy a new feature contract and point the core contract at the new contract. Here's an example of what that could look like:
   </p>
 
   <div class="code-container">
@@ -312,7 +348,7 @@
   </p>
 
   <p>
-    Second, <strong>the price of FastCash is set to increase by 20% every week</strong>! <a href="#9">[9]</a> You can see the precise logic in the <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L143" target="_blank">official FastCashMoneyPlus getExchangeRate function</a>. If it looks complicated... that's because it is. Since there are no decimal places in Solidity you can't just multiply a number by 1.2 -- you need to multiply it by 12 and then divide by 10. At the other end, the larges numbers supported by Solidity are uint256 (that's 77 zeros). That sounds pretty big, but when you're performing a compound operation on 1,000,000,000,000,000,000 MoneyBucks (i.e. 1 FastCash) over a 71 week timeframe, the numbers get very large very fast. In short, this formula of this function was derived using plenty of algebra to get rid of a bunch of extra zeros. You can read more about this in the <a href="/79f417c21b848aac16507c47f92abfbd.pdf" target="_blank">Official FastCashMoneyPlus White Paper</a>.
+    Second, <strong>the price of FastCash is set to increase by 20% every week</strong>!<sup><a href="#9">[9]</a></sup> You can see the precise logic in the <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L143" target="_blank">official FastCashMoneyPlus getExchangeRate function</a>. If it looks complicated... that's because it is. Since there are no decimal places in Solidity you can't just multiply a number by 1.2 -- you need to multiply it by 12 and then divide by 10. At the other end, the larges numbers supported by Solidity are uint256 (that's 77 zeros). That sounds pretty big, but when you're performing a compound operation on 1,000,000,000,000,000,000 MoneyBucks (i.e. 1 FastCash) over a 71 week timeframe, the numbers get very large very fast. In short, this formula of this function was derived using plenty of algebra to get rid of a bunch of extra zeros. You can read more about this in the <a href="/79f417c21b848aac16507c47f92abfbd.pdf" target="_blank">Official FastCashMoneyPlus White Paper</a>.
   </p>
 
     <!-- the official fcmp contract has a few proprietary features that make it different:
@@ -324,7 +360,7 @@
 
   <a name="1"></a>
   <p class="footnote">
-    [1] The first two things people usually ask me when they visit fastcashmoneyplus.biz is "How do I buy FastCash?", and "Is FastCash a real cryptocurrency, or is it just a flashy website?"<a style="color:blue" href="#1b">[1b]</a>. The answer to this question is a resounding YES! FastCashMoneyPlus is a real ERC20 token living on the Ethereum blockchain at <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>. If you don't believe me, you can even read the contract source code <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">here</a>.
+    [1] The first two things people usually ask me when they visit <a href="/" target="_blank">FastCashMoneyPlus.biz</a> is "How do I buy FastCash?", and "Is FastCash a real cryptocurrency, or is it just a flashy website?"<a style="color:blue" href="#1b">[1b]</a>. The answer to this question is a resounding YES! FastCashMoneyPlus is a real ERC20 token living on the Ethereum blockchain at <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>. If you don't believe me, you can even read the contract source code <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">here</a>.
   </p>
   <a name="1b"></a>
   <p class="footnote2">[1b] Actually, the first two questions they ask are usually "Is this site going to give me a virus?" and "Why is this site eating up all of my CPU?". But since the answers to these questions are both clearly "No", they wouldn't make for a very interesting blog post!</p>
