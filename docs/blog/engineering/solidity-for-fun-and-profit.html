@@ -9,7 +9,7 @@
   <META http-equiv="X-UA-Compatible" content="IE=Edge" />
   <META
     name="description"
-    content="SOLIDITY FOR FUN AND PROFIT -- A NO-NONSENSE TUTORIAL TO LEARN SOLIDITY NOW | THE OFFICIAL FASTCASHMONEYPLUS BLOG"
+    content="Solidity for Fun and Profit -- A no-nonsense guide to writing your first ICO smart contract. | THE OFFICIAL FASTCASHMONEYPLUS.biz BLOG"
   >
   <META
     name="keywords"
@@ -155,6 +155,10 @@
       margin: 30px 0;
       line-height: 1.2;
     }
+
+    .back-arrow {
+      text-decoration: none;
+    }
   </style>
 <link rel="shortcut icon" href="favicon.ico"></head>
 
@@ -168,12 +172,12 @@
 <div id="content">
   <div class="title">
     <h1>Solidity For Fun And Profit</h1>
-    <h2>A no-nonsense tutorial to learn Solidity now.</h2>
+    <h2>A no-nonsense guide to writing your first ICO smart contract.</h2>
     <h4>3/21/18</h4>
   </div>
 
   <p>
-    Let's cut to the chase: You've seen the rise and fall of countless Initial Coin Offerings (ICOs), and you want in on the action. There are so many amateurs getting rich from this new fundraising model, that you'd make a killing if you just knew how to write Ethereum smart contracts in Solidity. You might think that you need to be some sort of genius to learn how to do that, but let's set the record straight: <strong>You don't need to be a genius to write Ethereum smart contracts in Solidity</strong>. I knew nothing about Solidity before launching <a href="/" target="_blank">FastCashMoneyPluz.biz</a>, one of the hottest cryptocurrencies on the internet<sup><a href="#1">[1]</a></sup>, but I figured everything out in no time at all! And believe me, I'm no genius!
+    Let's cut to the chase: You've seen the rise and fall of countless Initial Coin Offerings (ICOs), and you want in on the action. There are so many amateurs getting rich from this new fundraising model, that you'd make a killing if you just knew how to write Ethereum smart contracts in Solidity. You might think that you need to be some sort of genius to learn how to do that, but let's set the record straight: <strong>You don't need to be a genius to write Ethereum smart contracts in Solidity</strong>. I knew nothing about Solidity before launching <a href="/" target="_blank">FastCashMoneyPluz.biz</a>, one of the hottest cryptocurrencies on the internet<sup><a name="1-ref" href="#1">[1]</a></sup>, but I figured everything out in no time at all! And believe me, I'm no genius!
   </p>
 
   <p>
@@ -232,11 +236,11 @@
   </div>
 
   <p>
-    First we add a new state variable, <span class="data">centralBanker</span>, and set it to <span class="data">msg.sender</span> in our constructor function. <span class="data">msg</span> is a reserved word in Solidity, and gives you information about the function invokation. Among other things, <span class="data">msg</span> has a <span class="data">sender</span> property that gives you the address that is invoking the function. In this case, <span class="data">msg.sender</span> refers to the address that launched the contract. (We're going to need to hold onto this for later so we know where to send the ICO funds).
+    First we add a new state variable, <span class="data">centralBanker</span>, and set it to <span class="data">msg.sender</span> in our constructor function. <span class="data">msg</span> is a reserved word in Solidity, and gives you information about the function invocation. Among other things, <span class="data">msg</span> has a <span class="data">sender</span> property that gives you the address that is invoking the function. In this case, <span class="data">msg.sender</span> refers to the address that launched the contract. (We're going to need to hold onto this for later so we know where to send the ICO funds).
   </p>
 
   <p>
-    Next, we define a <span class="data">buy</span> function on line 27. Since this function will be accepting Ethereum, we need to add special "modifier" called <span class="data">payable</span> to it.<sup><a href="#2">[2]</a></sup> Now when someone sends Ethereum to this specific function, that amount will be stored in the contract's balance.<sup><a href="#3">[3]</a></sup> We can get a <span class="data">uint</span> representation of this amount (denominated in WEI<sup><a href="#4">[4]</a></sup>) from <span class="data">msg.value</span>, and plug it into a utility function (<span class="data">weiToMoneyBucks</span>) to get the amount of MoneyBucks to credit our new investor.
+    Next, we define a <span class="data">buy</span> function on line 27. Since this function will be accepting Ethereum, we need to add special "modifier" called <span class="data">payable</span> to it.<sup><a name="2-ref" href="#2">[2]</a></sup> Now when someone sends Ethereum to this specific function, that amount will be stored in the contract's balance.<sup><a name="3-ref" href="#3">[3]</a></sup> We can get a <span class="data">uint</span> representation of this amount (denominated in WEI<sup><a name="4-ref" href="#4">[4]</a></sup>) from <span class="data">msg.value</span>, and plug it into a utility function (<span class="data">weiToMoneyBucks</span>) to get the amount of MoneyBucks to credit our new investor.
   </p>
 
   <p>
@@ -244,10 +248,10 @@
   </p>
 
   <p>
-    After these checks, we can get down to business: we add some FastCash (or, more precisely, MoneyBucks) to the investor's account, and subtract it from the central bank. And then the most important part: We transfer the amount of Ethereum that we just received to the central banker with <span class="data">centralBanker.transfer(msg.value)</span>.<sup><a href="#5">[5]</a></sup>
+    After these checks, we can get down to business: we add some FastCash (or, more precisely, MoneyBucks) to the investor's account, and subtract it from the central bank. And then the most important part: We transfer the amount of Ethereum that we just received to the central banker with <span class="data">centralBanker.transfer(msg.value)</span>.<sup><a name="5-ref" href="#5">[5]</a></sup>
   </p>
 
-  <p>Finally, we define a <span class="data">transfer</span> function so our investors can purchase goods and services with FastCash and sell it to other investors. This looks pretty similar to the <span class="data">buy</span> function: We check to make sure that funds aren't being transferred to an empty address, check that the transfer amount is positive, check that the sender has enough FastCash in their account, check that the result of the transfer won't cause any overflows<sup><a href="#6">[6]</a></sup>, and adjust the account balances.</p>
+  <p>Finally, we define a <span class="data">transfer</span> function so our investors can purchase goods and services with FastCash and sell it to other investors. This looks pretty similar to the <span class="data">buy</span> function: We check to make sure that funds aren't being transferred to an empty address, check that the transfer amount is positive, check that the sender has enough FastCash in their account, check that the result of the transfer won't cause any overflows<sup><a name="6-ref" href="#6">[6]</a></sup>, and adjust the account balances.</p>
 
   <a href="/" target="_blank" class="ad"> ARE YOU SICK AND TIRED OF SITTING ON THE SIDELINES AND WATCHING OTHER PEOPLE GET RICH? THEN CLICK HERE TO GET FAST CASH TODAY!</a>
 
@@ -255,7 +259,7 @@
 
   <h3>ERC-20 Standard</h3>
 
-  <p>"What the heck is the ERC-20 Standard?", you might ask. ERC-20 is a specific "<strong>E</strong>thereum <strong>R</strong>equest for <strong>C</strong>omment", and describes a standardized interfac<sup><a href="#7">[7]</a></sup> that all Ethereum tokens should conform to. We're already most of the way there with our <span class="data">totalSupply</span>, <span class="data">balanceOf</span>, <span class="data">transfer</span>, <span class="data">name</span>, and <span class="data">decimals</span> functions<sup><a href="#8">[8]</a></sup>, but we need to add a couple more things.</p>
+  <p>"What the heck is the ERC-20 Standard?", you might ask. ERC-20 is a specific "<strong>E</strong>thereum <strong>R</strong>equest for <strong>C</strong>omment", and describes a standardized interface<sup><a name="7-ref" href="#7">[7]</a></sup> that all Ethereum tokens should conform to. We're already most of the way there with our <span class="data">totalSupply</span>, <span class="data">balanceOf</span>, <span class="data">transfer</span>, <span class="data">name</span>, and <span class="data">decimals</span> functions<sup><a name="8-ref" href="#8">[8]</a></sup>, but we need to add a couple more things.</p>
 
   <div class="code-container">
     <script src="https://gist.github.com/scyclow/a2459a61b6c40e2448c93a42f0b72fb5.js"></script>
@@ -356,7 +360,7 @@
   </p>
 
   <p>
-    Second, <strong>the price of FastCash is set to increase by 20% every week</strong>!<sup><a href="#9">[9]</a></sup> You can see the precise logic in the <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L143" target="_blank">official FastCashMoneyPlus getExchangeRate function</a>. If it looks complicated... that's because it is. Since there are no decimal places in Solidity you can't just multiply a number by 1.2 -- you need to multiply it by 12 and then divide by 10. At the other end, the larges numbers supported by Solidity are uint256 (that's 77 zeros). That sounds pretty big, but when you're performing a compound operation on 1,000,000,000,000,000,000 MoneyBucks (i.e. 1 FastCash) over a 71 week timeframe, the numbers get very large very fast. In short, this formula of this function was derived using plenty of algebra to get rid of a bunch of extra zeros. You can read more about this in the <a href="/79f417c21b848aac16507c47f92abfbd.pdf" target="_blank">Official FastCashMoneyPlus White Paper</a> for more detailed information on the inner workings of the Official FastCashMoneyPlus contract.
+    Second, <strong>the price of FastCash is set to increase by 20% every week</strong>!<sup><a name="9-ref" href="#9">[9]</a></sup> You can see the precise logic in the <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L143" target="_blank">official FastCashMoneyPlus getExchangeRate function</a>. If it looks complicated... that's because it is. Since there are no decimal places in Solidity you can't just multiply a number by 1.2 -- you need to multiply it by 12 and then divide by 10. At the other end, the larges numbers supported by Solidity are uint256 (that's 77 zeros). That sounds pretty big, but when you're performing a compound operation on 1,000,000,000,000,000,000 MoneyBucks (i.e. 1 FastCash) over a 71 week timeframe, the numbers get very large very fast. In short, this formula of this function was derived using plenty of algebra to get rid of a bunch of extra zeros. You can read more about this in the <a href="/79f417c21b848aac16507c47f92abfbd.pdf" target="_blank">Official FastCashMoneyPlus White Paper</a> for more detailed information on the inner workings of the Official FastCashMoneyPlus contract.
   </p>
 
   <h3>Conclusion</h3>
@@ -391,49 +395,49 @@
 
   <a name="1"></a>
   <p class="footnote">
-    [1] The first two things people usually ask me when they visit <a href="/" target="_blank">FastCashMoneyPlus.biz</a> is "How do I buy FastCash?", and "Is FastCash a real cryptocurrency, or is it just a flashy website?"<a style="color:blue" href="#1b">[1b]</a>. The answer to this question is a resounding YES! FastCashMoneyPlus is a real ERC20 token living on the Ethereum blockchain at <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>. If you don't believe me, you can even read the contract source code <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">here</a>.
+    [1] <a class="back-arrow" href="#1-ref">^</a> The first two things people usually ask me when they visit <a href="/" target="_blank">FastCashMoneyPlus.biz</a> is "How do I buy FastCash?", and "Is FastCash a real cryptocurrency, or is it just a flashy website?"<a style="color:blue" href="#1b">[1b]</a>. The answer to this question is a resounding YES! FastCashMoneyPlus is a real ERC20 token living on the Ethereum blockchain at <span class="data">0xcA5228D1fe52D22db85E02CA305cddD9E573D752</span>. If you don't believe me, you can even read the contract source code <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">here</a>.
   </p>
   <a name="1b"></a>
   <p class="footnote2">[1b] Actually, the first two questions they ask are usually "Is this site going to give me a virus?" and "Why is this site eating up all of my CPU?". But since the answers to these questions are both clearly "No", they wouldn't make for a very interesting blog post!</p>
 
   <a name="2"></a>
   <p class="footnote">
-    [2] Modifiers, as you might have guessed, modify the behavior of the function. We'll talk about defining our own modifiers later.
+    [2] <a class="back-arrow" href="#2-ref">^</a> Modifiers, as you might have guessed, modify the behavior of the function. We'll talk about defining our own modifiers later.
   </p>
 
   <a name="3"></a>
   <p class="footnote">
-    [3] You can get the contract's balance with <span class="data">this.balance</span>.
+    [3] <a class="back-arrow" href="#3-ref">^</a> You can get the contract's balance with <span class="data">this.balance</span>.
   </p>
 
   <a name="4"></a>
   <p class="footnote">
-    [4] WEI is the smallest denomination of Ethereum, where 1 WEI = 0.000000000000000001 ETH.
+    [4] <a class="back-arrow" href="#4-ref">^</a> WEI is the smallest denomination of Ethereum, where 1 WEI = 0.000000000000000001 ETH.
   </p>
 
   <a name="5"></a>
   <p class="footnote">
-    [5] Note that you can just as easily send Ethereum to any address.
+    [5] <a class="back-arrow" href="#5-ref">^</a> Note that you can just as easily send Ethereum to any address.
   </p>
 
   <a name="6"></a>
   <p class="footnote">
-    [6] This probably won't be a problem here, but it's always a good idea to make sure that you don't increment a variable beyond the amount it can hold.
+    [6] <a class="back-arrow" href="#6-ref">^</a> This probably won't be a problem here, but it's always a good idea to make sure that you don't increment a variable beyond the amount it can hold.
   </p>
 
   <a name="7"></a>
   <p class="footnote">
-    [7] <a href="https://theethereum.wiki/w/index.php/ERC20_Token_Standard" target="_blank">Here is the specific interface.</a>
+    [7] <a class="back-arrow" href="#7-ref">^</a> <a href="https://theethereum.wiki/w/index.php/ERC20_Token_Standard" target="_blank">Here is the specific interface.</a>
   </p>
 
   <a name="8"></a>
   <p class="footnote">
-    [8] Even though we defined some of these as state variables, Solidity will create getter functions for them.
+    [8] <a class="back-arrow" href="#8-ref">^</a> Even though we defined some of these as state variables, Solidity will create getter functions for them.
   </p>
 
   <a name="9"></a>
   <p class="footnote">
-    [9] You might also notice that the official <span class="data">weeksFromCreation</span> function (which you can see <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L139" target="_blank">here</a>) makes use of the special <span class="data">now</span> keyword to find the number of weeks since the contract launched.
+    [9] <a class="back-arrow" href="#9-ref">^</a> You might also notice that the official <span class="data">weeksFromCreation</span> function (which you can see <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L139" target="_blank">here</a>) makes use of the special <span class="data">now</span> keyword to find the number of weeks since the contract launched.
   </p>
 </div>
 </div>
