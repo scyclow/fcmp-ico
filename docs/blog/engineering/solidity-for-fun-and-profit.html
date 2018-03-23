@@ -85,6 +85,14 @@
       }
     }
 
+    .socialLink {
+      text-align: center;
+      width: 100%;
+      font-size: 30px;
+      display: block;
+      padding-top: 10px;
+    }
+
     #window {
       padding-top: 50px;
       border: 2px solid black;
@@ -348,15 +356,38 @@
   </p>
 
   <p>
-    Second, <strong>the price of FastCash is set to increase by 20% every week</strong>!<sup><a href="#9">[9]</a></sup> You can see the precise logic in the <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L143" target="_blank">official FastCashMoneyPlus getExchangeRate function</a>. If it looks complicated... that's because it is. Since there are no decimal places in Solidity you can't just multiply a number by 1.2 -- you need to multiply it by 12 and then divide by 10. At the other end, the larges numbers supported by Solidity are uint256 (that's 77 zeros). That sounds pretty big, but when you're performing a compound operation on 1,000,000,000,000,000,000 MoneyBucks (i.e. 1 FastCash) over a 71 week timeframe, the numbers get very large very fast. In short, this formula of this function was derived using plenty of algebra to get rid of a bunch of extra zeros. You can read more about this in the <a href="/79f417c21b848aac16507c47f92abfbd.pdf" target="_blank">Official FastCashMoneyPlus White Paper</a>.
+    Second, <strong>the price of FastCash is set to increase by 20% every week</strong>!<sup><a href="#9">[9]</a></sup> You can see the precise logic in the <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7#file-fastcashmoneyplus-sol-L143" target="_blank">official FastCashMoneyPlus getExchangeRate function</a>. If it looks complicated... that's because it is. Since there are no decimal places in Solidity you can't just multiply a number by 1.2 -- you need to multiply it by 12 and then divide by 10. At the other end, the larges numbers supported by Solidity are uint256 (that's 77 zeros). That sounds pretty big, but when you're performing a compound operation on 1,000,000,000,000,000,000 MoneyBucks (i.e. 1 FastCash) over a 71 week timeframe, the numbers get very large very fast. In short, this formula of this function was derived using plenty of algebra to get rid of a bunch of extra zeros. You can read more about this in the <a href="/79f417c21b848aac16507c47f92abfbd.pdf" target="_blank">Official FastCashMoneyPlus White Paper</a> for more detailed information on the inner workings of the Official FastCashMoneyPlus contract.
   </p>
 
-    <!-- the official fcmp contract has a few proprietary features that make it different:
-      - pricing function is a bit more complicated: usdwei exchange rate, price goes up by 20% every week.
-      - routing codes: transfers, referals
-     -->
+  <h3>Conclusion</h3>
 
+  <p>
+    Congratulations! You have reached the end of the official FastCashMoneyPlus Solidity tutorial! With the informaiton you've just learned, you're all set to start writing your own Ethereum smart contract in Solidity and <strong>MAKING MONEY from your very own ICO</strong>.
+  </p>
 
+  <p>
+    Please see the <a href="https://gist.github.com/scyclow/20e919f3220d6050864779f7d15093a7" target="_blank">Official FastCashMoneyPlus Contract</a> and <a href="/79f417c21b848aac16507c47f92abfbd.pdf" target="_blank">Official FastCashMoneyPlus White Paper</a> for more detailed information on the inner workings of the Official FastCashMoneyPlus contract.
+  </p>
+
+  <p>
+    To buy FastCash, please visit the <a href="/invest">FastCashMoneyPlus Investment Console</a>. For all inquiries, please email <a target="_blank" href="mailto:fastcashmoneyplus.biz@gmail.com">FastCashMoneyPlus.biz@gmail.com</a>.
+  </p>
+
+  <hr>
+  <hr>
+  <hr>
+
+  <a class="socialLink" target="_blank" href="mailto:?Subject=CHECK%20OUT%20THIS%20AMAZING%20BLOG%20POST!&amp;Body=%0A%20%20Hello!%20I%20jsut%20came%20accross%20an%20INCREDIBLE%20blog%20blog%20post%20that%20taught%20me%20to%20learn%20solidity%20now!%0A%20%20and%20wanted%20to%20share%20it%20with%20you!%20If%20your%0A%20%20looking%20to%20get%20RICH%20from%20writing%20your%20own%20smart%20contract,%20then%20this%20article%20is%20for%20you!%0A%20%20Simply%20visit%20:%0A%20%20~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%0A%20%20%7C%0A%20%20%7C%20%20%20%20http://fastcashmoneyplus.biz/blog/engineering/solidity-for-fun-and-profit%0A%20%20%7C%0A%20%20~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%0A%20%20!%0A">
+    SHARE WITH EMAIL
+  </a>
+
+  <a class="socialLink" target="_blank" href="https://twitter.com/home?status=Do%20you%20%23want%20to%20%23learn%20Solidity%20NOW?%20Then%20check%20THIS%20one%20out:%20http://fastcashmoneyplus.biz/blog/engineering/solidity-for-fun-and-profit%20$fastcash%20%23FASTCASH%20$crypto%20%23CRYPTOBULL%20$eth%20$btc%20$xrp">
+    SHARE WITH TWITTER
+  </a>
+
+  <hr>
+  <hr>
+  <hr>
 
   <a name="1"></a>
   <p class="footnote">
