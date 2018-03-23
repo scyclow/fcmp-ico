@@ -22,7 +22,6 @@ const { changeColors } = require('./utils/updateColor');
 const referral = getRef()
 
 const $faqQuestions = $.cls('faqQuestion')
-const $navMenu = $.id('nav-menu');
 const $content = $.id('content');
 const $hero = $.id('hero');
 const $warning = $.id('warning');

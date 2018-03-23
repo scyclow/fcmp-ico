@@ -71,7 +71,7 @@ nav .nav-header {
   font-size: 21px;
 }
 
-nav #nav-menu {
+nav .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,7 +81,7 @@ nav #nav-menu {
           animation: BorderColorRotate 8s linear infinite;
 }
 
-nav #nav-menu .nav-menu-item {
+nav .nav-menu .nav-menu-item {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
@@ -819,6 +819,12 @@ nav #nav-menu .nav-menu-item {
       WELCOME TO FA$TCA$HMONEYPLU$.biz
       <span id="secondHeader">WELCOME TO FA$TCA$HMONEYPLU$.biz</span>
     </div>
+    <div class="nav-menu">
+      <a href="/blog.html" class="nav-menu-item color-speed-distance">BLOG</a>
+      <a href="./about" class="nav-menu-item color-speed-distance">ABOUT</a>
+      <a href="https://github.com/scyclow/fcmp-ico" class="nav-menu-item color-speed-distance">JOBS</a>
+      <a href="./terms.html" target="_blank" class="nav-menu-item color-speed-distance">TERMS OF SERVICE</a>
+    </div>
   </nav>
 
   <div class="floater"></div>
@@ -932,6 +938,7 @@ nav #nav-menu .nav-menu-item {
       <p>"Finally, the investment opportunity I've been waiting for. At last, I can make cash fast." -- Frank Johnson</p>
       <p>"Achieving the American Dream has never been easier" -- Fred Frankson</p>
       <p>"FastCashMoneyPlus.biz is one of the rare online wealth-creation platforms that combines a world-class technical infrastructure with common sense and good business strategy. In fact, it's so simple that anyone can do it with minimal fuss and effort!" -- <a href="http://fakebullshit.news/articles/hot-new-crypto" target="_blank">Patrick Swanson from FakeBullshit.news</a></p>
+      <p>"I am just bought my fast cash. Thank Yous for the opportunity to made me cash, fast. Already progress 20%! This for definitely once in my life opportunity!" -- <a href="https://bitcointalk.org/index.php?topic=2792029.0" target="_blank">rathergood15 - https://bitcointalk.org/index.php?topic=2792029.0</a></p>
 
       <h2 style="margin-top: 20px; text-align: center">YOU TOO CAN BECOME A FASTCASH MILLIONAIRE WITH FASTCASHMONEYPLUS</h2>
 
@@ -944,13 +951,13 @@ nav #nav-menu .nav-menu-item {
 
   </div>
   <nav>
-    <div id="nav-menu">
-      <a href="#callToAction" id="menuStart" class="nav-menu-item color-speed-distance">GET STARTED</a>
+    <div class="nav-menu">
+      <a href="/blog.html" class="nav-menu-item color-speed-distance">BLOG</a>
       <a href="./about" class="nav-menu-item color-speed-distance">ABOUT</a>
       <a href="https://github.com/scyclow/fcmp-ico" class="nav-menu-item color-speed-distance">JOBS</a>
       <a href="./terms.html" target="_blank" class="nav-menu-item color-speed-distance">TERMS OF SERVICE</a>
     </div>
-    <div id="nav-menu">
+    <div class="nav-menu">
       <a href="79f417c21b848aac16507c47f92abfbd.pdf" target="_blank" class="nav-menu-item color-speed-distance">WHITE PAPER</a>
     </div>
   </nav>
@@ -11552,7 +11559,6 @@ var _require = __webpack_require__(601),
 var referral = (0, _getRef.getRef)();
 
 var $faqQuestions = _$2.default.cls('faqQuestion');
-var $navMenu = _$2.default.id('nav-menu');
 var $content = _$2.default.id('content');
 var $hero = _$2.default.id('hero');
 var $warning = _$2.default.id('warning');
@@ -12097,7 +12103,7 @@ var modal = exports.modal = function modal() {
   // window.onkeydown = e => e.keyCode === 27 && closeModal()
 
   triggers.forEach(function (trigger) {
-    trigger.addEventListener('click', function () {
+    if (trigger) trigger.addEventListener('click', function () {
       // window.IMPORTANT.pause = true
       setTimeout(function () {
         component.className = '';

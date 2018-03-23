@@ -56,7 +56,7 @@ export const modal = (...triggers) => {
   // window.onkeydown = e => e.keyCode === 27 && closeModal()
 
   triggers.forEach(trigger => {
-    trigger.addEventListener('click', () => {
+    if (trigger) trigger.addEventListener('click', () => {
       // window.IMPORTANT.pause = true
       setTimeout(() => {
         component.className = '';

@@ -9,7 +9,7 @@
   <META http-equiv="X-UA-Compatible" content="IE=Edge" />
   <META
     name="description"
-    content="Solidity for Fun and Profit -- A no-nonsense guide to writing your first ICO smart contract. | THE OFFICIAL FASTCASHMONEYPLUS.biz BLOG"
+    content="Solidity for Fun and Profit -- A No-Nonsense Guide to Writing Your First ICO Smart Contract. | THE OFFICIAL FASTCASHMONEYPLUS.biz BLOG"
   >
   <META
     name="keywords"
@@ -141,24 +141,75 @@
 
     .code-container {
       border: 5px solid #555;
-      border-radius: 5px;
       margin: 25px 0;
     }
 
     .ad {
-      border: 2px solid red;
       font-size: 25px;
       display: block;
-      padding: 10px;
+      padding: 15px;
       text-align: center;
-      background-color: yellow;
       margin: 30px 0;
       line-height: 1.2;
+      transition: 250ms;
+      animation: AdButton 36s linear infinite;
+    }
+
+    .ad:hover {
+      animation: AdButton 6s linear infinite;
+      border-radius: 10px;
+      box-shadow: 0 0 35px;
+      border: 0;
     }
 
     .back-arrow {
       text-decoration: none;
     }
+
+    @keyframes AdButton {
+      0% {
+        color: #0000ff;
+        border: 2px solid #0000ff;
+        background-color: #ffff00;
+      }
+
+      17% {
+        color: #ff00ff;
+        border: 2px solid #ff00ff;
+        background-color: #00ff00;
+      }
+
+      33% {
+        color: #ff0000;
+        border: 2px solid #ff0000;
+        background-color: #00ffff;
+      }
+
+      50% {
+        color: #ffff00;
+        border: 2px solid #ffff00;
+        background-color: #0000ff;
+      }
+
+      66% {
+        color: #00ff00;
+        border: 2px solid #00ff00;
+        background-color: #ff00ff;
+      }
+
+      83% {
+        color: #00ffff;
+        border: 2px solid #00ffff;
+        background-color: #ff0000;
+      }
+
+      100% {
+        color: #0000ff;
+        border: 2px solid #0000ff;
+        background-color: #ffff00;
+      }
+    }
+
   </style>
 </head>
 
@@ -172,8 +223,8 @@
 <div id="content">
   <div class="title">
     <h1>Solidity For Fun And Profit</h1>
-    <h2>A no-nonsense guide to writing your first ICO smart contract.</h2>
-    <h4>3/21/18</h4>
+    <h2>A No-Nonsense Guide to Writing Your First ICO Smart Contract.</h2>
+    <h4>21/03/18</h4>
   </div>
 
   <p>

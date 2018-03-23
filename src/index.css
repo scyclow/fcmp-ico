@@ -25,14 +25,14 @@ nav .nav-header {
   font-size: 21px;
 }
 
-nav #nav-menu {
+nav .nav-menu {
   display: flex;
   border: 7px solid;
   border-top: 0;
   animation: BorderColorRotate 8s linear infinite;
 }
 
-nav #nav-menu .nav-menu-item {
+nav .nav-menu .nav-menu-item {
   flex: 1;
   min-height: 30px;
   text-decoration: none;

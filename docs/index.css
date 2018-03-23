@@ -35,7 +35,7 @@ nav .nav-header {
   font-size: 21px;
 }
 
-nav #nav-menu {
+nav .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +45,7 @@ nav #nav-menu {
           animation: BorderColorRotate 8s linear infinite;
 }
 
-nav #nav-menu .nav-menu-item {
+nav .nav-menu .nav-menu-item {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;

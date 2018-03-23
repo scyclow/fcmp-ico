@@ -10586,7 +10586,6 @@ var _require = __webpack_require__(601),
 var referral = (0, _getRef.getRef)();
 
 var $faqQuestions = _$2.default.cls('faqQuestion');
-var $navMenu = _$2.default.id('nav-menu');
 var $content = _$2.default.id('content');
 var $hero = _$2.default.id('hero');
 var $warning = _$2.default.id('warning');
@@ -11131,7 +11130,7 @@ var modal = exports.modal = function modal() {
   // window.onkeydown = e => e.keyCode === 27 && closeModal()
 
   triggers.forEach(function (trigger) {
-    trigger.addEventListener('click', function () {
+    if (trigger) trigger.addEventListener('click', function () {
       // window.IMPORTANT.pause = true
       setTimeout(function () {
         component.className = '';
