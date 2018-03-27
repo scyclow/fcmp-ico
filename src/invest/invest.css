@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+*::selection {
+  background-color: #fff;
+  color: #fff;
+}
+
 #hero {
   font-size: 60px;
   text-align: center;

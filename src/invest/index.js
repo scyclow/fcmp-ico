@@ -26,9 +26,9 @@ const STATE = {
   referal: getRef() || '',
   newRoutingCode: '',
   amountInMoneyBucks: 0,
-  fastcashLeft: 1000000,
+  fastcashLeft: 999093.9995289939,
   usd2fc: 4 / (1.2 ** weeksSinceStart),
-  usd2eth: 906577000000000 / (10 ** 18)
+  usd2eth: 2176488900000000 / (10 ** 18)
 }
 
 let INSTANCE;

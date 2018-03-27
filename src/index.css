@@ -11,6 +11,11 @@ nav {
   animation: FullColorRotate 8s linear infinite;
 }
 
+*::selection {
+  background-color: #000;
+  color: #000;
+}
+
 nav .nav-header {
   font-size: 30px;
   display: flex;
@@ -39,6 +44,11 @@ nav .nav-menu .nav-menu-item {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+nav .white-paper {
+  font-size: 35px;
+  padding: 20px;
 }
 
 #content {

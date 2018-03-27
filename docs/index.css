@@ -12,6 +12,16 @@ nav {
           animation: FullColorRotate 8s linear infinite;
 }
 
+*::-moz-selection {
+  background-color: #000;
+  color: #000;
+}
+
+*::selection {
+  background-color: #000;
+  color: #000;
+}
+
 nav .nav-header {
   font-size: 30px;
   display: -webkit-box;
@@ -60,6 +70,11 @@ nav .nav-menu .nav-menu-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+nav .white-paper {
+  font-size: 35px;
+  padding: 20px;
 }
 
 #content {

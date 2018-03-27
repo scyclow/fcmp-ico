@@ -62287,9 +62287,9 @@ var STATE = {
   referal: (0, _getRef.getRef)() || '',
   newRoutingCode: '',
   amountInMoneyBucks: 0,
-  fastcashLeft: 1000000,
+  fastcashLeft: 999093.9995289939,
   usd2fc: 4 / Math.pow(1.2, weeksSinceStart),
-  usd2eth: 906577000000000 / Math.pow(10, 18)
+  usd2eth: 2176488900000000 / Math.pow(10, 18)
 };
 
 var INSTANCE = void 0;
