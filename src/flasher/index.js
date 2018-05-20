@@ -1,4 +1,6 @@
 import './index.css'
+import smoothTo from 'utils/smoothTo'
+
 
 var currencySymbols = [
   '$',
@@ -89,34 +91,46 @@ function fast() {
 // function activateFast() { FAST_ACTIVE = !FAST_ACTIVE; };
 // function activateChangeSymbol() { CHANGE_SYMBOL = !CHANGE_SYMBOL;};
 
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0.04;
-gainNode.connect(audioCtx.destination);
-var oscillator;
-var currentInterval;
-var soundMovement = 1;
+let audioCtx, gain, oscillator, currentInterval, soundMovement, gainNode, NOISE_PLAYING, FREQ_CHANGE;
+let inited = false
 
-var NOISE_PLAYING = false;
-var FREQ_CHANGE = COLOR_CHANGE;
+function init() {
+  if (inited) return;
+  inited = true;
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  gainNode = audioCtx.createGain();
+  gainNode.gain.value = 0.04;
+  gainNode.connect(audioCtx.destination);
+  oscillator;
+  currentInterval;
+  soundMovement = 1
+
+  NOISE_PLAYING = false;
+  FREQ_CHANGE = COLOR_CHANGE;
+}
 
 var intervals = [];
 function noiseInterval() {
-  oscillator.frequency.value = 0; // value in hertz
-  currentInterval = setInterval(function() {
-    var freq = oscillator.frequency;
+  const freq = oscillator.frequency;
+  let smoothFreq = smoothTo(freq, audioCtx)
+  smoothFreq(10, 0.25)
+  const freqChange = FREQ_CHANGE * 10
+
+  currentInterval = setInterval(() => {
     if (freq.value >= 1020) {
-      soundMovement = -1;
+      soundMovement = -10;
     } else if (freq.value <= 10) {
-      soundMovement = 1;
+      soundMovement = 10;
     }
+    smoothFreq(freq.value + soundMovement, freqChange)
     freq.value += soundMovement;
-  }, FREQ_CHANGE);
+  }, freqChange);
   intervals.push(currentInterval);
 }
 
 var oscillators = [];
 function startNoise() {
+  init()
   NOISE_PLAYING = true;
 
   oscillator = audioCtx.createOscillator();

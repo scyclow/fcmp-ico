@@ -2,10 +2,7 @@
 
 import './index.css';
 import createSource from 'utils/createSource';
-
-const smoothTo = (obj, ctx) => (value, timeInSeconds) => {
-  obj.exponentialRampToValueAtTime(value, ctx.currentTime + timeInSeconds)
-}
+import smoothTo from 'utils/smoothTo'
 
 const startingFreq = 2000;
 const MAX_VOLUME = 0.02;

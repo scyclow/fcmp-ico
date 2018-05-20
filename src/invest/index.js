@@ -85,22 +85,29 @@ setTimeout(() => {
 
 const MAX_VOLUME = 0.03
 let gain;
-try {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  const ctx = new AudioContext();
+let audioInited = false
 
-  const source = ctx.createOscillator();
-  gain = ctx.createGain();
+function initAudio() {
+  if (audioInited) return;
+  audioInited = true;
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const ctx = new AudioContext();
 
-  source.connect(gain)
-  gain.connect(ctx.destination)
-  gain.gain.value = 0
-  source.type = 'sawtooth'
-  source.detune.value = 100
-  source.frequency.value = 30
-  source.start()
-} catch (e) {
-  console.error(e)
+    const source = ctx.createOscillator();
+    gain = ctx.createGain();
+
+    source.connect(gain)
+    gain.connect(ctx.destination)
+    gain.gain.value = 0
+    source.type = 'sawtooth'
+    source.detune.value = 100
+    source.frequency.value = 30
+    source.start()
+  } catch (e) {
+    console.error(e)
+  }
+
 }
 
 const $gotoWallet = $.id('gotoWallet')
@@ -108,6 +115,7 @@ const emptyAddress = "0x0000000000000000000000000000000000000000";
 let routingCodeTries = 0
 const generateCode = async () => {
   // there should be some
+  initAudio()
   const proposedCode = createAddress();
   gain.gain.value = MAX_VOLUME;
 

@@ -209,18 +209,42 @@ body {
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 628);
+/******/ 	return __webpack_require__(__webpack_require__.s = 629);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 628:
+/***/ 377:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(629);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (obj, ctx) {
+  return function (value, timeInSeconds) {
+    obj.exponentialRampToValueAtTime(value, ctx.currentTime + timeInSeconds);
+  };
+};
+
+/***/ }),
+
+/***/ 629:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(630);
+
+var _smoothTo = __webpack_require__(377);
+
+var _smoothTo2 = _interopRequireDefault(_smoothTo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var currencySymbols = ['$', '&#165', // ¥
 '$', '&#163', // £
@@ -294,34 +318,53 @@ function fast() {
 // function activateFast() { FAST_ACTIVE = !FAST_ACTIVE; };
 // function activateChangeSymbol() { CHANGE_SYMBOL = !CHANGE_SYMBOL;};
 
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0.04;
-gainNode.connect(audioCtx.destination);
-var oscillator;
-var currentInterval;
-var soundMovement = 1;
+var audioCtx = void 0,
+    gain = void 0,
+    oscillator = void 0,
+    currentInterval = void 0,
+    soundMovement = void 0,
+    gainNode = void 0,
+    NOISE_PLAYING = void 0,
+    FREQ_CHANGE = void 0;
+var inited = false;
 
-var NOISE_PLAYING = false;
-var FREQ_CHANGE = COLOR_CHANGE;
+function init() {
+  if (inited) return;
+  inited = true;
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  gainNode = audioCtx.createGain();
+  gainNode.gain.value = 0.04;
+  gainNode.connect(audioCtx.destination);
+  oscillator;
+  currentInterval;
+  soundMovement = 1;
+
+  NOISE_PLAYING = false;
+  FREQ_CHANGE = COLOR_CHANGE;
+}
 
 var intervals = [];
 function noiseInterval() {
-  oscillator.frequency.value = 0; // value in hertz
+  var freq = oscillator.frequency;
+  var smoothFreq = (0, _smoothTo2.default)(freq, audioCtx);
+  smoothFreq(10, 0.25);
+  var freqChange = FREQ_CHANGE * 10;
+
   currentInterval = setInterval(function () {
-    var freq = oscillator.frequency;
     if (freq.value >= 1020) {
-      soundMovement = -1;
+      soundMovement = -10;
     } else if (freq.value <= 10) {
-      soundMovement = 1;
+      soundMovement = 10;
     }
+    smoothFreq(freq.value + soundMovement, freqChange);
     freq.value += soundMovement;
-  }, FREQ_CHANGE);
+  }, freqChange);
   intervals.push(currentInterval);
 }
 
 var oscillators = [];
 function startNoise() {
+  init();
   NOISE_PLAYING = true;
 
   oscillator = audioCtx.createOscillator();
@@ -373,7 +416,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /***/ }),
 
-/***/ 629:
+/***/ 630:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

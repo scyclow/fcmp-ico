@@ -60,32 +60,49 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 634);
+/******/ 	return __webpack_require__(__webpack_require__.s = 635);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 634:
+/***/ 377:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(635);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-var _createSource4 = __webpack_require__(636);
-
-var _createSource5 = _interopRequireDefault(_createSource4);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var smoothTo = function smoothTo(obj, ctx) {
+exports.default = function (obj, ctx) {
   return function (value, timeInSeconds) {
     obj.exponentialRampToValueAtTime(value, ctx.currentTime + timeInSeconds);
   };
 };
 
+/***/ }),
+
+/***/ 635:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(636);
+
+var _createSource4 = __webpack_require__(637);
+
+var _createSource5 = _interopRequireDefault(_createSource4);
+
+var _smoothTo = __webpack_require__(377);
+
+var _smoothTo2 = _interopRequireDefault(_smoothTo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var startingFreq = 2000;
+
 var MAX_VOLUME = 0.02;
 
 var _createSource = (0, _createSource5.default)(0, 0.00000001, 'square'),
@@ -103,14 +120,14 @@ var _createSource3 = (0, _createSource5.default)(0, 0.00000001, 'square'),
     gain3 = _createSource3.gain,
     ctx3 = _createSource3.ctx;
 
-var smoothGain1 = smoothTo(gain1.gain, ctx1);
-var smoothFreq1 = smoothTo(source1.frequency, ctx1);
+var smoothGain1 = (0, _smoothTo2.default)(gain1.gain, ctx1);
+var smoothFreq1 = (0, _smoothTo2.default)(source1.frequency, ctx1);
 
-var smoothGain2 = smoothTo(gain2.gain, ctx2);
-var smoothFreq2 = smoothTo(source2.frequency, ctx2);
+var smoothGain2 = (0, _smoothTo2.default)(gain2.gain, ctx2);
+var smoothFreq2 = (0, _smoothTo2.default)(source2.frequency, ctx2);
 
-var smoothGain3 = smoothTo(gain3.gain, ctx3);
-var smoothFreq3 = smoothTo(source3.frequency, ctx3);
+var smoothGain3 = (0, _smoothTo2.default)(gain3.gain, ctx3);
+var smoothFreq3 = (0, _smoothTo2.default)(source3.frequency, ctx3);
 
 smoothGain1(MAX_VOLUME, 0.15);
 smoothGain2(MAX_VOLUME, 0.15);
@@ -154,14 +171,14 @@ setTimeout(function () {
 
 /***/ }),
 
-/***/ 635:
+/***/ 636:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 636:
+/***/ 637:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

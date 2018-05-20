@@ -1042,7 +1042,7 @@ nav .white-paper {
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 605);
+/******/ 	return __webpack_require__(__webpack_require__.s = 606);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10841,7 +10841,23 @@ module.exports = function (regExp, replace) {
 
 
 /***/ }),
-/* 377 */,
+/* 377 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (obj, ctx) {
+  return function (value, timeInSeconds) {
+    obj.exponentialRampToValueAtTime(value, ctx.currentTime + timeInSeconds);
+  };
+};
+
+/***/ }),
 /* 378 */,
 /* 379 */,
 /* 380 */,
@@ -10852,7 +10868,8 @@ module.exports = function (regExp, replace) {
 /* 385 */,
 /* 386 */,
 /* 387 */,
-/* 388 */
+/* 388 */,
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10888,7 +10905,7 @@ function getRef() {
 }
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10899,15 +10916,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.warning = exports.serif = exports.sansSerif = undefined;
 
-var _FCSansSerif = __webpack_require__(390);
+var _FCSansSerif = __webpack_require__(391);
 
 var _FCSansSerif2 = _interopRequireDefault(_FCSansSerif);
 
-var _FCSerif = __webpack_require__(391);
+var _FCSerif = __webpack_require__(392);
 
 var _FCSerif2 = _interopRequireDefault(_FCSerif);
 
-var _warningTriangle = __webpack_require__(392);
+var _warningTriangle = __webpack_require__(393);
 
 var _warningTriangle2 = _interopRequireDefault(_warningTriangle);
 
@@ -10948,7 +10965,7 @@ var warning = exports.warning = function warning() {
 };
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10959,7 +10976,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10970,7 +10987,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10981,7 +10998,6 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 393 */,
 /* 394 */,
 /* 395 */,
 /* 396 */,
@@ -11001,7 +11017,8 @@ module.exports = function (scope) {
 /* 410 */,
 /* 411 */,
 /* 412 */,
-/* 413 */
+/* 413 */,
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11012,37 +11029,55 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = playTone;
 
+var _smoothTo = __webpack_require__(377);
+
+var _smoothTo2 = _interopRequireDefault(_smoothTo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var MAX_VOLUME = 0.04;
 var source = void 0,
     gain = void 0;
-try {
-  var AudioContext = window.AudioContext || window.webkitAudioContext;
-  var ctx = new AudioContext();
+var smoothFreq = void 0;
 
-  source = ctx.createOscillator();
-  gain = ctx.createGain();
+var inited = false;
+function init() {
+  if (inited) return;
+  inited = true;
 
-  source.connect(gain);
-  gain.connect(ctx.destination);
-  gain.gain.value = 0;
-  source.start();
-} catch (e) {
-  console.log(e);
+  try {
+    var AudioContext = window.AudioContext || window.webkitAudioContext;
+    var ctx = new AudioContext();
+
+    source = ctx.createOscillator();
+    gain = ctx.createGain();
+
+    source.connect(gain);
+    gain.connect(ctx.destination);
+    gain.gain.value = 0;
+    smoothFreq = (0, _smoothTo2.default)(source.frequency, ctx);
+    source.start();
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 function playTone() {
   var baseFreq = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;
   var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 200;
 
+  init();
+
   try {
     var multiplier = _.sample([1, 1.25, 1.3333333, 2, 1.5, 1.125]);
     var freq = baseFreq * multiplier;
 
-    source.frequency.value = freq;
+    smoothFreq(freq, 0.2);
     gain.gain.value = MAX_VOLUME;
     setTimeout(function () {
       gain.gain.value = 0;
-      source.frequency.value = 0;
+
+      smoothFreq(0, 0.02);
     }, timeout);
   } catch (e) {
     console.log(e);
@@ -11050,7 +11085,7 @@ function playTone() {
 }
 
 /***/ }),
-/* 414 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11236,7 +11271,6 @@ module.exports = {
 };
 
 /***/ }),
-/* 415 */,
 /* 416 */,
 /* 417 */,
 /* 418 */,
@@ -11422,7 +11456,8 @@ module.exports = {
 /* 598 */,
 /* 599 */,
 /* 600 */,
-/* 601 */
+/* 601 */,
+/* 602 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11432,8 +11467,8 @@ module.exports = {
 
 var _ = __webpack_require__(59);
 var $ = __webpack_require__(111);
-var c = __webpack_require__(414);
-var dynamicInterval = __webpack_require__(610);
+var c = __webpack_require__(415);
+var dynamicInterval = __webpack_require__(611);
 var atLeast1 = _.atLeast(1);
 
 var changeColors = function changeColors(elem, baseColor) {
@@ -11519,26 +11554,26 @@ function updateColorSpeedDistance(elem, baseColor, baseSpeed) {
 module.exports = { updateColorSpeedDistance: updateColorSpeedDistance, changeColors: changeColors };
 
 /***/ }),
-/* 602 */,
 /* 603 */,
 /* 604 */,
-/* 605 */
+/* 605 */,
+/* 606 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(606);
+__webpack_require__(607);
 
 __webpack_require__(175);
 
-__webpack_require__(607);
-
 __webpack_require__(608);
 
-var _getRef = __webpack_require__(388);
+__webpack_require__(609);
 
-var _playTone = __webpack_require__(413);
+var _getRef = __webpack_require__(389);
+
+var _playTone = __webpack_require__(414);
 
 var _playTone2 = _interopRequireDefault(_playTone);
 
@@ -11550,11 +11585,11 @@ var _$ = __webpack_require__(111);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _colors = __webpack_require__(414);
+var _colors = __webpack_require__(415);
 
-var _symbol = __webpack_require__(389);
+var _symbol = __webpack_require__(390);
 
-var _signupModal = __webpack_require__(611);
+var _signupModal = __webpack_require__(612);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11562,7 +11597,7 @@ var fcSans = (0, _symbol.sansSerif)({ size: 70 }).outerHTML;
 
 var fcSerif = (0, _symbol.serif)({ size: 90 }).outerHTML;
 
-var _require = __webpack_require__(601),
+var _require = __webpack_require__(602),
     changeColors = _require.changeColors;
 
 var referral = (0, _getRef.getRef)();
@@ -11681,13 +11716,13 @@ setTimeout(function () {
 // }
 
 /***/ }),
-/* 606 */
+/* 607 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 607 */
+/* 608 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11697,7 +11732,7 @@ var _$ = __webpack_require__(111);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _getRef = __webpack_require__(388);
+var _getRef = __webpack_require__(389);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11717,7 +11752,7 @@ if ((0, _getRef.getQueryParams)().pause) {
 }
 
 /***/ }),
-/* 608 */
+/* 609 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11731,14 +11766,14 @@ var _2 = __webpack_require__(59);
 
 var _3 = _interopRequireDefault(_2);
 
-__webpack_require__(609);
+__webpack_require__(610);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var c = __webpack_require__(414);
+var c = __webpack_require__(415);
 // import 'components/signup';
 
-var _require = __webpack_require__(601),
+var _require = __webpack_require__(602),
     updateColorSpeedDistance = _require.updateColorSpeedDistance,
     changeColors = _require.changeColors;
 
@@ -11862,7 +11897,7 @@ colorMouses.forEach(function (elem) {
 });
 
 /***/ }),
-/* 609 */
+/* 610 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11876,11 +11911,11 @@ var _2 = __webpack_require__(59);
 
 var _3 = _interopRequireDefault(_2);
 
-var _playTone = __webpack_require__(413);
+var _playTone = __webpack_require__(414);
 
 var _playTone2 = _interopRequireDefault(_playTone);
 
-var _symbol = __webpack_require__(389);
+var _symbol = __webpack_require__(390);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11916,7 +11951,7 @@ _3.default.each(floaters, function (floater, i) {
 });
 
 /***/ }),
-/* 610 */
+/* 611 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11983,7 +12018,7 @@ function dynamicInterval(fn) {
 module.exports = dynamicInterval;
 
 /***/ }),
-/* 611 */
+/* 612 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12002,37 +12037,37 @@ var _2 = __webpack_require__(59);
 
 var _3 = _interopRequireDefault(_2);
 
-var _api = __webpack_require__(612);
+var _api = __webpack_require__(613);
 
 var _api2 = _interopRequireDefault(_api);
 
-var _playTone = __webpack_require__(413);
+var _playTone = __webpack_require__(414);
 
 var _playTone2 = _interopRequireDefault(_playTone);
 
-__webpack_require__(613);
+__webpack_require__(614);
 
-var _index = __webpack_require__(614);
+var _index = __webpack_require__(615);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _step = __webpack_require__(615);
+var _step = __webpack_require__(616);
 
 var _step2 = _interopRequireDefault(_step);
 
-var _step3 = __webpack_require__(616);
+var _step3 = __webpack_require__(617);
 
 var _step4 = _interopRequireDefault(_step3);
 
-var _step5 = __webpack_require__(617);
+var _step5 = __webpack_require__(618);
 
 var _step6 = _interopRequireDefault(_step5);
 
-var _step7 = __webpack_require__(619);
+var _step7 = __webpack_require__(620);
 
 var _step8 = _interopRequireDefault(_step7);
 
-var _loading = __webpack_require__(620);
+var _loading = __webpack_require__(621);
 
 var _loading2 = _interopRequireDefault(_loading);
 
@@ -12176,7 +12211,7 @@ var modal = exports.modal = function modal() {
 };
 
 /***/ }),
-/* 612 */
+/* 613 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12259,13 +12294,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 exports.default = { get: get, post: post };
 
 /***/ }),
-/* 613 */
+/* 614 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 614 */
+/* 615 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12276,7 +12311,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 615 */
+/* 616 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12287,7 +12322,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 616 */
+/* 617 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12298,24 +12333,24 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 617 */
+/* 618 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = function (scope) {
-  return '<div id="signupModal-3">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id="confirmationList">\n    <li>\n      <label>\n        <input type="checkbox"> I have read, and agree to, the <a target="_blank" href="./terms.html">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I have read the <a target="_blank" href="' + __webpack_require__(618) + '">FastCashMoneyPlus White Paper</a>, and comprehend it in it\'s entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I have read the <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I\'m ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n';
+  return '<div id="signupModal-3">\n  <style>\n    #confirmationList {\n      padding-left: 40px;\n      margin-top: 5px;\n    }\n    #confirmationList li {\n      margin-top: 15px\n    }\n    #confirmationList label {\n      font-family: sans-serif;\n      font-size: 20px;\n    }\n    #confirmationList input {\n      transform: scale(1.5);\n    }\n  </style>\n  <h1>PLEASE CLICK ALL OF THE BOXES TO CONTINUE</h1>\n\n  <ul id="confirmationList">\n    <li>\n      <label>\n        <input type="checkbox"> I have read, and agree to, the <a target="_blank" href="./terms.html">Terms of Service</a>\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I have read the <a target="_blank" href="' + __webpack_require__(619) + '">FastCashMoneyPlus White Paper</a>, and comprehend it in it\'s entirety.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I have read the <a href="https://etherscan.io/address/0xca5228d1fe52d22db85e02ca305cddd9e573d752#code" target="_blank">FastCashMoneyPlus smart contract source code</a>.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am not a resident of Hong Kong, Canada, Senegal, Libya, Nigeria, Germany, or Uraguay.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am older than 18.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I am not a robot.\n      </label>\n    </li>\n\n    <li>\n      <label>\n        <input type="checkbox"> I\'m ready to start making FAST CASH NOW!.\n      </label>\n    </li>\n  </ul>\n</div>\n';
 };
 
 /***/ }),
-/* 618 */
+/* 619 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "79f417c21b848aac16507c47f92abfbd.pdf";
 
 /***/ }),
-/* 619 */
+/* 620 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12326,7 +12361,7 @@ module.exports = function (scope) {
 };
 
 /***/ }),
-/* 620 */
+/* 621 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

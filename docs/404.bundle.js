@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 602);
+/******/ 	return __webpack_require__(__webpack_require__.s = 603);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10084,13 +10084,14 @@ module.exports = function (regExp, replace) {
 /* 599 */,
 /* 600 */,
 /* 601 */,
-/* 602 */
+/* 602 */,
+/* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(603);
+__webpack_require__(604);
 
 __webpack_require__(175);
 
@@ -10098,7 +10099,7 @@ var _$ = __webpack_require__(111);
 
 var _$2 = _interopRequireDefault(_$);
 
-var _randCurrency = __webpack_require__(604);
+var _randCurrency = __webpack_require__(605);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10146,13 +10147,13 @@ try {
 }
 
 /***/ }),
-/* 603 */
+/* 604 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 604 */
+/* 605 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

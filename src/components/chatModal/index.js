@@ -4,6 +4,8 @@ import $ from 'utils/$';
 import _ from 'utils/_';
 import './index.css'
 import chatTemplate from './index.html'
+import smoothTo from 'utils/smoothTo'
+
 
 const parser = new DOMParser();
 const parse = (template, id) => parser.parseFromString(template(), 'text/html').childNodes[0]
@@ -13,21 +15,29 @@ const $chatInput = $chatModal.querySelector('#chatInput');
 const $chatHistory = $chatModal.querySelector('#chatHistory');
 
 const MAX_VOLUME = 0.03
-let gain, source;
-try {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  const ctx = new AudioContext();
+let gain, source, smoothFreq;
 
-  source = ctx.createOscillator();
-  gain = ctx.createGain();
+let inited = false;
+function init() {
+  if (inited) return;
+  inited = true;
 
-  source.connect(gain)
-  gain.connect(ctx.destination)
-  gain.gain.value = 0
-  source.frequency.value = 0
-  source.start()
-} catch (e) {
-  console.error(e)
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const ctx = new AudioContext();
+
+    source = ctx.createOscillator();
+    gain = ctx.createGain();
+
+    source.connect(gain)
+    gain.connect(ctx.destination)
+    gain.gain.value = 0
+    smoothFreq = smoothTo(source.frequency, ctx)
+    source.start()
+
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 const chatLine = (_from, content) => `
@@ -56,9 +66,10 @@ function newMessage(from_, msg) {
 }
 
 function playTone(freq) {
-  source.frequency.value = freq;
+  init()
+  smoothFreq(freq, 0.25);
   gain.gain.value = MAX_VOLUME;
-  setTimeout(() => gain.gain.value = 0, 200)
+  setTimeout(() => gain.gain.value = 0, 250)
 }
 
 $chatModal.querySelector('#chatModal-x').onclick = () => {
