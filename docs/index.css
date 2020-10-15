@@ -364,6 +364,25 @@ nav .white-paper {
   color: #fff;
 }
 
+
+.marketing-3 {
+  border: 10px solid;
+  /*background-color: #ffff55;*/
+  /*color: #0000ff;*/
+}
+
+.merch-link {
+  display: inline-block;
+  color: #00ffff;
+}
+.merch-link img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+
+}
+
 .faqQuestion, .faqAnswer {
   cursor: help;
 }
