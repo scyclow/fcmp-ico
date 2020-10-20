@@ -98,6 +98,23 @@ $transferAmountInput.onchange = event => {
   populateTransferData(transferAddress, transferAmount)
 }
 
+try {
+  if (window.location.search.includes('transferAddress=')) {
+    const [param, address] = window.location.search.split('=')
+    if (address) {
+      $transferAddressInput.value = address
+      window.location.hash = '#transferSection'
+      setTimeout(() => {
+        window.scrollBy(0, -70)
+      }, 200)
+    }
+  }
+} catch (e) {
+  console.log(e)
+}
+
+
+
 $executeTransfer.onclick = () => {
   if (!INSTANCE) {
     alert('Please try again with an ethereum enabled browser or plugin (ex. MetaMask). Or, try executing your transfer from a wallet with the above data')

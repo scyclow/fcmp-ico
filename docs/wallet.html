@@ -175,6 +175,14 @@ hr {
   border: 0;
 }
 
+.backLinks {
+  padding: 10px;
+  font-size: 18px;
+}
+.backLinks a {
+  display: block
+}
+
 
 @-webkit-keyframes EasyButton {
   0% {
@@ -257,6 +265,10 @@ hr {
     <h1>THE OFFICIAL FASTCASHMONEYPLUS.biz FASTCASH WALLET</h1>
   </nav>
 
+  <div class="backLinks">
+    <a href="http://fastcashmoneypluz.biz">&lt;&lt;&lt; BACK TO FASTCASHMONEYPLUS.biz</a>
+    <a href="http://fastcashmoneypluz.biz">&lt;&lt;&lt; BACK TO FASTCASHMONEYPLUS INVESTMENT CONSOLE</a>
+  </div>
   <div id="content">
     <h1 style="margin-bottom: 20px;">Share this link wih your friends to make EVEN MORE FastCash!:</h1>
     <div id="refLinkLong" class="refLink"></div>
@@ -62600,6 +62612,8 @@ module.exports = IpcProvider;
 "use strict";
 
 
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
 __webpack_require__(632);
 
 __webpack_require__(175);
@@ -62623,7 +62637,6 @@ var _symbol = __webpack_require__(390);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var fcSymbol = (0, _symbol.sansSerif)({ size: 10 }).outerHTML;
-
 _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
   return elem.innerHTML = fcSymbol;
 });
@@ -62697,6 +62710,25 @@ $transferAmountInput.onchange = function (event) {
   transferAmount = event.target.valueAsNumber;
   populateTransferData(transferAddress, transferAmount);
 };
+
+try {
+  if (window.location.search.includes('transferAddress=')) {
+    var _window$location$sear = window.location.search.split('='),
+        _window$location$sear2 = _slicedToArray(_window$location$sear, 2),
+        param = _window$location$sear2[0],
+        address = _window$location$sear2[1];
+
+    if (address) {
+      $transferAddressInput.value = address;
+      window.location.hash = '#transferSection';
+      setTimeout(function () {
+        window.scrollBy(0, -70);
+      }, 200);
+    }
+  }
+} catch (e) {
+  console.log(e);
+}
 
 $executeTransfer.onclick = function () {
   if (!INSTANCE) {

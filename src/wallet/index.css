@@ -156,6 +156,14 @@ hr {
   border: 0;
 }
 
+.backLinks {
+  padding: 10px;
+  font-size: 18px;
+}
+.backLinks a {
+  display: block
+}
+
 
 @keyframes EasyButton {
   0% {
