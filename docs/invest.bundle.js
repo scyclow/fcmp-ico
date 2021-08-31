@@ -41130,7 +41130,7 @@ module.exports = TruffleContractSchema;
 /* 481 */
 /***/ (function(module, exports) {
 
-module.exports = {"_args":[["truffle-contract-schema@1.0.1","/Users/spikelny/Desktop/projects/fastcash-ico"]],"_from":"truffle-contract-schema@1.0.1","_id":"truffle-contract-schema@1.0.1","_inBundle":false,"_integrity":"sha512-37ZO9FVvmW/PZz/sh00LAz7HN2U4FHERuxI4mCbUR6h3r2cRgZ4YBfzHuAHOnZlrVzM1qx/Dx/1Ng3UyfWseEA==","_location":"/truffle-contract-schema","_phantomChildren":{},"_requested":{"type":"version","registry":true,"raw":"truffle-contract-schema@1.0.1","name":"truffle-contract-schema","escapedName":"truffle-contract-schema","rawSpec":"1.0.1","saveSpec":null,"fetchSpec":"1.0.1"},"_requiredBy":["/truffle-contract"],"_resolved":"https://registry.npmjs.org/truffle-contract-schema/-/truffle-contract-schema-1.0.1.tgz","_spec":"1.0.1","_where":"/Users/spikelny/Desktop/projects/fastcash-ico","author":{"name":"Tim Coulter","email":"tim.coulter@consensys.net"},"bugs":{"url":"https://github.com/trufflesuite/truffle-schema/issues"},"dependencies":{"ajv":"^5.1.1","crypto-js":"^3.1.9-1"},"description":"JSON schema for contract artifacts","devDependencies":{"mocha":"^3.2.0","solc":"^0.4.16"},"homepage":"https://github.com/trufflesuite/truffle-schema#readme","keywords":["ethereum","json","schema","contract","artifacts"],"license":"MIT","main":"index.js","name":"truffle-contract-schema","repository":{"type":"git","url":"git+https://github.com/trufflesuite/truffle-schema.git"},"scripts":{"test":"mocha"},"version":"1.0.1"}
+module.exports = {"name":"truffle-contract-schema","version":"1.0.1","description":"JSON schema for contract artifacts","main":"index.js","scripts":{"test":"mocha"},"repository":{"type":"git","url":"git+https://github.com/trufflesuite/truffle-schema.git"},"keywords":["ethereum","json","schema","contract","artifacts"],"author":"Tim Coulter <tim.coulter@consensys.net>","license":"MIT","bugs":{"url":"https://github.com/trufflesuite/truffle-schema/issues"},"homepage":"https://github.com/trufflesuite/truffle-schema#readme","dependencies":{"ajv":"^5.1.1","crypto-js":"^3.1.9-1"},"devDependencies":{"mocha":"^3.2.0","solc":"^0.4.16"}}
 
 /***/ }),
 /* 482 */
@@ -62296,6 +62296,28 @@ _3.default.each(_$2.default.cls('fc-ss'), function (elem) {
   return elem.innerHTML = fcSymbolLarge;
 });
 
+var displayPopup = function displayPopup() {
+  var DISCOUNT_LINK = "https://discount-fastcashofficial.0ms.co/xKzdkl0930sdk.html";
+  var $popup = document.createElement('div');
+  $popup.setAttribute('class', 'popup');
+  $popup.innerHTML = '\n    <a href="' + DISCOUNT_LINK + '" target="_value">\n      <div>X</div>\n      <div class="popupContent">\n        CLICK HERE TO BUY DISCOUNT FASTCASH!\n      </div>\n    <a>\n  ';
+  (0, _$2.default)($popup, 'top', _3.default.random(0, window.innerHeight - 180) + 'px');
+  (0, _$2.default)($popup, 'left', _3.default.random(0, window.innerWidth - 200) + 'px');
+
+  _$2.default.id('container').appendChild($popup);
+
+  $popup.onclick = function () {
+    setTimeout(function () {
+      return $popup.remove();
+    }, 150);
+  };
+
+  var moved = false;
+  $popup.onhov;
+};
+
+setTimeout(displayPopup, 300000);
+
 // TODO update
 var contractStart = 1516077280627;
 var weeksSinceStart = Math.floor((Date.now() - contractStart) / (1000 * 60 * 60 * 24 * 7));
@@ -62317,7 +62339,11 @@ var _getQueryParams = (0, _getRef.getQueryParams)(),
 
 if (noWarning) {
   setTimeout(function () {
-    return (0, _$2.default)($step2, 'visibility', 'inherit');
+    (0, _$2.default)($step2, 'visibility', 'inherit');
+    (0, _$2.default)($step3, 'visibility', 'inherit');
+    (0, _$2.default)($step4, 'visibility', 'inherit');
+    (0, _$2.default)($step5, 'visibility', 'inherit');
+    (0, _$2.default)($complete, 'visibility', 'inherit');
   }, 1000);
 }
 if (!noWarning) {
@@ -62522,6 +62548,8 @@ $ethInWallet.onchange = function (event) {
     (0, _$2.default)($step5, 'visibility', 'hidden');
     (0, _$2.default)($complete, 'visibility', 'hidden');
   }
+
+  setTimeout(displayPopup, 3000);
 };
 
 // chat modal

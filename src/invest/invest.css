@@ -306,3 +306,24 @@ p {
 .inputBox:focus {
   background-color: #def;
 }
+
+
+.popup {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  font-size: 27px;
+  font-family: sans-serif;
+  padding: 9px;
+  border: 5px solid;
+  z-index: 505;
+  color: #000
+}
+
+.popup a {
+  color: #000;
+  text-decoration:  none;
+}

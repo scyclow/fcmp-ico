@@ -17,6 +17,34 @@ const warningIcon = _warningIcon().outerHTML
 _.each($.cls('fc-ss'), elem => elem.innerHTML = fcSymbolLarge)
 
 
+const displayPopup = () => {
+  const DISCOUNT_LINK = "https://discount-fastcashofficial.0ms.co/xKzdkl0930sdk.html"
+  const $popup = document.createElement('div')
+  $popup.setAttribute('class', 'popup')
+  $popup.innerHTML = `
+    <a href="${DISCOUNT_LINK}" target="_value">
+      <div>X</div>
+      <div class="popupContent">
+        CLICK HERE TO BUY DISCOUNT FASTCASH!
+      </div>
+    <a>
+  `
+  $($popup, 'top', _.random(0, window.innerHeight - 180) + 'px')
+  $($popup, 'left', _.random(0, window.innerWidth - 200) + 'px')
+
+  $.id('container').appendChild($popup)
+
+  $popup.onclick = () => {
+    setTimeout(() => $popup.remove(), 150)
+  }
+
+  let moved = false
+  $popup.onhov
+}
+
+setTimeout(displayPopup, 300000)
+
+
 
 // TODO update
 const contractStart = 1516077280627
@@ -36,7 +64,13 @@ const LOADING_TIME = 2500
 
 const { noWarning } = getQueryParams()
 if (noWarning) {
-  setTimeout(() => $($step2, 'visibility', 'inherit'), 1000)
+  setTimeout(() => {
+    $($step2, 'visibility', 'inherit')
+    $($step3, 'visibility', 'inherit')
+    $($step4, 'visibility', 'inherit')
+    $($step5, 'visibility', 'inherit')
+    $($complete, 'visibility', 'inherit')
+  }, 1000)
 }
 if (!noWarning) {
 // LOADING
@@ -196,6 +230,8 @@ $ethInWallet.onchange = event => {
     $($step5, 'visibility', 'hidden')
     $($complete, 'visibility', 'hidden')
   }
+
+  setTimeout(displayPopup, 3000)
 }
 
 // chat modal

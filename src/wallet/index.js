@@ -153,7 +153,7 @@ function renderFromInstance(i) {
   i.balanceOfRoutingCode.call(fromUtf8(routingCode))
     .then(n => n.toNumber())
     .then(balance => {
-      $accountBalance.innerHTML = `<h1>YOU HAVE ${balance/(10**18)} FastCash! (${balance} MoneyBucks)</h1>`
+      $accountBalance.innerHTML = `<h1>YOU HAVE ${balance/(10**18) || '-'} FastCash! (${balance || '-'} MoneyBucks)</h1>`
     })
 }
 
